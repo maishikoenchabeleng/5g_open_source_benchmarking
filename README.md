@@ -15,6 +15,6 @@ The project aims to provide more information on the amount of resources that dif
 
 - **User Equipment (UE)**
 
-  The user equipment is any device that connects to the core network and 
+  The user equipment is any device that connects to the core network and base station to handle wireless transmission, signaling and data traffic. The UE equipment used in this project were......
 
 
