@@ -54,9 +54,11 @@ A 5G network is made up of three main parts: the Core Network, Radio Access Netw
 | [Results](docs/Results.md) | Benchmark results and analysis |
 
 ## Repository Structure
+ - `docs/` - Detailed documentation for the project
+ - `configs/` - Configuration files used in the e
+ - `results/` - Raw data, plots and logs gathered during testing and analysis for that network performance.
 
-  
-        
+
 
   
   
