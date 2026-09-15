@@ -32,6 +32,8 @@
   - **Note:** 
 
 - **Free5GC**
+   - Free5GC can be deployed by following the official quick-setup guide: https://free5gc.org/guide/quick-setup/
+   - **Note:**
  
 
 ### Radio Access Networks (RANs)
@@ -55,17 +57,34 @@
 ### UE Simulators
 - **UERANSIM**
 
-  This is an open-source 5G mobile phone (UE) simulator that was used in this project. It can only be used for testing 5G core networks. Due to srsRAN and OAI being built around physical layer (PHY) and UERANSIM having none, it cannot be used to test the RAN part of the network.
-  - Installation steps or guide can be found at: https://github.com/aligungr/UERANSIM/wiki/installation.
-  - The version of UERANSIM should match the version of Free5GC to avoid errors due to mismatching versions.
+  This is an open-source 5G mobile phone (UE) simulator. It simulates both a gNB and a UE, but has no physical layer (PHY). Thus means that it can only be used to test the **5G core network** and not the RAN.
+  
+  - Installation guide can be found at: https://github.com/aligungr/UERANSIM/wiki/installation.
+  - **Important:** The version of UERANSIM should match the version of your core network (e.g. Free5GC) to avoid errors caused by version mismatches.
 
--**srsUE**
+- **srsUE**
 
-This is the UE simulator for srsRAN, it is used to test the performance part of the network.
+  srsUE is the UE simulator for srsRAN. Unlike UERANSIM, it includes the physical layer so it can test the complete srsRAN stack, including the RAN.
+   - srsUE is installed during srsRAN installation and only needs to be configured.
+
+- **nrUE**
+  
+   nrUE us the UE simulator for OpenAirInterface (OAI). Like srsUE, it includes a physical layer, allowing it to test the full OAI RAN stack.
+   - nrUE can be installed at: 
 
 
+> **Note:** UERANSIM, srsUE, nrUE are not directly comparable because they have different
+>  PHY implementations, features and limitations. However, they are still useful
+> for measuring:
+> 
+> - **Baseline performance** of each component in isolation.
+> - **Integrated performance** after components are connected, to see how integration affects the overall network compared to isolated measurements.
 
-- Although these simulations have no direct comparisons with one another because UERANSIM, srsUE and nrUE have different PHY, features and limitations, there are a few things that can still be measured from these differences, such as :
-   - Measuring the performance of each of the components without additional components added to get a baseline of each of the components.
-   - Evaluate the affected measurements after connections have been made to see how integration affects the overall performance of the network from the measurements that were produced in isolation.
-   - 
+
+## Installation Issues and Fixes
+
+> **Note:** This part documents any of the errors that are encountered during installation and how to solve them.
+
+| Issue | Cause | Fix |
+|-------|-------|-----|
+
