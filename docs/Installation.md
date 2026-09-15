@@ -1,9 +1,9 @@
 # Installation Guide
 
-[← Back](../README.md)                                                     [Next →](Implementation.md)
+[← Back](../README.md)                                                    
 
 > **Note:** This document covers installation only. For configuration and integration,
-> see [Implementation & Configuration](Implementation.md)
+> see [Implementation](Implementation.md)
 
 ### Hardware 
 
@@ -88,3 +88,6 @@
 | Issue | Cause | Fix |
 |-------|-------|-----|
 
+
+
+ [Next →](Implementation.md)
