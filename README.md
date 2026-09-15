@@ -15,6 +15,33 @@ The project aims to provide more information on the amount of resources that dif
 
 - **User Equipment (UE)**
 
-  The user equipment is any device that connects to the core network and base station to handle wireless transmission, signaling and data traffic. The UE equipment used in this project were......
+  The user equipment is any device that connects to the core network and base station to handle wireless transmission, signaling and data traffic. The UE equipment used in this project were ....... during real-world deployment. For simulation, UERANSIM was used to simulate a UE during deployment to get more information on the performance of the network.
+
+- **Objectives**
+
+  The objective of this project were to:
+  
+  - to deploy various CN-RAN combinations of a 5G network.
+  - benchmark the performance of that network through evaluating performance metrics such as latency, throughput, jitter and power consumption.
+  - compare of the network performance metrics for each network combination and evaluating which one will be suitable for deployment in resource-constrained environments, e.g in rural areas.
+  
+        
+## Software tools and equipment used
+
+- **Open5GS**
+  - Open5GS was deployment was implemented by following this setup guide on: https://open5gs.org/open5gs/docs/guide/01-quickstart/.
+  - It was implemented on an ASUS PC running Ubuntu 22.04.5 with
+    
+- **srsRAN**
+  - Installation steps for srsRAN(OCUDU) can be found on the website: https://docs.ocudu.org/user_manual/installation/
+  - The dependencies were installed first and the following choices were made during installation:
+    - libfftw -chosen for FFT calculation.
+    - UHD and ZMQ -chosen for split deployment architectures.
+    - Vanilla installation -for clone and build, so that split architectures could be implemented during testing.
+
+- **OAI**
+ - Installation steps for the OAI-RAN can be found at: 
+  
+
 
 
