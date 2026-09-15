@@ -1,6 +1,6 @@
 # Installation Guide
 
-[← Back to README](../README.md) | [Implementation & Configuration →](Implementation.md)
+[← Back](../README.md) |                                                      [Next →](Implementation.md)
 
 > **Note:** This document covers installation only. For configuration and integration,
 > see [Implementation & Configuration](Implementation.md)
