@@ -48,10 +48,10 @@ A 5G network is made up of three main parts: the Core Network, Radio Access Netw
 
 | Document | Description |
 |----------|-------------|
-| [Installation Guide](docs/installation.md) | How to install each component |
-| [Implementation & Configuration](docs/implementation.md) | Config files, integration steps, deployment architectures |
-| [Experiments](docs/experiments.md) | CN-RAN combinations tested and parameters varied |
-| [Results](docs/results.md) | Benchmark results and analysis |
+| [Installation Guide](docs/Installation.md) | How to install each component |
+| [Implementation & Configuration](docs/Implementation.md) | Config files, integration steps, deployment architectures |
+| [Experiments](docs/Experiments.md) | CN-RAN combinations tested and parameters varied |
+| [Results](docs/Results.md) | Benchmark results and analysis |
 
 ## Repository Structure
 
