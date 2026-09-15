@@ -26,7 +26,7 @@ The project aims to provide more information on the amount of resources that dif
   - compare of the network performance metrics for each network combination and evaluating which one will be suitable for deployment in resource-constrained environments, e.g in rural areas.
   
         
-## Software tools and equipment used
+## Tools and Equipment used
 
 - **Open5GS**
   - Open5GS was deployment was implemented by following this setup guide on: https://open5gs.org/open5gs/docs/guide/01-quickstart/.
