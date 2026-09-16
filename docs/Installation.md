@@ -65,7 +65,17 @@
 - **srsUE**
 
   srsUE is the UE simulator for srsRAN. Unlike UERANSIM, it includes the physical layer so it can test the complete srsRAN stack, including the RAN.
-   - srsUE is installed during srsRAN installation and only needs to be configured.
+   - srsUE can be installed by following the **Installation from Source** at: https://docs.srsran.com/projects/4g/en/latest/general/source/1_installation.html
+   - **Note:** During installation ensure that the
+     > **Issues:**
+     >
+     > 1. There was mismatch in the base_srate and the srate between the gNB and the srsUE that can
+     >  cause the simulation to crash
+     > 2. The gNB parameters must match the capabilities of srsUE such as (band, scs, bandwidth
+     >  and sample rate)
+     >
+    ```device_name = zmq
+device_args = tx_port=tcp://127.0.0.1:2001,rx_port=tcp://127.0.0.1:2000,base_srate=11.52e6```
 
 - **nrUE**
   
