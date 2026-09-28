@@ -7,7 +7,7 @@ This folder contains the open-source configuration files that were **modified** 
 | `open5gs/` | Open5GS core network | Modified configs for Open5GS |
 | `free5gc/` | Free5GC core network | Modified configs for Free5GC |
 | `oai-ran/` | OpenAirInterface RAN | Modified configs for OAI gNB |
-| `srsran/` | srsRAN (OCUDU) | Modified configs for srsRAN gNB |
+| `ocudu/` | OCUDU (srsRAN) | Modified configs for srsRAN gNB |
 | `ueransim/` | UERANSIM UE simulator | Modified configs for UERANSIM |
 
 
