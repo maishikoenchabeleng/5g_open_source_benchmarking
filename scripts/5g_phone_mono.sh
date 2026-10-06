@@ -67,6 +67,12 @@ IPERF_SERVER_PORT=5201         # iperf3 -s in Termux listens here
 # Number of rounds (each round = every gNB once)
 ROUNDS=3
 
+# Fixed-load test: UDP at FIXED_RATE_MBPS in BOTH directions at the same time,
+# CPU/RAM/power measured only during it (same job for every combination)
+FIXED_RATE_MBPS=5
+FIXED_DURATION=60
+FL_CLIENT_SIDE="core"      # iperf3 client end: ue (simulated UE) or core (phone is the server)
+
 # Timing (seconds)
 WAIT_CORE_START=15
 WAIT_GNB_START=20              # B210 init + NG Setup
@@ -883,6 +889,137 @@ generate_summary() {
 # REPORT GENERATION
 # =============================================================================
 
+# =============================================================================
+# FIXED-LOAD TEST (resources for the same job)
+# =============================================================================
+# The same UDP load in both directions at the same time (iperf3 --bidir) for
+# every combination. CPU/RAM/power are measured only during this test, so the
+# combinations can be compared for the same amount of work.
+
+# iperf3 --bidir summary, client view: "[TX-C] ... receiver" = data the client
+# sent, "[RX-C] ... receiver" = data the client received.
+# Prints "tx_mbps tx_loss_pct rx_mbps rx_loss_pct".
+parse_iperf_bidir() {
+    local file=$1
+    if [ ! -f "$file" ]; then echo "N/A N/A N/A N/A"; return; fi
+    awk '
+        /receiver/ && /\[(TX|RX)-C\]/ {
+            role = (/\[TX-C\]/) ? "tx" : "rx"
+            for (i = 1; i <= NF; i++) {
+                if ($i ~ /bits\/sec$/) {
+                    v = $(i-1)
+                    if ($i ~ /^Gbits/) v *= 1000; else if ($i ~ /^Kbits/) v /= 1000
+                    rate[role] = v
+                }
+                if ($i ~ /^\(.*%\)$/) { l = $i; gsub(/[()%]/, "", l); loss[role] = l }
+            }
+        }
+        END {
+            printf "%s %s %s %s\n", (("tx" in rate) ? rate["tx"] : "N/A"), (("tx" in loss) ? loss["tx"] : "N/A"),
+                                    (("rx" in rate) ? rate["rx"] : "N/A"), (("rx" in loss) ? loss["rx"] : "N/A")
+        }' "$file"
+}
+
+# Prints "dl_mbps dl_loss_pct ul_mbps ul_loss_pct" (FL_CLIENT_SIDE tells which
+# end runs the iperf3 client)
+fixed_load_rates() {
+    local tx_r tx_l rx_r rx_l
+    read tx_r tx_l rx_r rx_l <<< $(parse_iperf_bidir "$1")
+    if [ "$FL_CLIENT_SIDE" = "ue" ]; then
+        echo "$rx_r $rx_l $tx_r $tx_l"
+    else
+        echo "$tx_r $tx_l $rx_r $rx_l"
+    fi
+}
+
+# VALID if both directions carried >= 95% of the target rate with <= 5% loss
+fixed_load_check() {
+    awk -v t="$FIXED_RATE_MBPS" -v a="$1" -v b="$2" -v c="$3" -v d="$4" 'BEGIN {
+        ok = (a ~ /^[0-9.]+$/ && c ~ /^[0-9.]+$/ && a >= 0.95 * t && c >= 0.95 * t \
+              && b ~ /^[0-9.]+$/ && d ~ /^[0-9.]+$/ && b <= 5 && d <= 5)
+        print (ok ? "VALID" : "CHECK") }'
+}
+
+# Power over the fixed-load window -> <dir>/power.txt
+write_fixed_power() {
+    local d=$1 s_ran=$2 e_ran=$3 s_core=$4 e_core=$5 dur=$6
+    [ "$dur" -lt 1 ] && dur=1
+    local dr=$(rapl_delta "$s_ran" "$e_ran" "$(read_rapl_max_ran)")
+    local dc=$(rapl_delta "$s_core" "$e_core" "$(read_rapl_max_core)")
+    {
+        echo "duration_s=${dur}"
+        echo "ran_watts=${dr:+$(( dr / (dur * 1000000) ))}"
+        echo "ran_joules=${dr:+$(( dr / 1000000 ))}"
+        echo "core_watts=${dc:+$(( dc / (dur * 1000000) ))}"
+        echo "core_joules=${dc:+$(( dc / 1000000 ))}"
+    } > "${d}/power.txt"
+}
+
+# Prints "ran_watts ran_joules core_watts core_joules" for the fixed-load window
+fixed_load_power() {
+    local f="$1/power.txt"
+    if [ ! -f "$f" ]; then echo "N/A N/A N/A N/A"; return; fi
+    awk -F= '{ v[$1] = $2 }
+        END { split("ran_watts ran_joules core_watts core_joules", K, " ")
+              for (i = 1; i <= 4; i++) printf "%s%s", (v[K[i]] == "" ? "N/A" : v[K[i]]), (i < 4 ? " " : "\n") }' "$f"
+}
+
+# Whole-machine CPU from mpstat (all cores, incl. kernel work such as free5gc's
+# gtp5g forwarding in softirq, which per-process pidstat cannot see).
+# Prints "busy_pct cores usr_pct sys_pct soft_pct" (averages over the samples;
+# busy = 100 - idle; cores = busy * number_of_CPUs / 100).
+parse_mpstat() {
+    local file=$1
+    if [ ! -s "$file" ]; then echo "N/A N/A N/A N/A N/A"; return; fi
+    awk '
+        /\([0-9]+ CPU\)/ { if (match($0, /\([0-9]+ CPU\)/)) ncpu = substr($0, RSTART + 1, RLENGTH - 6) + 0 }
+        $1 != "Average:" && $2 == "all" && NF >= 12 {
+            n++; usr += $3; sys += $5; soft += $8; idle += $NF
+        }
+        END {
+            if (!n) { print "N/A N/A N/A N/A N/A"; exit }
+            busy = 100 - idle / n
+            printf "%.2f %.2f %.2f %.2f %.2f\n", busy, (ncpu ? busy * ncpu / 100 : 0), usr / n, sys / n, soft / n
+        }' "$file"
+}
+
+run_fixed_load_test() {
+    local raw_dir=$1
+    local ran=$2
+    local d="${raw_dir}/fixed_load"
+    mkdir -p "$d"
+    log "FIXED-LOAD TEST: UDP ${FIXED_RATE_MBPS} Mbit/s downlink + ${FIXED_RATE_MBPS} Mbit/s uplink at the same time (${FIXED_DURATION}s)..."
+    refresh_phone_ip
+    collect_cpu_ram "$d" "$(gnb_proc $ran)" "$(( FIXED_DURATION + 60 ))"
+    # Radio metrics for this window only (OCUDU reads its table from gnb.log)
+    ln -sf ../gnb.log "${d}/gnb.log"
+    start_radio_log "$ran" "$d"
+    # Whole-machine CPU on both machines (mpstat, every second)
+    LC_ALL=C mpstat 1 $(( FIXED_DURATION + 60 )) > "${d}/mpstat_ran.txt" 2>&1 &
+    local mp_ran_pid=$!
+    ssh_core "LC_ALL=C mpstat 1 $(( FIXED_DURATION + 60 ))" > "${d}/mpstat_core.txt" 2>&1 &
+    local mp_core_pid=$!
+    local s_ran=$(read_rapl_ran) s_core=$(read_rapl_core) t0=$(date +%s)
+    ssh_core "timeout $(( FIXED_DURATION + 30 )) iperf3 -c ${UE_IP} -p ${IPERF_SERVER_PORT} -t ${FIXED_DURATION} \
+        -u -b ${FIXED_RATE_MBPS}M -l 1200 --bidir --connect-timeout 10000" > "${d}/iperf_fixed.txt" 2>&1
+    local e_ran=$(read_rapl_ran) e_core=$(read_rapl_core) t1=$(date +%s)
+    kill $mp_ran_pid 2>/dev/null
+    ssh_core "pkill -x mpstat 2>/dev/null; true"
+    wait $mp_ran_pid $mp_core_pid 2>/dev/null
+    stop_radio_log "$ran" "$d"
+    stop_cpu_ram
+    check_iperf_result "${d}/iperf_fixed.txt"
+    write_fixed_power "$d" "$s_ran" "$e_ran" "$s_core" "$e_core" $(( t1 - t0 ))
+    local fl=$(fixed_load_rates "${d}/iperf_fixed.txt")
+    read fl_dl fl_dll fl_ul fl_ull <<< "$fl"
+    local chk=$(fixed_load_check $fl)
+    if [ "$chk" = "VALID" ]; then
+        log_ok "Fixed load delivered: DL ${fl_dl} Mbps, UL ${fl_ul} Mbps"
+    else
+        log_warn "Fixed load NOT fully delivered (DL ${fl_dl} Mbps loss ${fl_dll}%, UL ${fl_ul} Mbps loss ${fl_ull}%) - resources marked N/A in the CSV"
+    fi
+}
+
 generate_report() {
     local report_file=$1
     local raw_dir=$2
@@ -916,6 +1053,22 @@ generate_report() {
     read cta ctm cf cth <<< $(parse_thermal "${raw_dir}/thermal_core.txt")
 
     local ip_changes=$(grep -c "IP changed" "${raw_dir}/phone_ip.txt" 2>/dev/null)
+
+    # Fixed-load test (same job for every combination)
+    local fl_rb fl_rcores fl_rusr fl_rsys fl_rsoft fl_cb fl_ccores fl_cusr fl_csys fl_csoft
+    read fl_rb fl_rcores fl_rusr fl_rsys fl_rsoft <<< $(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt")
+    read fl_cb fl_ccores fl_cusr fl_csys fl_csoft <<< $(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt")
+    local fl_dl fl_dl_loss fl_ul fl_ul_loss fl_valid fl_rw fl_rj fl_cw fl_cj
+    read fl_dl fl_dl_loss fl_ul fl_ul_loss <<< $(fixed_load_rates "${raw_dir}/fixed_load/iperf_fixed.txt")
+    fl_valid=$(fixed_load_check $fl_dl $fl_dl_loss $fl_ul $fl_ul_loss)
+    read fl_rw fl_rj fl_cw fl_cj <<< $(fixed_load_power "${raw_dir}/fixed_load")
+    local fl_gnb_cpu fl_gnb_pk
+    read fl_gnb_cpu fl_gnb_pk <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)")
+    local fl_amf_cpu; read fl_amf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "amf")
+    local fl_smf_cpu; read fl_smf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "smf")
+    local fl_upf_cpu; read fl_upf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "upf")
+    local fl_cqi fl_dmcs fl_dbler fl_umcs fl_ubler fl_usnr fl_drsrp fl_dsinr fl_ursrp fl_nsamp
+    read fl_cqi fl_dmcs fl_dbler fl_umcs fl_ubler fl_usnr fl_drsrp fl_dsinr fl_ursrp fl_nsamp <<< $(parse_radio "${raw_dir}/fixed_load/radio_metrics.csv")
 
     cat > "$report_file" << EOF
 ================================================================================
@@ -984,7 +1137,7 @@ generate_report() {
   UL RSRP                 : ${ursrp} dB   (measured by the gNB; OCUDU only)
 
 ────────────────────────────────────────────────────────────────────────────────
- CPU USAGE  (pidstat, sampled every 1s during the tests; 100% = one core)
+ CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : ${RAN_IP} ]
   gNB Process             : avg ${gnb_cpu} %   peak ${gnb_cpu_peak} %
@@ -995,7 +1148,7 @@ generate_report() {
   UPF                     : avg ${upf_cpu} %
 
 ────────────────────────────────────────────────────────────────────────────────
- MEMORY USAGE  (pidstat RSS, during the tests)
+ MEMORY USAGE  (pidstat RSS, during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine ]
   gNB RSS                 : $(parse_ram "${raw_dir}/cpu_ran.txt" "$(gnb_proc $ran)") KB
@@ -1006,7 +1159,7 @@ generate_report() {
   UPF RSS                 : $(parse_ram "${raw_dir}/cpu_core.txt" "upf") KB
 
 ────────────────────────────────────────────────────────────────────────────────
- POWER CONSUMPTION  (Intel RAPL, measured during the tests)
+ POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : ${RAN_IP} ]
   Average Power           : ${RAN_WATTS:-N/A} W
@@ -1015,6 +1168,28 @@ generate_report() {
   [ Core Machine : ${CORE_IP} ]
   Average Power           : ${CORE_WATTS:-N/A} W
   Total Energy            : ${CORE_JOULES:-N/A} J
+
+────────────────────────────────────────────────────────────────────────────────
+ FIXED-LOAD RESOURCES  (UDP ${FIXED_RATE_MBPS} Mbit/s DL + ${FIXED_RATE_MBPS} Mbit/s UL at once, ${FIXED_DURATION}s)
+────────────────────────────────────────────────────────────────────────────────
+  Same traffic for every combination: compare these values to see which
+  combination needs fewer resources for the same job.
+  Machine CPU = all cores incl. kernel work (e.g. free5gc gtp5g); use it,
+  not the UPF process CPU, to compare the cores. 100 % = whole machine.
+  FL Load Delivered       : DL ${fl_dl} Mbps (loss ${fl_dl_loss} %), UL ${fl_ul} Mbps (loss ${fl_ul_loss} %)
+  FL Load Check           : ${fl_valid}   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL Radio (avg)          : CQI ${fl_cqi}, DL MCS ${fl_dmcs}, UL MCS ${fl_umcs}, UL SNR ${fl_usnr} dB, DL BLER ${fl_dbler} %, UL BLER ${fl_ubler} %
+
+  [ RAN Machine : ${RAN_IP} ]
+  FL gNB CPU              : avg ${fl_gnb_cpu} %   peak ${fl_gnb_pk} %
+  FL gNB RSS              : $(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)") KB
+  FL RAN Power            : ${fl_rw} W   (${fl_rj} J)
+  FL Machine CPU (all)    : ${fl_rb} % busy = ${fl_rcores} cores   (usr ${fl_rusr} %, sys ${fl_rsys} %, soft ${fl_rsoft} %)
+
+  [ Core Machine : ${CORE_IP} ]
+  FL AMF / SMF / UPF CPU  : avg ${fl_amf_cpu} % / ${fl_smf_cpu} % / ${fl_upf_cpu} %
+  FL Core Power           : ${fl_cw} W   (${fl_cj} J)
+  FL Machine CPU (all)    : ${fl_cb} % busy = ${fl_ccores} cores   (usr ${fl_cusr} %, sys ${fl_csys} %, soft ${fl_csoft} %)
 
 ────────────────────────────────────────────────────────────────────────────────
  TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
@@ -1051,6 +1226,7 @@ generate_report() {
   raw/cpu_core.txt        : pidstat output - core machine
   raw/power_ran.txt       : RAPL power log - RAN machine
   raw/power_core.txt      : RAPL power log - core machine
+  raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power, radio
   raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
   raw/thermal_core.txt    : Temperature/frequency log - core machine
   ../../terminal_session.txt : Full terminal output of the whole run
@@ -1065,9 +1241,9 @@ EOF
 # CSV EXPORT
 # =============================================================================
 
-CSV_HEADER="timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,gnb_cpu_pct,cqi,dl_mcs,dl_bler_pct,ul_mcs,ul_bler_pct,ul_snr_db,dl_rsrp_dbm,dl_sinr_db,ul_rsrp_db,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round"
+CSV_HEADER="timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,gnb_cpu_pct,cqi,dl_mcs,dl_bler_pct,ul_mcs,ul_bler_pct,ul_snr_db,dl_rsrp_dbm,dl_sinr_db,ul_rsrp_db,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round,fl_dl_mbps,fl_ul_mbps,fl_dl_loss_pct,fl_ul_loss_pct,fl_valid,fl_gnb_cpu_pct,fl_gnb_rss_kb,fl_upf_cpu_pct,fl_ran_watts,fl_ran_joules,fl_core_watts,fl_core_joules,fl_ran_machine_cpu_pct,fl_ran_softirq_pct,fl_core_machine_cpu_pct,fl_core_softirq_pct"
 
-SUMMARY_METRICS="ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms gnb_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms cqi dl_mcs dl_bler_pct ul_mcs ul_bler_pct ul_snr_db dl_rsrp_dbm dl_sinr_db ul_rsrp_db ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events"
+SUMMARY_METRICS="ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms gnb_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms cqi dl_mcs dl_bler_pct ul_mcs ul_bler_pct ul_snr_db dl_rsrp_dbm dl_sinr_db ul_rsrp_db ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events fl_dl_mbps fl_ul_mbps fl_gnb_cpu_pct fl_gnb_rss_kb fl_upf_cpu_pct fl_ran_watts fl_ran_joules fl_core_watts fl_core_joules fl_ran_machine_cpu_pct fl_ran_softirq_pct fl_core_machine_cpu_pct fl_core_softirq_pct"
 
 append_csv() {
     local csv_file=$1
@@ -1091,7 +1267,15 @@ append_csv() {
     ran_th=$(parse_thermal "${raw_dir}/thermal_ran.txt" | tr ' ' ',')
     core_th=$(parse_thermal "${raw_dir}/thermal_core.txt" | tr ' ' ',')
 
-    echo "${TIMESTAMP},${core},${ran},${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${gnb_cpu},${radio},${ran_th},${core_th},${CURRENT_ROUND}" \
+    # Fixed-load test; resource values only if the load was fully delivered
+    local fl_dl fl_dl_loss fl_ul fl_ul_loss fl_valid fl_rw fl_rj fl_cw fl_cj fl_res
+    read fl_dl fl_dl_loss fl_ul fl_ul_loss <<< $(fixed_load_rates "${raw_dir}/fixed_load/iperf_fixed.txt")
+    fl_valid=$(fixed_load_check $fl_dl $fl_dl_loss $fl_ul $fl_ul_loss)
+    read fl_rw fl_rj fl_cw fl_cj <<< $(fixed_load_power "${raw_dir}/fixed_load")
+    fl_res="$(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)" | cut -d" " -f1),$(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)"),$(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "upf" | cut -d" " -f1),${fl_rw},${fl_rj},${fl_cw},${fl_cj},$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f5),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f5)"
+    [ "$fl_valid" = "VALID" ] || fl_res=$(printf "N/A%.0s," $(seq 1 11) | sed "s/,$//")
+
+    echo "${TIMESTAMP},${core},${ran},${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${gnb_cpu},${radio},${ran_th},${core_th},${CURRENT_ROUND},${fl_dl},${fl_ul},${fl_dl_loss},${fl_ul_loss},${fl_valid},${fl_res}" \
         >> "$csv_file"
 }
 
@@ -1263,6 +1447,9 @@ Average power (W) : ${CORE_WATTS}
 Timestamp         : $(date)
 EOF
 
+    # ── Fixed-load test (resources for the same job) ──────────────────────────
+    run_fixed_load_test "$raw_dir" "$ran"
+
     # ── STEP 6: Stop gNB, collect logs ────────────────────────────────────────
     log "STEP 6: Stopping gNB and collecting logs..."
     stop_ran_processes
@@ -1304,7 +1491,7 @@ EOF
             local name="$(basename "$(dirname "$combo_dir")")/$(basename "$combo_dir")"
             echo "── ${name} ──────────────────────────────────────────────────────" >> "$comp_file"
             # Extract key metrics from each report
-            grep -E "^  (Cell |Downlink|Uplink|RTT Average|Jitter|Packet Loss|UDP Packet Loss|Average Power|Phone IP |Registration Time|PDU Session Setup|CQI|DL MCS|DL BLER|UL MCS|UL BLER|UL SNR|DL RSRP|DL SINR|UL RSRP)" \
+            grep -E "^  (FL |Cell |Downlink|Uplink|RTT Average|Jitter|Packet Loss|UDP Packet Loss|Average Power|Phone IP |Registration Time|PDU Session Setup|CQI|DL MCS|DL BLER|UL MCS|UL BLER|UL SNR|DL RSRP|DL SINR|UL RSRP)" \
                 "${combo_dir}/report.txt" >> "$comp_file"
             echo "" >> "$comp_file"
         elif [ -f "${combo_dir}/raw/FAILED.txt" ]; then

@@ -36,6 +36,9 @@ CORE_IP="137.158.126.21"
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
 
+# srsUE only: Open5GS AMF config without the phone PLMN 001/02 (see start_open5gs)
+AMF_SRSUE_CONF="/etc/open5gs/amf_srsue.yaml"
+
 # Test parameters
 PING_COUNT=100
 IPERF_DURATION=30
@@ -43,6 +46,12 @@ IPERF_SERVER_PORT=5201
 
 # Number of rounds (each round = every combination once)
 ROUNDS=3
+
+# Fixed-load test: UDP at FIXED_RATE_MBPS in BOTH directions at the same time,
+# CPU/RAM/power measured only during it (same job for every combination)
+FIXED_RATE_MBPS=5
+FIXED_DURATION=60
+FL_CLIENT_SIDE="ue"      # iperf3 client end: ue (simulated UE) or core (phone is the server)
 
 # Timing (seconds to wait for each stage)
 WAIT_CORE_START=15
@@ -98,7 +107,29 @@ read_rapl_ran() {
 }
 
 read_rapl_core() {
-    ssh_core "cat ${RAPL_PATH} 2>/dev/null || echo 0"
+    ssh_core "sudo cat ${RAPL_PATH} 2>/dev/null || echo 0"
+}
+
+# RAPL max counter value (the energy counter wraps back to 0 after this)
+RAPL_MAX_PATH="/sys/class/powercap/intel-rapl/intel-rapl:0/max_energy_range_uj"
+read_rapl_max_ran() {
+    cat ${RAPL_MAX_PATH} 2>/dev/null || echo 0
+}
+
+read_rapl_max_core() {
+    ssh_core "sudo cat ${RAPL_MAX_PATH} 2>/dev/null || echo 0"
+}
+
+# Energy used between two RAPL readings (uJ), handling one counter wrap.
+# Prints nothing if a reading is missing (0), so the result shows as N/A.
+rapl_delta() {
+    local start=$1 end=$2 max=$3
+    [ "${start:-0}" -gt 0 ] 2>/dev/null && [ "${end:-0}" -gt 0 ] 2>/dev/null || return
+    if [ "$end" -ge "$start" ]; then
+        echo $(( end - start ))
+    elif [ "${max:-0}" -gt 0 ] 2>/dev/null; then
+        echo $(( max - start + end ))
+    fi
 }
 
 # Calculate power from two RAPL readings and duration
@@ -215,16 +246,30 @@ stop_core() {
 
 start_open5gs() {
     local log_dir=$1
+    local amf_conf=$2   # optional: run the AMF with this config instead of amf.yaml
+    local amf_unit="open5gs-amfd"
     log "Starting Open5GS on core machine..."
-    ssh_core "sudo systemctl start open5gs-nrfd open5gs-scpd open5gs-amfd \
+    ssh_core "sudo systemctl start open5gs-nrfd open5gs-scpd \
+        $([ -z "$amf_conf" ] && echo open5gs-amfd) \
         open5gs-smfd open5gs-upfd open5gs-ausfd open5gs-udmd open5gs-udrd \
-        open5gs-pcfd open5gs-nssfd open5gs-bsfd open5gs-seppd 2>/dev/null; \
-        sleep ${WAIT_CORE_START}" > /dev/null
+        open5gs-pcfd open5gs-nssfd open5gs-bsfd open5gs-seppd 2>/dev/null" > /dev/null
+
+    # srsUE can't decode the Registration Accept of the dual-PLMN amf.yaml
+    # (001/01 + phone 001/02), so its AMF runs as a transient unit with its own
+    # config. amf.yaml is untouched; "systemctl stop open5gs-*" stops it too.
+    if [ -n "$amf_conf" ]; then
+        amf_unit="open5gs-amfd-srsue"
+        log "AMF config for srsUE: ${amf_conf}"
+        ssh_core "sudo systemctl reset-failed ${amf_unit} 2>/dev/null; \
+            sudo systemd-run --unit=${amf_unit} -p User=open5gs -p Group=open5gs \
+            /usr/bin/open5gs-amfd -c ${amf_conf}" > /dev/null 2>&1
+    fi
+    ssh_core "sleep ${WAIT_CORE_START}" > /dev/null
 
     sleep ${WAIT_CORE_START}
 
     # Verify: count exact "active" lines ("inactive" also contains "active")
-    local n_active=$(ssh_core "sudo systemctl is-active open5gs-amfd open5gs-smfd open5gs-upfd" | grep -c "^active$")
+    local n_active=$(ssh_core "sudo systemctl is-active ${amf_unit} open5gs-smfd open5gs-upfd" | grep -c "^active$")
     if [ "$n_active" -eq 3 ]; then
         log_ok "Open5GS is running (AMF, SMF, UPF active)"
         return 0
@@ -634,24 +679,22 @@ core_log_file() {
 # PERFORMANCE MODE, TEMPERATURE LOGGING, ROUNDS SUMMARY
 # =============================================================================
 
-# CPU governor "performance" on both machines for the whole run (full clock
+# CPU governor "performance" on the RAN machine for the whole run (full clock
 # speed instead of load-dependent scaling). The original governor is restored
-# on exit (see the EXIT trap in main).
+# on exit (see the EXIT trap in main). The core machine is left unchanged: with
+# the core in "performance", free5gc + srsRAN downlink collapsed to ~2-8 Mbit/s
+# (tested 2026-09-29; ~52 Mbit/s in powersave), and its light load does not
+# benefit from it.
 ORIG_GOV_RAN=""
-ORIG_GOV_CORE=""
 set_performance_mode() {
     ORIG_GOV_RAN=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null)
-    ORIG_GOV_CORE=$(ssh_core "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null")
     for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
         echo performance > "$g" 2>/dev/null
     done
-    ssh_core "for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do \
-                echo performance | sudo tee \$g > /dev/null; done" 2>/dev/null
     GOV_RAN=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null)
     GOV_CORE=$(ssh_core "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null")
-    log "CPU governor: RAN ${ORIG_GOV_RAN:-?} -> ${GOV_RAN:-?}, core ${ORIG_GOV_CORE:-?} -> ${GOV_CORE:-?}"
-    [ "$GOV_RAN" = "performance" ] && [ "$GOV_CORE" = "performance" ] \
-        || log_warn "Performance mode not active on both machines"
+    log "CPU governor: RAN ${ORIG_GOV_RAN:-?} -> ${GOV_RAN:-?}, core ${GOV_CORE:-?} (unchanged)"
+    [ "$GOV_RAN" = "performance" ] || log_warn "Performance mode not active on the RAN machine"
 }
 
 restore_cpu_mode() {
@@ -659,10 +702,6 @@ restore_cpu_mode() {
         for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
             echo "$ORIG_GOV_RAN" > "$g" 2>/dev/null
         done
-    fi
-    if [ -n "$ORIG_GOV_CORE" ]; then
-        ssh_core "for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do \
-                    echo ${ORIG_GOV_CORE} | sudo tee \$g > /dev/null; done" 2>/dev/null
     fi
 }
 
@@ -780,6 +819,135 @@ generate_summary() {
 # REPORT GENERATION
 # =============================================================================
 
+# =============================================================================
+# FIXED-LOAD TEST (resources for the same job)
+# =============================================================================
+# The same UDP load in both directions at the same time (iperf3 --bidir) for
+# every combination. CPU/RAM/power are measured only during this test, so the
+# combinations can be compared for the same amount of work.
+
+# iperf3 --bidir summary, client view: "[TX-C] ... receiver" = data the client
+# sent, "[RX-C] ... receiver" = data the client received.
+# Prints "tx_mbps tx_loss_pct rx_mbps rx_loss_pct".
+parse_iperf_bidir() {
+    local file=$1
+    if [ ! -f "$file" ]; then echo "N/A N/A N/A N/A"; return; fi
+    awk '
+        /receiver/ && /\[(TX|RX)-C\]/ {
+            role = (/\[TX-C\]/) ? "tx" : "rx"
+            for (i = 1; i <= NF; i++) {
+                if ($i ~ /bits\/sec$/) {
+                    v = $(i-1)
+                    if ($i ~ /^Gbits/) v *= 1000; else if ($i ~ /^Kbits/) v /= 1000
+                    rate[role] = v
+                }
+                if ($i ~ /^\(.*%\)$/) { l = $i; gsub(/[()%]/, "", l); loss[role] = l }
+            }
+        }
+        END {
+            printf "%s %s %s %s\n", (("tx" in rate) ? rate["tx"] : "N/A"), (("tx" in loss) ? loss["tx"] : "N/A"),
+                                    (("rx" in rate) ? rate["rx"] : "N/A"), (("rx" in loss) ? loss["rx"] : "N/A")
+        }' "$file"
+}
+
+# Prints "dl_mbps dl_loss_pct ul_mbps ul_loss_pct" (FL_CLIENT_SIDE tells which
+# end runs the iperf3 client)
+fixed_load_rates() {
+    local tx_r tx_l rx_r rx_l
+    read tx_r tx_l rx_r rx_l <<< $(parse_iperf_bidir "$1")
+    if [ "$FL_CLIENT_SIDE" = "ue" ]; then
+        echo "$rx_r $rx_l $tx_r $tx_l"
+    else
+        echo "$tx_r $tx_l $rx_r $rx_l"
+    fi
+}
+
+# VALID if both directions carried >= 95% of the target rate with <= 5% loss
+fixed_load_check() {
+    awk -v t="$FIXED_RATE_MBPS" -v a="$1" -v b="$2" -v c="$3" -v d="$4" 'BEGIN {
+        ok = (a ~ /^[0-9.]+$/ && c ~ /^[0-9.]+$/ && a >= 0.95 * t && c >= 0.95 * t \
+              && b ~ /^[0-9.]+$/ && d ~ /^[0-9.]+$/ && b <= 5 && d <= 5)
+        print (ok ? "VALID" : "CHECK") }'
+}
+
+# Power over the fixed-load window -> <dir>/power.txt
+write_fixed_power() {
+    local d=$1 s_ran=$2 e_ran=$3 s_core=$4 e_core=$5 dur=$6
+    [ "$dur" -lt 1 ] && dur=1
+    local dr=$(rapl_delta "$s_ran" "$e_ran" "$(read_rapl_max_ran)")
+    local dc=$(rapl_delta "$s_core" "$e_core" "$(read_rapl_max_core)")
+    {
+        echo "duration_s=${dur}"
+        echo "ran_watts=${dr:+$(( dr / (dur * 1000000) ))}"
+        echo "ran_joules=${dr:+$(( dr / 1000000 ))}"
+        echo "core_watts=${dc:+$(( dc / (dur * 1000000) ))}"
+        echo "core_joules=${dc:+$(( dc / 1000000 ))}"
+    } > "${d}/power.txt"
+}
+
+# Prints "ran_watts ran_joules core_watts core_joules" for the fixed-load window
+fixed_load_power() {
+    local f="$1/power.txt"
+    if [ ! -f "$f" ]; then echo "N/A N/A N/A N/A"; return; fi
+    awk -F= '{ v[$1] = $2 }
+        END { split("ran_watts ran_joules core_watts core_joules", K, " ")
+              for (i = 1; i <= 4; i++) printf "%s%s", (v[K[i]] == "" ? "N/A" : v[K[i]]), (i < 4 ? " " : "\n") }' "$f"
+}
+
+# Whole-machine CPU from mpstat (all cores, incl. kernel work such as free5gc's
+# gtp5g forwarding in softirq, which per-process pidstat cannot see).
+# Prints "busy_pct cores usr_pct sys_pct soft_pct" (averages over the samples;
+# busy = 100 - idle; cores = busy * number_of_CPUs / 100).
+parse_mpstat() {
+    local file=$1
+    if [ ! -s "$file" ]; then echo "N/A N/A N/A N/A N/A"; return; fi
+    awk '
+        /\([0-9]+ CPU\)/ { if (match($0, /\([0-9]+ CPU\)/)) ncpu = substr($0, RSTART + 1, RLENGTH - 6) + 0 }
+        $1 != "Average:" && $2 == "all" && NF >= 12 {
+            n++; usr += $3; sys += $5; soft += $8; idle += $NF
+        }
+        END {
+            if (!n) { print "N/A N/A N/A N/A N/A"; exit }
+            busy = 100 - idle / n
+            printf "%.2f %.2f %.2f %.2f %.2f\n", busy, (ncpu ? busy * ncpu / 100 : 0), usr / n, sys / n, soft / n
+        }' "$file"
+}
+
+run_fixed_load_test() {
+    local raw_dir=$1
+    local ran=$2
+    local d="${raw_dir}/fixed_load"
+    mkdir -p "$d"
+    log "FIXED-LOAD TEST: UDP ${FIXED_RATE_MBPS} Mbit/s downlink + ${FIXED_RATE_MBPS} Mbit/s uplink at the same time (${FIXED_DURATION}s)..."
+    ssh_core "pkill -x iperf3 2>/dev/null; sleep 2; nohup iperf3 -s -B ${CORE_IP} --port ${IPERF_SERVER_PORT} > /tmp/iperf_server.log 2>&1 & disown"
+    sleep 5
+    collect_cpu_ram "$d" "$(gnb_proc $ran)" "$(ue_proc $ran)"
+    # Whole-machine CPU on both machines (mpstat, every second)
+    LC_ALL=C mpstat 1 $(( FIXED_DURATION + 60 )) > "${d}/mpstat_ran.txt" 2>&1 &
+    local mp_ran_pid=$!
+    ssh_core "LC_ALL=C mpstat 1 $(( FIXED_DURATION + 60 ))" > "${d}/mpstat_core.txt" 2>&1 &
+    local mp_core_pid=$!
+    local s_ran=$(read_rapl_ran) s_core=$(read_rapl_core) t0=$(date +%s)
+    timeout $(( FIXED_DURATION + 30 )) iperf3 -c ${CORE_IP} -B ${UE_IP} -p ${IPERF_SERVER_PORT} \
+        -u -b ${FIXED_RATE_MBPS}M -l 1200 -t ${FIXED_DURATION} --bidir > "${d}/iperf_fixed.txt" 2>&1
+    local e_ran=$(read_rapl_ran) e_core=$(read_rapl_core) t1=$(date +%s)
+    kill $mp_ran_pid 2>/dev/null
+    ssh_core "pkill -x mpstat 2>/dev/null; true"
+    wait $mp_ran_pid $mp_core_pid 2>/dev/null
+    pkill -x pidstat 2>/dev/null
+    ssh_core "pkill -x pidstat 2>/dev/null; pkill -x iperf3 2>/dev/null; true"
+    wait $CPU_RAN_PID $CPU_CORE_PID 2>/dev/null
+    write_fixed_power "$d" "$s_ran" "$e_ran" "$s_core" "$e_core" $(( t1 - t0 ))
+    local fl=$(fixed_load_rates "${d}/iperf_fixed.txt")
+    read fl_dl fl_dll fl_ul fl_ull <<< "$fl"
+    local chk=$(fixed_load_check $fl)
+    if [ "$chk" = "VALID" ]; then
+        log_ok "Fixed load delivered: DL ${fl_dl} Mbps, UL ${fl_ul} Mbps"
+    else
+        log_warn "Fixed load NOT fully delivered (DL ${fl_dl} Mbps loss ${fl_dll}%, UL ${fl_ul} Mbps loss ${fl_ull}%) - resources marked N/A in the CSV"
+    fi
+}
+
 generate_report() {
     local report_file=$1
     local raw_dir=$2
@@ -855,6 +1023,22 @@ generate_report() {
     local tun_tx=$(grep "^tx (uplink)" "${raw_dir}/tunnel_proof.txt" 2>/dev/null | awk '{print $NF}')
 
     # Write report
+    # Fixed-load test (same job for every combination)
+    local fl_rb fl_rcores fl_rusr fl_rsys fl_rsoft fl_cb fl_ccores fl_cusr fl_csys fl_csoft
+    read fl_rb fl_rcores fl_rusr fl_rsys fl_rsoft <<< $(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt")
+    read fl_cb fl_ccores fl_cusr fl_csys fl_csoft <<< $(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt")
+    local fl_dl fl_dl_loss fl_ul fl_ul_loss fl_valid fl_rw fl_rj fl_cw fl_cj
+    read fl_dl fl_dl_loss fl_ul fl_ul_loss <<< $(fixed_load_rates "${raw_dir}/fixed_load/iperf_fixed.txt")
+    fl_valid=$(fixed_load_check $fl_dl $fl_dl_loss $fl_ul $fl_ul_loss)
+    read fl_rw fl_rj fl_cw fl_cj <<< $(fixed_load_power "${raw_dir}/fixed_load")
+    local fl_gnb_cpu fl_gnb_pk
+    read fl_gnb_cpu fl_gnb_pk <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)")
+    local fl_ue_cpu fl_ue_pk
+    read fl_ue_cpu fl_ue_pk <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(ue_proc $ran)")
+    local fl_amf_cpu; read fl_amf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "amf")
+    local fl_smf_cpu; read fl_smf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "smf")
+    local fl_upf_cpu; read fl_upf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "upf")
+
     cat > "$report_file" << EOF
 ================================================================================
                         5G TESTBED BENCHMARK REPORT
@@ -921,7 +1105,7 @@ generate_report() {
   Sent     (uplink)       : ${tun_tx:-N/A} bytes
 
 ────────────────────────────────────────────────────────────────────────────────
- CPU USAGE  (pidstat, sampled every 1s during iperf test; 100% = one core)
+ CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : ${RAN_IP} ]
   gNB Process             : avg ${gnb_cpu} %   peak ${gnb_cpu_peak} %
@@ -933,7 +1117,7 @@ generate_report() {
   UPF                     : avg ${upf_cpu} %
 
 ────────────────────────────────────────────────────────────────────────────────
- MEMORY USAGE  (pidstat RSS, during iperf test)
+ MEMORY USAGE  (pidstat RSS, during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine ]
   gNB RSS                 : $(parse_ram "${raw_dir}/cpu_ran.txt" "$(gnb_proc $ran)") KB
@@ -945,7 +1129,7 @@ generate_report() {
   UPF RSS                 : $(parse_ram "${raw_dir}/cpu_core.txt" "upf") KB
 
 ────────────────────────────────────────────────────────────────────────────────
- POWER CONSUMPTION  (Intel RAPL, measured during iperf test)
+ POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : ${RAN_IP} ]
   Average Power           : ${ran_watts} W
@@ -954,6 +1138,29 @@ generate_report() {
   [ Core Machine : ${CORE_IP} ]
   Average Power           : ${core_watts} W
   Total Energy            : ${core_joules} J
+
+────────────────────────────────────────────────────────────────────────────────
+ FIXED-LOAD RESOURCES  (UDP ${FIXED_RATE_MBPS} Mbit/s DL + ${FIXED_RATE_MBPS} Mbit/s UL at once, ${FIXED_DURATION}s)
+────────────────────────────────────────────────────────────────────────────────
+  Same traffic for every combination: compare these values to see which
+  combination needs fewer resources for the same job.
+  Machine CPU = all cores incl. kernel work (e.g. free5gc gtp5g); use it,
+  not the UPF process CPU, to compare the cores. 100 % = whole machine.
+  FL Load Delivered       : DL ${fl_dl} Mbps (loss ${fl_dl_loss} %), UL ${fl_ul} Mbps (loss ${fl_ul_loss} %)
+  FL Load Check           : ${fl_valid}   (VALID = both directions >= 95% of target, loss <= 5%)
+
+  [ RAN Machine : ${RAN_IP} ]
+  FL gNB CPU              : avg ${fl_gnb_cpu} %   peak ${fl_gnb_pk} %
+  FL gNB RSS              : $(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)") KB
+  FL UE  CPU              : avg ${fl_ue_cpu} %   peak ${fl_ue_pk} %
+  FL UE  RSS              : $(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(ue_proc $ran)") KB
+  FL RAN Power            : ${fl_rw} W   (${fl_rj} J)
+  FL Machine CPU (all)    : ${fl_rb} % busy = ${fl_rcores} cores   (usr ${fl_rusr} %, sys ${fl_rsys} %, soft ${fl_rsoft} %)
+
+  [ Core Machine : ${CORE_IP} ]
+  FL AMF / SMF / UPF CPU  : avg ${fl_amf_cpu} % / ${fl_smf_cpu} % / ${fl_upf_cpu} %
+  FL Core Power           : ${fl_cw} W   (${fl_cj} J)
+  FL Machine CPU (all)    : ${fl_cb} % busy = ${fl_ccores} cores   (usr ${fl_cusr} %, sys ${fl_csys} %, soft ${fl_csoft} %)
 
 ────────────────────────────────────────────────────────────────────────────────
  TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
@@ -987,6 +1194,7 @@ generate_report() {
   raw/cpu_core.txt        : pidstat output - core machine
   raw/power_ran.txt       : RAPL power log - RAN machine
   raw/power_core.txt      : RAPL power log - core machine
+  raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power
   raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
   raw/thermal_core.txt    : Temperature/frequency log - core machine
   ../../terminal_session.txt : Full terminal output of the whole run
@@ -1026,7 +1234,15 @@ append_csv() {
     ran_th=$(parse_thermal "${raw_dir}/thermal_ran.txt" | tr ' ' ',')
     core_th=$(parse_thermal "${raw_dir}/thermal_core.txt" | tr ' ' ',')
 
-    echo "${TIMESTAMP},${core},${ran},${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${gnb_cpu},${ue_cpu},${ran_th},${core_th},${CURRENT_ROUND}" \
+    # Fixed-load test; resource values only if the load was fully delivered
+    local fl_dl fl_dl_loss fl_ul fl_ul_loss fl_valid fl_rw fl_rj fl_cw fl_cj fl_res
+    read fl_dl fl_dl_loss fl_ul fl_ul_loss <<< $(fixed_load_rates "${raw_dir}/fixed_load/iperf_fixed.txt")
+    fl_valid=$(fixed_load_check $fl_dl $fl_dl_loss $fl_ul $fl_ul_loss)
+    read fl_rw fl_rj fl_cw fl_cj <<< $(fixed_load_power "${raw_dir}/fixed_load")
+    fl_res="$(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)" | cut -d" " -f1),$(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(ue_proc $ran)" | cut -d" " -f1),$(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(gnb_proc $ran)"),$(parse_ram "${raw_dir}/fixed_load/cpu_ran.txt" "$(ue_proc $ran)"),$(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "upf" | cut -d" " -f1),${fl_rw},${fl_rj},${fl_cw},${fl_cj},$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f5),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f5)"
+    [ "$fl_valid" = "VALID" ] || fl_res=$(printf "N/A%.0s," $(seq 1 13) | sed "s/,$//")
+
+    echo "${TIMESTAMP},${core},${ran},${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${gnb_cpu},${ue_cpu},${ran_th},${core_th},${CURRENT_ROUND},${fl_dl},${fl_ul},${fl_dl_loss},${fl_ul_loss},${fl_valid},${fl_res}" \
         >> "$csv_file"
 }
 
@@ -1041,7 +1257,7 @@ collect_core_logs() {
     local raw_dir=$2
     case $core in
         open5gs)
-            ssh_core "sudo journalctl -u open5gs-amfd -u open5gs-smfd \
+            ssh_core "sudo journalctl -u open5gs-amfd -u open5gs-amfd-srsue -u open5gs-smfd \
                 -u open5gs-upfd -u open5gs-pcfd -u open5gs-bsfd \
                 --since '${COMBO_START}' --no-pager" \
                 > "${raw_dir}/amf.log" 2>&1
@@ -1093,7 +1309,7 @@ run_combination() {
     log "STEP 1: Starting core network ($core)..."
     case $core in
         open5gs)
-            start_open5gs "$raw_dir" || { fail_combination $core $ran "$raw_dir" "Core failed to start"; return 1; }
+            start_open5gs "$raw_dir" "$([ "$ran" = srsran ] && echo "$AMF_SRSUE_CONF")" || { fail_combination $core $ran "$raw_dir" "Core failed to start"; return 1; }
             ;;
         free5gc)
             start_free5gc "$raw_dir" || { fail_combination $core $ran "$raw_dir" "Core failed to start"; return 1; }
@@ -1158,7 +1374,7 @@ run_combination() {
     # 10.45.0.0/16 = Open5GS UE pool, 10.60.0.0/16 = Free5GC UE pool
     ssh_core "sudo sysctl -w net.ipv4.ip_forward=1 > /dev/null 2>&1; \
         for net in 10.45.0.0/16 10.60.0.0/16; do \
-          sudo iptables -t nat -C POSTROUTING -s \$net -o eno1 -j MASQUERADE 2>/dev/null \
+          sudo iptables -t nat -C POSTROUTING -s \$net -o eno1 -j MASQUERADE > /dev/null 2>&1 \
           || sudo iptables -t nat -A POSTROUTING -s \$net -o eno1 -j MASQUERADE; \
         done"
 
@@ -1197,11 +1413,19 @@ run_combination() {
     POWER_END_TIME=$(date +%s)
     stop_thermal_log
     ACTUAL_DURATION=$(( POWER_END_TIME - POWER_START_TIME ))
+    [ $ACTUAL_DURATION -lt 1 ] && ACTUAL_DURATION=1
 
-    RAN_JOULES=$(( (RAPL_RAN_END - RAPL_RAN_START) / 1000000 ))
-    RAN_WATTS=$(( (RAPL_RAN_END - RAPL_RAN_START) / (ACTUAL_DURATION * 1000000) ))
-    CORE_JOULES=$(( (RAPL_CORE_END - RAPL_CORE_START) / 1000000 ))
-    CORE_WATTS=$(( (RAPL_CORE_END - RAPL_CORE_START) / (ACTUAL_DURATION * 1000000) ))
+    # The RAPL counter wraps around (max_energy_range_uj); rapl_delta handles it
+    local e_ran=$(rapl_delta "$RAPL_RAN_START" "$RAPL_RAN_END" "$(read_rapl_max_ran)")
+    local e_core=$(rapl_delta "$RAPL_CORE_START" "$RAPL_CORE_END" "$(read_rapl_max_core)")
+    if [ -n "$e_ran" ]; then
+        RAN_JOULES=$(( e_ran / 1000000 ))
+        RAN_WATTS=$(( e_ran / (ACTUAL_DURATION * 1000000) ))
+    fi
+    if [ -n "$e_core" ]; then
+        CORE_JOULES=$(( e_core / 1000000 ))
+        CORE_WATTS=$(( e_core / (ACTUAL_DURATION * 1000000) ))
+    fi
 
     # Save power logs
     cat > "${raw_dir}/power_ran.txt" << EOF
@@ -1229,6 +1453,9 @@ EOF
     # Wait for CPU collection to finish
     wait $CPU_RAN_PID 2>/dev/null
     wait $CPU_CORE_PID 2>/dev/null
+
+    # ── Fixed-load test (resources for the same job) ──────────────────────────
+    run_fixed_load_test "$raw_dir" "$ran"
 
     # ── STEP 7: Collect core logs ─────────────────────────────────────────────
     log "STEP 7: Collecting logs..."
@@ -1272,7 +1499,7 @@ EOF
             local name="$(basename "$(dirname "$combo_dir")")/$(basename "$combo_dir")"
             echo "── ${name} ──────────────────────────────────────────────────────" >> "$comp_file"
             # Extract key metrics from each report
-            grep -E "^  (Downlink|Uplink|RTT Average|Jitter|Packet Loss|UDP Packet Loss|Average Power|UE IP Assigned    :|Registration Time|PDU Session Setup)" \
+            grep -E "^  (FL |Downlink|Uplink|RTT Average|Jitter|Packet Loss|UDP Packet Loss|Average Power|UE IP Assigned    :|Registration Time|PDU Session Setup)" \
                 "${combo_dir}/report.txt" >> "$comp_file"
             echo "" >> "$comp_file"
         elif [ -f "${combo_dir}/raw/FAILED.txt" ]; then
@@ -1294,6 +1521,16 @@ main() {
         exit 1
     fi
 
+    # Reject unknown names before anything starts (e.g. "ocudu" belongs to 5g_split_ue.sh)
+    if [ $# -ne 0 ]; then
+        if [ $# -ne 2 ] || ! [[ "$1" =~ ^(open5gs|free5gc)$ ]] || ! [[ "$2" =~ ^(oai|srsran|ueransim)$ ]]; then
+            echo "Usage: sudo $0 [core ran]"
+            echo "  core: open5gs | free5gc"
+            echo "  ran : oai | srsran | ueransim"
+            exit 1
+        fi
+    fi
+
     echo ""
     echo -e "${GREEN}╔══════════════════════════════════════════════════════════════╗${NC}"
     echo -e "${GREEN}║           5G TESTBED BENCHMARK SCRIPT                        ║${NC}"
@@ -1310,10 +1547,16 @@ main() {
     exec > >(tee -a "${BASE_DIR}/terminal_session.txt") 2>&1
 
     # Write CSV header
-    echo "timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,gnb_cpu_pct,ue_cpu_pct,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round" \
+    echo "timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,gnb_cpu_pct,ue_cpu_pct,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round,fl_dl_mbps,fl_ul_mbps,fl_dl_loss_pct,fl_ul_loss_pct,fl_valid,fl_gnb_cpu_pct,fl_ue_cpu_pct,fl_gnb_rss_kb,fl_ue_rss_kb,fl_upf_cpu_pct,fl_ran_watts,fl_ran_joules,fl_core_watts,fl_core_joules,fl_ran_machine_cpu_pct,fl_ran_softirq_pct,fl_core_machine_cpu_pct,fl_core_softirq_pct" \
         > "${BASE_DIR}/all_results.csv"
 
     log "Results will be saved to: ${BASE_DIR}"
+    # A previous run that was interrupted can leave the core/RAN running
+    # (e.g. an AMF still holding its ports), so start from a clean state
+    log "Making sure nothing from a previous run is still running..."
+    stop_ran_processes
+    stop_core open5gs
+    stop_core free5gc
     set_performance_mode
 
     for CURRENT_ROUND in $(seq 1 ${ROUNDS}); do
@@ -1338,7 +1581,7 @@ main() {
 
     # Generate comparison and statistics over rounds
     generate_comparison
-    generate_summary "ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms gnb_cpu_pct ue_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events"
+    generate_summary "ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms gnb_cpu_pct ue_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events fl_dl_mbps fl_ul_mbps fl_gnb_cpu_pct fl_ue_cpu_pct fl_gnb_rss_kb fl_ue_rss_kb fl_upf_cpu_pct fl_ran_watts fl_ran_joules fl_core_watts fl_core_joules fl_ran_machine_cpu_pct fl_ran_softirq_pct fl_core_machine_cpu_pct fl_core_softirq_pct"
 
     echo ""
     echo -e "${GREEN}╔══════════════════════════════════════════════════════════════╗${NC}"
