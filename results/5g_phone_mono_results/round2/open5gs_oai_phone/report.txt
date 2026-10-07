@@ -1,0 +1,161 @@
+================================================================================
+                   5G TESTBED - REAL PHONE BENCHMARK REPORT
+================================================================================
+  Generated  : 2026-10-06 16:05:36
+  Report for : OPEN5GS + OAI (B210)
+  Round      : 2 of 3
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+ TEST CONFIGURATION
+────────────────────────────────────────────────────────────────────────────────
+  Core Network      : OPEN5GS
+  gNB               : OAI (B210)
+  Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
+  RAN Machine IP    : 137.158.126.24
+  Core Machine IP   : 137.158.126.21
+  Phone IMSI        : 001020000049862
+  Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
+  Phone attached    : after ~5s (checked every 5s)
+  Ping Count        : 100 packets
+  Iperf Duration    : 30 seconds
+  Test Timestamp    : 2026-10-06 16:05:36
+
+────────────────────────────────────────────────────────────────────────────────
+ REGISTRATION  (from core network logs)
+────────────────────────────────────────────────────────────────────────────────
+  Registration Time       : 203 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 280 ms   (Registration Complete -> UE IP allocated by SMF)
+
+────────────────────────────────────────────────────────────────────────────────
+ LATENCY  (100 ICMP packets, core machine -> phone)
+────────────────────────────────────────────────────────────────────────────────
+  Packets Sent            : 100
+  Packet Loss             : 0 %
+  RTT Minimum             : 6.459 ms
+  RTT Average             : 21.038 ms
+  RTT Maximum             : 39.303 ms
+  RTT Std Deviation       : 4.880 ms
+
+────────────────────────────────────────────────────────────────────────────────
+ JITTER  (UDP iperf3 2 Mbit/s, 30s, core -> phone = downlink)
+────────────────────────────────────────────────────────────────────────────────
+  UDP Throughput          : 2.00 Mbps
+  Jitter                  : 2.800 ms
+  UDP Packet Loss         : 0%
+
+────────────────────────────────────────────────────────────────────────────────
+ THROUGHPUT  (TCP iperf3, 30s, receiver side)
+────────────────────────────────────────────────────────────────────────────────
+  Downlink                : 33.6 Mbps   (core -> phone)
+  Uplink                  : 7.81 Mbps   (phone -> core)
+
+────────────────────────────────────────────────────────────────────────────────
+ RADIO  (averages over the test window, 149 one-second samples)
+────────────────────────────────────────────────────────────────────────────────
+  CQI                     : 14.76   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.73   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 7.60 %
+  UL MCS                  : 5.69
+  UL BLER                 : 5.85 %
+  UL SNR                  : 15.51 dB   (measured by the gNB)
+  DL RSRP                 : -91.28 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
+  UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
+
+────────────────────────────────────────────────────────────────────────────────
+ CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  gNB Process             : avg 54.04 %   peak 99.00 %
+
+  [ Core Machine : 137.158.126.21 ]
+  AMF                     : avg 0.01 %
+  SMF                     : avg 0.03 %
+  UPF                     : avg 3.72 %
+
+────────────────────────────────────────────────────────────────────────────────
+ MEMORY USAGE  (pidstat RSS, during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine ]
+  gNB RSS                 : 668606 KB
+
+  [ Core Machine ]
+  AMF RSS                 : 36352 KB
+  SMF RSS                 : 57109 KB
+  UPF RSS                 : 34048 KB
+
+────────────────────────────────────────────────────────────────────────────────
+ POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  Average Power           : 19 W
+  Total Energy            : 2952 J
+
+  [ Core Machine : 137.158.126.21 ]
+  Average Power           : 3 W
+  Total Energy            : 592 J
+
+────────────────────────────────────────────────────────────────────────────────
+ FIXED-LOAD RESOURCES  (UDP 5 Mbit/s DL + 5 Mbit/s UL at once, 60s)
+────────────────────────────────────────────────────────────────────────────────
+  Same traffic for every combination: compare these values to see which
+  combination needs fewer resources for the same job.
+  Machine CPU = all cores incl. kernel work (e.g. free5gc gtp5g); use it,
+  not the UPF process CPU, to compare the cores. 100 % = whole machine.
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL Radio (avg)          : CQI 15.00, DL MCS 13.82, UL MCS 9.05, UL SNR 15.68 dB, DL BLER 13.34 %, UL BLER 9.22 %
+
+  [ RAN Machine : 137.158.126.24 ]
+  FL gNB CPU              : avg 70.06 %   peak 74.00 %
+  FL gNB RSS              : 669208 KB
+  FL RAN Power            : 21 W   (1283 J)
+  FL Machine CPU (all)    : 6.63 % busy = 0.80 cores   (usr 3.62 %, sys 2.41 %, soft 0.60 %)
+
+  [ Core Machine : 137.158.126.21 ]
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.32 %
+  FL Core Power           : 4 W   (266 J)
+  FL Machine CPU (all)    : 1.58 % busy = 0.19 cores   (usr 0.76 %, sys 0.79 %, soft 0.03 %)
+
+────────────────────────────────────────────────────────────────────────────────
+ TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
+────────────────────────────────────────────────────────────────────────────────
+  CPU Governor            : RAN performance, core powersave
+
+  [ RAN Machine : 137.158.126.24 ]
+  Package Temperature     : avg 43.0 °C   max 51 °C
+  Average CPU Frequency   : 4043 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+  [ Core Machine : 137.158.126.21 ]
+  Package Temperature     : avg 31.6 °C   max 43 °C
+  Average CPU Frequency   : 1689 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+────────────────────────────────────────────────────────────────────────────────
+ EVIDENCE FILES
+────────────────────────────────────────────────────────────────────────────────
+  raw/gnb.log             : gNB terminal output (OCUDU: incl. per-second metrics table)
+  raw/gnb_internal.log    : OCUDU /tmp/gnb.log (warning level) - OCUDU only
+  raw/radio_metrics.csv   : Per-second radio metrics during the tests
+  raw/nrMAC_stats_last.log: Last OAI MAC stats snapshot - OAI only
+  raw/nrRRC_stats_last.log: Last OAI RRC stats snapshot - OAI only
+  raw/amf.log             : Open5GS AMF/SMF/UPF journal logs (Open5GS runs)
+  raw/free5gc.log         : free5gc log (free5gc runs)
+  raw/phone_ip.txt        : Phone IP and any changes during the tests
+  raw/ping_phone.txt      : Full ping output (100 packets)
+  raw/iperf_tcp_dl.txt    : TCP downlink iperf3 full output
+  raw/iperf_tcp_ul.txt    : TCP uplink iperf3 full output
+  raw/iperf_udp.txt       : UDP jitter iperf3 full output
+  raw/FAILED.txt          : Only present if the run failed (reason)
+  raw/cpu_ran.txt         : pidstat output - RAN machine
+  raw/cpu_core.txt        : pidstat output - core machine
+  raw/power_ran.txt       : RAPL power log - RAN machine
+  raw/power_core.txt      : RAPL power log - core machine
+  raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power, radio
+  raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
+  raw/thermal_core.txt    : Temperature/frequency log - core machine
+  ../../terminal_session.txt : Full terminal output of the whole run
+
+================================================================================

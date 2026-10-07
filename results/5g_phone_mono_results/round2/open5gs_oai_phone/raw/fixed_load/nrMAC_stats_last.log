@@ -1,0 +1,9 @@
+UE RNTI 9ee3 CU-UE-ID 1 in-sync PH 53 dB PCMAX 21 dBm, average RSRP -91 (11 meas)
+UE 9ee3: CQI 15, RI 1, PMI (0,0)
+UE 9ee3: UL-RI 1, TPMI 0
+UE 9ee3: dlsch_rounds 80685/9915/50/3, dlsch_errors 0, pucch0_DTX 0 (SNR 19.2-0.8 dB), BLER 0.13479 MCS (1) 13 CCE fail 4785, goodput 5.33 Mbps
+UE 9ee3: ulsch_rounds 53138/4246/116/65, ulsch_errors 24, ulsch_DTX 2, BLER 0.08944 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 16 SNR 14.9 (-0.1) dB CCE fail 0, goodput 4.55 Mbps
+UE 9ee3: LCID 1: TX           1365 RX           6303 bytes
+UE 9ee3: LCID 2: TX            200 RX            864 bytes
+UE 9ee3: LCID 4: TX      179810996 RX       71545172 bytes
+
