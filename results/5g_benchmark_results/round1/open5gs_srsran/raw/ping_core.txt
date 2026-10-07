@@ -1,0 +1,15 @@
+PING 137.158.126.21 (137.158.126.21) from 10.45.0.2 tun_srsue: 56(84) bytes of data.
+64 bytes from 137.158.126.21: icmp_seq=1 ttl=64 time=29.0 ms
+64 bytes from 137.158.126.21: icmp_seq=2 ttl=64 time=27.0 ms
+64 bytes from 137.158.126.21: icmp_seq=3 ttl=64 time=25.9 ms
+64 bytes from 137.158.126.21: icmp_seq=4 ttl=64 time=23.2 ms
+64 bytes from 137.158.126.21: icmp_seq=5 ttl=64 time=19.6 ms
+64 bytes from 137.158.126.21: icmp_seq=6 ttl=64 time=37.4 ms
+64 bytes from 137.158.126.21: icmp_seq=7 ttl=64 time=33.7 ms
+64 bytes from 137.158.126.21: icmp_seq=8 ttl=64 time=30.3 ms
+64 bytes from 137.158.126.21: icmp_seq=9 ttl=64 time=25.4 ms
+64 bytes from 137.158.126.21: icmp_seq=10 ttl=64 time=23.6 ms
+
+--- 137.158.126.21 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 4500ms
+rtt min/avg/max/mdev = 19.597/27.492/37.355/4.996 ms
