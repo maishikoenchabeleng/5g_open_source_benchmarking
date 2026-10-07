@@ -1,0 +1,9 @@
+UE RNTI 4e83 CU-UE-ID 1 in-sync PH 57 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 4e83: CQI 15, RI 1, PMI (0,0)
+UE 4e83: UL-RI 1, TPMI 0
+UE 4e83: dlsch_rounds 48012/5244/80/6, dlsch_errors 2, pucch0_DTX 8 (SNR 19.1-0.9 dB), BLER 0.13422 MCS (1) 13 CCE fail 2320, goodput 0.56 Mbps
+UE 4e83: ulsch_rounds 26208/1923/43/10, ulsch_errors 2, ulsch_DTX 5, BLER 0.13264 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 39 SNR 14.6 (-0.4) dB CCE fail 0, goodput 7.10 Mbps
+UE 4e83: LCID 1: TX           1172 RX           4946 bytes
+UE 4e83: LCID 2: TX              0 RX              0 bytes
+UE 4e83: LCID 4: TX      143049478 RX       31813694 bytes
+

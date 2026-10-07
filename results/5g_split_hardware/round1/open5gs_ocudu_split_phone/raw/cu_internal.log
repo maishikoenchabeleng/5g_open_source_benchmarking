@@ -1,0 +1,21 @@
+2026-10-06T12:40:38.784160 [CU      ] [I] Built in Release mode using commit 45882431f3 on branch dev
+2026-10-06T12:40:39.376930 [CU      ] [W] CPU0 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376939 [CU      ] [W] CPU1 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376945 [CU      ] [W] CPU2 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376951 [CU      ] [W] CPU3 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376960 [CU      ] [W] CPU4 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376966 [CU      ] [W] CPU5 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376972 [CU      ] [W] CPU6 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376978 [CU      ] [W] CPU7 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376984 [CU      ] [W] CPU8 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376990 [CU      ] [W] CPU9 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.376996 [CU      ] [W] CPU10 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.377003 [CU      ] [W] CPU11 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "ocudu_performance" script
+2026-10-06T12:40:39.377009 [CU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-06T12:40:39.451137 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-06T12:40:39.451145 [APP     ] [E] Couldn't register stdin handler
+2026-10-06T12:40:39.455308 [CU      ] [I] ==== CU started ===
+2026-10-06T12:45:15.636726 [CU-CP   ] [W] No DU processor was able to handle the paging message
+2026-10-06T12:45:17.638816 [CU-CP   ] [W] No DU processor was able to handle the paging message
+2026-10-06T12:45:18.531293 [CU      ] [I] Stopping...
+(END)
