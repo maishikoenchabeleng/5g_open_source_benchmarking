@@ -1,0 +1,7 @@
+2026-10-06T13:48:25.372728 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-06T13:48:25.959946 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-06T13:48:28.136202 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-06T13:48:28.136213 [APP     ] [E] Couldn't register stdin handler
+2026-10-06T13:48:28.172868 [GNB     ] [I] ==== gNB started ===
+2026-10-06T13:52:32.720414 [GNB     ] [I] Stopping...
+(END)

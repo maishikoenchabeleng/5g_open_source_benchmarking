@@ -1,0 +1,9 @@
+UE RNTI 3bf6 CU-UE-ID 1 in-sync PH 55 dB PCMAX 21 dBm, average RSRP -91 (1 meas)
+UE 3bf6: CQI 14, RI 1, PMI (0,0)
+UE 3bf6: UL-RI 1, TPMI 0
+UE 3bf6: dlsch_rounds 48572/5471/103/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.5+0.5 dB), BLER 0.10364 MCS (1) 17 CCE fail 2536, goodput 0.55 Mbps
+UE 3bf6: ulsch_rounds 25906/1752/26/4, ulsch_errors 0, ulsch_DTX 2, BLER 0.15941 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.9 (-0.1) dB CCE fail 0, goodput 6.78 Mbps
+UE 3bf6: LCID 1: TX           1197 RX           5106 bytes
+UE 3bf6: LCID 2: TX              0 RX              0 bytes
+UE 3bf6: LCID 4: TX      144124592 RX       29714170 bytes
+

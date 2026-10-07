@@ -1,0 +1,9 @@
+UE RNTI dc02 CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (1 meas)
+UE dc02: CQI 14, RI 1, PMI (0,0)
+UE dc02: UL-RI 1, TPMI 0
+UE dc02: dlsch_rounds 80306/7815/41/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.09735 MCS (1) 20 CCE fail 5545, goodput 5.26 Mbps
+UE dc02: ulsch_rounds 53153/3951/38/11, ulsch_errors 0, ulsch_DTX 1, BLER 0.16096 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.91 Mbps
+UE dc02: LCID 1: TX           1322 RX           6033 bytes
+UE dc02: LCID 2: TX            125 RX            545 bytes
+UE dc02: LCID 4: TX      180145599 RX       69178500 bytes
+
