@@ -1,0 +1,9 @@
+UE RNTI b040 CU-UE-ID 1 in-sync PH 53 dB PCMAX 21 dBm, average RSRP -90 (14 meas)
+UE b040: CQI 15, RI 1, PMI (0,0)
+UE b040: UL-RI 1, TPMI 0
+UE b040: dlsch_rounds 48430/5368/47/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.9+1.9 dB), BLER 0.11088 MCS (1) 14 CCE fail 2574, goodput 0.57 Mbps
+UE b040: ulsch_rounds 26619/1733/42/24, ulsch_errors 5, ulsch_DTX 0, BLER 0.09320 MCS (1) 5 (Qm 4 deltaMCS 0 dB) NPRB 39 SNR 16.5 (+1.5) dB CCE fail 0, goodput 4.38 Mbps
+UE b040: LCID 1: TX           1102 RX           4947 bytes
+UE b040: LCID 2: TX            125 RX            541 bytes
+UE b040: LCID 4: TX      145635652 RX       28133218 bytes
+

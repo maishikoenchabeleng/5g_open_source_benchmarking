@@ -1,0 +1,11 @@
+UE 0 CU UE ID 1 DU UE ID 45120 RNTI b040 random identity 6c73bebc69000000:
+    last RRC activity: 157 seconds ago
+    PDU session ID 2 status established
+    associated DU:  DU assoc ID 557
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB: RSRP -89 dBm RSRQ -10.5 dB SINR 23.5 dB
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-Eurecom-DU) assoc_id 557: 1 cell
+  [1] nrCellID 12345678, PCI 0, Mode TDD, SSB ARFCN 640704
+      TDD: band 78 ARFCN 639996 SCS 30 (kHz) PRB 51

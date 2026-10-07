@@ -1,0 +1,9 @@
+UE RNTI 2e9d CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (7 meas)
+UE 2e9d: CQI 14, RI 1, PMI (0,0)
+UE 2e9d: UL-RI 1, TPMI 0
+UE 2e9d: dlsch_rounds 79836/8253/104/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.3+1.3 dB), BLER 0.11786 MCS (1) 20 CCE fail 4807, goodput 5.25 Mbps
+UE 2e9d: ulsch_rounds 55029/4150/40/6, ulsch_errors 4, ulsch_DTX 1, BLER 0.09084 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 39 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.06 Mbps
+UE 2e9d: LCID 1: TX           1352 RX           6304 bytes
+UE 2e9d: LCID 2: TX              0 RX              0 bytes
+UE 2e9d: LCID 4: TX      173001464 RX       67747900 bytes
+
