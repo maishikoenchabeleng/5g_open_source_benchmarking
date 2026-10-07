@@ -1,0 +1,9 @@
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (11 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 46045/5008/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.9+0.9 dB), BLER 0.14308 MCS (1) 16 CCE fail 2236, goodput 0.81 Mbps
+UE 206e: ulsch_rounds 25463/1769/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09042 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.9 (+0.9) dB CCE fail 0, goodput 7.55 Mbps
+UE 206e: LCID 1: TX           1188 RX           5016 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134125795 RX       29384011 bytes
+

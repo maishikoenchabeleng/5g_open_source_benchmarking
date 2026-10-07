@@ -1,0 +1,2498 @@
+CMDLINE: "./nr-softmodem" "-O" "/home/administrator/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/my_du_phone.conf" "-E" 
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[OPT]    OPT disabled
+[0m[HW]     Version: Branch: develop Abrev. Hash: 31eb466a7d Date: Fri Jun 19 16:45:41 2026 +0200
+[0m[GNB_APP] Initialized RAN Context: RC.nb_nr_inst = 1, RC.nb_nr_macrlc_inst = 1, RC.nb_nr_L1_inst = 1, RC.nb_RU = 1, RC.nb_nr_CC[0] = 1
+[0m[NR_PHY] Initializing gNB RAN context: RC.nb_nr_L1_inst = 1 
+[0m[NR_PHY] Registered with MAC interface module (0x61d0c88cffe0)
+[0m[NR_PHY] Initializing NR L1: RC.nb_nr_L1_inst = 1
+[0m[NR_PHY] thread cores for L1_RX -1 L1_TX -1
+[0m[NR_PHY] TX_AMP = 519 (-36 dBFS)
+[0m[PHY]    No prs_config configuration found..!!
+[0m[GNB_APP] pdsch_AntennaPorts N1 1 N2 1 XP 1 pusch_AntennaPorts 1
+[0m[GNB_APP] minTXRXTIME 2
+[0m[GNB_APP] CSI-RS 1, SRS periodic, report type 0 (ssb_rsrp), 256 QAM may be on, delta_MCS off, maxMIMO_Layers -1, HARQ feedback enabled, num DLHARQ:16, num ULHARQ:16
+[0m[GNB_APP] No RedCap configuration found
+[0m[GNB_APP] No PTRS configuration found
+[0m[GNB_APP] sr_ProhibitTimer 0, sr_TransMax 64, sr_ProhibitTimer_v1700 0, t300 400, t301 400, t310 2000, n310 10, t311 3000, n311 1, t319 400
+[0m[NR_MAC] Candidates per PDCCH aggregation level on UESS: L1: 0, L2: 2, L4: 0, L8: 0, L16: 0
+[0m[RRC]    Read in ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 640704, DLBand 78, ABSFREQPOINTA 639996, DLBW 51,RACH_TargetReceivedPower -96
+[0m[NR_MAC] Computing frequency (nrarfcn 640704 => 3610560 KHz, NR band 78
+[0m[RRC]    absoluteFrequencySSB 640704 corresponds to 3610560000 Hz
+[0m[NR_MAC] Computing frequency (nrarfcn 639996 => 3599940 KHz, NR band 78
+[0m[NR_MAC] PUSCH Target 150 RSSI thresh 0 Failure 10, PUCCH Target 200 RSSI thresh 0 Failure 10
+[0m[UTIL]   threadCreate() for MAC_STATS: creating thread with affinity ffffffff, priority 2
+[0m[NR_PHY] Copying 0 blacklisted PRB to L1 context
+[0m[NR_MAC] Computing frequency (nrarfcn 639996 => 3599940 KHz, NR band 78
+[0m[NR_MAC] Computing frequency (nrarfcn 639996 => 3599940 KHz, NR band 78
+[0m[NR_MAC] Set TX antenna number to 1, Set RX antenna number to 1 (num ssb 1: 80000000,0)
+[0m[NR_MAC] TDD period index = 6, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (5.000000 ms) and Pattern2 (0.000000 ms): Total = 5.000000 ms
+[0m[NR_MAC] Set TDD configuration period to: 8 DL slots, 3 UL slots, 10 slots per period (NR_TDD_UL_DL_Pattern is 7 DL slots, 2 UL slots, 6 DL symbols, 4 UL symbols)
+[0m[NR_MAC] Configured 1 TDD patterns (total slots: pattern1 = 10, pattern2 = 0)
+[0m[NR_PHY] Set TDD Period Configuration: 2 periods per frame, 20 slots to be configured (8 DL, 3 UL)
+[0m[NR_PHY] TDD period configuration: slot 0 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 1 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 2 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 3 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 4 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 5 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 6 is DOWNLINK
+[0m[NR_PHY] TDD period configuration: slot 7 is FLEXIBLE: DDDDDDFFFFUUUU
+[0m[NR_PHY] TDD period configuration: slot 8 is UPLINK
+[0m[NR_PHY] TDD period configuration: slot 9 is UPLINK
+[0m[NR_MAC] Command line parameters for OAI UE: -C 3609120000 -r 51 --numerology 1 --band 78 --ssb 234 -E
+[0m[PHY]    DL frequency 3609120000 Hz, UL frequency 3609120000 Hz: uldl offset 0 Hz
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 51, Ncp 0
+[0m[PHY]    Init: N_RB_DL 51, first_carrier_offset 462, nb_prefix_samples 54,nb_prefix_samples0 66, ofdm_symbol_size 768
+[0m[NR_MAC] TDD period index = 6, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (5.000000 ms) and Pattern2 (0.000000 ms): Total = 5.000000 ms
+[0m[NR_MAC] TDA index 0: start 0 length 13 k2 2
+[0m[NR_MAC] TDA index 1: start 0 length 12 k2 2
+[0m[NR_MAC] TDA index 2: start 10 length 3 k2 2
+[0m[NR_RRC] SIB1 freq: offsetToPointA 38
+[0m[GNB_APP] F1AP: gNB idx 0 gNB_DU_id 3584, gNB_DU_name gNB-Eurecom-DU, TAC 1 MCC/MNC/length 1/2/2 cellID 12345678
+[0m[GNB_APP] ngran_DU: Configuring Cell 0 for TDD
+[0m[GNB_APP] Configured DU: cell ID 12345678, PCI 0
+[0m[GNB_APP] gNB 0: neighbour_list has 0 serving cell(s)
+[0m[GNB_APP] SDAP layer is enabled
+[0m[GNB_APP] gNB 0 SIB2 config: q_Hyst=0 dB, cellReselPrio=0, q_RxLevMin=-56 dBm, t_ReselectionNR=1 s
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_DU_F1: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for time source realtime: creating thread with affinity ffffffff, priority 2
+[0m[F1AP]   Starting F1AP at DU
+[0m[F1AP]   F1-C DU IPaddr 137.158.126.24, connect to F1-C CU 137.158.126.21, binding GTP to 137.158.126.24
+[0m[34m[F1AP]   DU Task Received F1AP_DU_REGISTER_REQ for instance 0: sending SCTP messages via assoc_id 0
+[0m[UTIL]   time manager configuration: [time source: reatime] [mode: standalone] [server IP: 127.0.0.1} [server port: 7374] (server IP/port not used)
+[0m[34m[F1AP]   Local IPv4 Address: 137.158.126.24, Remote IPv4 Address: 137.158.126.21
+[0m[GTPU]   Initializing UDP for local address 137.158.126.24 with port 2152
+[0m[GTPU]   Created gtpu instance id: 80
+[0m[UTIL]   threadCreate() for GTPrx_80: creating thread with affinity ffffffff, priority 50
+[0m[34m[F1AP]   DU Task Received SCTP_NEW_ASSOCIATION_RESP for instance 0: sending SCTP messages via assoc_id 0
+[0m[34m[F1AP]   DU_send_F1_SETUP_REQUEST
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU_handle_F1_SETUP_RESPONSE
+[0m[34m[F1AP]   Sending F1AP_SETUP_RESP ITTI message
+[0m[MAC]    received F1 Setup Response from CU gNB-Eurecom-CU
+[0m[MAC]    CU uses RRC version 17.3.0
+[0m[MAC]    Clearing the DU's UE states before, if any.
+[0m[34m[F1AP]   DU Task Received F1AP_GNB_DU_CONFIGURATION_UPDATE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[MAC]    received gNB-DU configuration update acknowledge
+[0m[PHY]    RU clock source set as internal
+[0m[PHY]    number of L1 instances 1, number of RU 1, number of CPU cores 12
+[0m[PHY]    Initialized RU proc 0 (,synch_to_ext_device),
+[0m[PHY]    RU thread-pool core string -1,-1 (size 2)
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for ru_thread: creating thread with affinity ffffffff, priority 97
+[0m[PHY]    Starting RU 0 (,synch_to_ext_device) on cpu 7
+[0m[PHY]    Initializing frame parms for mu 1, N_RB 51, Ncp 0
+[0m[PHY]    Init: N_RB_DL 51, first_carrier_offset 462, nb_prefix_samples 54,nb_prefix_samples0 66, ofdm_symbol_size 768
+[0m[PHY]    fp->scs=30000
+[0m[PHY]    fp->ofdm_symbol_size=768
+[0m[PHY]    fp->nb_prefix_samples0=66
+[0m[PHY]    fp->nb_prefix_samples=54
+[0m[PHY]    fp->slots_per_subframe=2
+[0m[PHY]    fp->samples_per_subframe_wCP=21504
+[0m[PHY]    fp->samples_per_frame_wCP=215040
+[0m[PHY]    fp->samples_per_subframe=23040
+[0m[PHY]    fp->samples_per_frame=230400
+[0m[PHY]    fp->dl_CarrierFreq=3609120000
+[0m[PHY]    fp->ul_CarrierFreq=3609120000
+[0m[PHY]    fp->Nid_cell=0
+[0m[PHY]    fp->first_carrier_offset=462
+[0m[PHY]    fp->ssb_start_subcarrier=0
+[0m[PHY]    fp->Ncp=0
+[0m[PHY]    fp->N_RB_DL=51
+[0m[PHY]    fp->numerology_index=1
+[0m[PHY]    fp->ofdm_offset_divisor=8
+[0m[PHY]    fp->threequarter_fs=1
+[0m[PHY]    fp->sl_CarrierFreq=0
+[0m[PHY]    fp->N_RB_SL=0
+[0m[NR_PHY] nb_tx_streams 1, nb_rx_streams 1
+[0m[PHY]    Setting RF config for N_RB 51, NB_RX 1, NB_TX 1
+[0m[PHY]    tune_offset 0 Hz, sample_rate 23040000 Hz
+[0m[PHY]    Channel 0: setting tx_gain offset 0, tx_freq 3609120000 Hz
+[0m[PHY]    Channel 0: setting rx_gain offset 114, rx_freq 3609120000 Hz
+[0m[HW]     openair0_cfg[0].sdr_addrs == '(null)'
+[0m[HW]     openair0_cfg[0].clock_source == '0' (internal = 0, external = 1)
+[0m[HW]     UHD version 4.8.0.HEAD-0-g308126a4 (4.8.0)
+[0m[INFO] [UHD] linux; GNU C++ version 11.4.0; Boost_107400; UHD_4.8.0.HEAD-0-g308126a4
+[HW]     Found USRP b200
+[0m[INFO] [B200] Detected Device: B210
+[INFO] [B200] Operating over USB 3.
+[INFO] [B200] Initialize CODEC control...
+[INFO] [B200] Initialize Radio control...
+[INFO] [B200] Performing register loopback test... 
+[INFO] [B200] Register loopback test passed
+[INFO] [B200] Performing register loopback test... 
+[INFO] [B200] Register loopback test passed
+[INFO] [B200] Asking for clock rate 30.720000 MHz... 
+[INFO] [B200] Actually got clock rate 30.720000 MHz.
+[CONFIG] function config_libconfig_init returned 0
+-- Using calibration table: calib_table_b210_38
+[INFO] [B200] Asking for clock rate 23.040000 MHz... 
+[INFO] [B200] Actually got clock rate 23.040000 MHz.
+[HW]     cal 0: freq 3500000000.000000, offset 44.000000, diff 109120000.000000
+[0m[HW]     cal 1: freq 2660000000.000000, offset 49.800000, diff 949120000.000000
+[0m[HW]     cal 2: freq 2300000000.000000, offset 51.000000, diff 1309120000.000000
+[0m[HW]     cal 3: freq 1880000000.000000, offset 53.000000, diff 1729120000.000000
+[0m[HW]     cal 4: freq 816000000.000000, offset 57.000000, diff 2793120000.000000
+[0m[HW]     RX Gain 0 114.000000 (45.250000) => 68.750000 (max 76.000000)
+[0m[HW]     USRP TX_GAIN:89.75 gain_range:89.75 tx_gain:0.00
+[0m[HW]     Setting clock source to internal
+[0m[HW]     Setting time source to internal
+[0m[HW]     Actual master clock: 23.040000MHz...
+[0m[HW]     Actual clock source internal...
+[0m[HW]     Actual time source internal...
+[0m[HW]     setting rx channel 0
+[0m[HW]     RF board max packet size 1916, size for 100µs jitter 2304 
+[0m[HW]     rx_max_num_samps 1916
+[0m[HW]     RX Channel 0
+[0m[HW]       Actual RX sample rate: 23.040000MSps...
+[0m[HW]       Actual RX frequency: 3.609120GHz...
+[0m[HW]       Actual RX gain: 68.000000...
+[0m[HW]       Actual RX bandwidth: 20.000000M...
+[0m[HW]       Actual RX antenna: RX2...
+[0m[HW]     TX Channel 0
+[0m[HW]       Actual TX sample rate: 23.040000MSps...
+[0m[HW]       Actual TX frequency: 3.609120GHz...
+[0m[HW]       Actual TX gain: 89.750000...
+[0m[HW]       Actual TX bandwidth: 20.000000M...
+[0m[HW]       Actual TX antenna: TX/RX...
+[0m[HW]       Actual TX packet size: 1916
+[0mUsing Device: Single USRP:
+  Device: B-Series Device
+  Mboard 0: B210
+  RX Channel: 0
+    RX DSP: 0
+    RX Dboard: A
+    RX Subdev: FE-RX2
+  RX Channel: 1
+    RX DSP: 1
+    RX Dboard: A
+    RX Subdev: FE-RX1
+  TX Channel: 0
+    TX DSP: 0
+    TX Dboard: A
+    TX Subdev: FE-TX2
+  TX Channel: 1
+    TX DSP: 1
+    TX Dboard: A
+    TX Subdev: FE-TX1
+
+[HW]     Device timestamp: 1.804282...
+[0m[HW]     [RAU] has loaded USRP B200 device.
+[0m[PHY]    RU 0 Setting N_TA_offset to 300 samples (UL Freq 3599940, N_RB 51, mu 1)
+[0m[PHY]    Signaling main thread that RU 0 is ready, sl_ahead 6
+[0m[PHY]    L1 configured without analog beamforming
+[0m[PHY]    Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_rx_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_tx_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_stats: creating thread with affinity ffffffff, priority 1
+[0m[PHY]    got sync (L1_stats_thread)
+[0mTYPE <CTRL-C> TO TERMINATE
+[PHY]    got sync (ru_thread)
+[0m[HW]     current pps at 1.000000, starting streaming at 2.000000
+[0m[PHY]    RU 0 rf device ready
+[0m[PHY]    RU 0 RF started cpu_meas_enabled 0
+[0m[32m[NR_PHY] Aligning to the slot boundary 11513
+[0m[32m[PHY]    Command line parameters for OAI UE: -C 3609120000 -r 51 --numerology 1 --ssb 234 -E
+[0m[NR_MAC] Frame.Slot 384.0
+
+[0m[NR_MAC] Frame.Slot 512.0
+
+[0m[NR_MAC] Frame.Slot 640.0
+
+[0m[32m[NR_PHY] [RAPROC] 653.19 Initiating RA procedure with preamble 57, energy 51.0 dB (I0 123, thres 120), delay 10 start symbol 0 freq index 0
+[0m[32m[NR_MAC] 653.19 UE RA-RNTI 010b TC-RNTI 206e: initiating RA procedure
+[0m[NR_MAC] UE 206e: Sync beam index 0
+[0m[NR_MAC] UE 206e: Msg3 scheduled at 654.17 (654.12 TDA 2) start 0 RBs 8
+[0m[32m[NR_MAC] UE 206e: 654.12 Generating RA-Msg2 DCI, RA RNTI 0x10b, state 1, preamble_index(RAPID) 57, timing_offset = 10 (estimated distance 390.6 [m])
+[0m[32m[NR_MAC]  654.17 PUSCH with TC_RNTI 0x206e received correctly
+[0m[MAC]    [RAPROC] Received SDU for CCCH length 6 for UE 206e
+[0m[RLC]    Activated srb0 for UE 8302
+[0m[NR_RRC] SRS configured with 1 ports
+[0m[RLC]    Added srb 1 to UE 8302
+[0m[NR_MAC] Activating scheduling Msg4 for TC_RNTI 0x206e (state WAIT_Msg3)
+[0m[34m[F1AP]   DU Task Received F1AP_INITIAL_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[NR_MAC] UE 206e Generate Msg4: feedback at  655. 8, payload 225 bytes, next state nrRA_WAIT_Msg4_MsgB_ACK
+[0m[32m[NR_MAC]  655. 8 UE 206e: Received Ack of Msg4. CBRA procedure succeeded (UE Connected)
+[0m[NR_MAC] Adding new UE context with RNTI 0x206e
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 92 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 34 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 37 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 82 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 8 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 1004 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 19 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 93 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[RLC]    Added srb 2 to UE 8302
+[0m[RLC]    Added drb 1 to UE 8302
+[0m[RLC]    Added DRB to UE 8302
+[0m[GTPU]   Incoming DRB 1 / PDU Session 1 - UL TEID 906343270
+[0m[GTPU]   [80] UE ID 8302: Create tunnel TEID incoming 0xaec88ec8 outgoing 0x3605b366 to remote IPv4 137.158.126.21, IPv6 ::, port 2153
+[0m[NR_RRC] SRS configured with 1 ports
+[0m[34m[F1AP]   DU Task Received F1AP_UE_CONTEXT_SETUP_RESP for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[93m[NR_MAC] Received ACK for RRCReconfiguration, but nothing to apply!
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 8 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received SCTP_DATA_IND for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   Calling handler with instance 0
+[0m[NR_MAC] DU received confirmation of successful RRC Reconfiguration
+[0m[34m[F1AP]   DU Task Received F1AP_UE_CONTEXT_MODIFICATION_RESP for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -93 (13 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 157/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 22.1+2.1 dB), BLER 0.03874 MCS (1) 3 CCE fail 13, goodput 0.25 Mbps
+UE 206e: ulsch_rounds 189/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.05514 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.5 (+1.5) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX            717 RX           1518 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          27573 RX          16184 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 177/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.02288 MCS (1) 6 CCE fail 15, goodput 0.05 Mbps
+UE 206e: ulsch_rounds 225/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.01923 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.9 (+0.9) dB CCE fail 0, goodput 0.02 Mbps
+UE 206e: LCID 1: TX            720 RX           1544 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 180/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.01668 MCS (1) 3 CCE fail 16, goodput 0.01 Mbps
+UE 206e: ulsch_rounds 241/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00543 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 31 SNR 15.2 (+0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            726 RX           1588 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 182/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.01351 MCS (1) 1 CCE fail 17, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 256/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00138 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.8 (-0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            729 RX           1610 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 185/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.00985 MCS (1) 0 CCE fail 19, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 270/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00039 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            732 RX           1632 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 187/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.00798 MCS (1) 0 CCE fail 20, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 285/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00010 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.6 (-0.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            735 RX           1654 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 190/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.00581 MCS (1) 0 CCE fail 21, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 301/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00003 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 31 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            741 RX           1698 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 193/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.5+0.5 dB), BLER 0.00424 MCS (1) 0 CCE fail 23, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 316/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00001 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.3 (-0.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            744 RX           1720 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 195/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.3+0.3 dB), BLER 0.00343 MCS (1) 0 CCE fail 24, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 331/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.0 (-1.0) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            747 RX           1742 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 197/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.2+0.2 dB), BLER 0.00278 MCS (1) 0 CCE fail 25, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 345/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.8 (-0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            750 RX           1764 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31009 RX          17316 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 202/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.00182 MCS (1) 0 CCE fail 26, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 365/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.2 (+0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            756 RX           1808 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31103 RX          17415 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 212/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.7-0.3 dB), BLER 0.00097 MCS (1) 0 CCE fail 28, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 387/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 15.0 (+0.0) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            759 RX           1830 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31390 RX          17722 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 218/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.7-0.3 dB), BLER 0.00064 MCS (1) 0 CCE fail 29, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 408/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            762 RX           1852 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31578 RX          17930 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 227/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.6-0.4 dB), BLER 0.00038 MCS (1) 0 CCE fail 30, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 432/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.2 (+0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            765 RX           1874 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          31865 RX          18242 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 235/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.2-0.8 dB), BLER 0.00022 MCS (1) 0 CCE fail 32, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 453/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.6 (-0.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            771 RX           1918 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          32053 RX          18445 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 244/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.7-0.3 dB), BLER 0.00015 MCS (1) 0 CCE fail 33, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 476/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            774 RX           1940 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          32340 RX          18752 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 250/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.4-0.6 dB), BLER 0.00011 MCS (1) 0 CCE fail 34, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 494/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            777 RX           1962 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          32528 RX          18950 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 258/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.0-1.0 dB), BLER 0.00007 MCS (1) 0 CCE fail 38, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 517/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.3 (-0.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            780 RX           1984 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          32810 RX          19257 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 53 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 268/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.7-0.3 dB), BLER 0.00004 MCS (1) 0 CCE fail 40, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 542/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 14.2 (-0.8) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            786 RX           2028 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          33092 RX          19559 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 275/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.5-0.5 dB), BLER 0.00003 MCS (1) 0 CCE fail 41, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 562/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.2 (-0.8) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            789 RX           2058 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          33285 RX          19762 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 319/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.1-0.9 dB), BLER 0.00001 MCS (1) 2 CCE fail 44, goodput 0.02 Mbps
+UE 206e: ulsch_rounds 617/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 11 SNR 14.5 (-0.5) dB CCE fail 0, goodput 0.03 Mbps
+UE 206e: LCID 1: TX            792 RX           2084 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          38201 RX          24575 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 326/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.3-0.7 dB), BLER 0.00001 MCS (1) 0 CCE fail 46, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 637/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            795 RX           2106 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          38389 RX          24778 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 335/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.0-0.0 dB), BLER 0.00001 MCS (1) 0 CCE fail 47, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 663/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            801 RX           2150 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          38671 RX          25090 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 347/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.00000 MCS (1) 0 CCE fail 48, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 692/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.01 Mbps
+UE 206e: LCID 1: TX            804 RX           2172 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          39461 RX          25969 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 360/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 0 CCE fail 49, goodput 0.01 Mbps
+UE 206e: ulsch_rounds 721/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.6 (+1.6) dB CCE fail 0, goodput 0.01 Mbps
+UE 206e: LCID 1: TX            807 RX           2194 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          40339 RX          26930 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 368/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.00000 MCS (1) 0 CCE fail 52, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 739/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.9 (+1.9) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            810 RX           2216 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          40532 RX          27133 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 377/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.5+1.5 dB), BLER 0.00000 MCS (1) 0 CCE fail 54, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 761/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.9 (+1.9) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            816 RX           2260 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          40814 RX          27430 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 386/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.00000 MCS (1) 0 CCE fail 55, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 784/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 15.0 (+0.0) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            819 RX           2282 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          41101 RX          27732 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 392/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.00000 MCS (1) 0 CCE fail 56, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 804/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            822 RX           2304 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          41289 RX          27940 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 402/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.0+0.0 dB), BLER 0.00000 MCS (1) 0 CCE fail 58, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 826/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 14.3 (-0.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            825 RX           2326 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          41576 RX          28247 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -87 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 409/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.9-0.1 dB), BLER 0.00000 MCS (1) 0 CCE fail 59, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 848/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            831 RX           2370 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          41764 RX          28450 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 418/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.00000 MCS (1) 0 CCE fail 60, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 869/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.5 (+1.5) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            834 RX           2392 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          42051 RX          28747 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 425/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.3+0.3 dB), BLER 0.00000 MCS (1) 0 CCE fail 62, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 888/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            837 RX           2414 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          42239 RX          28950 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 434/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.00000 MCS (1) 0 CCE fail 65, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 911/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            840 RX           2444 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          42526 RX          29252 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 441/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 0 CCE fail 66, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 932/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.8 (+1.8) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            846 RX           2488 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          42714 RX          29455 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 450/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 0 CCE fail 67, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 953/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.7 (+1.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            849 RX           2510 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          43001 RX          29752 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 459/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 0 CCE fail 69, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 976/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 16.8 (+1.8) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            852 RX           2532 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          43283 RX          30054 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 466/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 0 CCE fail 70, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 997/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.6 (+1.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            855 RX           2554 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          43476 RX          30262 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 475/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.00000 MCS (1) 0 CCE fail 71, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1020/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 16.7 (+1.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            861 RX           2598 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          43758 RX          30569 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 483/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.00000 MCS (1) 0 CCE fail 73, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1039/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.7 (+0.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            864 RX           2620 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          43951 RX          30767 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 491/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.00000 MCS (1) 0 CCE fail 74, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1061/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            867 RX           2642 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          44233 RX          31069 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 498/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.3+1.3 dB), BLER 0.00000 MCS (1) 0 CCE fail 75, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1082/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 16 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            873 RX           2694 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          44421 RX          31267 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 506/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.4+1.4 dB), BLER 0.00000 MCS (1) 0 CCE fail 78, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1103/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.3 (+1.3) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            876 RX           2716 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          44703 RX          31564 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (11 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 513/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.00000 MCS (1) 0 CCE fail 80, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1121/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.3 (-0.7) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            879 RX           2738 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          44891 RX          31762 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 521/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.2+0.2 dB), BLER 0.00000 MCS (1) 0 CCE fail 81, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1145/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.2 (-0.8) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            882 RX           2760 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          45173 RX          32074 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 530/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.6-0.4 dB), BLER 0.00000 MCS (1) 0 CCE fail 82, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1169/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 0.01 Mbps
+UE 206e: LCID 1: TX            888 RX           2804 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          45455 RX          32376 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 537/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.3-0.7 dB), BLER 0.00000 MCS (1) 0 CCE fail 84, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1189/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            891 RX           2826 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          45643 RX          32584 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 546/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.0-1.0 dB), BLER 0.00000 MCS (1) 0 CCE fail 85, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1211/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 24 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            894 RX           2848 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          45930 RX          32886 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 558/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.5-0.5 dB), BLER 0.00000 MCS (1) 0 CCE fail 86, goodput 0.00 Mbps
+UE 206e: ulsch_rounds 1237/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.1 (+0.1) dB CCE fail 0, goodput 0.01 Mbps
+UE 206e: LCID 1: TX            897 RX           2870 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          46720 RX          33750 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 695/0/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00000 MCS (1) 2 CCE fail 94, goodput 0.50 Mbps
+UE 206e: ulsch_rounds 1284/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00000 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.01 Mbps
+UE 206e: LCID 1: TX            903 RX           2914 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX          90031 RX          34524 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 1029/7/0/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.00783 MCS (1) 15 CCE fail 118, goodput 1.91 Mbps
+UE 206e: ulsch_rounds 1410/3/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.02222 MCS (1) 16 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            906 RX           2936 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX         420101 RX          34716 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 1297/28/1/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.06803 MCS (1) 19 CCE fail 134, goodput 2.11 Mbps
+UE 206e: ulsch_rounds 1531/17/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.08048 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.5 (+1.5) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            909 RX           2958 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX         748611 RX          34908 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 1566/54/1/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.8-0.2 dB), BLER 0.09961 MCS (1) 19 CCE fail 156, goodput 2.13 Mbps
+UE 206e: ulsch_rounds 1643/36/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.29100 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.4 (+0.4) dB CCE fail 0, goodput 0.05 Mbps
+UE 206e: LCID 1: TX            912 RX           2980 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        1078356 RX          35100 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 1834/64/1/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.8-0.2 dB), BLER 0.05268 MCS (1) 19 CCE fail 178, goodput 2.14 Mbps
+UE 206e: ulsch_rounds 1771/37/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.07711 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 15.0 (-0.0) dB CCE fail 0, goodput 0.03 Mbps
+UE 206e: LCID 1: TX            918 RX           3024 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        1408101 RX          35292 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 2103/91/2/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.10485 MCS (1) 20 CCE fail 196, goodput 2.11 Mbps
+UE 206e: ulsch_rounds 1892/44/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.13860 MCS (1) 15 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            921 RX           3046 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        1736611 RX          35484 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 2370/127/2/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.09900 MCS (1) 18 CCE fail 215, goodput 2.16 Mbps
+UE 206e: ulsch_rounds 2013/55/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.07965 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 15.0 (+0.0) dB CCE fail 0, goodput 0.03 Mbps
+UE 206e: LCID 1: TX            924 RX           3068 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        2066356 RX          35676 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 2639/144/3/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.07277 MCS (1) 18 CCE fail 240, goodput 2.19 Mbps
+UE 206e: ulsch_rounds 2138/59/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.05999 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.3 (+0.3) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            927 RX           3090 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        2396101 RX          35868 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 2907/156/3/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.4+1.4 dB), BLER 0.04905 MCS (1) 19 CCE fail 263, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 2259/69/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.06846 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.6 (+0.6) dB CCE fail 0, goodput 0.03 Mbps
+UE 206e: LCID 1: TX            933 RX           3134 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        2724611 RX          36060 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 3175/197/3/0, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.13086 MCS (1) 20 CCE fail 285, goodput 2.10 Mbps
+UE 206e: ulsch_rounds 2374/88/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.19899 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 14.6 (-0.4) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            936 RX           3156 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        3054356 RX          36252 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 3444/228/3/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.8-0.2 dB), BLER 0.10688 MCS (1) 17 CCE fail 306, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 2502/88/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.05058 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.02 Mbps
+UE 206e: LCID 1: TX            939 RX           3178 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        3384101 RX          36444 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 3710/242/4/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.06749 MCS (1) 17 CCE fail 325, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 2623/102/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.12483 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.2 (+0.2) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            942 RX           3200 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        3712611 RX          36636 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 3980/260/7/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.08058 MCS (1) 21 CCE fail 347, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 2749/107/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.06882 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.4 (+0.4) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            948 RX           3244 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        4042356 RX          36828 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 4248/291/10/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.5+0.5 dB), BLER 0.09771 MCS (1) 21 CCE fail 369, goodput 2.20 Mbps
+UE 206e: ulsch_rounds 2874/113/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.05622 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            951 RX           3266 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        4372101 RX          37020 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 4515/336/19/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.15239 MCS (1) 19 CCE fail 390, goodput 2.15 Mbps
+UE 206e: ulsch_rounds 2992/123/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.10104 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.0 (+1.0) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            954 RX           3288 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        4700611 RX          37212 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 4784/347/23/0, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.06720 MCS (1) 18 CCE fail 413, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 3114/136/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.14358 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.3 (+0.3) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            957 RX           3310 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        5030356 RX          37404 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 5053/359/25/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.05002 MCS (1) 19 CCE fail 436, goodput 2.19 Mbps
+UE 206e: ulsch_rounds 3240/142/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.06176 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.8 (+0.8) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            963 RX           3354 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        5360101 RX          37596 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 5320/395/25/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.11853 MCS (1) 20 CCE fail 454, goodput 2.09 Mbps
+UE 206e: ulsch_rounds 3359/156/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.12363 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            966 RX           3376 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        5688611 RX          37788 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 5589/426/25/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.09703 MCS (1) 18 CCE fail 475, goodput 2.16 Mbps
+UE 206e: ulsch_rounds 3480/165/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.12376 MCS (1) 15 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.1 (+1.1) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            969 RX           3398 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        6018356 RX          37980 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 5858/437/27/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.5+1.5 dB), BLER 0.05698 MCS (1) 18 CCE fail 499, goodput 2.19 Mbps
+UE 206e: ulsch_rounds 3605/168/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.06319 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.7 (+1.7) dB CCE fail 0, goodput 0.03 Mbps
+UE 206e: LCID 1: TX            972 RX           3420 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        6348101 RX          38172 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 6125/452/27/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.06640 MCS (1) 21 CCE fail 519, goodput 2.18 Mbps
+UE 206e: ulsch_rounds 3725/180/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.12048 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            978 RX           3464 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        6676611 RX          38364 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 6394/485/31/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.2+0.2 dB), BLER 0.11630 MCS (1) 21 CCE fail 541, goodput 2.19 Mbps
+UE 206e: ulsch_rounds 3846/189/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.12691 MCS (1) 14 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.9 (+0.9) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            981 RX           3486 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7006356 RX          38556 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 6661/512/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.2+0.2 dB), BLER 0.08633 MCS (1) 19 CCE fail 564, goodput 2.16 Mbps
+UE 206e: ulsch_rounds 3971/196/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.06349 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.7 (+0.7) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            984 RX           3508 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7336101 RX          38748 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 6929/528/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.07070 MCS (1) 20 CCE fail 585, goodput 2.11 Mbps
+UE 206e: ulsch_rounds 4091/208/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.10662 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 16.0 (+1.0) dB CCE fail 0, goodput 0.04 Mbps
+UE 206e: LCID 1: TX            987 RX           3530 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7664611 RX          38940 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 7022/539/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.17506 MCS (1) 19 CCE fail 594, goodput 0.53 Mbps
+UE 206e: ulsch_rounds 4153/208/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.03011 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.02 Mbps
+UE 206e: LCID 1: TX            993 RX           3574 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7767981 RX          40008 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 7024/539/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.14180 MCS (1) 17 CCE fail 595, goodput 0.07 Mbps
+UE 206e: ulsch_rounds 4168/208/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00765 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            996 RX           3596 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7767981 RX          40008 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 12, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 7027/539/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.10337 MCS (1) 14 CCE fail 597, goodput 0.01 Mbps
+UE 206e: ulsch_rounds 4182/208/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00216 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.4 (+1.4) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX            999 RX           3618 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX        7767981 RX          40008 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 7891/565/35/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.05597 MCS (1) 18 CCE fail 628, goodput 16.47 Mbps
+UE 206e: ulsch_rounds 4417/254/21/13, ulsch_errors 4, ulsch_DTX 1, BLER 0.15007 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.8 (+0.8) dB CCE fail 0, goodput 0.46 Mbps
+UE 206e: LCID 1: TX           1002 RX           3640 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       10375965 RX          89785 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 8961/718/41/1, dlsch_errors 0, pucch0_DTX 0 (SNR 19.2-0.8 dB), BLER 0.12225 MCS (1) 18 CCE fail 674, goodput 27.75 Mbps
+UE 206e: ulsch_rounds 4643/259/22/13, ulsch_errors 4, ulsch_DTX 1, BLER 0.05234 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.16 Mbps
+UE 206e: LCID 1: TX           1008 RX           3692 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       14870442 RX         108330 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 10127/874/45/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.1+0.1 dB), BLER 0.13163 MCS (1) 18 CCE fail 723, goodput 31.95 Mbps
+UE 206e: ulsch_rounds 4866/273/22/13, ulsch_errors 4, ulsch_DTX 1, BLER 0.05299 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 14 SNR 14.2 (-0.8) dB CCE fail 0, goodput 0.13 Mbps
+UE 206e: LCID 1: TX           1011 RX           3714 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       19919749 RX         126658 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 11246/1022/53/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.0+0.0 dB), BLER 0.13174 MCS (1) 18 CCE fail 769, goodput 31.59 Mbps
+UE 206e: ulsch_rounds 5065/299/32/19, ulsch_errors 5, ulsch_DTX 1, BLER 0.09897 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.3 (-0.7) dB CCE fail 0, goodput 0.14 Mbps
+UE 206e: LCID 1: TX           1014 RX           3736 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       24770088 RX         143413 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 12536/1198/54/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.2+0.2 dB), BLER 0.13320 MCS (1) 18 CCE fail 832, goodput 35.44 Mbps
+UE 206e: ulsch_rounds 5288/321/32/19, ulsch_errors 5, ulsch_DTX 1, BLER 0.09946 MCS (1) 3 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 14.5 (-0.5) dB CCE fail 0, goodput 0.18 Mbps
+UE 206e: LCID 1: TX           1017 RX           3758 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       30487079 RX         161689 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 13822/1372/56/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.13419 MCS (1) 18 CCE fail 894, goodput 35.91 Mbps
+UE 206e: ulsch_rounds 5519/330/33/19, ulsch_errors 5, ulsch_DTX 1, BLER 0.04787 MCS (1) 4 (Qm 2 deltaMCS 0 dB) NPRB 8 SNR 15.9 (+0.9) dB CCE fail 0, goodput 0.12 Mbps
+UE 206e: LCID 1: TX           1023 RX           3806 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       36189677 RX         179173 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 14750/1500/60/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.13824 MCS (1) 18 CCE fail 929, goodput 24.10 Mbps
+UE 206e: ulsch_rounds 5690/361/45/29, ulsch_errors 10, ulsch_DTX 1, BLER 0.13960 MCS (1) 4 (Qm 2 deltaMCS 0 dB) NPRB 44 SNR 15.0 (+0.0) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX           1026 RX           3828 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       40053843 RX         196830 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 15900/1667/62/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.14123 MCS (1) 18 CCE fail 977, goodput 31.15 Mbps
+UE 206e: ulsch_rounds 5943/380/51/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.07888 MCS (1) 1 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 16.2 (+1.2) dB CCE fail 0, goodput 0.13 Mbps
+UE 206e: LCID 1: TX           1029 RX           3850 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       44984919 RX         215526 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 17039/1795/65/1, dlsch_errors 0, pucch0_DTX 0 (SNR 19.9-0.1 dB), BLER 0.11064 MCS (1) 17 CCE fail 1028, goodput 30.11 Mbps
+UE 206e: ulsch_rounds 6167/388/51/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.05487 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 28 SNR 15.3 (+0.3) dB CCE fail 0, goodput 0.14 Mbps
+UE 206e: LCID 1: TX           1032 RX           3872 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       49741746 RX         233736 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 18357/1843/65/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.5+0.5 dB), BLER 0.05459 MCS (1) 17 CCE fail 1083, goodput 32.76 Mbps
+UE 206e: ulsch_rounds 6372/402/51/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.06450 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 34 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.17 Mbps
+UE 206e: LCID 1: TX           1038 RX           3916 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       54980904 RX         256951 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 15, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 19614/1988/69/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.10572 MCS (1) 18 CCE fail 1139, goodput 34.47 Mbps
+UE 206e: ulsch_rounds 6565/417/51/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.08061 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 9 SNR 16.0 (+1.0) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX           1041 RX           3938 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       60436980 RX         275652 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 20859/2160/75/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.8+1.8 dB), BLER 0.12959 MCS (1) 18 CCE fail 1195, goodput 35.07 Mbps
+UE 206e: ulsch_rounds 6754/440/52/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.09798 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 47 SNR 16.3 (+1.3) dB CCE fail 0, goodput 0.18 Mbps
+UE 206e: LCID 1: TX           1044 RX           3960 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       65927103 RX         299056 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 22153/2332/76/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.13036 MCS (1) 18 CCE fail 1258, goodput 36.07 Mbps
+UE 206e: ulsch_rounds 6941/468/54/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.14581 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 24 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.19 Mbps
+UE 206e: LCID 1: TX           1050 RX           4004 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       71665454 RX         322088 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 23443/2496/79/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.9+0.9 dB), BLER 0.13043 MCS (1) 18 CCE fail 1319, goodput 35.85 Mbps
+UE 206e: ulsch_rounds 7134/479/54/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.08116 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 24 SNR 15.5 (+0.5) dB CCE fail 0, goodput 0.13 Mbps
+UE 206e: LCID 1: TX           1053 RX           4026 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       77385971 RX         339185 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 24730/2663/82/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.7+0.7 dB), BLER 0.12957 MCS (1) 18 CCE fail 1380, goodput 35.94 Mbps
+UE 206e: ulsch_rounds 7317/500/54/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.11449 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 24 SNR 15.6 (+0.6) dB CCE fail 0, goodput 0.17 Mbps
+UE 206e: LCID 1: TX           1056 RX           4048 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       83093053 RX         358865 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 26013/2834/85/1, dlsch_errors 0, pucch0_DTX 0 (SNR 19.7-0.3 dB), BLER 0.13079 MCS (1) 18 CCE fail 1441, goodput 35.72 Mbps
+UE 206e: ulsch_rounds 7521/513/54/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.06997 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 15.3 (+0.3) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX           1059 RX           4070 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       88782272 RX         378853 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 27294/3007/88/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.6+1.6 dB), BLER 0.13507 MCS (1) 18 CCE fail 1502, goodput 35.52 Mbps
+UE 206e: ulsch_rounds 7725/529/55/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.08501 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 34 SNR 15.8 (+0.8) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX           1065 RX           4114 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX       94462549 RX         399102 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 50 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 28630/3143/88/1, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.10183 MCS (1) 17 CCE fail 1566, goodput 35.97 Mbps
+UE 206e: ulsch_rounds 7934/538/55/33, ulsch_errors 10, ulsch_DTX 1, BLER 0.06036 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 8 SNR 16.1 (+1.1) dB CCE fail 0, goodput 0.14 Mbps
+UE 206e: LCID 1: TX           1068 RX           4136 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      100156814 RX         418347 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 30028/3199/91/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.06211 MCS (1) 18 CCE fail 1627, goodput 36.33 Mbps
+UE 206e: ulsch_rounds 8138/557/60/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.11607 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 6 SNR 15.4 (+0.4) dB CCE fail 0, goodput 0.18 Mbps
+UE 206e: LCID 1: TX           1071 RX           4158 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      105914993 RX         438469 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 53 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 31312/3381/92/1, dlsch_errors 0, pucch0_DTX 0 (SNR 21.7+1.7 dB), BLER 0.11622 MCS (1) 18 CCE fail 1690, goodput 36.06 Mbps
+UE 206e: ulsch_rounds 8337/576/60/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.10565 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 15 SNR 16.7 (+1.7) dB CCE fail 0, goodput 0.15 Mbps
+UE 206e: LCID 1: TX           1074 RX           4180 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      111608669 RX         458548 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 51 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 32555/3574/97/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.8+0.8 dB), BLER 0.14871 MCS (1) 18 CCE fail 1749, goodput 34.71 Mbps
+UE 206e: ulsch_rounds 8527/590/60/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.07614 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 29 SNR 16.5 (+1.5) dB CCE fail 0, goodput 0.14 Mbps
+UE 206e: LCID 1: TX           1080 RX           4224 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      117119114 RX         476707 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 33987/3614/97/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.3+0.3 dB), BLER 0.06200 MCS (1) 17 CCE fail 1813, goodput 36.37 Mbps
+UE 206e: ulsch_rounds 8724/626/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.15206 MCS (1) 5 (Qm 4 deltaMCS 0 dB) NPRB 48 SNR 15.7 (+0.7) dB CCE fail 0, goodput 0.24 Mbps
+UE 206e: LCID 1: TX           1083 RX           4246 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      122934996 RX         505474 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 35313/3748/99/2, dlsch_errors 0, pucch0_DTX 0 (SNR 19.9-0.1 dB), BLER 0.09754 MCS (1) 18 CCE fail 1875, goodput 36.13 Mbps
+UE 206e: ulsch_rounds 8967/637/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.07313 MCS (1) 5 (Qm 4 deltaMCS 0 dB) NPRB 30 SNR 14.4 (-0.6) dB CCE fail 0, goodput 0.52 Mbps
+UE 206e: LCID 1: TX           1086 RX           4268 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      128673006 RX         565220 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 36405/3909/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 21.3+1.3 dB), BLER 0.14450 MCS (1) 18 CCE fail 1928, goodput 26.19 Mbps
+UE 206e: ulsch_rounds 9171/647/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.06968 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 16.5 (+1.5) dB CCE fail 0, goodput 0.25 Mbps
+UE 206e: LCID 1: TX           1089 RX           4290 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133479234 RX         599458 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 36409/3909/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 21.1+1.1 dB), BLER 0.11705 MCS (1) 17 CCE fail 1930, goodput 3.39 Mbps
+UE 206e: ulsch_rounds 9187/647/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.01968 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 31 SNR 15.8 (+0.8) dB CCE fail 0, goodput 0.02 Mbps
+UE 206e: LCID 1: TX           1095 RX           4334 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133479234 RX         599458 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 36411/3909/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 21.0+1.0 dB), BLER 0.09481 MCS (1) 15 CCE fail 1931, goodput 0.44 Mbps
+UE 206e: ulsch_rounds 9202/647/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.00500 MCS (1) 0 (Qm 2 deltaMCS 0 dB) NPRB 5 SNR 15.2 (+0.2) dB CCE fail 0, goodput 0.00 Mbps
+UE 206e: LCID 1: TX           1098 RX           4356 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133479234 RX         599458 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -93 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 36525/3916/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.06678 MCS (1) 13 CCE fail 1932, goodput 0.32 Mbps
+UE 206e: ulsch_rounds 9494/647/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.00141 MCS (1) 5 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.5 (+0.5) dB CCE fail 0, goodput 1.48 Mbps
+UE 206e: LCID 1: TX           1101 RX           4378 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133485854 RX         754054 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 37002/3945/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.0+0.0 dB), BLER 0.06382 MCS (1) 17 CCE fail 1937, goodput 0.74 Mbps
+UE 206e: ulsch_rounds 10165/728/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.18463 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.2 (+0.2) dB CCE fail 0, goodput 6.83 Mbps
+UE 206e: LCID 1: TX           1104 RX           4400 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133526049 RX        1893058 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 37437/4018/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.4+0.4 dB), BLER 0.13503 MCS (1) 17 CCE fail 1958, goodput 0.88 Mbps
+UE 206e: ulsch_rounds 10933/728/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.04693 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 6.28 Mbps
+UE 206e: LCID 1: TX           1110 RX           4444 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133553149 RX        3128171 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 37847/4081/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.0+0.0 dB), BLER 0.15450 MCS (1) 15 CCE fail 1971, goodput 0.85 Mbps
+UE 206e: ulsch_rounds 11601/803/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.08899 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.4 (+0.4) dB CCE fail 0, goodput 7.39 Mbps
+UE 206e: LCID 1: TX           1113 RX           4466 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133581373 RX        4478452 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -94 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 38272/4125/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 19.8-0.2 dB), BLER 0.11486 MCS (1) 15 CCE fail 1987, goodput 0.69 Mbps
+UE 206e: ulsch_rounds 12273/875/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.14831 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.1 (+0.1) dB CCE fail 0, goodput 7.73 Mbps
+UE 206e: LCID 1: TX           1116 RX           4488 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133609715 RX        5852684 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 38700/4179/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 19.4-0.6 dB), BLER 0.12621 MCS (1) 15 CCE fail 2006, goodput 0.77 Mbps
+UE 206e: ulsch_rounds 13012/897/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.06133 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 6.67 Mbps
+UE 206e: LCID 1: TX           1119 RX           4510 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133638408 RX        7145326 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 39105/4192/101/2, dlsch_errors 0, pucch0_DTX 0 (SNR 20.5+0.5 dB), BLER 0.05044 MCS (1) 15 CCE fail 2014, goodput 0.71 Mbps
+UE 206e: ulsch_rounds 13690/972/61/35, ulsch_errors 10, ulsch_DTX 1, BLER 0.12220 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 16.4 (+1.4) dB CCE fail 0, goodput 5.91 Mbps
+UE 206e: LCID 1: TX           1125 RX           4554 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133663443 RX        8255063 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 50 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 39457/4241/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.3+1.3 dB), BLER 0.11586 MCS (1) 16 CCE fail 2024, goodput 0.74 Mbps
+UE 206e: ulsch_rounds 14415/1001/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05877 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.2 (+0.2) dB CCE fail 0, goodput 4.81 Mbps
+UE 206e: LCID 1: TX           1128 RX           4576 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133683814 RX        9156880 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 39851/4292/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.0+1.0 dB), BLER 0.11438 MCS (1) 16 CCE fail 2032, goodput 0.77 Mbps
+UE 206e: ulsch_rounds 15071/1088/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.21354 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.0 (+1.0) dB CCE fail 0, goodput 7.22 Mbps
+UE 206e: LCID 1: TX           1131 RX           4598 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133710796 RX       10321559 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 40264/4342/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.0+0.0 dB), BLER 0.11650 MCS (1) 16 CCE fail 2041, goodput 0.82 Mbps
+UE 206e: ulsch_rounds 15839/1088/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05428 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.1 (+0.1) dB CCE fail 0, goodput 5.43 Mbps
+UE 206e: LCID 1: TX           1134 RX           4620 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133734943 RX       11399831 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 40677/4390/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.8-0.2 dB), BLER 0.10954 MCS (1) 16 CCE fail 2056, goodput 0.83 Mbps
+UE 206e: ulsch_rounds 16518/1160/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.18063 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.0 (-0.0) dB CCE fail 0, goodput 7.47 Mbps
+UE 206e: LCID 1: TX           1140 RX           4664 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133762164 RX       12696091 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 41107/4450/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.5+1.5 dB), BLER 0.13339 MCS (1) 16 CCE fail 2079, goodput 0.83 Mbps
+UE 206e: ulsch_rounds 17283/1163/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.04831 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.5 (+1.5) dB CCE fail 0, goodput 6.73 Mbps
+UE 206e: LCID 1: TX           1143 RX           4686 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133791096 RX       14006000 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 41531/4507/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.7+1.7 dB), BLER 0.13586 MCS (1) 16 CCE fail 2101, goodput 0.82 Mbps
+UE 206e: ulsch_rounds 17955/1235/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09169 MCS (1) 14 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.1 (+1.1) dB CCE fail 0, goodput 8.49 Mbps
+UE 206e: LCID 1: TX           1146 RX           4708 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133823335 RX       15559053 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 41970/4567/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.13649 MCS (1) 16 CCE fail 2113, goodput 0.83 Mbps
+UE 206e: ulsch_rounds 18648/1293/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09778 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 7.46 Mbps
+UE 206e: LCID 1: TX           1149 RX           4730 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133853037 RX       16940659 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 42388/4620/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.3+0.3 dB), BLER 0.14935 MCS (1) 16 CCE fail 2132, goodput 0.74 Mbps
+UE 206e: ulsch_rounds 19310/1374/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.20266 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.2 (-0.8) dB CCE fail 0, goodput 7.50 Mbps
+UE 206e: LCID 1: TX           1155 RX           4774 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133881497 RX       18265919 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 42769/4635/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.8-0.2 dB), BLER 0.06624 MCS (1) 15 CCE fail 2139, goodput 0.70 Mbps
+UE 206e: ulsch_rounds 20074/1376/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05842 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 16.1 (+1.1) dB CCE fail 0, goodput 5.46 Mbps
+UE 206e: LCID 1: TX           1158 RX           4796 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133904936 RX       19342545 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 43153/4686/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.3-0.7 dB), BLER 0.13095 MCS (1) 16 CCE fail 2149, goodput 0.74 Mbps
+UE 206e: ulsch_rounds 20746/1454/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.13603 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.1 (+0.1) dB CCE fail 0, goodput 7.04 Mbps
+UE 206e: LCID 1: TX           1161 RX           4818 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133931269 RX       20577493 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 43598/4755/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.8+1.8 dB), BLER 0.14576 MCS (1) 16 CCE fail 2164, goodput 0.87 Mbps
+UE 206e: ulsch_rounds 21498/1466/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05477 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.3 (+1.3) dB CCE fail 0, goodput 7.01 Mbps
+UE 206e: LCID 1: TX           1164 RX           4840 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133961204 RX       21898908 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 44045/4793/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.3+1.3 dB), BLER 0.09389 MCS (1) 15 CCE fail 2182, goodput 0.83 Mbps
+UE 206e: ulsch_rounds 22175/1539/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09058 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 7.47 Mbps
+UE 206e: LCID 1: TX           1170 RX           4884 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      133990729 RX       23277314 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 44495/4818/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.6-0.4 dB), BLER 0.08216 MCS (1) 16 CCE fail 2191, goodput 0.79 Mbps
+UE 206e: ulsch_rounds 22866/1597/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.11355 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.7 (-0.3) dB CCE fail 0, goodput 7.32 Mbps
+UE 206e: LCID 1: TX           1173 RX           4906 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134019363 RX       24627546 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 44890/4880/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.4+1.4 dB), BLER 0.13860 MCS (1) 16 CCE fail 2201, goodput 0.80 Mbps
+UE 206e: ulsch_rounds 23589/1633/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06682 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.8 (+0.8) dB CCE fail 0, goodput 6.03 Mbps
+UE 206e: LCID 1: TX           1176 RX           4928 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134044395 RX       25770000 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 45332/4908/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.1+1.1 dB), BLER 0.07413 MCS (1) 15 CCE fail 2210, goodput 0.73 Mbps
+UE 206e: ulsch_rounds 24272/1701/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.12131 MCS (1) 14 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.7 (+0.7) dB CCE fail 0, goodput 8.07 Mbps
+UE 206e: LCID 1: TX           1179 RX           4950 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134074215 RX       27144334 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 45766/4964/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.2+0.2 dB), BLER 0.12205 MCS (1) 16 CCE fail 2225, goodput 0.83 Mbps
+UE 206e: ulsch_rounds 25000/1731/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06840 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.0 (+1.0) dB CCE fail 0, goodput 6.73 Mbps
+UE 206e: LCID 1: TX           1185 RX           4994 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134104206 RX       28448642 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 46175/5022/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.8+0.8 dB), BLER 0.13322 MCS (1) 16 CCE fail 2240, goodput 0.81 Mbps
+UE 206e: ulsch_rounds 25668/1803/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.11739 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.8 (+0.8) dB CCE fail 0, goodput 7.81 Mbps
+UE 206e: LCID 1: TX           1188 RX           5016 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134135734 RX       29840852 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 46407/5059/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.3-0.7 dB), BLER 0.09360 MCS (1) 16 CCE fail 2248, goodput 0.46 Mbps
+UE 206e: ulsch_rounds 26388/1837/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06000 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.6 (-0.4) dB CCE fail 0, goodput 6.70 Mbps
+UE 206e: LCID 1: TX           1191 RX           5038 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134151786 RX       31113744 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 46534/5088/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.2-0.8 dB), BLER 0.11759 MCS (1) 14 CCE fail 2265, goodput 0.16 Mbps
+UE 206e: ulsch_rounds 26577/1837/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.01695 MCS (1) 4 (Qm 2 deltaMCS 0 dB) NPRB 17 SNR 14.9 (-0.1) dB CCE fail 0, goodput 0.94 Mbps
+UE 206e: LCID 1: TX           1194 RX           5060 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134162578 RX       31419347 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 47150/5089/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.2-0.8 dB), BLER 0.03120 MCS (1) 18 CCE fail 2323, goodput 4.55 Mbps
+UE 206e: ulsch_rounds 27071/1882/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08399 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.8 (-0.2) dB CCE fail 0, goodput 3.74 Mbps
+UE 206e: LCID 1: TX           1200 RX           5108 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      134916575 RX       32123870 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -88 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 47820/5150/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.2-0.8 dB), BLER 0.07946 MCS (1) 24 CCE fail 2387, goodput 5.38 Mbps
+UE 206e: ulsch_rounds 27608/1948/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.21524 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.1 (-0.9) dB CCE fail 0, goodput 5.56 Mbps
+UE 206e: LCID 1: TX           1203 RX           5130 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      135740398 RX       33000019 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 52 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 48485/5220/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.6+1.6 dB), BLER 0.09881 MCS (1) 24 CCE fail 2451, goodput 5.48 Mbps
+UE 206e: ulsch_rounds 28286/1956/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06630 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 16.2 (+1.2) dB CCE fail 0, goodput 4.33 Mbps
+UE 206e: LCID 1: TX           1206 RX           5152 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      136562983 RX       33831258 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 49156/5290/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.3-0.7 dB), BLER 0.10200 MCS (1) 24 CCE fail 2515, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 28933/2004/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.12111 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.4 (+0.4) dB CCE fail 0, goodput 4.71 Mbps
+UE 206e: LCID 1: TX           1209 RX           5174 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      137386815 RX       34656081 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -89 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 49828/5355/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.6+0.6 dB), BLER 0.09903 MCS (1) 24 CCE fail 2579, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 29430/2042/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08894 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.0 (-0.0) dB CCE fail 0, goodput 3.99 Mbps
+UE 206e: LCID 1: TX           1215 RX           5218 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      138210623 RX       35431972 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 55 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 50500/5421/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.2-0.8 dB), BLER 0.09925 MCS (1) 24 CCE fail 2643, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 29968/2084/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.12264 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 28 SNR 14.8 (-0.2) dB CCE fail 0, goodput 4.76 Mbps
+UE 206e: LCID 1: TX           1218 RX           5240 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      139033202 RX       36290518 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 51172/5490/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.1+1.1 dB), BLER 0.10061 MCS (1) 24 CCE fail 2707, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 30480/2109/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06062 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.7 (+1.7) dB CCE fail 0, goodput 4.47 Mbps
+UE 206e: LCID 1: TX           1221 RX           5262 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      139857043 RX       37136085 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 51845/5562/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.2+0.2 dB), BLER 0.10691 MCS (1) 24 CCE fail 2771, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 30905/2150/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.10741 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.1 (+1.1) dB CCE fail 0, goodput 4.18 Mbps
+UE 206e: LCID 1: TX           1224 RX           5284 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      140680863 RX       37907592 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 52514/5628/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.3-0.7 dB), BLER 0.10041 MCS (1) 24 CCE fail 2835, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 31369/2215/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.10376 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.1 (-0.9) dB CCE fail 0, goodput 4.94 Mbps
+UE 206e: LCID 1: TX           1230 RX           5328 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      141503436 RX       38781097 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 53186/5699/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.0-0.0 dB), BLER 0.10443 MCS (1) 24 CCE fail 2899, goodput 5.54 Mbps
+UE 206e: ulsch_rounds 31937/2224/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05457 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 11 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.38 Mbps
+UE 206e: LCID 1: TX           1233 RX           5350 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      142327259 RX       39615731 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 53856/5771/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.4+0.4 dB), BLER 0.10676 MCS (1) 24 CCE fail 2963, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 32412/2311/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.18338 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.0 (+0.0) dB CCE fail 0, goodput 4.73 Mbps
+UE 206e: LCID 1: TX           1236 RX           5372 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      143151067 RX       40397231 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 54525/5837/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.10068 MCS (1) 24 CCE fail 3027, goodput 5.50 Mbps
+UE 206e: ulsch_rounds 33180/2311/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.04661 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.6 (-0.4) dB CCE fail 0, goodput 4.23 Mbps
+UE 206e: LCID 1: TX           1242 RX           5416 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      143973655 RX       41227441 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 55200/5904/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.7-0.3 dB), BLER 0.10044 MCS (1) 24 CCE fail 3091, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 33707/2371/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.11965 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 4.54 Mbps
+UE 206e: LCID 1: TX           1245 RX           5438 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      144797478 RX       42048228 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 55869/5970/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.4+1.4 dB), BLER 0.10017 MCS (1) 24 CCE fail 3155, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 34255/2391/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05564 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.9 (+0.9) dB CCE fail 0, goodput 4.57 Mbps
+UE 206e: LCID 1: TX           1248 RX           5460 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      145621292 RX       42917801 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 56535/6040/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.7+1.7 dB), BLER 0.10317 MCS (1) 24 CCE fail 3219, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 34733/2444/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08142 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.1 (+1.1) dB CCE fail 0, goodput 4.69 Mbps
+UE 206e: LCID 1: TX           1251 RX           5482 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      146443883 RX       43744015 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 57210/6111/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.0+0.0 dB), BLER 0.10598 MCS (1) 24 CCE fail 3283, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 35199/2485/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09335 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.5 (+0.5) dB CCE fail 0, goodput 4.42 Mbps
+UE 206e: LCID 1: TX           1257 RX           5526 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      147267733 RX       44527596 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 57877/6182/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.7+0.7 dB), BLER 0.10824 MCS (1) 24 CCE fail 3347, goodput 5.50 Mbps
+UE 206e: ulsch_rounds 35624/2521/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09084 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.9 (+0.9) dB CCE fail 0, goodput 4.01 Mbps
+UE 206e: LCID 1: TX           1260 RX           5548 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      148091538 RX       45337877 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 58547/6251/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.8+0.8 dB), BLER 0.10623 MCS (1) 24 CCE fail 3411, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 36108/2556/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08082 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.2 (+1.2) dB CCE fail 0, goodput 4.64 Mbps
+UE 206e: LCID 1: TX           1263 RX           5570 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      148914126 RX       46220497 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 59218/6322/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.0+1.0 dB), BLER 0.10489 MCS (1) 24 CCE fail 3475, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 36623/2593/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.10461 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 49 SNR 16.4 (+1.4) dB CCE fail 0, goodput 4.64 Mbps
+UE 206e: LCID 1: TX           1266 RX           5592 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      149737967 RX       47036371 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 59892/6394/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.7+0.7 dB), BLER 0.10527 MCS (1) 24 CCE fail 3539, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 37068/2664/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.14929 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.3 (+1.3) dB CCE fail 0, goodput 5.18 Mbps
+UE 206e: LCID 1: TX           1272 RX           5636 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      150561805 RX       47873692 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 60565/6461/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.9+1.9 dB), BLER 0.10246 MCS (1) 24 CCE fail 3603, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 37598/2671/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.04634 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 16.1 (+1.1) dB CCE fail 0, goodput 4.10 Mbps
+UE 206e: LCID 1: TX           1275 RX           5658 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      151384420 RX       48671757 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 61235/6529/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.2+1.2 dB), BLER 0.10020 MCS (1) 24 CCE fail 3667, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 38113/2724/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08368 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.58 Mbps
+UE 206e: LCID 1: TX           1278 RX           5680 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      152208234 RX       49522095 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 61903/6599/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.3+0.3 dB), BLER 0.10438 MCS (1) 24 CCE fail 3731, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 38613/2783/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.17487 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 43 SNR 15.7 (+0.7) dB CCE fail 0, goodput 4.66 Mbps
+UE 206e: LCID 1: TX           1281 RX           5702 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      153032054 RX       50304054 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 62571/6667/104/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.3-0.7 dB), BLER 0.10360 MCS (1) 24 CCE fail 3795, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 39188/2785/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05705 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 5 SNR 14.4 (-0.6) dB CCE fail 0, goodput 4.56 Mbps
+UE 206e: LCID 1: TX           1287 RX           5746 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      153854633 RX       51177543 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 63241/6739/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.10254 MCS (1) 24 CCE fail 3858, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 39759/2839/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.10459 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 14.6 (-0.4) dB CCE fail 0, goodput 4.75 Mbps
+UE 206e: LCID 1: TX           1290 RX           5768 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      154678465 RX       52005599 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 63912/6807/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.6+0.6 dB), BLER 0.10296 MCS (1) 24 CCE fail 3922, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 40280/2861/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.07906 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.60 Mbps
+UE 206e: LCID 1: TX           1293 RX           5790 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      155502282 RX       52804513 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 64577/6873/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.5+0.5 dB), BLER 0.10082 MCS (1) 24 CCE fail 3986, goodput 5.49 Mbps
+UE 206e: ulsch_rounds 40796/2917/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.07759 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.8 (-0.2) dB CCE fail 0, goodput 4.69 Mbps
+UE 206e: LCID 1: TX           1296 RX           5812 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      156324852 RX       53654417 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 65248/6944/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.2+1.2 dB), BLER 0.10627 MCS (1) 24 CCE fail 4050, goodput 5.52 Mbps
+UE 206e: ulsch_rounds 41358/2972/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.12693 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.8 (-0.2) dB CCE fail 0, goodput 5.21 Mbps
+UE 206e: LCID 1: TX           1302 RX           5856 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      157148693 RX       54474340 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 65921/7013/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.4+0.4 dB), BLER 0.10441 MCS (1) 24 CCE fail 4114, goodput 5.53 Mbps
+UE 206e: ulsch_rounds 42007/3004/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.07983 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 16.5 (+1.5) dB CCE fail 0, goodput 4.37 Mbps
+UE 206e: LCID 1: TX           1305 RX           5878 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      157972513 RX       55311217 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 55 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 66592/7085/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.7-0.3 dB), BLER 0.10791 MCS (1) 24 CCE fail 4178, goodput 5.50 Mbps
+UE 206e: ulsch_rounds 42658/3024/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05773 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 43 SNR 14.5 (-0.5) dB CCE fail 0, goodput 4.51 Mbps
+UE 206e: LCID 1: TX           1308 RX           5900 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      158795098 RX       56135669 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 67264/7156/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.7+1.7 dB), BLER 0.10777 MCS (1) 24 CCE fail 4242, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 43098/3065/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.10219 MCS (1) 14 (Qm 6 deltaMCS 0 dB) NPRB 45 SNR 16.7 (+1.7) dB CCE fail 0, goodput 4.44 Mbps
+UE 206e: LCID 1: TX           1311 RX           5922 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      159618930 RX       56937859 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 67934/7226/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.6+0.6 dB), BLER 0.10447 MCS (1) 24 CCE fail 4306, goodput 5.51 Mbps
+UE 206e: ulsch_rounds 43532/3128/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.13160 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 33 SNR 15.9 (+0.9) dB CCE fail 0, goodput 4.89 Mbps
+UE 206e: LCID 1: TX           1317 RX           5966 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      160442747 RX       57787362 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 68603/7293/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.0-0.0 dB), BLER 0.09991 MCS (1) 24 CCE fail 4370, goodput 5.50 Mbps
+UE 206e: ulsch_rounds 44048/3178/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.14301 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.0 (+0.0) dB CCE fail 0, goodput 4.89 Mbps
+UE 206e: LCID 1: TX           1320 RX           5988 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      161265335 RX       58608348 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 52 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 13, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 69274/7360/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.3+1.3 dB), BLER 0.09976 MCS (1) 23 CCE fail 4433, goodput 5.57 Mbps
+UE 206e: ulsch_rounds 44717/3179/65/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.03764 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 13 SNR 16.3 (+1.3) dB CCE fail 0, goodput 4.27 Mbps
+UE 206e: LCID 1: TX           1323 RX           6010 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      162089170 RX       59439846 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 69954/7430/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.0-0.0 dB), BLER 0.10106 MCS (1) 23 CCE fail 4497, goodput 5.68 Mbps
+UE 206e: ulsch_rounds 45263/3273/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.14467 MCS (1) 6 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.2 (-0.8) dB CCE fail 0, goodput 4.71 Mbps
+UE 206e: LCID 1: TX           1326 RX           6032 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      162926564 RX       60264626 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 70626/7495/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.4+0.4 dB), BLER 0.09783 MCS (1) 23 CCE fail 4561, goodput 5.64 Mbps
+UE 206e: ulsch_rounds 46024/3273/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.03677 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 11 SNR 15.3 (+0.3) dB CCE fail 0, goodput 4.35 Mbps
+UE 206e: LCID 1: TX           1332 RX           6076 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      163749791 RX       61104960 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 71299/7561/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.2+1.2 dB), BLER 0.09737 MCS (1) 23 CCE fail 4625, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 46550/3360/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.20043 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 6 SNR 16.0 (+1.0) dB CCE fail 0, goodput 5.07 Mbps
+UE 206e: LCID 1: TX           1335 RX           6098 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      164573620 RX       61930237 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 71968/7625/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.09634 MCS (1) 23 CCE fail 4689, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 47310/3360/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05095 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 15.0 (+0.0) dB CCE fail 0, goodput 4.24 Mbps
+UE 206e: LCID 1: TX           1338 RX           6120 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      165397443 RX       62758786 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 72639/7690/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.1+1.1 dB), BLER 0.09725 MCS (1) 23 CCE fail 4753, goodput 5.64 Mbps
+UE 206e: ulsch_rounds 47812/3420/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.13932 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 15.6 (+0.6) dB CCE fail 0, goodput 4.92 Mbps
+UE 206e: LCID 1: TX           1341 RX           6142 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      166220019 RX       63572630 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 640.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 73310/7757/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 21.2+1.2 dB), BLER 0.09808 MCS (1) 23 CCE fail 4817, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 48365/3424/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05019 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.4 (-0.6) dB CCE fail 0, goodput 4.44 Mbps
+UE 206e: LCID 1: TX           1347 RX           6186 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      167043836 RX       64398587 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 768.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 57 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 73978/7823/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.9+0.9 dB), BLER 0.09905 MCS (1) 23 CCE fail 4881, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 48788/3519/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.26361 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 49 SNR 15.6 (+0.6) dB CCE fail 0, goodput 5.51 Mbps
+UE 206e: LCID 1: TX           1350 RX           6208 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      167867653 RX       65209944 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 896.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 74648/7887/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.5+0.5 dB), BLER 0.09625 MCS (1) 23 CCE fail 4945, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 49467/3522/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.07688 MCS (1) 7 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 16.3 (+1.3) dB CCE fail 0, goodput 4.35 Mbps
+UE 206e: LCID 1: TX           1353 RX           6230 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      168690241 RX       66061681 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 0.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -92 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 75321/7952/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.5-0.5 dB), BLER 0.09742 MCS (1) 23 CCE fail 5009, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 50085/3557/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09915 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.6 (-0.4) dB CCE fail 0, goodput 4.44 Mbps
+UE 206e: LCID 1: TX           1356 RX           6252 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      169514067 RX       66848409 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 128.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 75992/8016/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.09603 MCS (1) 23 CCE fail 5073, goodput 5.65 Mbps
+UE 206e: ulsch_rounds 50652/3604/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.09734 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.9 (-0.1) dB CCE fail 0, goodput 3.95 Mbps
+UE 206e: LCID 1: TX           1362 RX           6296 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      170337896 RX       67662503 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 256.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -87 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 76663/8081/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.8-0.2 dB), BLER 0.09580 MCS (1) 23 CCE fail 5137, goodput 5.64 Mbps
+UE 206e: ulsch_rounds 51159/3633/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.08025 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 4.64 Mbps
+UE 206e: LCID 1: TX           1365 RX           6318 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      171160472 RX       68516163 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 384.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -90 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 77336/8147/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.9-0.1 dB), BLER 0.09695 MCS (1) 23 CCE fail 5201, goodput 5.66 Mbps
+UE 206e: ulsch_rounds 51758/3683/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.07578 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.7 (-0.3) dB CCE fail 0, goodput 4.45 Mbps
+UE 206e: LCID 1: TX           1368 RX           6340 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      171984307 RX       69367543 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m[NR_MAC] Frame.Slot 512.0
+UE RNTI 206e CU-UE-ID 1 in-sync PH 48 dB PCMAX 21 dBm, average RSRP -91 (16 meas)
+UE 206e: CQI 14, RI 1, PMI (0,0)
+UE 206e: UL-RI 1, TPMI 0
+UE 206e: dlsch_rounds 77985/8210/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 20.3+0.3 dB), BLER 0.09838 MCS (1) 23 CCE fail 5263, goodput 5.23 Mbps
+UE 206e: ulsch_rounds 52296/3704/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.05292 MCS (1) 12 (Qm 6 deltaMCS 0 dB) NPRB 5 SNR 15.3 (+0.3) dB CCE fail 0, goodput 4.20 Mbps
+UE 206e: LCID 1: TX           1371 RX           6362 bytes
+UE 206e: LCID 2: TX              0 RX              0 bytes
+UE 206e: LCID 4: TX      172774976 RX       70172976 bytes
+
+[0m[34m[F1AP]   DU Task Received F1AP_UL_RRC_MESSAGE for instance 0: sending SCTP messages via assoc_id 62865
+[0m[34m[F1AP]   size 20 UE RNTI 206e in SRB 1
+[0m
+** Caught SIGTERM, shutting down
+[GNB_APP] stopping nr-softmodem
+[0m[PHY]    Killing gNB 0 processing threads
+[0m[GNB_APP] turned off RU rfdevice
+[0m[PHY]    Stopping RU 0 processing threads
+[0m[HW]     releasing USRP
+[0msleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+Returned from ITTI signal handler
+O[PHY]    RU 0 RF device stopped
+[0m[NR_MAC] Remove NR rnti 0x206e
+[0mBye.

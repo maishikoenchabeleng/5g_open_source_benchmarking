@@ -1,0 +1,9 @@
+UE RNTI 5fb7 CU-UE-ID 1 in-sync PH 56 dB PCMAX 21 dBm, average RSRP -93 (14 meas)
+UE 5fb7: CQI 15, RI 1, PMI (0,0)
+UE 5fb7: UL-RI 1, TPMI 0
+UE 5fb7: dlsch_rounds 48011/5378/38/2, dlsch_errors 0, pucch0_DTX 0 (SNR 21.2+1.2 dB), BLER 0.14400 MCS (1) 16 CCE fail 2586, goodput 0.65 Mbps
+UE 5fb7: ulsch_rounds 26956/1824/32/8, ulsch_errors 2, ulsch_DTX 1, BLER 0.03862 MCS (1) 8 (Qm 4 deltaMCS 0 dB) NPRB 39 SNR 15.7 (+0.7) dB CCE fail 0, goodput 4.22 Mbps
+UE 5fb7: LCID 1: TX           1200 RX           5028 bytes
+UE 5fb7: LCID 2: TX            125 RX            541 bytes
+UE 5fb7: LCID 4: TX      143652137 RX       28455538 bytes
+
