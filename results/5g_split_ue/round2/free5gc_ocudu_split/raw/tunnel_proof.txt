@@ -1,0 +1,120 @@
+=== Tunnel Interface State ===
+Timestamp: Tue Oct  6 07:23:41 PM CAT 2026
+164: tun_srsue: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 10.60.0.1/24 scope global tun_srsue
+       valid_lft forever preferred_lft forever
+
+Route for UE traffic: 137.158.126.21 from 10.60.0.1 dev tun_srsue table 5000 uid 0 
+
+=== Policy rules ===
+0:	from all lookup local
+32589:	from 10.60.0.1 lookup 5000
+32590:	from all to 10.45.0.2 lookup 9999
+32591:	from 10.45.0.2 lookup 9999
+32592:	from all to 10.60.0.1 lookup 9999
+32593:	from 10.60.0.1 lookup 9999
+32594:	from all to 10.45.0.2 lookup 9999
+32595:	from 10.45.0.2 lookup 9999
+32596:	from 10.60.0.1 lookup rt_uesimtun0
+32597:	from all to 10.60.0.1 lookup 9999
+32599:	from 10.45.0.2 lookup rt_uesimtun0
+32600:	from all to 10.45.0.2 lookup 9999
+32603:	from all to 10.60.0.1 lookup 9999
+32606:	from all to 10.45.0.2 lookup 9999
+32609:	from all to 10.60.0.1 lookup 9999
+32612:	from all to 10.45.0.2 lookup 9999
+32614:	from all to 10.45.0.2 lookup 9999
+32616:	from all to 10.45.0.2 lookup 9999
+32618:	from all to 10.45.0.2 lookup 9999
+32620:	from all to 10.45.1.59 lookup 9999
+32621:	from 10.45.1.59 lookup 9999
+32622:	from all to 10.45.1.58 lookup 9999
+32623:	from 10.45.1.58 lookup 9999
+32624:	from all to 10.45.1.57 lookup 9999
+32625:	from 10.45.1.57 lookup 9999
+32626:	from all to 10.45.1.56 lookup 9999
+32627:	from 10.45.1.56 lookup 9999
+32628:	from all to 10.45.1.55 lookup 9999
+32629:	from 10.45.1.55 lookup 9999
+32630:	from all to 10.45.1.52 lookup 9999
+32631:	from 10.45.1.52 lookup 9999
+32632:	from all to 10.45.1.20 lookup 9999
+32633:	from 10.45.1.20 lookup 9999
+32634:	from all to 10.45.1.18 lookup 9999
+32635:	from 10.45.1.18 lookup 9999
+32636:	from all to 10.45.1.17 lookup 9999
+32637:	from 10.45.1.17 lookup 9999
+32638:	from all to 10.45.1.16 lookup 9999
+32639:	from 10.45.1.16 lookup 9999
+32640:	from all to 10.45.1.15 lookup 9999
+32641:	from 10.45.1.15 lookup 9999
+32642:	from all to 10.60.0.1 lookup 9999
+32644:	from all to 10.45.0.2 lookup 9999
+32646:	from all to 10.60.0.1 lookup 9999
+32648:	from all to 10.45.0.2 lookup 9999
+32650:	from all to 10.60.0.1 lookup 9999
+32652:	from all to 10.45.0.2 lookup 9999
+32660:	from all to 10.60.0.1 lookup 9999
+32662:	from all to 10.45.0.2 lookup 9999
+32664:	from all to 10.60.0.1 lookup 9999
+32666:	from all to 10.45.0.2 lookup 9999
+32668:	from all to 10.60.0.1 lookup 9999
+32670:	from all to 10.45.0.2 lookup 9999
+32673:	from all to 10.60.0.1 lookup 9999
+32676:	from all to 10.45.0.2 lookup 9999
+32679:	from all to 10.60.0.1 lookup 9999
+32682:	from all to 10.45.0.2 lookup 9999
+32685:	from all to 10.60.0.1 lookup 9999
+32688:	from all to 10.45.0.2 lookup 9999
+32690:	from all to 10.60.0.1 lookup 9999
+32692:	from all to 10.45.0.2 lookup 9999
+32694:	from all to 10.45.0.2 lookup 9999
+32696:	from all to 10.45.0.2 lookup 9999
+32698:	from all to 10.45.0.2 lookup 9999
+32700:	from all to 10.45.0.2 lookup 9999
+32702:	from all to 10.60.0.1 lookup 9999
+32704:	from all to 10.45.0.2 lookup 9999
+32706:	from all to 10.45.0.2 lookup 9999
+32708:	from all to 10.60.0.1 lookup 9999
+32713:	from all to 10.60.0.1 lookup 9999
+32716:	from all to 10.45.0.2 lookup 9999
+32722:	from all to 10.45.0.2 lookup 9999
+32724:	from all to 10.60.0.1 lookup 9999
+32726:	from all to 10.45.0.2 lookup 9999
+32728:	from all to 10.45.0.2 lookup 9999
+32730:	from all to 10.45.0.2 lookup 9999
+32732:	from all to 10.45.0.2 lookup 9999
+32734:	from all to 10.45.0.2 lookup 9999
+32736:	from all to 10.45.0.2 lookup 9999
+32738:	from all to 10.45.0.2 lookup 9999
+32740:	from all to 10.45.0.2 lookup 9999
+32742:	from all to 10.45.0.2 lookup 9999
+32744:	from all to 10.45.0.2 lookup 9999
+32746:	from all to 10.45.0.2 lookup 9999
+32748:	from all to 10.60.0.1 lookup 9999
+32750:	from all to 10.45.0.8 lookup 9999
+32751:	from 10.45.0.8 lookup 9999
+32752:	from all to 10.45.0.8 lookup 9999
+32753:	from 10.45.0.8 lookup 9999
+32754:	from all to 10.45.0.7 lookup 9999
+32755:	from 10.45.0.7 lookup 9999
+32756:	from all to 10.45.0.6 lookup 9999
+32757:	from 10.45.0.6 lookup 9999
+32758:	from all to 10.45.0.5 lookup 9999
+32759:	from 10.45.0.5 lookup 9999
+32760:	from all to 10.45.0.4 lookup 9999
+32761:	from 10.45.0.4 lookup 9999
+32762:	from all to 10.45.0.3 lookup 9999
+32763:	from 10.45.0.3 lookup 9999
+32764:	from all to 10.45.0.2 lookup 9999
+32766:	from all lookup main
+32767:	from all lookup default
+
+=== Bytes through tun_srsue (UE side) during tests ===
+rx (downlink): 213150118
+tx (uplink)  : 55625945
+
+=== upfgtp (UPF side, core machine) rx/tx bytes ===
+before: 0 0 
+after : 55589985 213150118 
