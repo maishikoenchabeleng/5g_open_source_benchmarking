@@ -1,0 +1,9 @@
+UE RNTI 1692 CU-UE-ID 1 in-sync PH 54 dB PCMAX 21 dBm, average RSRP -92 (15 meas)
+UE 1692: CQI 14, RI 1, PMI (0,0)
+UE 1692: UL-RI 1, TPMI 0
+UE 1692: dlsch_rounds 78878/7161/145/1, dlsch_errors 0, pucch0_DTX 0 (SNR 19.9-0.1 dB), BLER 0.08585 MCS (1) 19 CCE fail 5096, goodput 5.39 Mbps
+UE 1692: ulsch_rounds 53223/3988/90/41, ulsch_errors 15, ulsch_DTX 1, BLER 0.08910 MCS (1) 10 (Qm 4 deltaMCS 0 dB) NPRB 51 SNR 14.8 (-0.2) dB CCE fail 0, goodput 4.10 Mbps
+UE 1692: LCID 1: TX           1378 RX           6330 bytes
+UE 1692: LCID 2: TX            200 RX            860 bytes
+UE 1692: LCID 4: TX      173179232 RX       67535362 bytes
+

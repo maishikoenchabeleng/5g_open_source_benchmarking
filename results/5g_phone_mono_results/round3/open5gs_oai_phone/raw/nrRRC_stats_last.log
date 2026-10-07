@@ -1,0 +1,11 @@
+UE 0 CU UE ID 1 DU UE ID 5778 RNTI 1692 random identity 2a405c24ed000000:
+    last RRC activity: 154 seconds ago
+    PDU session ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB: RSRP -90 dBm RSRQ -10.5 dB SINR 23.5 dB
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: 1 cell
+  [1] nrCellID 12345678, PCI 0, Mode TDD, SSB ARFCN 640704
+      TDD: band 78 ARFCN 639996 SCS 30 (kHz) PRB 51

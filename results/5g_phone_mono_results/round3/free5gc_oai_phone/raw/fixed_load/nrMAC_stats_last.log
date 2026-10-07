@@ -1,0 +1,9 @@
+UE RNTI 07dd CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -94 (13 meas)
+UE 07dd: CQI 13, RI 1, PMI (0,0)
+UE 07dd: UL-RI 1, TPMI 0
+UE 07dd: dlsch_rounds 79836/8029/89/0, dlsch_errors 0, pucch0_DTX 0 (SNR 19.9-0.1 dB), BLER 0.10085 MCS (1) 20 CCE fail 5098, goodput 5.26 Mbps
+UE 07dd: ulsch_rounds 52826/4044/77/34, ulsch_errors 8, ulsch_DTX 1, BLER 0.21851 MCS (1) 11 (Qm 6 deltaMCS 0 dB) NPRB 51 SNR 14.5 (-0.5) dB CCE fail 0, goodput 5.29 Mbps
+UE 07dd: LCID 1: TX           1394 RX           6557 bytes
+UE 07dd: LCID 2: TX              0 RX              0 bytes
+UE 07dd: LCID 4: TX      181863316 RX       68013428 bytes
+
