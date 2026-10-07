@@ -1,0 +1,160 @@
+================================================================================
+                        5G TESTBED BENCHMARK REPORT
+================================================================================
+  Generated  : 2026-10-06 18:50:02
+  Report for : FREE5GC + SRSRAN
+  Round      : 3 of 3
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+ TEST CONFIGURATION
+────────────────────────────────────────────────────────────────────────────────
+  Core Network      : FREE5GC
+  RAN Stack         : SRSRAN
+  RAN Machine IP    : 137.158.126.24
+  Core Machine IP   : 137.158.126.21
+  Tunnel Interface  : tun_srsue
+  UE IP Assigned    : 10.60.0.1
+  Ping Count        : 100 packets
+  Iperf Duration    : 30 seconds
+  Test Timestamp    : 2026-10-06 18:50:02
+
+────────────────────────────────────────────────────────────────────────────────
+ CONNECTIVITY
+────────────────────────────────────────────────────────────────────────────────
+  UE Registration         : PASS
+  UE IP Assigned          : 10.60.0.1
+  Tunnel Interface Up     : tun_srsue
+  UE traffic route        : 137.158.126.21 from 10.60.0.1 dev tun_srsue table 5000 uid 0 
+  Core Reachable (tunnel) : PASS  (10 pings to 137.158.126.21 via tun_srsue, loss 0 %)
+  Internet Reachable      : PASS
+
+────────────────────────────────────────────────────────────────────────────────
+ REGISTRATION  (from core network logs)
+────────────────────────────────────────────────────────────────────────────────
+  Registration Time       : 331 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 25 ms   (Registration Complete -> UE IP allocated by SMF)
+
+────────────────────────────────────────────────────────────────────────────────
+ LATENCY  (100 ICMP packets via tun_srsue to 8.8.8.8)
+────────────────────────────────────────────────────────────────────────────────
+  Packets Sent            : 100
+  Packet Loss             : 0 %
+  RTT Minimum             : 34.855 ms
+  RTT Average             : 45.137 ms
+  RTT Maximum             : 55.609 ms
+  RTT Std Deviation       : 5.972 ms
+
+────────────────────────────────────────────────────────────────────────────────
+ JITTER  (UDP iperf3, 30s via tun_srsue)
+────────────────────────────────────────────────────────────────────────────────
+  UDP Throughput          : 2.00 Mbps
+  Jitter                  : 3.657 ms
+  UDP Packet Loss         : 0%
+
+────────────────────────────────────────────────────────────────────────────────
+ THROUGHPUT  (TCP iperf3, 30s via tun_srsue, receiver side)
+────────────────────────────────────────────────────────────────────────────────
+  Downlink                : 53.5 Mbps
+  Uplink                  : 12.4 Mbps
+
+  Bytes through tun_srsue during all tests (proof traffic used the 5G path):
+  Received (downlink)     : 212289661 bytes
+  Sent     (uplink)       : 60247984 bytes
+
+────────────────────────────────────────────────────────────────────────────────
+ CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  gNB Process             : avg 168.91 %   peak 220.00 %
+  UE  Process             : avg 72.05 %    peak 181.00 %
+
+  [ Core Machine : 137.158.126.21 ]
+  AMF                     : avg 0.08 %
+  SMF                     : avg 0.23 %
+  UPF                     : avg 0.28 %
+
+────────────────────────────────────────────────────────────────────────────────
+ MEMORY USAGE  (pidstat RSS, during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine ]
+  gNB RSS                 : 2860428 KB
+  UE  RSS                 : 852490 KB
+
+  [ Core Machine ]
+  AMF RSS                 : 32834 KB
+  SMF RSS                 : 28089 KB
+  UPF RSS                 : 15683 KB
+
+────────────────────────────────────────────────────────────────────────────────
+ POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  Average Power           : 38 W
+  Total Energy            : 6420 J
+
+  [ Core Machine : 137.158.126.21 ]
+  Average Power           : 3 W
+  Total Energy            : 655 J
+
+────────────────────────────────────────────────────────────────────────────────
+ FIXED-LOAD RESOURCES  (UDP 5 Mbit/s DL + 5 Mbit/s UL at once, 60s)
+────────────────────────────────────────────────────────────────────────────────
+  Same traffic for every combination: compare these values to see which
+  combination needs fewer resources for the same job.
+  Machine CPU = all cores incl. kernel work (e.g. free5gc gtp5g); use it,
+  not the UPF process CPU, to compare the cores. 100 % = whole machine.
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+
+  [ RAN Machine : 137.158.126.24 ]
+  FL gNB CPU              : avg 191.44 %   peak 196.00 %
+  FL gNB RSS              : 2861944 KB
+  FL UE  CPU              : avg 90.98 %   peak 99.00 %
+  FL UE  RSS              : 852560 KB
+  FL RAN Power            : 42 W   (2535 J)
+  FL Machine CPU (all)    : 23.83 % busy = 2.86 cores   (usr 17.28 %, sys 6.10 %, soft 0.38 %)
+
+  [ Core Machine : 137.158.126.21 ]
+  FL AMF / SMF / UPF CPU  : avg 0.03 % / 0.12 % / 0.13 %
+  FL Core Power           : 4 W   (242 J)
+  FL Machine CPU (all)    : 1.28 % busy = 0.15 cores   (usr 0.60 %, sys 0.56 %, soft 0.12 %)
+
+────────────────────────────────────────────────────────────────────────────────
+ TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
+────────────────────────────────────────────────────────────────────────────────
+  CPU Governor            : RAN performance, core powersave
+
+  [ RAN Machine : 137.158.126.24 ]
+  Package Temperature     : avg 62.1 °C   max 71 °C
+  Average CPU Frequency   : 4200 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+  [ Core Machine : 137.158.126.21 ]
+  Package Temperature     : avg 30.0 °C   max 43 °C
+  Average CPU Frequency   : 1363 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+────────────────────────────────────────────────────────────────────────────────
+ EVIDENCE FILES
+────────────────────────────────────────────────────────────────────────────────
+  raw/gnb.log             : gNB full terminal output with timestamps
+  raw/ue.log              : UE full terminal output with timestamps
+  raw/amf.log             : AMF/core journal logs
+  raw/tunnel_proof.txt    : UE IP, route check, tunnel byte counters
+  raw/ping_core.txt       : Ping to core machine via tunnel (10 packets)
+  raw/ping_100.txt        : Full ping output (100 packets)
+  raw/iperf_tcp_dl.txt    : TCP downlink iperf3 full output
+  raw/iperf_tcp_ul.txt    : TCP uplink iperf3 full output
+  raw/iperf_udp.txt       : UDP jitter iperf3 full output
+  raw/FAILED.txt          : Only present if the combination failed (reason)
+  raw/cpu_ran.txt         : pidstat output - RAN machine
+  raw/cpu_core.txt        : pidstat output - core machine
+  raw/power_ran.txt       : RAPL power log - RAN machine
+  raw/power_core.txt      : RAPL power log - core machine
+  raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power
+  raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
+  raw/thermal_core.txt    : Temperature/frequency log - core machine
+  ../../terminal_session.txt : Full terminal output of the whole run
+
+================================================================================
