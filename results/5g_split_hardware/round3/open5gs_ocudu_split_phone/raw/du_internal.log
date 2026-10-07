@@ -1,0 +1,9 @@
+2026-10-06T13:16:44.306630 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-06T13:16:44.894994 [DU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-06T13:16:46.961424 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-06T13:16:46.961433 [APP     ] [E] Couldn't register stdin handler
+2026-10-06T13:16:47.001886 [GNB     ] [I] ==== DU started ===
+2026-10-06T13:16:48.723680 [CU-F1-U ] [D] Found F1-U default gateway for DRB. sst: 1, sd: 0x1, 5QI=0x9
+2026-10-06T13:20:40.297980 [GNB     ] [I] Stopping...
+2026-10-06T13:20:40.299126 [PHY     ] [W] [  965.19] Real-time failure in lower PHY: PRACH request late for sector 0, slot 965.19 and start symbol 0.
+(END)
