@@ -1,0 +1,15 @@
+PING 137.158.126.21 (137.158.126.21) from 10.45.0.2 oaitun_ue1: 56(84) bytes of data.
+64 bytes from 137.158.126.21: icmp_seq=1 ttl=64 time=6.51 ms
+64 bytes from 137.158.126.21: icmp_seq=2 ttl=64 time=6.87 ms
+64 bytes from 137.158.126.21: icmp_seq=3 ttl=64 time=6.09 ms
+64 bytes from 137.158.126.21: icmp_seq=4 ttl=64 time=6.67 ms
+64 bytes from 137.158.126.21: icmp_seq=5 ttl=64 time=4.40 ms
+64 bytes from 137.158.126.21: icmp_seq=6 ttl=64 time=5.81 ms
+64 bytes from 137.158.126.21: icmp_seq=7 ttl=64 time=5.74 ms
+64 bytes from 137.158.126.21: icmp_seq=8 ttl=64 time=6.32 ms
+64 bytes from 137.158.126.21: icmp_seq=9 ttl=64 time=6.08 ms
+64 bytes from 137.158.126.21: icmp_seq=10 ttl=64 time=3.68 ms
+
+--- 137.158.126.21 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 4509ms
+rtt min/avg/max/mdev = 3.684/5.815/6.868/0.961 ms
