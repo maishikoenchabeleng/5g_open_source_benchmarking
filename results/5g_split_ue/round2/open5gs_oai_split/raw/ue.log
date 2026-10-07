@@ -1,0 +1,2933 @@
+CMDLINE: "./nr-uesoftmodem" "--band" "78" "-r" "106" "--numerology" "1" "-C" "3619200000" "--ssb" "516" "--rfsim" "-O" "/home/administrator/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/ue-sim.conf" 
+[UTIL]   running in SA mode (no --phy-test, --do-ra, --nsa option present)
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[OPT]    OPT disabled
+[0m[HW]     Version: Branch: develop Abrev. Hash: 31eb466a7d Date: Fri Jun 19 16:45:41 2026 +0200
+[0m[NR_RRC] create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[SIM]    UICC simulation: IMSI=001010000000001, IMEISV=6754567890123413, Ki=465B5CE8B199B49FAA5F0A2EE238A6BC, OPc=E8ED289DEBA952E4283B54E88E6183CA
+[0m[93m[SIM]    loading PDU session parameters from legacy UICC configuration. Please update to use uicc0.pdu_sessions instead to make this warning disappear
+[0m[SIM]    will request PDU session ID 10, type 1, DNN internet, NSSAI 1.     1
+[0m[NR_MAC] [UE0] Initializing MAC
+[0m[NR_MAC] Initializing dl and ul config_request. num_slots = 20
+[0m[RLC]    Activated srb0 for UE 0
+[0m[UTIL]   threadCreate() for time source iq samples: creating thread with affinity ffffffff, priority 2
+[0m[UTIL]   time manager configuration: [time source: iq_samples] [mode: standalone] [server IP: 127.0.0.1} [server port: 7374] (server IP/port not used)
+[0m[PHY]    Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ofdm_offset_divisor 8
+[0m[PHY]    SA init parameters. DL freq 3619200000 UL offset 0 SSB numerology 1 N_RB_DL 106
+[0m[PHY]    Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[93m[PHY]    samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]    Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0, chest-time 0
+[0m[UTIL]   threadCreate() for SYNC__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for DL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for UL__actor: creating thread with affinity ffffffff, priority 97
+[0m[PHY]    Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]    prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]    HW: Configuring ru_id 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[UTIL]   threadCreate() for ru_start_thread: creating thread with affinity ffffffff, priority 97
+[0m[93m[HW]     Warning: rfsimulator parameters should be provided as array elements!
+[0m[HW]     Running as client: will connect to a rfsimulator server side
+[0m[HW]     [RAU] has loaded RFSIMULATOR device.
+[0m[HW]     Trying to connect to 127.0.0.1:4043
+[0m[HW]     Connection to 127.0.0.1:4043 established
+[0m[32m[HW]     RFsim: Number of antennas changed from 0 to 1
+[0m[PHY]    Intializing UE Threads for instance 0 ...
+[0m[UTIL]   threadCreate() for UEthread_0: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats_0: creating thread with affinity ffffffff, priority 1
+[0m[93m[PHY]    SSB position provided
+[0m[93m[NR_PHY] Starting sync detection
+[0m[PHY]    [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY] Starting cell search with center freq: 3619200000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY] Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[32m[PHY]    Initial sync: pbch decoded sucessfully, ssb index 0
+[0m[PHY]    pbch rx ok. rsrp:51 dB/RE, adjust_rxgain:-1 dB
+[0m[NR_PHY] Cell Detected with GSCN: 0, SSB SC offset: 516, SSB Ref: 0.000000, PSS Corr peak: 0 dB, PSS Corr Average: 0
+[0m[PHY]    [UE0] In synch, rx_offset 153600 samples
+[0m[PHY]    [UE 0] Measured Carrier Frequency offset 5 Hz
+[0m[32m[PHY]    Initial sync successful, PCI: 0
+[0m[PHY]    HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200005 Hz, rx_freq 3619200005 Hz, tune_offset 0
+[0m[PHY]    Got synch: hw_slot_offset 10, carrier off 5 Hz
+[0m[NR_RRC] [UE 0] BCCH update: phyCellID 0->0, arfcn_ssb 0->641280
+[0m[32m[PHY]    UE synchronized! decoded_frame_rx=578 UE->init_sync_frame=1 trashed_frames=112
+[0m[PHY]    Resynchronizing RX by 153600 samples
+[0m[HW]     received write reorder clear context
+[0m[PHY]    max_pos_acc = 0, shiftForNextFrame = 0
+[0m[32m[NR_RRC] SIB1 decoded
+[0m[NR_MAC] [UE 0] Initial cell selection: dl_frequency=3600120 kHz (from command-line, band=78, scs=1)
+[0m[NR_MAC] Initial cell selection: uplink_frequency=3600120 kHz (from dl_frequency=3600120 kHz)
+[0m[NR_MAC] TDD period index = 6, based on the sum of dl_UL_TransmissionPeriodicity from Pattern1 (5.000000 ms) and Pattern2 (0.000000 ms): Total = 5.000000 ms
+[0m[NR_MAC] Set TDD configuration period to: 8 DL slots, 3 UL slots, 10 slots per period (NR_TDD_UL_DL_Pattern is 7 DL slots, 2 UL slots, 6 DL symbols, 4 UL symbols)
+[0m[NR_MAC] Configured 1 TDD patterns (total slots: pattern1 = 10, pattern2 = 0)
+[0m[PHY]    N_TA_offset changed from 0 to 800
+[0m[MAC]    Initialization of 4-Step CBRA procedure
+[0m[NR_MAC] [UE 0] selected PRACH occasion: start_symbol 0 fdm 0 slot 19 format 162
+[0m[NR_MAC] PRACH scheduler: Selected RO Frame 693, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]    PRACH [UE 0] in frame.slot 693.19, placing PRACH in position 2828, Msg1/MsgA-Preamble frequency start 0 (k1 0), preamble_offset 9, first_nonzero_root_idx 0, preambleIndex = 38
+[0m[PHY]    [UE 0] RAR-Msg2 decoded
+[0m[NR_MAC] [UE 0][RAPROC][RA-RNTI 010b] Got BI RAR subPDU 5 ms
+[0m[NR_MAC] [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+[0m[32m[NR_MAC] [UE 0][RAPROC][694.10] Found RAR with the intended RAPID 38
+[0m[93m[MAC]    received TA command 31
+[0m[32m[NR_MAC] [RAPROC][694.19] RA-Msg3 transmitted
+[0m[32m[NR_MAC] [UE 0][696.3][RAPROC] 4-Step RA procedure succeeded. CBRA: Contention Resolution is successful.
+[0m[NR_RRC] [UE0][RAPROC] Logical Channel DL-CCCH (SRB0), Received NR_RRCSetup
+[0m[RLC]    Added srb 1 to UE 0
+[0m[NR_RRC] State = NR_RRC_CONNECTED
+[0m[NAS]    Generate Initial NAS Message: Registration Request
+[0m[NAS]    [UE 0] Received NR_NAS_CONN_ESTABLISH_IND: asCause 0
+[0m[NR_RRC] [UE 0][RAPROC] Logical Channel UL-DCCH (SRB1), Generating RRCSetupComplete (bytes33)
+[0m[MAC]    [UE 0] Applying CellGroupConfig from gNodeB
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_AUTHENTICATION_REQUEST with length 42
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_SECURITY_MODE_COMMAND with length 19
+[0m[NAS]    Generate Initial NAS Message: Registration Request
+[0m[NR_RRC] Received securityModeCommand (gNB 0)
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), Processing securityModeCommand
+[0m[NR_RRC] Security algorithm is set to nea0
+[0m[NR_RRC] Integrity protection algorithm is set to nia2
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), encoding securityModeComplete, rrc_TransactionIdentifier: 0
+[0m[NR_RRC] Received Capability Enquiry (gNB 0)
+[0m[NR_RRC] Receiving from SRB1 (DL-DCCH), Processing UECapabilityEnquiry
+[0m[CONFIG] function config_libconfig_init returned 0
+Initializing random number generator, seed 14680820068489707894
+TYPE <CTRL-C> TO TERMINATE
+kausf:62 d8 24 cc 7a a8 94 de fa b8 c9 4b 1f 57 b3 96 a8 39 6c f8 8d 18 a8 99 7d 5 fb ec 70 59 1d 3 
+kseaf:ed b2 18 5e 7a a 13 bc 23 92 b e2 20 39 9 d0 e7 c9 ee 1f d7 22 c8 4b 1d e2 9c 27 2e ed b6 70 
+kamf:3a 58 5d 5b 95 53 17 75 87 2c ce a1 db 9f a7 b9 5f 84 64 f2 3e 95 ff b5 d6 32 aa 95 be b1 ef 71 
+knas_int: ee c 86 46 e1 91 42 c1 ba 4f 9 a1 12 1f 77 41 
+knas_enc: fb db 7d 6f 3b b7 51 4a ae 8c 65 d3 9c b2 d8 89 
+mac 17 52 52 c0 
+[NR_RRC] deriving kRRCenc, kRRCint from KgNB=95 24 60 51 9c 38 e5 bc 56 c9 d2 21 35 c3 21 f1 8a e4 4d b1 d2 46 3b 34 88 9b c9 08 dc b4 8c fc [0m
+[NR_RRC] securityModeComplete payload: 28 00 00 00 00 00 00 00 f0 00 00 00 00 00 00 00 [0m
+<UE-NR-Capability>
+    <accessStratumRelease><rel15/></accessStratumRelease>
+    <pdcp-Parameters>
+        <supportedROHC-Profiles>
+            <profile0x0000><false/></profile0x0000>
+            <profile0x0001><false/></profile0x0001>
+            <profile0x0002><false/></profile0x0002>
+            <profile0x0003><false/></profile0x0003>
+            <profile0x0004><false/></profile0x0004>
+            <profile0x0006><false/></profile0x0006>
+            <profile0x0101><false/></profile0x0101>
+            <profile0x0102><false/></profile0x0102>
+            <profile0x0103><false/></profile0x0103>
+            <profile0x0104><false/></profile0x0104>
+        </supportedROHC-Profiles>
+        <maxNumberROHC-ContextSessions><cs2/></maxNumberROHC-ContextSessions>
+    </pdcp-Parameters>
+    <phy-Parameters>
+    </phy-Parameters>
+    <rf-Parameters>
+        <supportedBandListNR>
+            <BandNR>
+                <bandNR>1</bandNR>
+            </BandNR>
+        </supportedBandListNR>
+    </rf-Parameters>
+</UE-NR-Capability>
+[PHY]    [RRC]UE NR Capability encoded, 10 bytes (86 bits)
+[0m[NR_RRC] UECapabilityInformation Encoded 106 bits (14 bytes)
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_REGISTRATION_ACCEPT with length 55
+[0m[NAS]    Received Registration Accept with result 3GPP
+[0m[NAS]    SMS not allowed in 5GS Registration Result
+[0m[NR_RRC] 5G-GUTI: AMF pointer 0, AMF Set ID 1, 5G-TMSI 3221226196 
+[0m[NAS]    Send NAS_UPLINK_DATA_REQ message(RegistrationComplete)
+[0m[NR_MAC] [UE 0] paging UE_ID=724
+[0m[NAS]    requested PDU session ID 10 type 1 NSSAI 1.1 DNN internet
+[0m[NAS]    Send NAS_UPLINK_DATA_REQ message(PduSessionEstablishRequest)
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_CONFIGURATION_UPDATE_COMMAND with length 51
+[0m[93m[NR_RRC] unknown message type 84
+[0m[RLC]    Added srb 2 to UE 0
+[0m[RLC]    Added drb 1 to UE 0
+[0m[RLC]    Added DRB to UE 0
+[0m[NR_RRC] RRCReconfiguration includes radio Bearer Configuration
+[0m[MAC]    [UE 0] Applying CellGroupConfig from gNodeB
+[0m[93m[SDAP]    Could not find SDAP entity: entity list empty (ue_id=0 pdu_session_id=10)
+[0m[SDAP]   Creating SDAP entity ue_id=0 pdu_session_id=10
+[0m[SDAP]   Default DRB for the created SDAP entity: DRB 1 
+[0m[PDCP]   Added DRB 1 to UE ID 0
+[0m[NR_RRC] State = NR_RRC_CONNECTED
+[0m[NR_RRC] RRCReconfiguration includes Measurement Configuration
+[0m[93m[NR_RRC] Measurement gaps not yet supported!
+[0m[NAS]    [UE 0] Received NAS_CONN_ESTABLI_CNF: errCode 1, length 71
+[0m[NR_RRC] rrcReconfigurationComplete Encoded 10 bits (2 bytes)
+[0m[NR_RRC]  Logical Channel UL-DCCH (SRB1), Generating RRCReconfigurationComplete (bytes 2)
+[0m[NAS]    Received PDU Session Establishment Accept, UE IPv4: 10.45.0.2
+[0m[SDAP]   UE 0 PDU session 10: cached QFI 1
+[0m[SDAP]   UE 0 PDU session 10: bringing TUN oaitun_ue1 up
+[0m[UTIL]   threadCreate() for ue_tun_read_0_p10: creating thread with affinity ffffffff, priority 1
+[0m[32m[OIP]    TUN Interface oaitun_ue1 successfully configured, IPv4 10.45.0.2, IPv6 (null)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 17/0
+    UL harq: 45/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 29.8, nb symbols 4.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 19/0
+    UL harq: 58/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 24.2, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 20/0
+    UL harq: 71/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 20.7, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 21/0
+    UL harq: 84/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 18.3, nb symbols 8.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 22/0
+    UL harq: 96/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 16.6, nb symbols 9.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 24/0
+    UL harq: 109/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 15.2, nb symbols 9.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 25/0
+    UL harq: 122/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 14.1, nb symbols 10.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 26/0
+    UL harq: 135/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 13.3, nb symbols 10.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 27/0
+    UL harq: 148/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 12.5, nb symbols 10.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 29/0
+    UL harq: 160/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 12.0, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 31/0
+    UL harq: 179/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 12.4, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 33/0
+    UL harq: 195/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.9, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 35/0
+    UL harq: 208/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.5, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 38/0
+    UL harq: 229/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.9, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 39/0
+    UL harq: 242/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.5, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 42/0
+    UL harq: 264/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.9, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 44/0
+    UL harq: 277/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.5, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 45/0
+    UL harq: 290/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 48/0
+    UL harq: 311/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 50/0
+    UL harq: 324/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.3, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 54/0
+    UL harq: 351/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 12.1, nb symbols 10.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 55/0
+    UL harq: 363/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.8, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 56/0
+    UL harq: 376/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 60/0
+    UL harq: 398/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.8, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 61/0
+    UL harq: 411/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 64/0
+    UL harq: 432/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.8, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 66/0
+    UL harq: 445/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67/0
+    UL harq: 458/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.4, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 70/0
+    UL harq: 479/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 71/0
+    UL harq: 492/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.5, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 75/0
+    UL harq: 514/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.6, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 76/0
+    UL harq: 527/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.5, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 77/0
+    UL harq: 540/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.3, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 80/0
+    UL harq: 559/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.3, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 82/0
+    UL harq: 571/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 85/0
+    UL harq: 593/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.3, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 86/0
+    UL harq: 606/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 88/0
+    UL harq: 619/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 91/0
+    UL harq: 641/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 92/0
+    UL harq: 653/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 95/0
+    UL harq: 675/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.3, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 97/0
+    UL harq: 688/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 98/0
+    UL harq: 701/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 101/0
+    UL harq: 723/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 103/0
+    UL harq: 735/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 106/0
+    UL harq: 757/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.2, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 107/0
+    UL harq: 770/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 108/0
+    UL harq: 783/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 112/0
+    UL harq: 804/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 113/0
+    UL harq: 817/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 116/0
+    UL harq: 836/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 118/0
+    UL harq: 849/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121/0
+    UL harq: 870/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.1, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 122/0
+    UL harq: 883/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 123/0
+    UL harq: 896/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 127/0
+    UL harq: 918/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 128/0
+    UL harq: 930/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 131/0
+    UL harq: 952/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 132/0
+    UL harq: 965/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 134/0
+    UL harq: 977/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 137/0
+    UL harq: 999/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 138/0
+    UL harq: 1012/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 142/0
+    UL harq: 1034/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 144/0
+    UL harq: 1048/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 145/0
+    UL harq: 1061/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 148/0
+    UL harq: 1082/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 150/0
+    UL harq: 1095/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 153/0
+    UL harq: 1117/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 154/0
+    UL harq: 1129/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 156/0
+    UL harq: 1142/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 159/0
+    UL harq: 1164/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 160/0
+    UL harq: 1176/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 163/0
+    UL harq: 1198/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 165/0
+    UL harq: 1211/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 168/0
+    UL harq: 1232/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 169/0
+    UL harq: 1244/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 171/0
+    UL harq: 1257/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 174/0
+    UL harq: 1279/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 175/0
+    UL harq: 1292/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 178/0
+    UL harq: 1313/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 180/0
+    UL harq: 1326/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 182/0
+    UL harq: 1344/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 184/0
+    UL harq: 1360/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 185/0
+    UL harq: 1373/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 189/0
+    UL harq: 1392/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 190/0
+    UL harq: 1405/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 193/0
+    UL harq: 1427/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 11.0, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 195/0
+    UL harq: 1439/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 196/0
+    UL harq: 1452/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 199/0
+    UL harq: 1474/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 200/0
+    UL harq: 1487/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 204/0
+    UL harq: 1508/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 205/0
+    UL harq: 1521/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 206/0
+    UL harq: 1534/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 210/0
+    UL harq: 1555/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 211/0
+    UL harq: 1568/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 214/0
+    UL harq: 1590/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 215/0
+    UL harq: 1602/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 217/0
+    UL harq: 1615/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 220/0
+    UL harq: 1636/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 221/0
+    UL harq: 1649/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 225/0
+    UL harq: 1671/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 226/0
+    UL harq: 1683/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 229/0
+    UL harq: 1705/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 230/0
+    UL harq: 1718/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 232/0
+    UL harq: 1730/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 235/0
+    UL harq: 1750/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 236/0
+    UL harq: 1762/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 239/0
+    UL harq: 1784/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.9, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 241/0
+    UL harq: 1796/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 242/0
+    UL harq: 1809/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 245/0
+    UL harq: 1828/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 247/0
+    UL harq: 1841/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 250/0
+    UL harq: 1862/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 251/0
+    UL harq: 1875/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 252/0
+    UL harq: 1888/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 256/0
+    UL harq: 1907/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 257/0
+    UL harq: 1920/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 260/0
+    UL harq: 1942/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 262/0
+    UL harq: 1955/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 263/0
+    UL harq: 1968/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 266/0
+    UL harq: 1989/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 267/0
+    UL harq: 2002/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 271/0
+    UL harq: 2024/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 272/0
+    UL harq: 2036/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 273/0
+    UL harq: 2049/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 277/0
+    UL harq: 2070/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 278/0
+    UL harq: 2083/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 280/0
+    UL harq: 2105/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 281/0
+    UL harq: 2118/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 285/0
+    UL harq: 2136/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 286/0
+    UL harq: 2152/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 287/0
+    UL harq: 2165/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 290/0
+    UL harq: 2187/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 292/0
+    UL harq: 2199/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 295/0
+    UL harq: 2221/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 296/0
+    UL harq: 2234/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 298/0
+    UL harq: 2247/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 301/0
+    UL harq: 2268/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 302/0
+    UL harq: 2281/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 305/0
+    UL harq: 2302/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 307/0
+    UL harq: 2315/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 308/0
+    UL harq: 2328/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 311/0
+    UL harq: 2349/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 313/0
+    UL harq: 2362/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 316/0
+    UL harq: 2383/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 317/0
+    UL harq: 2396/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 318/0
+    UL harq: 2409/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 322/0
+    UL harq: 2431/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 323/0
+    UL harq: 2443/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 327/0
+    UL harq: 2468/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 329/0
+    UL harq: 2480/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 331/0
+    UL harq: 2498/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 333/0
+    UL harq: 2514/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 334/0
+    UL harq: 2527/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 338/0
+    UL harq: 2549/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 339/0
+    UL harq: 2562/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 342/0
+    UL harq: 2580/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 343/0
+    UL harq: 2596/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 345/0
+    UL harq: 2609/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 348/0
+    UL harq: 2630/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 349/0
+    UL harq: 2643/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 353/0
+    UL harq: 2665/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 354/0
+    UL harq: 2677/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 355/0
+    UL harq: 2690/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 358/0
+    UL harq: 2712/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 360/0
+    UL harq: 2725/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 363/0
+    UL harq: 2747/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 364/0
+    UL harq: 2759/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 366/0
+    UL harq: 2772/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 369/0
+    UL harq: 2794/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 370/0
+    UL harq: 2806/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 373/0
+    UL harq: 2828/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 375/0
+    UL harq: 2840/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 376/0
+    UL harq: 2853/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 379/0
+    UL harq: 2874/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 381/0
+    UL harq: 2887/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 384/0
+    UL harq: 2909/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 385/0
+    UL harq: 2922/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 386/0
+    UL harq: 2935/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 390/0
+    UL harq: 2957/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 391/0
+    UL harq: 2970/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 394/0
+    UL harq: 2991/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 395/0
+    UL harq: 3004/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 398/0
+    UL harq: 3022/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 400/0
+    UL harq: 3039/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 401/0
+    UL harq: 3051/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 405/0
+    UL harq: 3073/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 406/0
+    UL harq: 3086/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 409/0
+    UL harq: 3106/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 410/0
+    UL harq: 3120/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 412/0
+    UL harq: 3133/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 415/0
+    UL harq: 3152/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 416/0
+    UL harq: 3165/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 420/0
+    UL harq: 3184/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 421/0
+    UL harq: 3197/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 422/0
+    UL harq: 3210/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 425/0
+    UL harq: 3232/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 427/0
+    UL harq: 3244/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 430/0
+    UL harq: 3266/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 431/0
+    UL harq: 3279/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 433/0
+    UL harq: 3292/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 436/0
+    UL harq: 3313/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 437/0
+    UL harq: 3326/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 440/0
+    UL harq: 3348/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 442/0
+    UL harq: 3361/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 443/0
+    UL harq: 3373/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 446/0
+    UL harq: 3395/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 447/0
+    UL harq: 3407/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 451/0
+    UL harq: 3428/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 452/0
+    UL harq: 3441/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 453/0
+    UL harq: 3454/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 457/0
+    UL harq: 3475/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 458/0
+    UL harq: 3488/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 461/0
+    UL harq: 3510/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 462/0
+    UL harq: 3523/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 466/0
+    UL harq: 3545/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 467/0
+    UL harq: 3558/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 468/0
+    UL harq: 3570/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 472/0
+    UL harq: 3592/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 473/0
+    UL harq: 3605/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 476/0
+    UL harq: 3627/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 477/0
+    UL harq: 3640/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 479/0
+    UL harq: 3652/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 482/0
+    UL harq: 3674/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 483/0
+    UL harq: 3686/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 487/0
+    UL harq: 3708/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 488/0
+    UL harq: 3721/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 489/0
+    UL harq: 3733/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 492/0
+    UL harq: 3755/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 494/0
+    UL harq: 3768/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 497/0
+    UL harq: 3789/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 498/0
+    UL harq: 3802/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 500/0
+    UL harq: 3820/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 503/0
+    UL harq: 3836/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 504/0
+    UL harq: 3849/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 507/0
+    UL harq: 3871/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 509/0
+    UL harq: 3884/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 510/0
+    UL harq: 3896/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 513/0
+    UL harq: 3918/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 514/0
+    UL harq: 3930/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 518/0
+    UL harq: 3952/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 519/0
+    UL harq: 3964/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 520/0
+    UL harq: 3977/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 524/0
+    UL harq: 3999/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 525/0
+    UL harq: 4011/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 527/0
+    UL harq: 4033/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 528/0
+    UL harq: 4046/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 531/0
+    UL harq: 4065/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 533/0
+    UL harq: 4081/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 534/0
+    UL harq: 4094/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 538/0
+    UL harq: 4116/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 539/0
+    UL harq: 4128/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 541/0
+    UL harq: 4147/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.8, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 543/0
+    UL harq: 4163/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 545/0
+    UL harq: 4176/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 546/0
+    UL harq: 4189/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 547/0
+    UL harq: 4201/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 548/0
+    UL harq: 4214/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.7, nb symbols 11.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 550/0
+    UL harq: 4227/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 551/0
+    UL harq: 4240/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 552/0
+    UL harq: 4253/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 554/0
+    UL harq: 4265/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 555/0
+    UL harq: 4278/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 556/0
+    UL harq: 4291/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.6, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 557/0
+    UL harq: 4304/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 559/0
+    UL harq: 4317/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 560/0
+    UL harq: 4329/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 561/0
+    UL harq: 4342/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 563/0
+    UL harq: 4355/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 564/0
+    UL harq: 4368/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 565/0
+    UL harq: 4381/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.5, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 566/0
+    UL harq: 4393/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 568/0
+    UL harq: 4406/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 569/0
+    UL harq: 4419/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 570/0
+    UL harq: 4432/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 572/0
+    UL harq: 4445/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 573/0
+    UL harq: 4457/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.4, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 574/0
+    UL harq: 4470/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 575/0
+    UL harq: 4483/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 577/0
+    UL harq: 4496/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 578/0
+    UL harq: 4509/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 579/0
+    UL harq: 4521/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 580/0
+    UL harq: 4534/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 582/0
+    UL harq: 4547/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.3, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 583/0
+    UL harq: 4560/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.2, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 584/0
+    UL harq: 4573/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.2, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 586/0
+    UL harq: 4585/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.2, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 587/0
+    UL harq: 4598/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.2, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 590/0
+    UL harq: 4616/0 avg code rate 0.1, avg bit/symbol 2.0, avg per TB: (nb RBs 10.2, nb symbols 11.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 622/0
+    UL harq: 4764/0 avg code rate 0.2, avg bit/symbol 2.0, avg per TB: (nb RBs 11.9, nb symbols 11.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 659/0
+    UL harq: 4939/0 avg code rate 0.3, avg bit/symbol 2.4, avg per TB: (nb RBs 13.4, nb symbols 10.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 703/0
+    UL harq: 5068/0 avg code rate 0.4, avg bit/symbol 2.9, avg per TB: (nb RBs 14.2, nb symbols 10.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 745/0
+    UL harq: 5171/0 avg code rate 0.5, avg bit/symbol 3.3, avg per TB: (nb RBs 14.9, nb symbols 10.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 787/0
+    UL harq: 5272/0 avg code rate 0.6, avg bit/symbol 3.6, avg per TB: (nb RBs 15.5, nb symbols 10.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 826/0
+    UL harq: 5387/0 avg code rate 0.7, avg bit/symbol 3.8, avg per TB: (nb RBs 16.2, nb symbols 10.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 867/0
+    UL harq: 5495/0 avg code rate 0.7, avg bit/symbol 4.0, avg per TB: (nb RBs 16.9, nb symbols 10.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 907/0
+    UL harq: 5598/0 avg code rate 0.7, avg bit/symbol 4.2, avg per TB: (nb RBs 17.5, nb symbols 10.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 951/0
+    UL harq: 5700/0 avg code rate 0.7, avg bit/symbol 4.3, avg per TB: (nb RBs 18.1, nb symbols 9.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 991/0
+    UL harq: 5811/0 avg code rate 0.8, avg bit/symbol 4.5, avg per TB: (nb RBs 18.7, nb symbols 9.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 1033/0
+    UL harq: 5919/0 avg code rate 0.8, avg bit/symbol 4.6, avg per TB: (nb RBs 19.2, nb symbols 9.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 1074/0
+    UL harq: 6040/0 avg code rate 0.8, avg bit/symbol 4.7, avg per TB: (nb RBs 19.9, nb symbols 9.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 1118/0
+    UL harq: 6137/0 avg code rate 0.8, avg bit/symbol 4.7, avg per TB: (nb RBs 20.3, nb symbols 9.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 1157/0
+    UL harq: 6244/0 avg code rate 0.8, avg bit/symbol 4.8, avg per TB: (nb RBs 20.8, nb symbols 9.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 1197/0
+    UL harq: 6351/0 avg code rate 0.8, avg bit/symbol 4.9, avg per TB: (nb RBs 21.3, nb symbols 9.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 1238/0
+    UL harq: 6457/0 avg code rate 0.8, avg bit/symbol 4.9, avg per TB: (nb RBs 21.8, nb symbols 9.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 1279/0
+    UL harq: 6566/0 avg code rate 0.8, avg bit/symbol 5.0, avg per TB: (nb RBs 22.2, nb symbols 9.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 1321/0
+    UL harq: 6667/0 avg code rate 0.8, avg bit/symbol 5.0, avg per TB: (nb RBs 22.6, nb symbols 8.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 1361/0
+    UL harq: 6771/0 avg code rate 0.8, avg bit/symbol 5.1, avg per TB: (nb RBs 23.1, nb symbols 8.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 1405/0
+    UL harq: 6875/0 avg code rate 0.8, avg bit/symbol 5.1, avg per TB: (nb RBs 23.5, nb symbols 8.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 1447/0
+    UL harq: 6992/0 avg code rate 0.8, avg bit/symbol 5.1, avg per TB: (nb RBs 23.9, nb symbols 8.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 1487/0
+    UL harq: 7101/0 avg code rate 0.9, avg bit/symbol 5.2, avg per TB: (nb RBs 24.3, nb symbols 8.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 1529/0
+    UL harq: 7212/0 avg code rate 0.9, avg bit/symbol 5.2, avg per TB: (nb RBs 24.7, nb symbols 8.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 1570/0
+    UL harq: 7315/0 avg code rate 0.9, avg bit/symbol 5.2, avg per TB: (nb RBs 25.0, nb symbols 8.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 1610/0
+    UL harq: 7415/0 avg code rate 0.9, avg bit/symbol 5.3, avg per TB: (nb RBs 25.3, nb symbols 8.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 1653/0
+    UL harq: 7529/0 avg code rate 0.9, avg bit/symbol 5.3, avg per TB: (nb RBs 25.7, nb symbols 8.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 1697/0
+    UL harq: 7629/0 avg code rate 0.9, avg bit/symbol 5.3, avg per TB: (nb RBs 26.0, nb symbols 8.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 1739/0
+    UL harq: 7726/0 avg code rate 0.9, avg bit/symbol 5.3, avg per TB: (nb RBs 26.3, nb symbols 8.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 1783/0
+    UL harq: 7823/0 avg code rate 0.9, avg bit/symbol 5.3, avg per TB: (nb RBs 26.6, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 1825/0
+    UL harq: 7924/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 26.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 1867/0
+    UL harq: 8023/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 27.2, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 1906/0
+    UL harq: 8129/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 27.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 1947/0
+    UL harq: 8228/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 27.7, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 1989/0
+    UL harq: 8328/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 28.0, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 2030/0
+    UL harq: 8440/0 avg code rate 0.9, avg bit/symbol 5.4, avg per TB: (nb RBs 28.3, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 2070/0
+    UL harq: 8544/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 28.5, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 2113/0
+    UL harq: 8652/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 28.8, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 2154/0
+    UL harq: 8765/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 29.1, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 2194/0
+    UL harq: 8879/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 29.3, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 2232/0
+    UL harq: 8988/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 29.6, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 2274/0
+    UL harq: 9096/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 29.8, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 2317/0
+    UL harq: 9193/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 30.0, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 2360/0
+    UL harq: 9310/0 avg code rate 0.9, avg bit/symbol 5.5, avg per TB: (nb RBs 30.3, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 2401/0
+    UL harq: 9412/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 30.5, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 2444/0
+    UL harq: 9516/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 30.7, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 2484/0
+    UL harq: 9616/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 30.9, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 2525/0
+    UL harq: 9730/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 31.1, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 2569/0
+    UL harq: 9837/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 31.3, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 2608/0
+    UL harq: 9951/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 31.5, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 2652/0
+    UL harq: 10054/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 31.7, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 2692/0
+    UL harq: 10161/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 31.9, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 2736/0
+    UL harq: 10266/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 32.1, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 2779/0
+    UL harq: 10372/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 32.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 2822/0
+    UL harq: 10484/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 32.4, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 2862/0
+    UL harq: 10598/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 32.6, nb symbols 6.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 2903/0
+    UL harq: 10711/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 32.8, nb symbols 6.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 2944/0
+    UL harq: 10820/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.0, nb symbols 6.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 2986/0
+    UL harq: 10919/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.1, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 3029/0
+    UL harq: 11031/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.3, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 3068/0
+    UL harq: 11142/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.4, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 3109/0
+    UL harq: 11247/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.6, nb symbols 6.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 3151/0
+    UL harq: 11353/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.7, nb symbols 6.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 3192/0
+    UL harq: 11462/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 33.9, nb symbols 6.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 3231/0
+    UL harq: 11575/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.0, nb symbols 6.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 3273/0
+    UL harq: 11686/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.2, nb symbols 6.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 3314/0
+    UL harq: 11795/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.3, nb symbols 6.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 3354/0
+    UL harq: 11902/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.4, nb symbols 6.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 3397/0
+    UL harq: 12017/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.6, nb symbols 6.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 3441/0
+    UL harq: 12119/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.7, nb symbols 6.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 3484/0
+    UL harq: 12231/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 34.9, nb symbols 6.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 3523/0
+    UL harq: 12347/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.0, nb symbols 6.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 3564/0
+    UL harq: 12449/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.1, nb symbols 6.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 3605/0
+    UL harq: 12560/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.2, nb symbols 6.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 3647/0
+    UL harq: 12668/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.4, nb symbols 6.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 3690/0
+    UL harq: 12773/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.5, nb symbols 6.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 3731/0
+    UL harq: 12889/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.6, nb symbols 6.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 3771/0
+    UL harq: 13013/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.7, nb symbols 6.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 3812/0
+    UL harq: 13115/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 35.8, nb symbols 6.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 3852/0
+    UL harq: 13223/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.0, nb symbols 6.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 3891/0
+    UL harq: 13341/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.1, nb symbols 6.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 3931/0
+    UL harq: 13448/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.2, nb symbols 6.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 3974/0
+    UL harq: 13546/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.3, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 4013/0
+    UL harq: 13655/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.4, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 4054/0
+    UL harq: 13761/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.5, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 4095/0
+    UL harq: 13862/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.6, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 4136/0
+    UL harq: 13977/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.7, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 4180/0
+    UL harq: 14080/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.7, nb symbols 5.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 4221/0
+    UL harq: 14186/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.8, nb symbols 5.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 4261/0
+    UL harq: 14304/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 36.9, nb symbols 5.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 4301/0
+    UL harq: 14421/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.0, nb symbols 5.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 4345/0
+    UL harq: 14529/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.1, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 4387/0
+    UL harq: 14631/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.2, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 4428/0
+    UL harq: 14732/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.3, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 4466/0
+    UL harq: 14847/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.4, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 4505/0
+    UL harq: 14951/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.5, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 4542/0
+    UL harq: 15059/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.5, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 4583/0
+    UL harq: 15155/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.6, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 4624/0
+    UL harq: 15264/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.7, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 4662/0
+    UL harq: 15376/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.8, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 4699/0
+    UL harq: 15489/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.9, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 4738/0
+    UL harq: 15598/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 37.9, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 4781/0
+    UL harq: 15700/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.0, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 4823/0
+    UL harq: 15804/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.1, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 4863/0
+    UL harq: 15919/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 4905/0
+    UL harq: 16032/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 4947/0
+    UL harq: 16128/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 4986/0
+    UL harq: 16234/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.4, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 5028/0
+    UL harq: 16340/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 5069/0
+    UL harq: 16453/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 5112/0
+    UL harq: 16564/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 5153/0
+    UL harq: 16671/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.7, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 5195/0
+    UL harq: 16772/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.8, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 5234/0
+    UL harq: 16879/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.8, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 5277/0
+    UL harq: 16991/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.9, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 5317/0
+    UL harq: 17096/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 38.9, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 5358/0
+    UL harq: 17206/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.0, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 5400/0
+    UL harq: 17316/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.1, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 5441/0
+    UL harq: 17424/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.1, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 5480/0
+    UL harq: 17553/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.2, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 5522/0
+    UL harq: 17670/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.3, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 5565/0
+    UL harq: 17777/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.4, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 5603/0
+    UL harq: 17892/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.4, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 5645/0
+    UL harq: 18005/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.5, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 5684/0
+    UL harq: 18111/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.5, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 5726/0
+    UL harq: 18228/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 5766/0
+    UL harq: 18332/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 5810/0
+    UL harq: 18438/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 5852/0
+    UL harq: 18542/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.8, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 5890/0
+    UL harq: 18647/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.8, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 5934/0
+    UL harq: 18750/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 5972/0
+    UL harq: 18862/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6011/0
+    UL harq: 18967/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6052/0
+    UL harq: 19076/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6093/0
+    UL harq: 19185/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6135/0
+    UL harq: 19290/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6175/0
+    UL harq: 19405/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 6218/0
+    UL harq: 19517/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 6258/0
+    UL harq: 19628/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 6297/0
+    UL harq: 19738/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6328/0
+    UL harq: 19818/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6334/0
+    UL harq: 19835/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6335/0
+    UL harq: 19848/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6336/0
+    UL harq: 19861/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.3, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6337/0
+    UL harq: 19873/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 6339/0
+    UL harq: 19886/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 6340/0
+    UL harq: 19899/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 6341/0
+    UL harq: 19912/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.2, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6343/0
+    UL harq: 19925/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6344/0
+    UL harq: 19937/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6345/0
+    UL harq: 19950/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6346/0
+    UL harq: 19963/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6348/0
+    UL harq: 19976/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.1, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 6349/0
+    UL harq: 19989/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 6350/0
+    UL harq: 20001/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 6352/0
+    UL harq: 20014/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6353/0
+    UL harq: 20027/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 40.0, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6354/0
+    UL harq: 20040/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6355/0
+    UL harq: 20053/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6357/0
+    UL harq: 20065/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6358/0
+    UL harq: 20078/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 6359/0
+    UL harq: 20091/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.9, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 6361/0
+    UL harq: 20104/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.8, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 6362/0
+    UL harq: 20117/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.8, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6363/0
+    UL harq: 20129/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.8, nb symbols 5.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6364/0
+    UL harq: 20142/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.8, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6366/0
+    UL harq: 20155/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6367/0
+    UL harq: 20168/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6368/0
+    UL harq: 20181/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 6369/0
+    UL harq: 20193/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 6371/0
+    UL harq: 20206/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.7, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 6372/0
+    UL harq: 20219/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 6373/0
+    UL harq: 20232/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 6375/0
+    UL harq: 20245/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 6376/0
+    UL harq: 20257/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 6377/0
+    UL harq: 20270/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.5, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 6457/0
+    UL harq: 20331/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 39.6, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 7955/0
+    UL harq: 20603/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 39.8, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 9507/0
+    UL harq: 20865/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.0, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 11059/0
+    UL harq: 21119/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.1, nb symbols 5.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 12611/0
+    UL harq: 21368/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.2, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 14163/0
+    UL harq: 21623/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.2, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 15715/0
+    UL harq: 21866/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.3, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 17267/0
+    UL harq: 22118/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.4, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 18819/0
+    UL harq: 22365/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.4, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 20371/0
+    UL harq: 22613/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.5, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 21923/0
+    UL harq: 22857/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.5, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 23475/0
+    UL harq: 23104/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.6, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 25027/0
+    UL harq: 23349/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.6, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 26579/0
+    UL harq: 23602/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.7, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 28131/0
+    UL harq: 23846/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.7, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 29683/0
+    UL harq: 24092/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.8, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 31235/0
+    UL harq: 24334/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.8, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 32787/0
+    UL harq: 24578/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.9, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 34339/0
+    UL harq: 24822/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 40.9, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 35891/0
+    UL harq: 25064/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 41.0, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 37443/0
+    UL harq: 25306/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 41.0, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 38995/0
+    UL harq: 25560/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 41.1, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 40547/0
+    UL harq: 25805/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 41.1, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 42099/0
+    UL harq: 26058/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.1, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 43651/0
+    UL harq: 26301/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 45203/0
+    UL harq: 26544/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 46755/0
+    UL harq: 26788/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 48307/0
+    UL harq: 27036/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 49859/0
+    UL harq: 27277/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 51411/0
+    UL harq: 27527/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 52963/0
+    UL harq: 27764/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 54515/0
+    UL harq: 28014/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 56067/0
+    UL harq: 28256/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 57619/0
+    UL harq: 28500/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 59171/0
+    UL harq: 28738/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 60723/0
+    UL harq: 28994/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 62275/0
+    UL harq: 29243/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 63827/0
+    UL harq: 29487/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 65379/0
+    UL harq: 29728/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.7, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 66931/0
+    UL harq: 29975/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.7, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 67606/0
+    UL harq: 30076/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.7, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 67607/0
+    UL harq: 30089/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.7, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67608/0
+    UL harq: 30102/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 67609/0
+    UL harq: 30115/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 67611/0
+    UL harq: 30127/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 67612/0
+    UL harq: 30140/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 67613/0
+    UL harq: 30153/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 67615/0
+    UL harq: 30166/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.6, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 67616/0
+    UL harq: 30179/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 67617/0
+    UL harq: 30191/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67618/0
+    UL harq: 30204/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 67620/0
+    UL harq: 30217/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 67621/0
+    UL harq: 30230/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 67622/0
+    UL harq: 30243/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 67624/0
+    UL harq: 30255/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.5, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 67625/0
+    UL harq: 30268/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 67626/0
+    UL harq: 30281/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 67627/0
+    UL harq: 30294/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67629/0
+    UL harq: 30307/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 67630/0
+    UL harq: 30319/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 67631/0
+    UL harq: 30332/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.4, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 67633/0
+    UL harq: 30345/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 67634/0
+    UL harq: 30358/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 67635/0
+    UL harq: 30371/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 67636/0
+    UL harq: 30383/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 67638/0
+    UL harq: 30396/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67639/0
+    UL harq: 30409/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 67640/0
+    UL harq: 30422/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.3, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 67641/0
+    UL harq: 30435/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 67643/0
+    UL harq: 30447/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 67644/0
+    UL harq: 30460/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 67645/0
+    UL harq: 30473/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 67647/0
+    UL harq: 30486/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 67648/0
+    UL harq: 30499/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.2, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 67649/0
+    UL harq: 30511/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.1, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 67650/0
+    UL harq: 30524/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 41.1, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 67805/0
+    UL harq: 30865/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 41.7, nb symbols 5.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 68474/0
+    UL harq: 31633/0 avg code rate 0.9, avg bit/symbol 5.6, avg per TB: (nb RBs 43.3, nb symbols 5.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 69364/0
+    UL harq: 32401/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 44.7, nb symbols 5.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 70328/0
+    UL harq: 33169/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 46.1, nb symbols 5.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 71313/0
+    UL harq: 33937/0 avg code rate 0.9, avg bit/symbol 5.7, avg per TB: (nb RBs 47.5, nb symbols 5.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 72304/0
+    UL harq: 34705/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 48.7, nb symbols 6.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 73272/0
+    UL harq: 35473/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 49.9, nb symbols 6.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 74274/0
+    UL harq: 36241/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 51.1, nb symbols 6.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 75275/0
+    UL harq: 37009/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 52.2, nb symbols 6.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 76239/0
+    UL harq: 37777/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 53.3, nb symbols 6.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 77267/0
+    UL harq: 38545/0 avg code rate 0.9, avg bit/symbol 5.8, avg per TB: (nb RBs 54.3, nb symbols 6.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 78230/0
+    UL harq: 39313/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 55.3, nb symbols 6.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 79204/0
+    UL harq: 40081/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 56.3, nb symbols 6.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 80177/0
+    UL harq: 40849/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 57.2, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 81162/0
+    UL harq: 41617/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 58.1, nb symbols 6.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 82141/0
+    UL harq: 42385/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 58.9, nb symbols 6.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 83130/0
+    UL harq: 43153/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 59.7, nb symbols 6.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 84089/0
+    UL harq: 43921/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 60.5, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 85037/0
+    UL harq: 44689/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 61.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 85990/0
+    UL harq: 45457/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 62.0, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 86934/0
+    UL harq: 46225/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 62.8, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 87899/0
+    UL harq: 46993/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 63.4, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 88858/0
+    UL harq: 47761/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 64.1, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 89820/0
+    UL harq: 48529/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 64.8, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 90767/0
+    UL harq: 49297/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 65.4, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 91736/0
+    UL harq: 50065/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 66.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 92706/0
+    UL harq: 50833/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 66.6, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 93648/0
+    UL harq: 51601/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 67.2, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 94614/0
+    UL harq: 52369/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 67.7, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 95553/0
+    UL harq: 53137/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 68.2, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 96507/0
+    UL harq: 53905/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 68.8, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 97459/0
+    UL harq: 54673/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 69.3, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 98452/0
+    UL harq: 55441/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 69.8, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 99373/0
+    UL harq: 56209/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 70.3, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 100339/0
+    UL harq: 56977/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 70.7, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 101282/0
+    UL harq: 57745/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 71.2, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 102234/0
+    UL harq: 58513/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 71.6, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 103239/0
+    UL harq: 59281/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 72.1, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 104216/0
+    UL harq: 60049/0 avg code rate 0.9, avg bit/symbol 5.9, avg per TB: (nb RBs 72.5, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 105067/0
+    UL harq: 60804/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.9, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 105946/0
+    UL harq: 61572/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.3, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 106907/0
+    UL harq: 62340/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.7, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 107861/0
+    UL harq: 63108/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.1, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 108831/0
+    UL harq: 63876/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.4, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 109795/0
+    UL harq: 64644/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.8, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 110748/0
+    UL harq: 65412/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.1, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 111741/0
+    UL harq: 66180/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.5, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 112702/0
+    UL harq: 66948/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.8, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 113656/0
+    UL harq: 67716/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.2, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 114615/0
+    UL harq: 68484/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.5, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 115581/0
+    UL harq: 69252/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.8, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 116535/0
+    UL harq: 70020/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.1, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 117464/0
+    UL harq: 70788/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 118411/0
+    UL harq: 71556/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.7, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 119361/0
+    UL harq: 72324/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 120313/0
+    UL harq: 73092/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121133/0
+    UL harq: 73714/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121143/0
+    UL harq: 73738/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121144/0
+    UL harq: 73751/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121145/0
+    UL harq: 73763/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121147/0
+    UL harq: 73776/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121148/0
+    UL harq: 73789/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121149/0
+    UL harq: 73802/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121150/0
+    UL harq: 73815/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121152/0
+    UL harq: 73827/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121153/0
+    UL harq: 73840/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121154/0
+    UL harq: 73853/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121155/0
+    UL harq: 73866/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121157/0
+    UL harq: 73879/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121158/0
+    UL harq: 73891/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121159/0
+    UL harq: 73904/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121161/0
+    UL harq: 73917/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121162/0
+    UL harq: 73930/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121163/0
+    UL harq: 73943/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121164/0
+    UL harq: 73955/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.3, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121166/0
+    UL harq: 73968/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121167/0
+    UL harq: 73981/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121168/0
+    UL harq: 73994/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121170/0
+    UL harq: 74007/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121171/0
+    UL harq: 74019/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121172/0
+    UL harq: 74032/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121173/0
+    UL harq: 74045/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121175/0
+    UL harq: 74058/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.2, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121176/0
+    UL harq: 74071/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121177/0
+    UL harq: 74083/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121179/0
+    UL harq: 74096/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121180/0
+    UL harq: 74109/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121181/0
+    UL harq: 74122/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121182/0
+    UL harq: 74135/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121184/0
+    UL harq: 74147/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121185/0
+    UL harq: 74160/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.1, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121186/0
+    UL harq: 74173/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121187/0
+    UL harq: 74186/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121189/0
+    UL harq: 74199/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121190/0
+    UL harq: 74211/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121191/0
+    UL harq: 74224/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121193/0
+    UL harq: 74237/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121194/0
+    UL harq: 74250/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121195/0
+    UL harq: 74263/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 78.0, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121196/0
+    UL harq: 74275/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121198/0
+    UL harq: 74288/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 121199/0
+    UL harq: 74301/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 121200/0
+    UL harq: 74314/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 121202/0
+    UL harq: 74327/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 121300/0
+    UL harq: 74449/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.9, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 121486/0
+    UL harq: 74761/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.8, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 121654/0
+    UL harq: 75001/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.7, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 121824/0
+    UL harq: 75222/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.6, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 121990/0
+    UL harq: 75447/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.6, nb symbols 8.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 122151/0
+    UL harq: 75678/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 122318/0
+    UL harq: 75897/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 122490/0
+    UL harq: 76120/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.3, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 122655/0
+    UL harq: 76341/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.2, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 122824/0
+    UL harq: 76560/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.1, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 122993/0
+    UL harq: 76784/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 77.0, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 123160/0
+    UL harq: 77013/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.9, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 123331/0
+    UL harq: 77236/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.8, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 123488/0
+    UL harq: 77466/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.7, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 123657/0
+    UL harq: 77688/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.6, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 123821/0
+    UL harq: 77916/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.5, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 123990/0
+    UL harq: 78138/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.4, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 124158/0
+    UL harq: 78365/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.3, nb symbols 7.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 124329/0
+    UL harq: 78581/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.2, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 124500/0
+    UL harq: 78800/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.1, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 124666/0
+    UL harq: 79026/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.1, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 124834/0
+    UL harq: 79251/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 76.0, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 125002/0
+    UL harq: 79476/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.9, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 125172/0
+    UL harq: 79701/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.8, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 125341/0
+    UL harq: 79924/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.7, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 125509/0
+    UL harq: 80153/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.6, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 125671/0
+    UL harq: 80375/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.5, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 125841/0
+    UL harq: 80600/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.4, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 126008/0
+    UL harq: 80826/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.4, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 126174/0
+    UL harq: 81051/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.3, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 126341/0
+    UL harq: 81281/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.2, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 126511/0
+    UL harq: 81508/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.1, nb symbols 7.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 126670/0
+    UL harq: 81734/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 75.0, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 126845/0
+    UL harq: 81957/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.9, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 127011/0
+    UL harq: 82180/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.8, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 127179/0
+    UL harq: 82397/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.8, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 127351/0
+    UL harq: 82624/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.7, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 127519/0
+    UL harq: 82844/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.6, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 127688/0
+    UL harq: 83072/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.5, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 127858/0
+    UL harq: 83299/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.4, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 128027/0
+    UL harq: 83523/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.4, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 128196/0
+    UL harq: 83753/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.3, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 128366/0
+    UL harq: 83975/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.2, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 128533/0
+    UL harq: 84203/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.1, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 128696/0
+    UL harq: 84426/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.0, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 128868/0
+    UL harq: 84655/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 74.0, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 129036/0
+    UL harq: 84888/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.9, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 129200/0
+    UL harq: 85109/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.8, nb symbols 7.7)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 129362/0
+    UL harq: 85345/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.7, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 129529/0
+    UL harq: 85568/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.6, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 129695/0
+    UL harq: 85792/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.6, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 129865/0
+    UL harq: 86014/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.5, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 130034/0
+    UL harq: 86239/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.4, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 130206/0
+    UL harq: 86462/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.3, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 130371/0
+    UL harq: 86690/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.3, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 130538/0
+    UL harq: 86915/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.2, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 130702/0
+    UL harq: 87142/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.1, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 130870/0
+    UL harq: 87375/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.0, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 131038/0
+    UL harq: 87605/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 73.0, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 131207/0
+    UL harq: 87833/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.9, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 131369/0
+    UL harq: 88062/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.8, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 131533/0
+    UL harq: 88290/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.7, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 131703/0
+    UL harq: 88519/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.7, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 131872/0
+    UL harq: 88743/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.6, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 132043/0
+    UL harq: 88970/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.5, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 132207/0
+    UL harq: 89193/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.5, nb symbols 7.6)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 132374/0
+    UL harq: 89417/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.4, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 132546/0
+    UL harq: 89648/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.3, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 132717/0
+    UL harq: 89875/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.3, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 132882/0
+    UL harq: 90097/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.2, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 133049/0
+    UL harq: 90316/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.1, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 133222/0
+    UL harq: 90546/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.0, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 133389/0
+    UL harq: 90770/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 72.0, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 133549/0
+    UL harq: 90999/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.9, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 133717/0
+    UL harq: 91226/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.8, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 133884/0
+    UL harq: 91453/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.8, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 134057/0
+    UL harq: 91677/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.7, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 134218/0
+    UL harq: 91899/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.6, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 134382/0
+    UL harq: 92126/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.6, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 134550/0
+    UL harq: 92355/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.5, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 134720/0
+    UL harq: 92584/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.4, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 134890/0
+    UL harq: 92806/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.4, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 135055/0
+    UL harq: 93033/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.3, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 135218/0
+    UL harq: 93253/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.2, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 135384/0
+    UL harq: 93476/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.2, nb symbols 7.5)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 135544/0
+    UL harq: 93705/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.1, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 135708/0
+    UL harq: 93932/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.0, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 135873/0
+    UL harq: 94157/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 71.0, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 136039/0
+    UL harq: 94384/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.9, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 136210/0
+    UL harq: 94601/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.9, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 136377/0
+    UL harq: 94826/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.8, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 136551/0
+    UL harq: 95044/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.7, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 136723/0
+    UL harq: 95276/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.7, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 136890/0
+    UL harq: 95510/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.6, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 137055/0
+    UL harq: 95733/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.5, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 137224/0
+    UL harq: 95962/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.5, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 137394/0
+    UL harq: 96194/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.4, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 137561/0
+    UL harq: 96414/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.4, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 137731/0
+    UL harq: 96643/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.3, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 137899/0
+    UL harq: 96869/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.2, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 138072/0
+    UL harq: 97095/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.2, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 138245/0
+    UL harq: 97326/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.1, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 138414/0
+    UL harq: 97547/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.1, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 138580/0
+    UL harq: 97784/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 70.0, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 138749/0
+    UL harq: 98004/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.9, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 138917/0
+    UL harq: 98228/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.9, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 139083/0
+    UL harq: 98461/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.8, nb symbols 7.4)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 139251/0
+    UL harq: 98682/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.8, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 139415/0
+    UL harq: 98906/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.7, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 139582/0
+    UL harq: 99131/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.7, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 139754/0
+    UL harq: 99362/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.6, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 139925/0
+    UL harq: 99587/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.5, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 140092/0
+    UL harq: 99810/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.5, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 140256/0
+    UL harq: 100033/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.4, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 140423/0
+    UL harq: 100258/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.4, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 140591/0
+    UL harq: 100488/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.3, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 140759/0
+    UL harq: 100718/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.3, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 140926/0
+    UL harq: 100937/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.2, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 141091/0
+    UL harq: 101162/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.2, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 141260/0
+    UL harq: 101394/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.1, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 141425/0
+    UL harq: 101622/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.0, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 141594/0
+    UL harq: 101848/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 69.0, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 141757/0
+    UL harq: 102075/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.9, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 141927/0
+    UL harq: 102305/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.9, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 142092/0
+    UL harq: 102536/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.8, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 142261/0
+    UL harq: 102756/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.8, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 142427/0
+    UL harq: 102980/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.7, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 142598/0
+    UL harq: 103212/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.7, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 142762/0
+    UL harq: 103440/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.6, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 142935/0
+    UL harq: 103665/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.6, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 143101/0
+    UL harq: 103890/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.5, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 143270/0
+    UL harq: 104119/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.5, nb symbols 7.3)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 143439/0
+    UL harq: 104340/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.4, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 143604/0
+    UL harq: 104566/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.3, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 143771/0
+    UL harq: 104790/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.3, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 143939/0
+    UL harq: 105014/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.2, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 144113/0
+    UL harq: 105235/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.2, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 144282/0
+    UL harq: 105464/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.1, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 144450/0
+    UL harq: 105690/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.1, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 144621/0
+    UL harq: 105922/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.0, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 144792/0
+    UL harq: 106141/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 68.0, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 144959/0
+    UL harq: 106365/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.9, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 145127/0
+    UL harq: 106594/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.9, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 145298/0
+    UL harq: 106809/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.8, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 145466/0
+    UL harq: 107037/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.8, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 145631/0
+    UL harq: 107263/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.7, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 145800/0
+    UL harq: 107490/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.7, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 145968/0
+    UL harq: 107714/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.7, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 146138/0
+    UL harq: 107942/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.6, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 146305/0
+    UL harq: 108163/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.6, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 146470/0
+    UL harq: 108388/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.5, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 146634/0
+    UL harq: 108614/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.5, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 146800/0
+    UL harq: 108835/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.4, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 146963/0
+    UL harq: 109063/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.4, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 147130/0
+    UL harq: 109289/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.3, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 147300/0
+    UL harq: 109510/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.3, nb symbols 7.2)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 147472/0
+    UL harq: 109735/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.2, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 147636/0
+    UL harq: 109961/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.2, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 147813/0
+    UL harq: 110189/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.1, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 147980/0
+    UL harq: 110419/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.1, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 148146/0
+    UL harq: 110640/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 148312/0
+    UL harq: 110874/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 148478/0
+    UL harq: 111100/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 67.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 148644/0
+    UL harq: 111319/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.9, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 148809/0
+    UL harq: 111544/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.9, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 148979/0
+    UL harq: 111767/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.8, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 149137/0
+    UL harq: 111997/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.8, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 149305/0
+    UL harq: 112228/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.7, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 149477/0
+    UL harq: 112456/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.7, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 149643/0
+    UL harq: 112670/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.6, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 149810/0
+    UL harq: 112896/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.6, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 149980/0
+    UL harq: 113113/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.6, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 150149/0
+    UL harq: 113335/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.5, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 150315/0
+    UL harq: 113561/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.5, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 150487/0
+    UL harq: 113786/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.4, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 150646/0
+    UL harq: 114018/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.4, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 150810/0
+    UL harq: 114248/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.3, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 150977/0
+    UL harq: 114468/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.3, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 151140/0
+    UL harq: 114697/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.2, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 151309/0
+    UL harq: 114923/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.2, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 151473/0
+    UL harq: 115147/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.2, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 151639/0
+    UL harq: 115371/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.1, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 151810/0
+    UL harq: 115594/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.1, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 151976/0
+    UL harq: 115823/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 152142/0
+    UL harq: 116043/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.0, nb symbols 7.1)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 152303/0
+    UL harq: 116268/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 66.0, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 152471/0
+    UL harq: 116492/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.9, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 152645/0
+    UL harq: 116721/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.9, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 152816/0
+    UL harq: 116952/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.8, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 152983/0
+    UL harq: 117175/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.8, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 153154/0
+    UL harq: 117399/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.7, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 153324/0
+    UL harq: 117627/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.7, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 153500/0
+    UL harq: 117851/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.7, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 153664/0
+    UL harq: 118079/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.6, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 153835/0
+    UL harq: 118302/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.6, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 154002/0
+    UL harq: 118527/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.5, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 154173/0
+    UL harq: 118748/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.5, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 154336/0
+    UL harq: 118971/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.5, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 154507/0
+    UL harq: 119192/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.4, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 154669/0
+    UL harq: 119422/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.4, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 154836/0
+    UL harq: 119646/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.4, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 155002/0
+    UL harq: 119867/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.3, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 155170/0
+    UL harq: 120088/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.3, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 155337/0
+    UL harq: 120313/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.2, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 155506/0
+    UL harq: 120534/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.2, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 155672/0
+    UL harq: 120754/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.2, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 155844/0
+    UL harq: 120977/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.1, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 156010/0
+    UL harq: 121202/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.1, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 156178/0
+    UL harq: 121435/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.0, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 156344/0
+    UL harq: 121661/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.0, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 156514/0
+    UL harq: 121886/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 65.0, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 156684/0
+    UL harq: 122117/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.9, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 156846/0
+    UL harq: 122339/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.9, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 157014/0
+    UL harq: 122562/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.9, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 157184/0
+    UL harq: 122794/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.8, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 157353/0
+    UL harq: 123024/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.8, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 157530/0
+    UL harq: 123250/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.7, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 157698/0
+    UL harq: 123477/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.7, nb symbols 7.0)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 157865/0
+    UL harq: 123700/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.7, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 158032/0
+    UL harq: 123921/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 158195/0
+    UL harq: 124154/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 158361/0
+    UL harq: 124376/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 158524/0
+    UL harq: 124600/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.5, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 158690/0
+    UL harq: 124818/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.5, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 158858/0
+    UL harq: 125046/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.5, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 159025/0
+    UL harq: 125270/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.4, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 159188/0
+    UL harq: 125494/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.4, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 159352/0
+    UL harq: 125716/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.4, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 159522/0
+    UL harq: 125944/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.3, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 159687/0
+    UL harq: 126169/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.3, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 159859/0
+    UL harq: 126394/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.2, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 160023/0
+    UL harq: 126617/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.2, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 160184/0
+    UL harq: 126839/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.2, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 160352/0
+    UL harq: 127064/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.1, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 160521/0
+    UL harq: 127298/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.1, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 160696/0
+    UL harq: 127519/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.1, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 160859/0
+    UL harq: 127740/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.0, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 161026/0
+    UL harq: 127962/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.0, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 161197/0
+    UL harq: 128188/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 64.0, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 161362/0
+    UL harq: 128414/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.9, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 161526/0
+    UL harq: 128633/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.9, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 161692/0
+    UL harq: 128860/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.9, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 161857/0
+    UL harq: 129081/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.8, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 162020/0
+    UL harq: 129303/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.8, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 162191/0
+    UL harq: 129534/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.8, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 162358/0
+    UL harq: 129764/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.7, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 162524/0
+    UL harq: 129995/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.7, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 162691/0
+    UL harq: 130217/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.7, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 162860/0
+    UL harq: 130443/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 163024/0
+    UL harq: 130664/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 163196/0
+    UL harq: 130890/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.6, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 163363/0
+    UL harq: 131119/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.5, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 163529/0
+    UL harq: 131344/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.5, nb symbols 6.9)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 163694/0
+    UL harq: 131564/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.5, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 163858/0
+    UL harq: 131797/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.4, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 164024/0
+    UL harq: 132025/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.4, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 164187/0
+    UL harq: 132249/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.4, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 164224/0
+    UL harq: 132305/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.4, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 164225/0
+    UL harq: 132318/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 164226/0
+    UL harq: 132331/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 164228/0
+    UL harq: 132344/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 164229/0
+    UL harq: 132357/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 164230/0
+    UL harq: 132369/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 256.8, cumulated bad DCI 0
+    DL harq: 164231/0
+    UL harq: 132382/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 384.8, cumulated bad DCI 0
+    DL harq: 164233/0
+    UL harq: 132395/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 512.8, cumulated bad DCI 0
+    DL harq: 164234/0
+    UL harq: 132408/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 640.8, cumulated bad DCI 0
+    DL harq: 164235/0
+    UL harq: 132421/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 768.8, cumulated bad DCI 0
+    DL harq: 164237/0
+    UL harq: 132433/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 896.8, cumulated bad DCI 0
+    DL harq: 164238/0
+    UL harq: 132446/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 0.8, cumulated bad DCI 0
+    DL harq: 164239/0
+    UL harq: 132459/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0mPress ^C again to trigger immediate shutdown
+[NAS]    [UE 0] Received NAS_DEREGISTRATION_REQ
+[0m[NR_MAC] UE 0 RNTI 703e stats sfn: 128.8, cumulated bad DCI 0
+    DL harq: 164241/0
+    UL harq: 132475/0 avg code rate 0.9, avg bit/symbol 6.0, avg per TB: (nb RBs 63.3, nb symbols 6.8)
+[0m[NR_RRC] [UE 0] Received RRC Release (gNB 0)
+[0m[NAS]    [UE 0] Received NAS_DOWNLINK_DATA_IND type FGS_DEREGISTRATION_ACCEPT_UE_ORIGINATING with length 10
+[0m[NAS]    received deregistration accept
+[0m[93m[HW]     Lost socket
+[0mmac af 23 3a ac 
+mac 31 45 3 bb 
+Entering ITTI signals handler
+TYPE <CTRL-C> TO TERMINATE
+mac 5d b0 da 80 
