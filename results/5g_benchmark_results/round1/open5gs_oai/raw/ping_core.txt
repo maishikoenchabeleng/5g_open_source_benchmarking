@@ -1,15 +1,15 @@
 PING 137.158.126.21 (137.158.126.21) from 10.45.0.2 oaitun_ue1: 56(84) bytes of data.
-64 bytes from 137.158.126.21: icmp_seq=1 ttl=64 time=6.05 ms
-64 bytes from 137.158.126.21: icmp_seq=2 ttl=64 time=6.01 ms
-64 bytes from 137.158.126.21: icmp_seq=3 ttl=64 time=6.31 ms
-64 bytes from 137.158.126.21: icmp_seq=4 ttl=64 time=7.24 ms
-64 bytes from 137.158.126.21: icmp_seq=5 ttl=64 time=5.97 ms
-64 bytes from 137.158.126.21: icmp_seq=6 ttl=64 time=6.29 ms
-64 bytes from 137.158.126.21: icmp_seq=7 ttl=64 time=6.73 ms
-64 bytes from 137.158.126.21: icmp_seq=8 ttl=64 time=6.50 ms
-64 bytes from 137.158.126.21: icmp_seq=9 ttl=64 time=6.84 ms
-64 bytes from 137.158.126.21: icmp_seq=10 ttl=64 time=5.96 ms
+64 bytes from 137.158.126.21: icmp_seq=1 ttl=64 time=5.75 ms
+64 bytes from 137.158.126.21: icmp_seq=2 ttl=64 time=6.43 ms
+64 bytes from 137.158.126.21: icmp_seq=3 ttl=64 time=3.54 ms
+64 bytes from 137.158.126.21: icmp_seq=4 ttl=64 time=7.11 ms
+64 bytes from 137.158.126.21: icmp_seq=5 ttl=64 time=5.61 ms
+64 bytes from 137.158.126.21: icmp_seq=6 ttl=64 time=5.96 ms
+64 bytes from 137.158.126.21: icmp_seq=7 ttl=64 time=7.12 ms
+64 bytes from 137.158.126.21: icmp_seq=8 ttl=64 time=4.86 ms
+64 bytes from 137.158.126.21: icmp_seq=9 ttl=64 time=6.25 ms
+64 bytes from 137.158.126.21: icmp_seq=10 ttl=64 time=4.12 ms
 
 --- 137.158.126.21 ping statistics ---
-10 packets transmitted, 10 received, 0% packet loss, time 4507ms
-rtt min/avg/max/mdev = 5.963/6.389/7.243/0.411 ms
+10 packets transmitted, 10 received, 0% packet loss, time 4508ms
+rtt min/avg/max/mdev = 3.540/5.673/7.121/1.130 ms

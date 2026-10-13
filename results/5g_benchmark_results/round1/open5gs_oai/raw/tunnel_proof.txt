@@ -1,25 +1,42 @@
 === Tunnel Interface State ===
-Timestamp: Tue Oct  6 05:26:29 PM CAT 2026
-140: oaitun_ue1: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+Timestamp: Mon Oct 12 08:16:17 PM CAT 2026
+170: oaitun_ue1: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
     link/none 
     inet 10.45.0.2/24 scope global oaitun_ue1
        valid_lft forever preferred_lft forever
-    inet6 fe80::6bb2:5d90:1995:5869/64 scope link stable-privacy 
+    inet6 fe80::4502:6015:b064:5d01/64 scope link stable-privacy 
        valid_lft forever preferred_lft forever
 
 Route for UE traffic: 137.158.126.21 from 10.45.0.2 dev oaitun_ue1 table 5000 uid 0 
 
 === Policy rules ===
 0:	from all lookup local
-32611:	from 10.45.0.2 lookup 5000
+32581:	from 10.45.0.2 lookup 5000
+32582:	from all to 10.45.0.2 lookup 9999
+32583:	from 10.45.0.2 lookup 9999
+32584:	from all to 10.60.0.1 lookup 9999
+32585:	from 10.60.0.1 lookup 9999
+32586:	from all to 10.45.0.2 lookup 9999
+32587:	from 10.45.0.2 lookup 9999
+32588:	from all to 10.60.0.1 lookup 9999
+32589:	from 10.60.0.1 lookup 9999
+32590:	from all to 10.45.0.2 lookup 9999
+32591:	from 10.45.0.2 lookup 9999
+32592:	from all to 10.60.0.1 lookup 9999
+32593:	from 10.60.0.1 lookup 9999
+32594:	from all to 10.45.0.2 lookup 9999
+32595:	from 10.45.0.2 lookup 9999
+32596:	from 10.60.0.1 lookup rt_uesimtun0
+32597:	from all to 10.60.0.1 lookup 9999
+32599:	from 10.45.0.2 lookup rt_uesimtun0
+32600:	from all to 10.45.0.2 lookup 9999
+32603:	from all to 10.60.0.1 lookup 9999
+32606:	from all to 10.45.0.2 lookup 9999
+32609:	from all to 10.60.0.1 lookup 9999
 32612:	from all to 10.45.0.2 lookup 9999
-32613:	from 10.45.0.2 lookup 9999
 32614:	from all to 10.45.0.2 lookup 9999
-32615:	from 10.45.0.2 lookup 9999
 32616:	from all to 10.45.0.2 lookup 9999
-32617:	from 10.45.0.2 lookup 9999
 32618:	from all to 10.45.0.2 lookup 9999
-32619:	from 10.45.0.2 lookup 9999
 32620:	from all to 10.45.1.59 lookup 9999
 32621:	from 10.45.1.59 lookup 9999
 32622:	from all to 10.45.1.58 lookup 9999
@@ -43,19 +60,11 @@ Route for UE traffic: 137.158.126.21 from 10.45.0.2 dev oaitun_ue1 table 5000 ui
 32640:	from all to 10.45.1.15 lookup 9999
 32641:	from 10.45.1.15 lookup 9999
 32642:	from all to 10.60.0.1 lookup 9999
-32643:	from 10.60.0.1 lookup 9999
 32644:	from all to 10.45.0.2 lookup 9999
-32645:	from 10.45.0.2 lookup 9999
 32646:	from all to 10.60.0.1 lookup 9999
-32647:	from 10.60.0.1 lookup 9999
 32648:	from all to 10.45.0.2 lookup 9999
-32649:	from 10.45.0.2 lookup 9999
 32650:	from all to 10.60.0.1 lookup 9999
-32651:	from 10.60.0.1 lookup 9999
 32652:	from all to 10.45.0.2 lookup 9999
-32653:	from 10.45.0.2 lookup 9999
-32654:	from 10.60.0.1 lookup rt_uesimtun0
-32655:	from 10.45.0.2 lookup rt_uesimtun0
 32660:	from all to 10.60.0.1 lookup 9999
 32662:	from all to 10.45.0.2 lookup 9999
 32664:	from all to 10.60.0.1 lookup 9999
@@ -121,5 +130,5 @@ default via 137.158.126.1 dev eno1 proto dhcp metric 100
 192.168.70.128/26 dev oai-cn5g proto kernel scope link src 192.168.70.129 linkdown 
 
 === Bytes through oaitun_ue1 during tests ===
-rx (downlink): 451452578
-tx (uplink)  : 331903183
+rx (downlink): 454693764
+tx (uplink)  : 323923329

@@ -1,462 +1,368 @@
-Oct 06 17:25:37 admin systemd[1]: Started Open5GS AMF Daemon.
-Oct 06 17:25:37 admin systemd[1]: Started Open5GS SMF Daemon.
-Oct 06 17:25:37 admin systemd[1]: Started Open5GS UPF Daemon.
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: Open5GS daemon v2.8.0
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.958: [app] INFO: Configuration: '/etc/open5gs/amf.yaml' (../lib/app/ogs-init.c:144)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.958: [app] INFO: File Logging: '/var/log/open5gs/amf.log' (../lib/app/ogs-init.c:147)
-Oct 06 17:25:37 admin open5gs-upfd[1731471]: Open5GS daemon v2.8.0
-Oct 06 17:25:37 admin open5gs-upfd[1731471]: 10/06 17:25:37.960: [app] INFO: Configuration: '/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:144)
-Oct 06 17:25:37 admin open5gs-upfd[1731471]: 10/06 17:25:37.960: [app] INFO: File Logging: '/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:147)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [metrics] INFO: metrics_server() [http://127.0.0.5]:9090 (../lib/metrics/prometheus/context.c:392)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [sbi] INFO: NF Service [namf-comm] (../lib/sbi/context.c:2012)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [sbi] INFO: nghttp2_server() [http://127.0.0.5]:7777 (../lib/sbi/nghttp2-server.c:454)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [amf] INFO: ngap_server() [0.0.0.0]:38412 (../src/amf/ngap-sctp.c:61)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.961: [sctp] INFO: AMF initialize...done (../src/amf/app.c:33)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.962: [sbi] INFO: [2ece719c-c19a-41f1-abbf-95467a03aecf] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.964: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.964: [sbi] INFO: [2ecef284-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.963515+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2ecef630-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.963592+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2ecef950-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.963672+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2ecefc34-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.963746+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2eceec58-c19a-41f1-88f3-eb95157cd7d9] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2eceec58-c19a-41f1-88f3-eb95157cd7d9] (NRF-notify) NF Profile updated [type:AUSF] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [AUSF] NFInstance associated [2eceec58-c19a-41f1-88f3-eb95157cd7d9] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.11:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [nausf-auth] NFService associated [2eceefdc-c19a-41f1-88f3-eb95157cd7d9] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.11:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2ecf0026-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.963847+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.965: [sbi] INFO: [2ecf0850-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.964062+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin systemd[1]: Started Open5GS PCF Daemon.
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.966: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.966: [sbi] INFO: [2ecf0b0c-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.964125+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-smfd[1731470]: Open5GS daemon v2.8.0
-Oct 06 17:25:37 admin open5gs-smfd[1731470]: 10/06 17:25:37.966: [app] INFO: Configuration: '/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:144)
-Oct 06 17:25:37 admin open5gs-smfd[1731470]: 10/06 17:25:37.966: [app] INFO: File Logging: '/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:147)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] (NRF-notify) NF Profile updated [type:UDM] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [UDM] NFInstance associated [2ecf733a-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [nudm-uecm] NFService associated [2ecf7e98-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] WARNING: [2ecf733a-c19a-41f1-bb7b-65191e339b91] (NRF-notify) NF has already been added [type:UDM] (../lib/sbi/nnrf-handler.c:1312)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] (NRF-notify) NF Profile updated [type:UDM] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [UDM] NFInstance associated [2ecf733a-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] WARNING: UnRef NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [nudm-uecm] NFService associated [2ecf7e98-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] WARNING: UnRef NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: [nudm-sdm] NFService associated [2ecf7ef2-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.969: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin systemd[1]: Started Open5GS BSF Daemon.
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: Open5GS daemon v2.8.0
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.977: [app] INFO: Configuration: '/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:144)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.977: [app] INFO: File Logging: '/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:147)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: Open5GS daemon v2.8.0
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.978: [app] INFO: Configuration: '/etc/open5gs/pcf.yaml' (../lib/app/ogs-init.c:144)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.978: [app] INFO: File Logging: '/var/log/open5gs/pcf.log' (../lib/app/ogs-init.c:147)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.978: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.978: [sbi] INFO: NF Service [nbsf-management] (../lib/sbi/context.c:2012)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.978: [sbi] INFO: nghttp2_server() [http://127.0.0.15]:7777 (../lib/sbi/nghttp2-server.c:454)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.978: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: [2ed11a1e-c19a-41f1-bb3e-f1f5628ffdc8] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: [2ed11a1e-c19a-41f1-bb3e-f1f5628ffdc8] (NRF-notify) NF Profile updated [type:NSSF] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: [NSSF] NFInstance associated [2ed11a1e-c19a-41f1-bb3e-f1f5628ffdc8] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.14:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: [nnssf-nsselection] NFService associated [2ed11f14-c19a-41f1-bb3e-f1f5628ffdc8] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.979: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.14:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.979: [sbi] INFO: [2ed13350-c19a-41f1-a783-c13fa9df42fa] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.981: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.981: [sbi] INFO: [2ed1808a-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.980246+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.979: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.980: [metrics] INFO: metrics_server() [http://127.0.0.13]:9090 (../lib/metrics/prometheus/context.c:392)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.980: [dbi] INFO: MongoDB URI: 'mongodb://localhost/open5gs' (../lib/dbi/ogs-mongoc.c:128)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.980: [sbi] INFO: NF Service [npcf-am-policy-control] (../lib/sbi/context.c:2012)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.980: [sbi] INFO: NF Service [npcf-smpolicycontrol] (../lib/sbi/context.c:2012)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.980: [sbi] INFO: NF Service [npcf-policyauthorization] (../lib/sbi/context.c:2012)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.981: [sbi] INFO: nghttp2_server() [http://127.0.0.13]:7777 (../lib/sbi/nghttp2-server.c:454)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.981: [app] INFO: PCF initialize...done (../src/pcf/app.c:31)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] (NRF-notify) NF Profile updated [type:PCF] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: [PCF] NFInstance associated [2ed17086-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: [npcf-am-policy-control] NFService associated [2ed19a98-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.983: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.985: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.986: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.986: [sbi] INFO: [2ed25492-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.985673+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.986: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.986: [sbi] INFO: [2ed256ae-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.985716+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.987: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.987: [sbi] INFO: [2ed25802-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:37.985749+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [2ed0eb0c-c19a-41f1-9b53-03245f944b35] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [UDR] NFInstance associated [2ed0eb0c-c19a-41f1-9b53-03245f944b35] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.20:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [nudr-dr] NFService associated [2ed112c6-c19a-41f1-9b53-03245f944b35] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.20:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [2ed13350-c19a-41f1-a783-c13fa9df42fa] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [BSF] NFInstance associated [2ed13350-c19a-41f1-a783-c13fa9df42fa] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.15:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: [nbsf-management] NFService associated [2ed13a30-c19a-41f1-a783-c13fa9df42fa] (../lib/sbi/context.c:2138)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.989: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.15:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.990: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.990: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.990: [sbi] INFO: [SEPP] NFInstance associated [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-amfd[1731468]: 10/06 17:25:37.990: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.991: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.991: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.991: [sbi] INFO: [SEPP] NFInstance associated [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-pcfd[1731478]: 10/06 17:25:37.991: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.992: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.992: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.992: [sbi] INFO: [SEPP] NFInstance associated [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (../lib/sbi/context.c:2498)
-Oct 06 17:25:37 admin open5gs-bsfd[1731481]: 10/06 17:25:37.992: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
-Oct 06 17:25:38 admin open5gs-upfd[1731471]: 10/06 17:25:38.001: [metrics] INFO: metrics_server() [http://127.0.0.7]:9090 (../lib/metrics/prometheus/context.c:392)
-Oct 06 17:25:38 admin open5gs-upfd[1731471]: 10/06 17:25:38.001: [pfcp] INFO: pfcp_server() [127.0.0.7]:8805 (../lib/pfcp/path.c:30)
-Oct 06 17:25:38 admin open5gs-upfd[1731471]: 10/06 17:25:38.001: [gtp] INFO: gtp_server() [137.158.126.21]:2152 (../lib/gtp/path.c:30)
-Oct 06 17:25:38 admin open5gs-upfd[1731471]: 10/06 17:25:38.001: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.007: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.007: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:392)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [app] INFO: Polling freeDiameter stats every 60000000 usecs (../lib/diameter/common/stats.c:77)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:2012)
-Oct 06 17:25:38 admin open5gs-upfd[1731471]: 10/06 17:25:38.034: [upf] INFO: PFCP associated [127.0.0.4]:8805 (../src/upf/pfcp-sm.c:168)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.034: [sbi] INFO: nghttp2_server() [http://127.0.0.4]:7777 (../lib/sbi/nghttp2-server.c:454)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.035: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.035: [smf] INFO: PFCP associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:189)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.035: [sbi] INFO: [2ed524ba-c19a-41f1-a510-47493533fae8] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: [2ed524ba-c19a-41f1-a510-47493533fae8] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: [2ed524ba-c19a-41f1-a510-47493533fae8] (NRF-notify) NF Profile updated [type:SMF] (../lib/sbi/nnrf-handler.c:1348)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: [SMF] NFInstance associated [2ed524ba-c19a-41f1-a510-47493533fae8] (../lib/sbi/context.c:2498)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.4:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: [nsmf-pdusession] NFService associated [2ed9d280-c19a-41f1-a510-47493533fae8] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-amfd[1731468]: 10/06 17:25:38.035: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: [2eda0516-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:38.036065+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: [2eda0714-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:38.036107+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: [2eda0868-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:38.036140+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: [2eda099e-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:38.036170+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.036: [sbi] INFO: [2eda0ab6-c19a-41f1-ab06-d735cb1c34d6] Subscription created until 2026-10-07T17:25:38.036199+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.037: [sbi] INFO: [2ece719c-c19a-41f1-abbf-95467a03aecf] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.037: [sbi] INFO: [AMF] NFInstance associated [2ece719c-c19a-41f1-abbf-95467a03aecf] (../lib/sbi/context.c:2498)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.037: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.5:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [namf-comm] NFService associated [2ece9ad2-c19a-41f1-abbf-95467a03aecf] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [UDM] NFInstance associated [2ecf733a-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2498)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [nudm-ueau] NFService associated [2ecf7dbc-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [nudm-uecm] NFService associated [2ecf7e98-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [nudm-sdm] NFService associated [2ecf7ef2-c19a-41f1-bb7b-65191e339b91] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [PCF] NFInstance associated [2ed17086-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2498)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:80] (../lib/sbi/context.c:2503)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [npcf-am-policy-control] NFService associated [2ed19a98-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [npcf-smpolicycontrol] NFService associated [2ed19b7e-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [npcf-policyauthorization] NFService associated [2ed19be2-c19a-41f1-9296-1bc6f51fd41c] (../lib/sbi/context.c:2138)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: [SEPP] NFInstance associated [2ed1ee8a-c19a-41f1-aaa3-9f4c29e163e2] (../lib/sbi/context.c:2498)
-Oct 06 17:25:38 admin open5gs-smfd[1731470]: 10/06 17:25:38.038: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
-Oct 06 17:26:09 admin open5gs-amfd[1731468]: 10/06 17:26:09.342: [amf] INFO: gNB-N2 accepted[137.158.126.24]:40025 in ng-path module (../src/amf/ngap-sctp.c:113)
-Oct 06 17:26:09 admin open5gs-amfd[1731468]: 10/06 17:26:09.342: [amf] INFO: gNB-N2 accepted[137.158.126.24] in master_sm module (../src/amf/amf-sm.c:818)
-Oct 06 17:26:09 admin open5gs-amfd[1731468]: 10/06 17:26:09.349: [amf] INFO: [Added] Number of gNBs is now 1 (../src/amf/context.c:1277)
-Oct 06 17:26:09 admin open5gs-amfd[1731468]: 10/06 17:26:09.349: [amf] INFO: gNB-N2[137.158.126.24] max_num_of_ostreams : 2 (../src/amf/amf-sm.c:865)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.026: [amf] INFO: InitialUEMessage (../src/amf/ngap-handler.c:668)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.026: [amf] INFO: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2932)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.026: [amf] INFO:     RAN_UE_NGAP_ID[1] AMF_UE_NGAP_ID[1] TAC[1] CellID[0xe014e] (../src/amf/ngap-handler.c:878)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.027: [amf] INFO: [suci-0-001-01-0000-0-0-0000000001] Unknown UE by SUCI (../src/amf/context.c:1934)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.027: [amf] INFO: [Added] Number of AMF-UEs is now 1 (../src/amf/context.c:1699)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.027: [gmm] INFO: Registration request (../src/amf/gmm-sm.c:1678)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.027: [gmm] INFO: [suci-0-001-01-0000-0-0-0000000001]    SUCI (../src/amf/gmm-handler.c:186)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.027: [sbi] INFO: [2eceec58-c19a-41f1-88f3-eb95157cd7d9] Setup NF Instance [type:AUSF] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.033: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.11:7777] (../src/amf/nausf-handler.c:130)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.055: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.058: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.064: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../src/amf/nudm-handler.c:422)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.064: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] Setup NF Instance [type:PCF] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.066: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../src/pcf/npcf-handler.c:150)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.066: [sbi] INFO: [2ed0eb0c-c19a-41f1-9b53-03245f944b35] Setup NF Instance [type:UDR] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.070: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../src/amf/npcf-handler.c:143)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.093: [gmm] INFO: [imsi-001010000000001] Registration complete (../src/amf/gmm-sm.c:3165)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.093: [amf] INFO: [imsi-001010000000001] Configuration update command (../src/amf/nas-path.c:609)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.093: [gmm] INFO:     UTC [2026-10-06T15:26:28] Timezone[0]/DST[0] (../src/amf/gmm-build.c:551)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.093: [gmm] INFO:     LOCAL [2026-10-06T17:26:28] Timezone[7200]/DST[0] (../src/amf/gmm-build.c:556)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [amf] INFO: [Added] Number of AMF-Sessions is now 1 (../src/amf/context.c:2953)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: UE SUPI[imsi-001010000000001] DNN[internet] LBO[0] S_NSSAI[SST:1 SD:0x1] smContextRef[NULL] smContextResourceURI[NULL] (../src/amf/gmm-handler.c:1430)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: V-SMF Instance [2ed524ba-c19a-41f1-a510-47493533fae8](LIST) (../src/amf/gmm-handler.c:1507)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: [2ed524ba-c19a-41f1-a510-47493533fae8] Setup NF Instance [type:SMF] (../src/amf/gmm-handler.c:1509)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: V-SMF Instance [2ed524ba-c19a-41f1-a510-47493533fae8] (../src/amf/gmm-handler.c:1519)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: V-SMF discovered in Non-Roaming or LBO-Roaming[0] (../src/amf/gmm-handler.c:1588)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.094: [gmm] INFO: nsmf_pdusession [1:0x620b2f499f70:(nil)] (../src/amf/gmm-handler.c:1628)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.096: [smf] INFO: [Added] Number of SMF-UEs is now 1 (../src/smf/context.c:1069)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.096: [smf] INFO: [Added] Number of SMF-Sessions is now 1 (../src/smf/context.c:3612)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.096: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../src/smf/nsmf-handler.c:317)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.096: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.101: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../src/smf/nudm-handler.c:466)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.101: [sbi] INFO: [2ed17086-c19a-41f1-9296-1bc6f51fd41c] Setup NF Instance [type:PCF] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.102: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../src/amf/nsmf-handler.c:140)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.102: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../src/pcf/npcf-handler.c:482)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.103: [sbi] INFO: [2ed0eb0c-c19a-41f1-9b53-03245f944b35] Setup NF Instance [type:UDR] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.104: [sbi] INFO: [2ed13350-c19a-41f1-a783-c13fa9df42fa] Setup NF Instance [type:BSF] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-pcfd[1731478]: 10/06 17:26:28.106: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.15:7777] (../src/pcf/nbsf-handler.c:125)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.107: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../src/smf/npcf-handler.c:414)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.107: [smf] INFO: UE SUPI[imsi-001010000000001] DNN[internet] IPv4[10.45.0.2] IPv6[] (../src/smf/npcf-handler.c:647)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 10/06 17:26:28.108: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 10/06 17:26:28.108: [gtp] INFO: gtp_connect() [127.0.0.4]:2152 (../lib/gtp/path.c:60)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 10/06 17:26:28.108: [upf] INFO: UE F-SEID[UP:0x11c CP:0x468] APN[internet] PDN-Type[1] IPv4[10.45.0.2] IPv6[] (../src/upf/context.c:498)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.109: [gtp] INFO: gtp_connect() [137.158.126.21]:2152 (../lib/gtp/path.c:60)
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.109: [sbi] INFO: [2ece719c-c19a-41f1-abbf-95467a03aecf] Setup NF Instance [type:AMF] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 10/06 17:26:28.178: [gtp] INFO: gtp_connect() [137.158.126.24]:2152 (../lib/gtp/path.c:60)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 10/06 17:26:28.178: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:26:28 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:26:28 admin open5gs-smfd[1731470]: 10/06 17:26:28.178: [sbi] INFO: [2ecf733a-c19a-41f1-bb7b-65191e339b91] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
-Oct 06 17:26:28 admin open5gs-amfd[1731468]: 10/06 17:26:28.181: [amf] INFO: [imsi-001010000000001:10:11][0:0:NULL] /nsmf-pdusession/v1/sm-contexts/{smContextRef}/modify (../src/amf/nsmf-handler.c:983)
-Oct 06 17:26:31 admin open5gs-upfd[1731471]: 10/06 17:26:31.988: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:26:31 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:26:31 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:26:31 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:26:39 admin open5gs-upfd[1731471]: 10/06 17:26:39.988: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:26:39 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:26:39 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:26:39 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:26:56 admin open5gs-upfd[1731471]: 10/06 17:26:56.372: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:26:56 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:26:56 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:26:56 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:27:28 admin open5gs-upfd[1731471]: 10/06 17:27:28.630: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:27:28 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:27:28 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:27:28 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.489: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.489: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.489: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.489: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.489: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.694: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.694: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.695: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.695: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.713: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.965: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:09 admin open5gs-upfd[1731471]: 10/06 17:28:09.995: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:11 admin open5gs-upfd[1731471]: 10/06 17:28:11.826: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:13 admin open5gs-upfd[1731471]: 10/06 17:28:13.264: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:14 admin open5gs-upfd[1731471]: 10/06 17:28:14.019: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:15 admin open5gs-upfd[1731471]: 10/06 17:28:15.851: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:17 admin open5gs-upfd[1731471]: 10/06 17:28:17.804: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:17 admin open5gs-upfd[1731471]: 10/06 17:28:17.804: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:17 admin open5gs-upfd[1731471]: 10/06 17:28:17.804: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:18 admin open5gs-upfd[1731471]: 10/06 17:28:18.831: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:18 admin open5gs-upfd[1731471]: 10/06 17:28:18.831: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.021: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.967: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.967: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.967: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:21 admin open5gs-upfd[1731471]: 10/06 17:28:21.967: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:22 admin open5gs-upfd[1731471]: 10/06 17:28:22.892: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:24 admin open5gs-upfd[1731471]: 10/06 17:28:24.370: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:24 admin open5gs-upfd[1731471]: 10/06 17:28:24.370: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:25 admin open5gs-upfd[1731471]: 10/06 17:28:25.684: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:25 admin open5gs-upfd[1731471]: 10/06 17:28:25.684: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:28 admin open5gs-upfd[1731471]: 10/06 17:28:28.640: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:28 admin open5gs-upfd[1731471]: 10/06 17:28:28.709: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:30 admin open5gs-upfd[1731471]: 10/06 17:28:30.607: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:30 admin open5gs-upfd[1731471]: 10/06 17:28:30.607: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:30 admin open5gs-upfd[1731471]: 10/06 17:28:30.607: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:30 admin open5gs-upfd[1731471]: 10/06 17:28:30.607: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:30 admin open5gs-upfd[1731471]: 10/06 17:28:30.607: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.782: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.782: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.782: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.783: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:33 admin open5gs-upfd[1731471]: 10/06 17:28:33.802: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:34 admin open5gs-upfd[1731471]: 10/06 17:28:34.818: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:35 admin open5gs-upfd[1731471]: 10/06 17:28:35.818: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:35 admin open5gs-upfd[1731471]: 10/06 17:28:35.818: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:35 admin open5gs-upfd[1731471]: 10/06 17:28:35.818: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:37 admin open5gs-upfd[1731471]: 10/06 17:28:37.219: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:38 admin open5gs-upfd[1731471]: 10/06 17:28:38.413: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
-Oct 06 17:28:38 admin open5gs-upfd[1731471]: 10/06 17:28:38.777: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
-Oct 06 17:28:38 admin open5gs-upfd[1731471]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
-Oct 06 17:28:38 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:28:38 admin open5gs-upfd[1731471]: 0020: 00000000 00000002 850041f6 00000000   ..........A.....
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.464: [upf] ERROR: Invalid packet [IP version:6, Packet Length:655] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 6002426a 02671101 fe800000 00000000   `.Bj.g..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 0000000c ccf70e76 02676b92   ...........v.gk.
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 3c3f786d 6c207665 7273696f 6e3d2231   <?xml version="1
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 2e30223f 3e3c736f 61703a45 6e76656c   .0"?><soap:Envel
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0050: 6f706520 786d6c6e 733a7773 613d2268   ope xmlns:wsa="h
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0060: 7474703a 2f2f7363 68656d61 732e786d   ttp://schemas.xm
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0070: 6c736f61 702e6f72 672f7773 2f323030   lsoap.org/ws/200
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0080: 342f3038 2f616464 72657373 696e6722   4/08/addressing"
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0090: 20786d6c 6e733a77 73643d22 68747470    xmlns:wsd="http
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00a0: 3a2f2f73 6368656d 61732e78 6d6c736f   ://schemas.xmlso
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00b0: 61702e6f 72672f77 732f3230 30352f30   ap.org/ws/2005/0
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00c0: 342f6469 73636f76 65727922 20786d6c   4/discovery" xml
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00d0: 6e733a73 6f61703d 22687474 703a2f2f   ns:soap="http://
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00e0: 7777772e 77332e6f 72672f32 3030332f   www.w3.org/2003/
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00f0: 30352f73 6f61702d 656e7665 6c6f7065   05/soap-envelope
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0100: 2220786d 6c6e733a 77736470 3d226874   " xmlns:wsdp="ht
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0110: 74703a2f 2f736368 656d6173 2e786d6c   tp://schemas.xml
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0120: 736f6170 2e6f7267 2f77732f 32303036   soap.org/ws/2006
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0130: 2f30322f 64657670 726f6622 3e3c736f   /02/devprof"><so
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0140: 61703a48 65616465 723e3c77 73613a41   ap:Header><wsa:A
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0150: 6374696f 6e3e6874 74703a2f 2f736368   ction>http://sch
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0160: 656d6173 2e786d6c 736f6170 2e6f7267   emas.xmlsoap.org
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0170: 2f77732f 32303035 2f30342f 64697363   /ws/2005/04/disc
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0180: 6f766572 792f5072 6f62653c 2f777361   overy/Probe</wsa
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0190: 3a416374 696f6e3e 3c777361 3a4d6573   :Action><wsa:Mes
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01a0: 73616765 49443e75 726e3a75 7569643a   sageID>urn:uuid:
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01b0: 61383632 30383266 2d393636 312d6365   a862082f-9661-ce
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01c0: 62322d37 3664642d 38666337 64656532   b2-76dd-8fc7dee2
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01d0: 36623331 3c2f7773 613a4d65 73736167   6b31</wsa:Messag
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01e0: 6549443e 3c777361 3a546f3e 75726e3a   eID><wsa:To>urn:
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01f0: 73636865 6d61732d 786d6c73 6f61702d   schemas-xmlsoap-
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0200: 6f72673a 77733a32 3030353a 30343a64   org:ws:2005:04:d
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0210: 6973636f 76657279 3c2f7773 613a546f   iscovery</wsa:To
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0220: 3e3c2f73 6f61703a 48656164 65723e3c   ></soap:Header><
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0230: 736f6170 3a426f64 793e3c77 73643a50   soap:Body><wsd:P
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0240: 726f6265 3e3c7773 643a5479 7065733e   robe><wsd:Types>
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0250: 77736470 3a446576 6963653c 2f777364   wsdp:Device</wsd
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0260: 3a547970 65733e3c 2f777364 3a50726f   :Types></wsd:Pro
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0270: 62653e3c 2f736f61 703a426f 64793e3c   be></soap:Body><
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0280: 2f736f61 703a456e 76656c6f 70653e     /soap:Envelope>
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.464: [upf] ERROR: Invalid packet [IP version:6, Packet Length:76] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 60000000 00240001 fe800000 00000000   `....$..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 00000016 3a000502 00000100   ........:.......
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 8f0034be 00000001 04000000 ff020000   ..4.............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 00000000 00000000 0000000c            ............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.478: [upf] ERROR: Invalid packet [IP version:6, Packet Length:76] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 60000000 00240001 fe800000 00000000   `....$..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 00000016 3a000502 00000100   ........:.......
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 8f0035be 00000001 03000000 ff020000   ..5.............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 00000000 00000000 0000000c            ............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.836: [upf] ERROR: Invalid packet [IP version:6, Packet Length:655] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 60006d4d 02671101 fe800000 00000000   `.mM.g..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 0000000c e6630e76 0267d5f7   .........c.v.g..
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 3c3f786d 6c207665 7273696f 6e3d2231   <?xml version="1
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 2e30223f 3e3c736f 61703a45 6e76656c   .0"?><soap:Envel
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0050: 6f706520 786d6c6e 733a7773 613d2268   ope xmlns:wsa="h
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0060: 7474703a 2f2f7363 68656d61 732e786d   ttp://schemas.xm
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0070: 6c736f61 702e6f72 672f7773 2f323030   lsoap.org/ws/200
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0080: 342f3038 2f616464 72657373 696e6722   4/08/addressing"
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0090: 20786d6c 6e733a77 73643d22 68747470    xmlns:wsd="http
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00a0: 3a2f2f73 6368656d 61732e78 6d6c736f   ://schemas.xmlso
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00b0: 61702e6f 72672f77 732f3230 30352f30   ap.org/ws/2005/0
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00c0: 342f6469 73636f76 65727922 20786d6c   4/discovery" xml
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00d0: 6e733a73 6f61703d 22687474 703a2f2f   ns:soap="http://
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00e0: 7777772e 77332e6f 72672f32 3030332f   www.w3.org/2003/
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 00f0: 30352f73 6f61702d 656e7665 6c6f7065   05/soap-envelope
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0100: 2220786d 6c6e733a 77736470 3d226874   " xmlns:wsdp="ht
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0110: 74703a2f 2f736368 656d6173 2e786d6c   tp://schemas.xml
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0120: 736f6170 2e6f7267 2f77732f 32303036   soap.org/ws/2006
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0130: 2f30322f 64657670 726f6622 3e3c736f   /02/devprof"><so
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0140: 61703a48 65616465 723e3c77 73613a41   ap:Header><wsa:A
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0150: 6374696f 6e3e6874 74703a2f 2f736368   ction>http://sch
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0160: 656d6173 2e786d6c 736f6170 2e6f7267   emas.xmlsoap.org
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0170: 2f77732f 32303035 2f30342f 64697363   /ws/2005/04/disc
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0180: 6f766572 792f5072 6f62653c 2f777361   overy/Probe</wsa
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0190: 3a416374 696f6e3e 3c777361 3a4d6573   :Action><wsa:Mes
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01a0: 73616765 49443e75 726e3a75 7569643a   sageID>urn:uuid:
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01b0: 37343062 36393938 2d366566 612d3734   740b6998-6efa-74
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01c0: 35322d39 6464382d 32303064 32666337   52-9dd8-200d2fc7
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01d0: 35663862 3c2f7773 613a4d65 73736167   5f8b</wsa:Messag
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01e0: 6549443e 3c777361 3a546f3e 75726e3a   eID><wsa:To>urn:
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 01f0: 73636865 6d61732d 786d6c73 6f61702d   schemas-xmlsoap-
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0200: 6f72673a 77733a32 3030353a 30343a64   org:ws:2005:04:d
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0210: 6973636f 76657279 3c2f7773 613a546f   iscovery</wsa:To
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0220: 3e3c2f73 6f61703a 48656164 65723e3c   ></soap:Header><
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0230: 736f6170 3a426f64 793e3c77 73643a50   soap:Body><wsd:P
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0240: 726f6265 3e3c7773 643a5479 7065733e   robe><wsd:Types>
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0250: 77736470 3a446576 6963653c 2f777364   wsdp:Device</wsd
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0260: 3a547970 65733e3c 2f777364 3a50726f   :Types></wsd:Pro
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0270: 62653e3c 2f736f61 703a426f 64793e3c   be></soap:Body><
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0280: 2f736f61 703a456e 76656c6f 70653e     /soap:Envelope>
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.836: [upf] ERROR: Invalid packet [IP version:6, Packet Length:76] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 60000000 00240001 fe800000 00000000   `....$..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 00000016 3a000502 00000100   ........:.......
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 8f0034be 00000001 04000000 ff020000   ..4.............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 00000000 00000000 0000000c            ............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 10/06 17:29:23.850: [upf] ERROR: Invalid packet [IP version:6, Packet Length:76] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0000: 60000000 00240001 fe800000 00000000   `....$..........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0020: 00000000 00000016 3a000502 00000100   ........:.......
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0030: 8f0035be 00000001 03000000 ff020000   ..5.............
-Oct 06 17:29:23 admin open5gs-upfd[1731471]: 0040: 00000000 00000000 0000000c            ............
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 10/06 17:29:24.725: [upf] ERROR: Invalid packet [IP version:6, Packet Length:76] (../src/upf/gtp-path.c:694)
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 0000: 60000000 00240001 fe800000 00000000   `....$..........
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 0010: 6bb25d90 19955869 ff020000 00000000   k.]...Xi........
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 0020: 00000000 00000016 3a000502 00000100   ........:.......
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 0030: 8f0035be 00000001 03000000 ff020000   ..5.............
-Oct 06 17:29:24 admin open5gs-upfd[1731471]: 0040: 00000000 00000000 0000000c            ............
+Oct 12 20:15:26 admin systemd[1]: Started Open5GS AMF Daemon.
+Oct 12 20:15:26 admin systemd[1]: Started Open5GS SMF Daemon.
+Oct 12 20:15:26 admin systemd[1]: Started Open5GS UPF Daemon.
+Oct 12 20:15:26 admin open5gs-amfd[479010]: Open5GS daemon v2.8.0
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.102: [app] INFO: Configuration: '/etc/open5gs/amf.yaml' (../lib/app/ogs-init.c:144)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.102: [app] INFO: File Logging: '/var/log/open5gs/amf.log' (../lib/app/ogs-init.c:147)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: Open5GS daemon v2.8.0
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.102: [app] INFO: Configuration: '/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:144)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.102: [app] INFO: File Logging: '/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:147)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: Open5GS daemon v2.8.0
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.102: [app] INFO: Configuration: '/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:144)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.102: [app] INFO: File Logging: '/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:147)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [metrics] INFO: metrics_server() [http://127.0.0.5]:9090 (../lib/metrics/prometheus/context.c:392)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [sbi] INFO: NF Service [namf-comm] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [sbi] INFO: nghttp2_server() [http://127.0.0.5]:7777 (../lib/sbi/nghttp2-server.c:454)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [amf] INFO: ngap_server() [0.0.0.0]:38412 (../src/amf/ngap-sctp.c:61)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.104: [sctp] INFO: AMF initialize...done (../src/amf/app.c:33)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.105: [sbi] INFO: [e5e43e3e-c668-41f1-8637-0bcc63da1136] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
+Oct 12 20:15:26 admin systemd[1]: Started Open5GS PCF Daemon.
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: [e5e4b15c-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106473+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: [e5e4b4a4-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106552+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.107: [sbi] INFO: [e5e4b742-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106618+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.108: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.108: [sbi] INFO: [e5e4b9ae-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106679+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.108: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.108: [sbi] INFO: [e5e4bc1a-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106741+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.109: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.109: [sbi] INFO: [e5e4c4da-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.106992+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin systemd[1]: Started Open5GS BSF Daemon.
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [e5e4c7f0-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.107045+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (NRF-notify) NF Profile updated [type:UDM] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [UDM] NFInstance associated [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [nudm-uecm] NFService associated [e5e4e708-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] WARNING: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (NRF-notify) NF has already been added [type:UDM] (../lib/sbi/nnrf-handler.c:1312)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (NRF-notify) NF Profile updated [type:UDM] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [UDM] NFInstance associated [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] WARNING: UnRef NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [nudm-uecm] NFService associated [e5e4e708-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] WARNING: UnRef NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: [nudm-sdm] NFService associated [e5e4e73a-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.111: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.113: [sbi] INFO: [e5e489d4-c668-41f1-a909-03e22c76a8a7] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.113: [sbi] INFO: [AUSF] NFInstance associated [e5e489d4-c668-41f1-a909-03e22c76a8a7] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.113: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.11:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.113: [sbi] INFO: [nausf-auth] NFService associated [e5e49028-c668-41f1-a909-03e22c76a8a7] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.113: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.11:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: Open5GS daemon v2.8.0
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.117: [app] INFO: Configuration: '/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:144)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.117: [app] INFO: File Logging: '/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:147)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.118: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.118: [sbi] INFO: NF Service [nbsf-management] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.118: [sbi] INFO: nghttp2_server() [http://127.0.0.15]:7777 (../lib/sbi/nghttp2-server.c:454)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.118: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.118: [sbi] INFO: [e5e662f4-c668-41f1-8a12-b9521fa53a7c] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.118: [sbi] INFO: [e5e662f4-c668-41f1-8a12-b9521fa53a7c] (NRF-notify) NF Profile updated [type:NSSF] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.118: [sbi] INFO: [NSSF] NFInstance associated [e5e662f4-c668-41f1-8a12-b9521fa53a7c] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.118: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.14:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.119: [sbi] INFO: [nnssf-nsselection] NFService associated [e5e6666e-c668-41f1-8a12-b9521fa53a7c] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.119: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.14:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: Open5GS daemon v2.8.0
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.119: [app] INFO: Configuration: '/etc/open5gs/pcf.yaml' (../lib/app/ogs-init.c:144)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.119: [app] INFO: File Logging: '/var/log/open5gs/pcf.log' (../lib/app/ogs-init.c:147)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.120: [sbi] INFO: [e5e68cd4-c668-41f1-9145-6d60ffd29389] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.120: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.120: [metrics] INFO: metrics_server() [http://127.0.0.13]:9090 (../lib/metrics/prometheus/context.c:392)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [dbi] INFO: MongoDB URI: 'mongodb://localhost/open5gs' (../lib/dbi/ogs-mongoc.c:128)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [sbi] INFO: NF Service [npcf-am-policy-control] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [sbi] INFO: NF Service [npcf-smpolicycontrol] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [sbi] INFO: NF Service [npcf-policyauthorization] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.121: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.121: [sbi] INFO: [e5e6d680-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.120525+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [sbi] INFO: nghttp2_server() [http://127.0.0.13]:7777 (../lib/sbi/nghttp2-server.c:454)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.121: [app] INFO: PCF initialize...done (../src/pcf/app.c:31)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.123: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] (NRF-notify) NF Profile updated [type:PCF] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: [PCF] NFInstance associated [e5e6d856-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: [npcf-am-policy-control] NFService associated [e5e6f9da-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.123: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.124: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.124: [sbi] INFO: [e5e7494e-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.123476+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.124: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.124: [sbi] INFO: [e5e7556a-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.123779+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.125: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.125: [sbi] INFO: [e5e75790-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.123826+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.128: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.128: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.128: [sbi] INFO: [SEPP] NFInstance associated [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.128: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.129: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.129: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.129: [sbi] INFO: [SEPP] NFInstance associated [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-bsfd[479022]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [e5e667c2-c668-41f1-915f-2b60f209085d] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [UDR] NFInstance associated [e5e667c2-c668-41f1-915f-2b60f209085d] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.20:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [nudr-dr] NFService associated [e5e68f22-c668-41f1-915f-2b60f209085d] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.20:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-notify) NF Profile updated [type:SEPP] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [SEPP] NFInstance associated [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [e5e68cd4-c668-41f1-9145-6d60ffd29389] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [BSF] NFInstance associated [e5e68cd4-c668-41f1-9145-6d60ffd29389] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.15:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: [nbsf-management] NFService associated [e5e69170-c668-41f1-9145-6d60ffd29389] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-pcfd[479020]: 10/12 20:15:26.129: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.15:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.137: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/context.c:451)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.137: [metrics] INFO: metrics_server() [http://127.0.0.7]:9090 (../lib/metrics/prometheus/context.c:392)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.138: [pfcp] INFO: pfcp_server() [127.0.0.7]:8805 (../lib/pfcp/path.c:30)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.138: [gtp] INFO: gtp_server() [137.158.126.21]:2152 (../lib/gtp/path.c:30)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.138: [metrics] INFO: metrics_server() [http://127.0.0.4]:9090 (../lib/metrics/prometheus/context.c:392)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.138: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.177: [app] INFO: Polling freeDiameter stats every 60000000 usecs (../lib/diameter/common/stats.c:77)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.177: [gtp] INFO: gtp_server() [127.0.0.4]:2123 (../lib/gtp/path.c:30)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.177: [gtp] INFO: gtp_server() [127.0.0.4]:2152 (../lib/gtp/path.c:30)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.177: [pfcp] INFO: pfcp_server() [127.0.0.4]:8805 (../lib/pfcp/path.c:30)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.177: [sbi] INFO: NF Service [nsmf-pdusession] (../lib/sbi/context.c:2012)
+Oct 12 20:15:26 admin open5gs-upfd[479013]: 10/12 20:15:26.178: [upf] INFO: PFCP associated [127.0.0.4]:8805 (../src/upf/pfcp-sm.c:168)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.178: [sbi] INFO: nghttp2_server() [http://127.0.0.4]:7777 (../lib/sbi/nghttp2-server.c:454)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.178: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.178: [smf] INFO: PFCP associated [127.0.0.7]:8805 (../src/smf/pfcp-sm.c:189)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.178: [sbi] INFO: [e5e905b8-c668-41f1-940a-07cfcb6a3683] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:368)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: [e5e905b8-c668-41f1-940a-07cfcb6a3683] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:1310)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: [e5e905b8-c668-41f1-940a-07cfcb6a3683] (NRF-notify) NF Profile updated [type:SMF] (../lib/sbi/nnrf-handler.c:1348)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: [SMF] NFInstance associated [e5e905b8-c668-41f1-940a-07cfcb6a3683] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.4:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: [nsmf-pdusession] NFService associated [e5ef972a-c668-41f1-940a-07cfcb6a3683] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-amfd[479010]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: [e5efc862-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.179150+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: [e5efcc18-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.179239+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: [e5efd0aa-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.179357+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: [e5efd38e-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.179429+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.10:7777] (../lib/sbi/nnrf-handler.c:1113)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.179: [sbi] INFO: [e5efd514-c668-41f1-a3d4-9b616717c683] Subscription created until 2026-10-13T20:15:26.179467+02:00 [duration:86400000000,validity:86400.000000,patch:43200.000000] (../lib/sbi/nnrf-handler.c:1032)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [e5e43e3e-c668-41f1-8637-0bcc63da1136] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [AMF] NFInstance associated [e5e43e3e-c668-41f1-8637-0bcc63da1136] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.5:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [namf-comm] NFService associated [e5e46080-c668-41f1-8637-0bcc63da1136] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [UDM] NFInstance associated [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [nudm-ueau] NFService associated [e5e4e654-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [nudm-uecm] NFService associated [e5e4e708-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [nudm-sdm] NFService associated [e5e4e73a-c668-41f1-b6ce-89b9d927dd32] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [PCF] NFInstance associated [e5e6d856-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:80] (../lib/sbi/context.c:2503)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [npcf-am-policy-control] NFService associated [e5e6f9da-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.181: [sbi] INFO: [npcf-smpolicycontrol] NFService associated [e5e6fa98-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: [npcf-policyauthorization] NFService associated [e5e6faf2-c668-41f1-84a1-33b49a07cc34] (../lib/sbi/context.c:2138)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../lib/sbi/context.c:2141)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (NRF-profile-get) NF registered (../lib/sbi/nf-sm.c:104)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: [SEPP] NFInstance associated [e5e6f674-c668-41f1-8bd7-13407a63c0e8] (../lib/sbi/context.c:2498)
+Oct 12 20:15:26 admin open5gs-smfd[479011]: 10/12 20:15:26.182: [sbi] INFO: Setup NF EndPoint(addr) [127.0.1.250:7777] (../lib/sbi/context.c:2503)
+Oct 12 20:15:57 admin open5gs-amfd[479010]: 10/12 20:15:57.554: [amf] INFO: gNB-N2 accepted[137.158.126.24]:38508 in ng-path module (../src/amf/ngap-sctp.c:113)
+Oct 12 20:15:57 admin open5gs-amfd[479010]: 10/12 20:15:57.554: [amf] INFO: gNB-N2 accepted[137.158.126.24] in master_sm module (../src/amf/amf-sm.c:818)
+Oct 12 20:15:57 admin open5gs-amfd[479010]: 10/12 20:15:57.561: [amf] INFO: [Added] Number of gNBs is now 1 (../src/amf/context.c:1277)
+Oct 12 20:15:57 admin open5gs-amfd[479010]: 10/12 20:15:57.561: [amf] INFO: gNB-N2[137.158.126.24] max_num_of_ostreams : 2 (../src/amf/amf-sm.c:865)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [amf] INFO: InitialUEMessage (../src/amf/ngap-handler.c:668)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [amf] INFO: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2932)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [amf] INFO:     RAN_UE_NGAP_ID[1] AMF_UE_NGAP_ID[1] TAC[1] CellID[0xe014e] (../src/amf/ngap-handler.c:878)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [amf] INFO: [suci-0-001-01-0000-0-0-0000000001] Unknown UE by SUCI (../src/amf/context.c:1934)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [amf] INFO: [Added] Number of AMF-UEs is now 1 (../src/amf/context.c:1699)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [gmm] INFO: Registration request (../src/amf/gmm-sm.c:1678)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [gmm] INFO: [suci-0-001-01-0000-0-0-0000000001]    SUCI (../src/amf/gmm-handler.c:186)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.203: [sbi] INFO: [e5e489d4-c668-41f1-a909-03e22c76a8a7] Setup NF Instance [type:AUSF] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.209: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.11:7777] (../src/amf/nausf-handler.c:130)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.229: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.233: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.239: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../src/amf/nudm-handler.c:422)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.240: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] Setup NF Instance [type:PCF] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.241: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../src/pcf/npcf-handler.c:150)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.241: [sbi] INFO: [e5e667c2-c668-41f1-915f-2b60f209085d] Setup NF Instance [type:UDR] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.244: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../src/amf/npcf-handler.c:143)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.268: [gmm] INFO: [imsi-001010000000001] Registration complete (../src/amf/gmm-sm.c:3165)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.268: [amf] INFO: [imsi-001010000000001] Configuration update command (../src/amf/nas-path.c:609)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.268: [gmm] INFO:     UTC [2026-10-12T18:16:16] Timezone[0]/DST[0] (../src/amf/gmm-build.c:551)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.268: [gmm] INFO:     LOCAL [2026-10-12T20:16:16] Timezone[7200]/DST[0] (../src/amf/gmm-build.c:556)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [amf] INFO: [Added] Number of AMF-Sessions is now 1 (../src/amf/context.c:2953)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: UE SUPI[imsi-001010000000001] DNN[internet] LBO[0] S_NSSAI[SST:1 SD:0x1] smContextRef[NULL] smContextResourceURI[NULL] (../src/amf/gmm-handler.c:1430)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: V-SMF Instance [e5e905b8-c668-41f1-940a-07cfcb6a3683](LIST) (../src/amf/gmm-handler.c:1507)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: [e5e905b8-c668-41f1-940a-07cfcb6a3683] Setup NF Instance [type:SMF] (../src/amf/gmm-handler.c:1509)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: V-SMF Instance [e5e905b8-c668-41f1-940a-07cfcb6a3683] (../src/amf/gmm-handler.c:1519)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: V-SMF discovered in Non-Roaming or LBO-Roaming[0] (../src/amf/gmm-handler.c:1588)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.269: [gmm] INFO: nsmf_pdusession [1:0x64c80178cf70:(nil)] (../src/amf/gmm-handler.c:1628)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.270: [smf] INFO: [Added] Number of SMF-UEs is now 1 (../src/smf/context.c:1069)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.270: [smf] INFO: [Added] Number of SMF-Sessions is now 1 (../src/smf/context.c:3612)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.271: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.5:7777] (../src/smf/nsmf-handler.c:317)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.271: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.276: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.12:7777] (../src/smf/nudm-handler.c:466)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.276: [sbi] INFO: [e5e6d856-c668-41f1-84a1-33b49a07cc34] Setup NF Instance [type:PCF] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.277: [amf] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../src/amf/nsmf-handler.c:140)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.278: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.4:7777] (../src/pcf/npcf-handler.c:482)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.278: [sbi] INFO: [e5e667c2-c668-41f1-915f-2b60f209085d] Setup NF Instance [type:UDR] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.280: [sbi] INFO: [e5e68cd4-c668-41f1-9145-6d60ffd29389] Setup NF Instance [type:BSF] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-pcfd[479020]: 10/12 20:16:16.281: [pcf] INFO: Setup NF EndPoint(addr) [127.0.0.15:7777] (../src/pcf/nbsf-handler.c:125)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.282: [smf] INFO: Setup NF EndPoint(addr) [127.0.0.13:7777] (../src/smf/npcf-handler.c:414)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.283: [smf] INFO: UE SUPI[imsi-001010000000001] DNN[internet] IPv4[10.45.0.2] IPv6[] (../src/smf/npcf-handler.c:647)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 10/12 20:16:16.283: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 10/12 20:16:16.283: [gtp] INFO: gtp_connect() [127.0.0.4]:2152 (../lib/gtp/path.c:60)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 10/12 20:16:16.283: [upf] INFO: UE F-SEID[UP:0x3a3 CP:0x8e0] APN[internet] PDN-Type[1] IPv4[10.45.0.2] IPv6[] (../src/upf/context.c:498)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.284: [gtp] INFO: gtp_connect() [137.158.126.21]:2152 (../lib/gtp/path.c:60)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.284: [sbi] INFO: [e5e43e3e-c668-41f1-8637-0bcc63da1136] Setup NF Instance [type:AMF] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 10/12 20:16:16.301: [gtp] INFO: gtp_connect() [137.158.126.24]:2152 (../lib/gtp/path.c:60)
+Oct 12 20:16:16 admin open5gs-smfd[479011]: 10/12 20:16:16.301: [sbi] INFO: [e5e4dd58-c668-41f1-b6ce-89b9d927dd32] Setup NF Instance [type:UDM] (../lib/sbi/path.c:349)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 10/12 20:16:16.302: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:16:16 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:16:16 admin open5gs-amfd[479010]: 10/12 20:16:16.304: [amf] INFO: [imsi-001010000000001:10:11][0:0:NULL] /nsmf-pdusession/v1/sm-contexts/{smContextRef}/modify (../src/amf/nsmf-handler.c:983)
+Oct 12 20:16:20 admin open5gs-upfd[479013]: 10/12 20:16:20.339: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:16:20 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:16:20 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:16:20 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:16:28 admin open5gs-upfd[479013]: 10/12 20:16:28.275: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:16:28 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:16:28 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:16:28 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:16:43 admin open5gs-upfd[479013]: 10/12 20:16:43.124: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:16:43 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:16:43 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:16:43 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:17:14 admin open5gs-upfd[479013]: 10/12 20:17:14.355: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:17:14 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:17:14 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:17:14 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:58 admin open5gs-upfd[479013]: 10/12 20:17:58.029: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.012: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.012: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.012: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.012: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.013: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.013: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.013: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.013: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.204: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:17:59 admin open5gs-upfd[479013]: 10/12 20:17:59.343: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.373: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.373: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.373: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.373: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.374: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:01 admin open5gs-upfd[479013]: 10/12 20:18:01.755: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:03 admin open5gs-upfd[479013]: 10/12 20:18:03.451: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:04 admin open5gs-upfd[479013]: 10/12 20:18:04.586: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.172: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.172: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.172: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.189: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.693: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.693: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:07 admin open5gs-upfd[479013]: 10/12 20:18:07.693: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:09 admin open5gs-upfd[479013]: 10/12 20:18:09.805: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:12 admin open5gs-upfd[479013]: 10/12 20:18:12.015: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:12 admin open5gs-upfd[479013]: 10/12 20:18:12.015: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:12 admin open5gs-upfd[479013]: 10/12 20:18:12.015: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:12 admin open5gs-upfd[479013]: 10/12 20:18:12.015: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:12 admin open5gs-upfd[479013]: 10/12 20:18:12.015: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.031: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:14 admin open5gs-upfd[479013]: 10/12 20:18:14.032: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.288: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:15 admin open5gs-upfd[479013]: 10/12 20:18:15.717: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:17 admin open5gs-upfd[479013]: 10/12 20:18:17.117: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:17 admin open5gs-upfd[479013]: 10/12 20:18:17.117: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:17 admin open5gs-upfd[479013]: 10/12 20:18:17.117: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:17 admin open5gs-upfd[479013]: 10/12 20:18:17.117: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:17 admin open5gs-upfd[479013]: 10/12 20:18:17.117: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:18 admin open5gs-upfd[479013]: 10/12 20:18:18.151: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:18 admin open5gs-upfd[479013]: 10/12 20:18:18.152: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:18 admin open5gs-upfd[479013]: 10/12 20:18:18.152: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:19 admin open5gs-upfd[479013]: 10/12 20:18:19.314: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:20 admin open5gs-upfd[479013]: 10/12 20:18:20.768: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:23 admin open5gs-upfd[479013]: 10/12 20:18:23.880: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:24 admin open5gs-upfd[479013]: 10/12 20:18:24.007: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:25 admin open5gs-upfd[479013]: 10/12 20:18:25.366: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:25 admin open5gs-upfd[479013]: 10/12 20:18:25.366: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:18:25 admin open5gs-upfd[479013]: 10/12 20:18:25.366: [gtp] ERROR: ogs_sendto() failed (11:Resource temporarily unavailable) (../lib/gtp/path.c:153)
+Oct 12 20:20:22 admin open5gs-upfd[479013]: 10/12 20:20:22.257: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+Oct 12 20:20:22 admin open5gs-upfd[479013]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+Oct 12 20:20:22 admin open5gs-upfd[479013]: 0010: 45026015 b0645d01 ff020000 00000000   E.`..d].........
+Oct 12 20:20:22 admin open5gs-upfd[479013]: 0020: 00000000 00000002 8500cab9 00000000   ................
