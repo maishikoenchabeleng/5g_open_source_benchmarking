@@ -1,6 +1,6 @@
 === Tunnel Interface State ===
-Timestamp: Tue Oct  6 06:55:46 PM CAT 2026
-158: tun_srsue: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+Timestamp: Mon Oct 12 09:45:35 PM CAT 2026
+188: tun_srsue: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
     link/none 
     inet 10.45.0.2/24 scope global tun_srsue
        valid_lft forever preferred_lft forever
@@ -9,10 +9,22 @@ Route for UE traffic: 137.158.126.21 from 10.45.0.2 dev tun_srsue table 5000 uid
 
 === Policy rules ===
 0:	from all lookup local
-32595:	from 10.45.0.2 lookup 5000
-32596:	from 10.60.0.1 lookup rt_uesimtun0
+32565:	from 10.45.0.2 lookup 5000
+32566:	from 10.60.0.1 lookup rt_uesimtun0
+32567:	from all to 10.60.0.1 lookup 9999
+32569:	from 10.45.0.2 lookup rt_uesimtun0
+32570:	from all to 10.45.0.2 lookup 9999
+32573:	from all to 10.60.0.1 lookup 9999
+32576:	from all to 10.45.0.2 lookup 9999
+32579:	from all to 10.60.0.1 lookup 9999
+32582:	from all to 10.45.0.2 lookup 9999
+32584:	from all to 10.60.0.1 lookup 9999
+32586:	from all to 10.45.0.2 lookup 9999
+32588:	from all to 10.60.0.1 lookup 9999
+32590:	from all to 10.45.0.2 lookup 9999
+32592:	from all to 10.60.0.1 lookup 9999
+32594:	from all to 10.45.0.2 lookup 9999
 32597:	from all to 10.60.0.1 lookup 9999
-32599:	from 10.45.0.2 lookup rt_uesimtun0
 32600:	from all to 10.45.0.2 lookup 9999
 32603:	from all to 10.60.0.1 lookup 9999
 32606:	from all to 10.45.0.2 lookup 9999
@@ -106,9 +118,9 @@ Route for UE traffic: 137.158.126.21 from 10.45.0.2 dev tun_srsue table 5000 uid
 32767:	from all lookup default
 
 === Bytes through tun_srsue (UE side) during tests ===
-rx (downlink): 212922910
-tx (uplink)  : 56099595
+rx (downlink): 212715476
+tx (uplink)  : 56452677
 
 === ogstun (UPF side, core machine) rx/tx bytes ===
-before: 16662205077 24230103751 
-after : 16718264072 24443026829 
+before: 30283851907 39780750233 
+after : 30340266784 39993467557 
