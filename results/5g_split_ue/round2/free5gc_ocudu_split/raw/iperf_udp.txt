@@ -1,5 +1,5 @@
 Connecting to host 137.158.126.21, port 5201
-[  5] local 10.60.0.1 port 35252 connected to 137.158.126.21 port 5201
+[  5] local 10.60.0.1 port 36707 connected to 137.158.126.21 port 5201
 [ ID] Interval           Transfer     Bitrate         Total Datagrams
 [  5]   0.00-1.00   sec   245 KBytes  2.01 Mbits/sec  209  
 [  5]   1.00-2.00   sec   244 KBytes  2.00 Mbits/sec  208  
@@ -34,6 +34,6 @@ Connecting to host 137.158.126.21, port 5201
 - - - - - - - - - - - - - - - - - - - - - - - - -
 [ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
 [  5]   0.00-30.00  sec  7.15 MBytes  2.00 Mbits/sec  0.000 ms  0/6250 (0%)  sender
-[  5]   0.00-30.06  sec  7.15 MBytes  2.00 Mbits/sec  3.930 ms  0/6250 (0%)  receiver
+[  5]   0.00-30.05  sec  7.15 MBytes  2.00 Mbits/sec  3.689 ms  0/6249 (0%)  receiver
 
 iperf Done.

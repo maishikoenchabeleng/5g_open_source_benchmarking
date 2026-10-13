@@ -1,28 +1,40 @@
 === Tunnel Interface State ===
-Timestamp: Tue Oct  6 07:28:16 PM CAT 2026
-165: oaitun_ue1: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+Timestamp: Mon Oct 12 10:18:10 PM CAT 2026
+195: oaitun_ue1: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
     link/none 
     inet 10.60.0.1/24 scope global oaitun_ue1
        valid_lft forever preferred_lft forever
-    inet6 fe80::2f29:347e:ce05:cd38/64 scope link stable-privacy 
+    inet6 fe80::6f46:3caa:2615:56d9/64 scope link stable-privacy 
        valid_lft forever preferred_lft forever
 
 Route for UE traffic: 137.158.126.21 from 10.60.0.1 dev oaitun_ue1 table 5000 uid 0 
 
 === Policy rules ===
 0:	from all lookup local
-32587:	from 10.60.0.1 lookup 5000
+32557:	from 10.60.0.1 lookup 5000
+32558:	from all to 10.60.0.1 lookup 9999
+32559:	from 10.60.0.1 lookup 9999
+32560:	from all to 10.45.0.2 lookup 9999
+32561:	from 10.45.0.2 lookup 9999
+32562:	from all to 10.60.0.1 lookup 9999
+32563:	from 10.60.0.1 lookup 9999
+32564:	from all to 10.45.0.2 lookup 9999
+32565:	from 10.45.0.2 lookup 9999
+32566:	from 10.60.0.1 lookup rt_uesimtun0
+32567:	from all to 10.60.0.1 lookup 9999
+32569:	from 10.45.0.2 lookup rt_uesimtun0
+32570:	from all to 10.45.0.2 lookup 9999
+32573:	from all to 10.60.0.1 lookup 9999
+32576:	from all to 10.45.0.2 lookup 9999
+32579:	from all to 10.60.0.1 lookup 9999
+32582:	from all to 10.45.0.2 lookup 9999
+32584:	from all to 10.60.0.1 lookup 9999
+32586:	from all to 10.45.0.2 lookup 9999
 32588:	from all to 10.60.0.1 lookup 9999
-32589:	from 10.60.0.1 lookup 9999
 32590:	from all to 10.45.0.2 lookup 9999
-32591:	from 10.45.0.2 lookup 9999
 32592:	from all to 10.60.0.1 lookup 9999
-32593:	from 10.60.0.1 lookup 9999
 32594:	from all to 10.45.0.2 lookup 9999
-32595:	from 10.45.0.2 lookup 9999
-32596:	from 10.60.0.1 lookup rt_uesimtun0
 32597:	from all to 10.60.0.1 lookup 9999
-32599:	from 10.45.0.2 lookup rt_uesimtun0
 32600:	from all to 10.45.0.2 lookup 9999
 32603:	from all to 10.60.0.1 lookup 9999
 32606:	from all to 10.45.0.2 lookup 9999
@@ -116,9 +128,9 @@ Route for UE traffic: 137.158.126.21 from 10.60.0.1 dev oaitun_ue1 table 5000 ui
 32767:	from all lookup default
 
 === Bytes through oaitun_ue1 (UE side) during tests ===
-rx (downlink): 274892148
-tx (uplink)  : 328441522
+rx (downlink): 273712513
+tx (uplink)  : 329994137
 
 === upfgtp (UPF side, core machine) rx/tx bytes ===
 before: 0 0 
-after : 328441282 275262072 
+after : 329993897 274124893 
