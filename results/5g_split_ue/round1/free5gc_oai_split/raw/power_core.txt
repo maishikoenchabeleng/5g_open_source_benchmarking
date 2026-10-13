@@ -1,8 +1,8 @@
 RAPL Power Measurement - Core Machine (137.158.126.21) - CU + core
 ===============================================================
-Start energy (uJ) : 237677319217
-End energy   (uJ) : 239051093044
-Duration      (s) : 163
-Total energy  (J) : 1373
+Start energy (uJ) : 181931438612
+End energy   (uJ) : 183317194525
+Duration      (s) : 173
+Total energy  (J) : 1385
 Average power (W) : 8
-Timestamp         : Tue Oct  6 07:12:28 PM CAT 2026
+Timestamp         : Mon Oct 12 10:02:29 PM CAT 2026
