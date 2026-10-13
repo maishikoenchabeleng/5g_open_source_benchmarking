@@ -1,8 +1,8 @@
 ================================================================================
                     5G TESTBED - ALL COMBINATIONS COMPARISON
 ================================================================================
-  Generated : 2026-10-06 18:54:58
-  Run ID    : 20261006_172521
+  Generated : 2026-10-12 21:44:47
+  Run ID    : 20261012_201509
 ================================================================================
 
 ── round1/free5gc_oai ──────────────────────────────────────────────────────
@@ -10,392 +10,108 @@
   Registration Time       : 99 ms   (AMF: Registration Request -> Registration Complete)
   PDU Session Setup Time  : 20 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 23.194 ms
-  Jitter                  : 2.048 ms
+  RTT Average             : 23.134 ms
+  Jitter                  : 2.390 ms
   UDP Packet Loss         : 0%
-  Downlink                : 125 Mbps
-  Uplink                  : 81.3 Mbps
-  Average Power           : 51 W
+  Downlink                : 122 Mbps
+  Uplink                  : 81.6 Mbps
+  Average Power           : 50 W
   Average Power           : 7 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 242.62 %   peak 247.00 %
-  FL gNB RSS              : 857632 KB
-  FL UE  CPU              : avg 177.99 %   peak 181.00 %
-  FL UE  RSS              : 490428 KB
-  FL RAN Power            : 51 W   (3095 J)
-  FL Machine CPU (all)    : 35.44 % busy = 4.25 cores   (usr 22.92 %, sys 10.84 %, soft 1.68 %)
-  FL AMF / SMF / UPF CPU  : avg 0.03 % / 0.43 % / 0.12 %
-  FL Core Power           : 4 W   (282 J)
-  FL Machine CPU (all)    : 1.54 % busy = 0.18 cores   (usr 0.83 %, sys 0.56 %, soft 0.10 %)
+  FL gNB CPU              : avg 240.61 %   peak 245.00 %
+  FL gNB RSS              : 857504 KB
+  FL UE  CPU              : avg 175.91 %   peak 179.00 %
+  FL UE  RSS              : 491096 KB
+  FL RAN Power            : 50 W   (3032 J)
+  FL Machine CPU (all)    : 36.09 % busy = 4.33 cores   (usr 23.78 %, sys 10.70 %, soft 1.51 %)
+  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.40 % / 0.12 %
+  FL Core NFs (all)       : CPU avg 4.02 %   RSS 314617 KB   (CU not included)
+  FL Core Power           : 4 W   (275 J)
+  FL Machine CPU (all)    : 2.86 % busy = 0.34 cores   (usr 0.92 %, sys 1.74 %, soft 0.14 %)
 
 ── round1/free5gc_srsran ──────────────────────────────────────────────────────
   UE IP Assigned    : 10.60.0.1
-  Registration Time       : 325 ms   (AMF: Registration Request -> Registration Complete)
+  Registration Time       : 326 ms   (AMF: Registration Request -> Registration Complete)
   PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 45.621 ms
-  Jitter                  : 3.570 ms
+  RTT Average             : 45.408 ms
+  Jitter                  : 3.572 ms
   UDP Packet Loss         : 0%
   Downlink                : 53.7 Mbps
   Uplink                  : 12.5 Mbps
-  Average Power           : 38 W
+  Average Power           : 37 W
   Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 192.07 %   peak 198.00 %
-  FL gNB RSS              : 2862012 KB
-  FL UE  CPU              : avg 86.60 %   peak 95.00 %
-  FL UE  RSS              : 852260 KB
-  FL RAN Power            : 42 W   (2548 J)
-  FL Machine CPU (all)    : 23.72 % busy = 2.85 cores   (usr 16.96 %, sys 6.18 %, soft 0.56 %)
-  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.13 % / 0.13 %
-  FL Core Power           : 4 W   (256 J)
-  FL Machine CPU (all)    : 1.38 % busy = 0.17 cores   (usr 0.63 %, sys 0.53 %, soft 0.11 %)
+  FL gNB CPU              : avg 189.86 %   peak 196.00 %
+  FL gNB RSS              : 2861252 KB
+  FL UE  CPU              : avg 85.94 %   peak 100.00 %
+  FL UE  RSS              : 851900 KB
+  FL RAN Power            : 40 W   (2500 J)
+  FL Machine CPU (all)    : 23.63 % busy = 2.84 cores   (usr 17.15 %, sys 5.89 %, soft 0.43 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.11 % / 0.16 %
+  FL Core NFs (all)       : CPU avg 0.54 %   RSS 296842 KB   (CU not included)
+  FL Core Power           : 4 W   (250 J)
+  FL Machine CPU (all)    : 1.40 % busy = 0.17 cores   (usr 0.65 %, sys 0.55 %, soft 0.11 %)
 
 ── round1/free5gc_ueransim ──────────────────────────────────────────────────────
   UE IP Assigned    : 10.60.0.1
-  Registration Time       : 267 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 23 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 261 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 18.214 ms
-  Jitter                  : 0.034 ms
+  RTT Average             : 18.257 ms
+  Jitter                  : 0.051 ms
   UDP Packet Loss         : 0%
-  Downlink                : 903 Mbps
-  Uplink                  : 900 Mbps
-  Average Power           : 18 W
+  Downlink                : 904 Mbps
+  Uplink                  : 899 Mbps
+  Average Power           : 17 W
   Average Power           : 12 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.42 %   peak 5.00 %
-  FL gNB RSS              : 10112 KB
-  FL UE  CPU              : avg 3.90 %   peak 5.00 %
+  FL gNB CPU              : avg 3.05 %   peak 5.00 %
+  FL gNB RSS              : 10240 KB
+  FL UE  CPU              : avg 3.45 %   peak 5.00 %
   FL UE  RSS              : 7040 KB
-  FL RAN Power            : 13 W   (810 J)
-  FL Machine CPU (all)    : 1.14 % busy = 0.14 cores   (usr 0.43 %, sys 0.66 %, soft 0.05 %)
-  FL AMF / SMF / UPF CPU  : avg 0.03 % / 1.42 % / 0.25 %
-  FL Core Power           : 22 W   (1353 J)
-  FL Machine CPU (all)    : 11.63 % busy = 1.40 cores   (usr 10.99 %, sys 0.57 %, soft 0.07 %)
+  FL RAN Power            : 13 W   (785 J)
+  FL Machine CPU (all)    : 0.76 % busy = 0.09 cores   (usr 0.25 %, sys 0.35 %, soft 0.02 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 1.68 % / 0.23 %
+  FL Core NFs (all)       : CPU avg 131.16 %   RSS 686836 KB   (CU not included)
+  FL Core Power           : 22 W   (1350 J)
+  FL Machine CPU (all)    : 11.71 % busy = 1.40 cores   (usr 11.01 %, sys 0.66 %, soft 0.03 %)
 
 ── round1/open5gs_oai ──────────────────────────────────────────────────────
   UE IP Assigned    : 10.45.0.2
-  Registration Time       : 66 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 65 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 15 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 23.447 ms
-  Jitter                  : 3.905 ms
+  RTT Average             : 23.338 ms
+  Jitter                  : 2.754 ms
   UDP Packet Loss         : 0%
-  Downlink                : 114 Mbps
-  Uplink                  : 60.9 Mbps
-  Average Power           : 51 W
+  Downlink                : 115 Mbps
+  Uplink                  : 59.3 Mbps
+  Average Power           : 50 W
   Average Power           : 5 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 243.10 %   peak 246.00 %
-  FL gNB RSS              : 856404 KB
-  FL UE  CPU              : avg 179.57 %   peak 182.00 %
-  FL UE  RSS              : 491040 KB
-  FL RAN Power            : 51 W   (3077 J)
-  FL Machine CPU (all)    : 37.16 % busy = 4.46 cores   (usr 24.73 %, sys 11.00 %, soft 1.43 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 6.77 %
-  FL Core Power           : 4 W   (259 J)
-  FL Machine CPU (all)    : 1.63 % busy = 0.20 cores   (usr 0.69 %, sys 0.76 %, soft 0.07 %)
+  FL gNB CPU              : avg 242.48 %   peak 247.00 %
+  FL gNB RSS              : 856536 KB
+  FL UE  CPU              : avg 178.20 %   peak 182.00 %
+  FL UE  RSS              : 490056 KB
+  FL RAN Power            : 50 W   (3038 J)
+  FL Machine CPU (all)    : 35.62 % busy = 4.27 cores   (usr 23.45 %, sys 10.77 %, soft 1.40 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 7.31 %
+  FL Core NFs (all)       : CPU avg 7.43 %   RSS 292476 KB   (CU not included)
+  FL Core Power           : 4 W   (262 J)
+  FL Machine CPU (all)    : 4.11 % busy = 0.49 cores   (usr 1.72 %, sys 2.07 %, soft 0.24 %)
 
 ── round1/open5gs_srsran ──────────────────────────────────────────────────────
   UE IP Assigned    : 10.45.0.2
-  Registration Time       : 291 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 15 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 45.493 ms
-  Jitter                  : 3.215 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 53.6 Mbps
-  Uplink                  : 12.5 Mbps
-  Average Power           : 38 W
-  Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 192.48 %   peak 196.00 %
-  FL gNB RSS              : 2862708 KB
-  FL UE  CPU              : avg 88.18 %   peak 98.00 %
-  FL UE  RSS              : 852308 KB
-  FL RAN Power            : 42 W   (2548 J)
-  FL Machine CPU (all)    : 24.13 % busy = 2.90 cores   (usr 17.45 %, sys 6.27 %, soft 0.29 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.33 %
-  FL Core Power           : 4 W   (255 J)
-  FL Machine CPU (all)    : 1.62 % busy = 0.19 cores   (usr 0.65 %, sys 0.79 %, soft 0.08 %)
-
-── round1/open5gs_ueransim ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 222 ms   (AMF: Registration Request -> Registration Complete)
+  Registration Time       : 252 ms   (AMF: Registration Request -> Registration Complete)
   PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 18.293 ms
-  Jitter                  : 0.043 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 899 Mbps
-  Uplink                  : 899 Mbps
-  Average Power           : 20 W
-  Average Power           : 8 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.47 %   peak 5.00 %
-  FL gNB RSS              : 10112 KB
-  FL UE  CPU              : avg 3.73 %   peak 5.00 %
-  FL UE  RSS              : 6912 KB
-  FL RAN Power            : 13 W   (814 J)
-  FL Machine CPU (all)    : 1.77 % busy = 0.21 cores   (usr 0.61 %, sys 0.98 %, soft 0.19 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.53 %
-  FL Core Power           : 4 W   (271 J)
-  FL Machine CPU (all)    : 2.89 % busy = 0.35 cores   (usr 1.00 %, sys 1.62 %, soft 0.17 %)
-
-── round2/free5gc_oai ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 102 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 21 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 23.137 ms
-  Jitter                  : 2.480 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 125 Mbps
-  Uplink                  : 81.0 Mbps
-  Average Power           : 51 W
-  Average Power           : 7 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 242.90 %   peak 247.00 %
-  FL gNB RSS              : 857571 KB
-  FL UE  CPU              : avg 177.91 %   peak 180.00 %
-  FL UE  RSS              : 490768 KB
-  FL RAN Power            : 51 W   (3080 J)
-  FL Machine CPU (all)    : 35.24 % busy = 4.23 cores   (usr 22.63 %, sys 10.73 %, soft 1.81 %)
-  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.43 % / 0.13 %
-  FL Core Power           : 4 W   (280 J)
-  FL Machine CPU (all)    : 1.62 % busy = 0.19 cores   (usr 0.85 %, sys 0.60 %, soft 0.10 %)
-
-── round2/free5gc_srsran ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 330 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 25 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 45.252 ms
-  Jitter                  : 3.571 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 53.7 Mbps
-  Uplink                  : 12.5 Mbps
-  Average Power           : 38 W
-  Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 192.44 %   peak 198.00 %
-  FL gNB RSS              : 2862096 KB
-  FL UE  CPU              : avg 88.08 %   peak 99.00 %
-  FL UE  RSS              : 852304 KB
-  FL RAN Power            : 42 W   (2555 J)
-  FL Machine CPU (all)    : 23.76 % busy = 2.85 cores   (usr 17.15 %, sys 6.06 %, soft 0.41 %)
-  FL AMF / SMF / UPF CPU  : avg 0.08 % / 0.13 % / 0.13 %
-  FL Core Power           : 4 W   (240 J)
-  FL Machine CPU (all)    : 1.39 % busy = 0.17 cores   (usr 0.58 %, sys 0.59 %, soft 0.12 %)
-
-── round2/free5gc_ueransim ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 265 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 18.246 ms
-  Jitter                  : 0.048 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 902 Mbps
-  Uplink                  : 900 Mbps
-  Average Power           : 18 W
-  Average Power           : 12 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.43 %   peak 6.00 %
-  FL gNB RSS              : 9984 KB
-  FL UE  CPU              : avg 3.83 %   peak 6.00 %
-  FL UE  RSS              : 7020 KB
-  FL RAN Power            : 13 W   (806 J)
-  FL Machine CPU (all)    : 1.99 % busy = 0.24 cores   (usr 0.57 %, sys 1.13 %, soft 0.08 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 1.40 % / 0.23 %
-  FL Core Power           : 22 W   (1361 J)
-  FL Machine CPU (all)    : 11.66 % busy = 1.40 cores   (usr 11.05 %, sys 0.57 %, soft 0.05 %)
-
-── round2/open5gs_oai ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 65 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 23.213 ms
-  Jitter                  : 2.758 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 115 Mbps
-  Uplink                  : 79.8 Mbps
-  Average Power           : 51 W
-  Average Power           : 5 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 242.75 %   peak 246.00 %
-  FL gNB RSS              : 857296 KB
-  FL UE  CPU              : avg 178.87 %   peak 181.00 %
-  FL UE  RSS              : 491060 KB
-  FL RAN Power            : 51 W   (3075 J)
-  FL Machine CPU (all)    : 36.56 % busy = 4.39 cores   (usr 23.59 %, sys 11.10 %, soft 1.87 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.77 %
-  FL Core Power           : 4 W   (259 J)
-  FL Machine CPU (all)    : 1.54 % busy = 0.19 cores   (usr 0.69 %, sys 0.69 %, soft 0.06 %)
-
-── round2/open5gs_srsran ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 290 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 5 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 45.683 ms
-  Jitter                  : 3.266 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 53.7 Mbps
-  Uplink                  : 12.5 Mbps
-  Average Power           : 38 W
-  Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 192.24 %   peak 197.00 %
-  FL gNB RSS              : 2862216 KB
-  FL UE  CPU              : avg 88.50 %   peak 99.00 %
-  FL UE  RSS              : 852260 KB
-  FL RAN Power            : 42 W   (2539 J)
-  FL Machine CPU (all)    : 23.75 % busy = 2.85 cores   (usr 17.12 %, sys 6.14 %, soft 0.30 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 7.05 %
-  FL Core Power           : 4 W   (258 J)
-  FL Machine CPU (all)    : 1.53 % busy = 0.18 cores   (usr 0.64 %, sys 0.72 %, soft 0.09 %)
-
-── round2/open5gs_ueransim ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 234 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 18.418 ms
-  Jitter                  : 0.040 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 901 Mbps
-  Uplink                  : 897 Mbps
-  Average Power           : 19 W
-  Average Power           : 8 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.03 %   peak 4.00 %
-  FL gNB RSS              : 10368 KB
-  FL UE  CPU              : avg 3.48 %   peak 5.00 %
-  FL UE  RSS              : 7040 KB
-  FL RAN Power            : 13 W   (821 J)
-  FL Machine CPU (all)    : 2.08 % busy = 0.25 cores   (usr 0.64 %, sys 1.03 %, soft 0.25 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 7.25 %
-  FL Core Power           : 4 W   (257 J)
-  FL Machine CPU (all)    : 2.91 % busy = 0.35 cores   (usr 0.85 %, sys 1.45 %, soft 0.51 %)
-
-── round3/free5gc_oai ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 101 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 20 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 24.555 ms
-  Jitter                  : 2.136 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 124 Mbps
-  Uplink                  : 80.8 Mbps
-  Average Power           : 51 W
-  Average Power           : 7 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 242.40 %   peak 246.00 %
-  FL gNB RSS              : 857488 KB
-  FL UE  CPU              : avg 177.55 %   peak 180.00 %
-  FL UE  RSS              : 491052 KB
-  FL RAN Power            : 50 W   (3071 J)
-  FL Machine CPU (all)    : 36.10 % busy = 4.33 cores   (usr 23.61 %, sys 10.84 %, soft 1.53 %)
-  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.43 % / 0.15 %
-  FL Core Power           : 4 W   (286 J)
-  FL Machine CPU (all)    : 1.57 % busy = 0.19 cores   (usr 0.88 %, sys 0.58 %, soft 0.10 %)
-
-── round3/free5gc_srsran ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 331 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 25 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 45.137 ms
-  Jitter                  : 3.657 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 53.5 Mbps
-  Uplink                  : 12.4 Mbps
-  Average Power           : 38 W
-  Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 191.44 %   peak 196.00 %
-  FL gNB RSS              : 2861944 KB
-  FL UE  CPU              : avg 90.98 %   peak 99.00 %
-  FL UE  RSS              : 852560 KB
-  FL RAN Power            : 42 W   (2535 J)
-  FL Machine CPU (all)    : 23.83 % busy = 2.86 cores   (usr 17.28 %, sys 6.10 %, soft 0.38 %)
-  FL AMF / SMF / UPF CPU  : avg 0.03 % / 0.12 % / 0.13 %
-  FL Core Power           : 4 W   (242 J)
-  FL Machine CPU (all)    : 1.28 % busy = 0.15 cores   (usr 0.60 %, sys 0.56 %, soft 0.12 %)
-
-── round3/free5gc_ueransim ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.60.0.1
-  Registration Time       : 275 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 18.162 ms
-  Jitter                  : 0.031 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 902 Mbps
-  Uplink                  : 900 Mbps
-  Average Power           : 18 W
-  Average Power           : 12 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.17 %   peak 5.00 %
-  FL gNB RSS              : 10240 KB
-  FL UE  CPU              : avg 3.50 %   peak 5.00 %
-  FL UE  RSS              : 7168 KB
-  FL RAN Power            : 13 W   (800 J)
-  FL Machine CPU (all)    : 0.54 % busy = 0.07 cores   (usr 0.21 %, sys 0.31 %, soft 0.01 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 1.73 % / 0.25 %
-  FL Core Power           : 22 W   (1351 J)
-  FL Machine CPU (all)    : 11.85 % busy = 1.42 cores   (usr 11.09 %, sys 0.62 %, soft 0.13 %)
-
-── round3/open5gs_oai ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 67 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 23.386 ms
-  Jitter                  : 3.483 ms
-  UDP Packet Loss         : 0%
-  Downlink                : 115 Mbps
-  Uplink                  : 80.6 Mbps
-  Average Power           : 51 W
-  Average Power           : 5 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
-  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 241.87 %   peak 246.00 %
-  FL gNB RSS              : 856628 KB
-  FL UE  CPU              : avg 177.84 %   peak 181.00 %
-  FL UE  RSS              : 492252 KB
-  FL RAN Power            : 50 W   (3062 J)
-  FL Machine CPU (all)    : 36.52 % busy = 4.38 cores   (usr 23.43 %, sys 11.23 %, soft 1.73 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.08 %
-  FL Core Power           : 4 W   (249 J)
-  FL Machine CPU (all)    : 1.42 % busy = 0.17 cores   (usr 0.62 %, sys 0.70 %, soft 0.10 %)
-
-── round3/open5gs_srsran ──────────────────────────────────────────────────────
-  UE IP Assigned    : 10.45.0.2
-  Registration Time       : 287 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 45.458 ms
-  Jitter                  : 4.166 ms
+  RTT Average             : 45.442 ms
+  Jitter                  : 3.299 ms
   UDP Packet Loss         : 0%
   Downlink                : 53.6 Mbps
   Uplink                  : 12.4 Mbps
@@ -403,37 +119,339 @@
   Average Power           : 3 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 192.08 %   peak 198.00 %
-  FL gNB RSS              : 2862088 KB
-  FL UE  CPU              : avg 88.96 %   peak 98.00 %
-  FL UE  RSS              : 852356 KB
-  FL RAN Power            : 41 W   (2529 J)
-  FL Machine CPU (all)    : 23.86 % busy = 2.86 cores   (usr 17.13 %, sys 6.22 %, soft 0.35 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.17 %
-  FL Core Power           : 4 W   (262 J)
-  FL Machine CPU (all)    : 2.21 % busy = 0.26 cores   (usr 0.69 %, sys 0.89 %, soft 0.62 %)
+  FL gNB CPU              : avg 191.05 %   peak 197.00 %
+  FL gNB RSS              : 2861404 KB
+  FL UE  CPU              : avg 86.70 %   peak 94.00 %
+  FL UE  RSS              : 852352 KB
+  FL RAN Power            : 41 W   (2501 J)
+  FL Machine CPU (all)    : 23.58 % busy = 2.83 cores   (usr 17.11 %, sys 5.85 %, soft 0.43 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.02 % / 7.13 %
+  FL Core NFs (all)       : CPU avg 7.21 %   RSS 290878 KB   (CU not included)
+  FL Core Power           : 4 W   (258 J)
+  FL Machine CPU (all)    : 1.63 % busy = 0.20 cores   (usr 0.65 %, sys 0.79 %, soft 0.07 %)
 
-── round3/open5gs_ueransim ──────────────────────────────────────────────────────
+── round1/open5gs_ueransim ──────────────────────────────────────────────────────
   UE IP Assigned    : 10.45.0.2
-  Registration Time       : 217 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 15 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 232 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 18.280 ms
-  Jitter                  : 0.069 ms
+  RTT Average             : 18.403 ms
+  Jitter                  : 0.089 ms
   UDP Packet Loss         : 0%
-  Downlink                : 901 Mbps
-  Uplink                  : 897 Mbps
+  Downlink                : 900 Mbps
+  Uplink                  : 899 Mbps
   Average Power           : 18 W
   Average Power           : 8 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL gNB CPU              : avg 3.50 %   peak 5.00 %
-  FL gNB RSS              : 10240 KB
-  FL UE  CPU              : avg 3.85 %   peak 6.00 %
-  FL UE  RSS              : 6784 KB
-  FL RAN Power            : 13 W   (804 J)
-  FL Machine CPU (all)    : 2.70 % busy = 0.32 cores   (usr 0.90 %, sys 1.62 %, soft 0.04 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.27 %
-  FL Core Power           : 4 W   (253 J)
-  FL Machine CPU (all)    : 1.54 % busy = 0.18 cores   (usr 0.65 %, sys 0.81 %, soft 0.07 %)
+  FL gNB CPU              : avg 3.38 %   peak 5.00 %
+  FL gNB RSS              : 10368 KB
+  FL UE  CPU              : avg 3.60 %   peak 5.00 %
+  FL UE  RSS              : 6912 KB
+  FL RAN Power            : 13 W   (784 J)
+  FL Machine CPU (all)    : 1.34 % busy = 0.16 cores   (usr 0.40 %, sys 0.69 %, soft 0.11 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 7.55 %
+  FL Core NFs (all)       : CPU avg 7.63 %   RSS 292563 KB   (CU not included)
+  FL Core Power           : 4 W   (263 J)
+  FL Machine CPU (all)    : 3.62 % busy = 0.43 cores   (usr 0.87 %, sys 2.36 %, soft 0.29 %)
+
+── round2/free5gc_oai ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 101 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 19 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 23.205 ms
+  Jitter                  : 2.209 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 123 Mbps
+  Uplink                  : 80.8 Mbps
+  Average Power           : 50 W
+  Average Power           : 7 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 241.87 %   peak 247.00 %
+  FL gNB RSS              : 857100 KB
+  FL UE  CPU              : avg 176.63 %   peak 181.00 %
+  FL UE  RSS              : 491440 KB
+  FL RAN Power            : 49 W   (3040 J)
+  FL Machine CPU (all)    : 36.11 % busy = 4.33 cores   (usr 23.67 %, sys 10.75 %, soft 1.59 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.45 % / 0.13 %
+  FL Core NFs (all)       : CPU avg 4.05 %   RSS 312205 KB   (CU not included)
+  FL Core Power           : 4 W   (279 J)
+  FL Machine CPU (all)    : 1.87 % busy = 0.22 cores   (usr 0.86 %, sys 0.62 %, soft 0.32 %)
+
+── round2/free5gc_srsran ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 329 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 25 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 45.667 ms
+  Jitter                  : 12.862 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 53.6 Mbps
+  Uplink                  : 12.5 Mbps
+  Average Power           : 37 W
+  Average Power           : 3 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 189.20 %   peak 196.00 %
+  FL gNB RSS              : 2861440 KB
+  FL UE  CPU              : avg 88.97 %   peak 102.00 %
+  FL UE  RSS              : 852424 KB
+  FL RAN Power            : 41 W   (2489 J)
+  FL Machine CPU (all)    : 23.55 % busy = 2.83 cores   (usr 17.19 %, sys 5.83 %, soft 0.36 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.13 % / 0.13 %
+  FL Core NFs (all)       : CPU avg 0.44 %   RSS 298065 KB   (CU not included)
+  FL Core Power           : 4 W   (255 J)
+  FL Machine CPU (all)    : 1.40 % busy = 0.17 cores   (usr 0.64 %, sys 0.56 %, soft 0.12 %)
+
+── round2/free5gc_ueransim ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 269 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 18.286 ms
+  Jitter                  : 0.031 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 902 Mbps
+  Uplink                  : 900 Mbps
+  Average Power           : 17 W
+  Average Power           : 12 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 3.25 %   peak 5.00 %
+  FL gNB RSS              : 10112 KB
+  FL UE  CPU              : avg 3.77 %   peak 5.00 %
+  FL UE  RSS              : 7424 KB
+  FL RAN Power            : 13 W   (788 J)
+  FL Machine CPU (all)    : 0.93 % busy = 0.11 cores   (usr 0.27 %, sys 0.44 %, soft 0.03 %)
+  FL AMF / SMF / UPF CPU  : avg 0.03 % / 1.40 % / 0.23 %
+  FL Core NFs (all)       : CPU avg 130.96 %   RSS 665781 KB   (CU not included)
+  FL Core Power           : 22 W   (1362 J)
+  FL Machine CPU (all)    : 11.71 % busy = 1.41 cores   (usr 11.10 %, sys 0.57 %, soft 0.04 %)
+
+── round2/open5gs_oai ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 65 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 23.285 ms
+  Jitter                  : 3.209 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 113 Mbps
+  Uplink                  : 60.8 Mbps
+  Average Power           : 50 W
+  Average Power           : 5 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 242.15 %   peak 246.00 %
+  FL gNB RSS              : 856408 KB
+  FL UE  CPU              : avg 177.93 %   peak 180.81 %
+  FL UE  RSS              : 491612 KB
+  FL RAN Power            : 49 W   (3038 J)
+  FL Machine CPU (all)    : 36.04 % busy = 4.32 cores   (usr 23.87 %, sys 10.56 %, soft 1.53 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 7.12 %
+  FL Core NFs (all)       : CPU avg 7.27 %   RSS 292785 KB   (CU not included)
+  FL Core Power           : 4 W   (263 J)
+  FL Machine CPU (all)    : 4.20 % busy = 0.50 cores   (usr 1.07 %, sys 2.87 %, soft 0.15 %)
+
+── round2/open5gs_srsran ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 289 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 44.985 ms
+  Jitter                  : 3.247 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 53.7 Mbps
+  Uplink                  : 12.5 Mbps
+  Average Power           : 37 W
+  Average Power           : 4 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 190.85 %   peak 195.00 %
+  FL gNB RSS              : 2861560 KB
+  FL UE  CPU              : avg 86.07 %   peak 93.00 %
+  FL UE  RSS              : 852580 KB
+  FL RAN Power            : 40 W   (2479 J)
+  FL Machine CPU (all)    : 23.35 % busy = 2.80 cores   (usr 16.90 %, sys 5.86 %, soft 0.41 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.28 %
+  FL Core NFs (all)       : CPU avg 7.38 %   RSS 290469 KB   (CU not included)
+  FL Core Power           : 4 W   (261 J)
+  FL Machine CPU (all)    : 1.55 % busy = 0.19 cores   (usr 0.64 %, sys 0.73 %, soft 0.07 %)
+
+── round2/open5gs_ueransim ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 233 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 18.361 ms
+  Jitter                  : 0.067 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 899 Mbps
+  Uplink                  : 900 Mbps
+  Average Power           : 17 W
+  Average Power           : 8 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 3.47 %   peak 5.00 %
+  FL gNB RSS              : 10112 KB
+  FL UE  CPU              : avg 3.67 %   peak 6.00 %
+  FL UE  RSS              : 6912 KB
+  FL RAN Power            : 12 W   (777 J)
+  FL Machine CPU (all)    : 2.68 % busy = 0.32 cores   (usr 0.95 %, sys 1.36 %, soft 0.18 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.22 %
+  FL Core NFs (all)       : CPU avg 7.32 %   RSS 292068 KB   (CU not included)
+  FL Core Power           : 4 W   (267 J)
+  FL Machine CPU (all)    : 1.64 % busy = 0.20 cores   (usr 0.70 %, sys 0.76 %, soft 0.08 %)
+
+── round3/free5gc_oai ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 97 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 21 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 23.188 ms
+  Jitter                  : 2.171 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 127 Mbps
+  Uplink                  : 82.1 Mbps
+  Average Power           : 50 W
+  Average Power           : 7 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 242.82 %   peak 248.00 %
+  FL gNB RSS              : 857676 KB
+  FL UE  CPU              : avg 176.96 %   peak 180.00 %
+  FL UE  RSS              : 490372 KB
+  FL RAN Power            : 50 W   (3035 J)
+  FL Machine CPU (all)    : 35.77 % busy = 4.29 cores   (usr 23.61 %, sys 10.63 %, soft 1.52 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.43 % / 0.12 %
+  FL Core NFs (all)       : CPU avg 4.02 %   RSS 314788 KB   (CU not included)
+  FL Core Power           : 4 W   (286 J)
+  FL Machine CPU (all)    : 1.72 % busy = 0.21 cores   (usr 0.94 %, sys 0.62 %, soft 0.09 %)
+
+── round3/free5gc_srsran ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 334 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 24 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 45.732 ms
+  Jitter                  : 3.317 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 53.8 Mbps
+  Uplink                  : 12.5 Mbps
+  Average Power           : 37 W
+  Average Power           : 3 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 189.79 %   peak 194.00 %
+  FL gNB RSS              : 2861508 KB
+  FL UE  CPU              : avg 87.16 %   peak 94.00 %
+  FL UE  RSS              : 852136 KB
+  FL RAN Power            : 41 W   (2487 J)
+  FL Machine CPU (all)    : 23.25 % busy = 2.79 cores   (usr 17.00 %, sys 5.88 %, soft 0.36 %)
+  FL AMF / SMF / UPF CPU  : avg 0.03 % / 0.10 % / 0.12 %
+  FL Core NFs (all)       : CPU avg 0.38 %   RSS 297034 KB   (CU not included)
+  FL Core Power           : 4 W   (248 J)
+  FL Machine CPU (all)    : 1.37 % busy = 0.16 cores   (usr 0.60 %, sys 0.55 %, soft 0.09 %)
+
+── round3/free5gc_ueransim ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.60.0.1
+  Registration Time       : 268 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 26 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 18.191 ms
+  Jitter                  : 0.069 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 902 Mbps
+  Uplink                  : 900 Mbps
+  Average Power           : 17 W
+  Average Power           : 12 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 3.30 %   peak 5.00 %
+  FL gNB RSS              : 10112 KB
+  FL UE  CPU              : avg 3.43 %   peak 5.00 %
+  FL UE  RSS              : 7040 KB
+  FL RAN Power            : 13 W   (788 J)
+  FL Machine CPU (all)    : 0.73 % busy = 0.09 cores   (usr 0.31 %, sys 0.38 %, soft 0.04 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 1.40 % / 0.25 %
+  FL Core NFs (all)       : CPU avg 130.84 %   RSS 669084 KB   (CU not included)
+  FL Core Power           : 22 W   (1353 J)
+  FL Machine CPU (all)    : 11.69 % busy = 1.40 cores   (usr 11.06 %, sys 0.58 %, soft 0.04 %)
+
+── round3/open5gs_oai ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 67 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 23.288 ms
+  Jitter                  : 2.966 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 113 Mbps
+  Uplink                  : 81.0 Mbps
+  Average Power           : 50 W
+  Average Power           : 5 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 242.55 %   peak 247.00 %
+  FL gNB RSS              : 856280 KB
+  FL UE  CPU              : avg 178.39 %   peak 182.00 %
+  FL UE  RSS              : 491176 KB
+  FL RAN Power            : 50 W   (3045 J)
+  FL Machine CPU (all)    : 36.06 % busy = 4.33 cores   (usr 23.82 %, sys 10.69 %, soft 1.54 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.95 %
+  FL Core NFs (all)       : CPU avg 7.03 %   RSS 291340 KB   (CU not included)
+  FL Core Power           : 4 W   (252 J)
+  FL Machine CPU (all)    : 1.46 % busy = 0.18 cores   (usr 0.60 %, sys 0.69 %, soft 0.08 %)
+
+── round3/open5gs_srsran ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 286 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 45.681 ms
+  Jitter                  : 3.492 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 53.7 Mbps
+  Uplink                  : 12.2 Mbps
+  Average Power           : 37 W
+  Average Power           : 3 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 190.69 %   peak 196.00 %
+  FL gNB RSS              : 2862005 KB
+  FL UE  CPU              : avg 86.77 %   peak 98.00 %
+  FL UE  RSS              : 852376 KB
+  FL RAN Power            : 41 W   (2489 J)
+  FL Machine CPU (all)    : 23.23 % busy = 2.79 cores   (usr 16.97 %, sys 5.87 %, soft 0.38 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 7.17 %
+  FL Core NFs (all)       : CPU avg 7.30 %   RSS 289805 KB   (CU not included)
+  FL Core Power           : 4 W   (263 J)
+  FL Machine CPU (all)    : 1.71 % busy = 0.20 cores   (usr 0.74 %, sys 0.77 %, soft 0.08 %)
+
+── round3/open5gs_ueransim ──────────────────────────────────────────────────────
+  UE IP Assigned    : 10.45.0.2
+  Registration Time       : 238 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 11 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 0 %
+  RTT Average             : 18.369 ms
+  Jitter                  : 0.067 ms
+  UDP Packet Loss         : 0%
+  Downlink                : 900 Mbps
+  Uplink                  : 900 Mbps
+  Average Power           : 18 W
+  Average Power           : 8 W
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL gNB CPU              : avg 3.58 %   peak 6.00 %
+  FL gNB RSS              : 10112 KB
+  FL UE  CPU              : avg 3.68 %   peak 6.00 %
+  FL UE  RSS              : 7040 KB
+  FL RAN Power            : 12 W   (773 J)
+  FL Machine CPU (all)    : 2.13 % busy = 0.26 cores   (usr 0.76 %, sys 1.24 %, soft 0.14 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.02 % / 7.38 %
+  FL Core NFs (all)       : CPU avg 7.43 %   RSS 292021 KB   (CU not included)
+  FL Core Power           : 4 W   (262 J)
+  FL Machine CPU (all)    : 1.66 % busy = 0.20 cores   (usr 0.71 %, sys 0.77 %, soft 0.09 %)
 
