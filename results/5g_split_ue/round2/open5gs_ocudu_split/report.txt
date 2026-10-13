@@ -1,7 +1,7 @@
 ================================================================================
                    5G CU/DU SPLIT BENCHMARK REPORT
 ================================================================================
-  Generated  : 2026-10-06 19:18:16
+  Generated  : 2026-10-12 22:08:18
   Report for : OPEN5GS + OCUDU CU/DU split (srsUE, ZMQ)
   Round      : 2 of 3
 ================================================================================
@@ -17,7 +17,7 @@
   UE IP Assigned    : 10.45.0.2
   Ping Count        : 100 packets
   Iperf Duration    : 30 seconds
-  Test Timestamp    : 2026-10-06 19:18:16
+  Test Timestamp    : 2026-10-12 22:08:18
 
 ────────────────────────────────────────────────────────────────────────────────
  CONNECTIVITY
@@ -33,72 +33,78 @@
 ────────────────────────────────────────────────────────────────────────────────
  REGISTRATION  (from core network logs)
 ────────────────────────────────────────────────────────────────────────────────
-  Registration Time       : 329 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 4 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 353 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 3 ms   (Registration Complete -> UE IP allocated by SMF)
 
 ────────────────────────────────────────────────────────────────────────────────
  LATENCY  (100 ICMP packets via tun_srsue to 8.8.8.8)
 ────────────────────────────────────────────────────────────────────────────────
   Packets Sent            : 100
   Packet Loss             : 0 %
-  RTT Minimum             : 35.265 ms
-  RTT Average             : 45.945 ms
-  RTT Maximum             : 55.649 ms
-  RTT Std Deviation       : 5.889 ms
+  RTT Minimum             : 35.315 ms
+  RTT Average             : 45.846 ms
+  RTT Maximum             : 57.148 ms
+  RTT Std Deviation       : 6.059 ms
 
 ────────────────────────────────────────────────────────────────────────────────
  JITTER  (UDP iperf3, 2 Mbps, 30s via tun_srsue)
 ────────────────────────────────────────────────────────────────────────────────
   UDP Throughput          : 2.00 Mbps
-  Jitter                  : 3.470 ms
+  Jitter                  : 3.583 ms
   UDP Packet Loss         : 0%
 
 ────────────────────────────────────────────────────────────────────────────────
  THROUGHPUT  (TCP iperf3, 30s via tun_srsue, receiver side)
 ────────────────────────────────────────────────────────────────────────────────
   Downlink                : 53.7 Mbps
-  Uplink                  : 11.2 Mbps
+  Uplink                  : 11.0 Mbps
 
   Bytes through tun_srsue during all tests (proof traffic used the 5G path):
-  Received (downlink)     : 213600086 bytes
-  Sent     (uplink)       : 55590444 bytes
+  Received (downlink)     : 212769714 bytes
+  Sent     (uplink)       : 55099663 bytes
 
 ────────────────────────────────────────────────────────────────────────────────
  CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : 137.158.126.24 ]
-  DU  Process             : avg 171.77 %   peak 220.00 %
-  UE  Process             : avg 76.12 %   peak 177.00 %
+  DU  Process             : avg 169.35 %   peak 217.00 %
+  UE  Process             : avg 75.27 %   peak 180.00 %
 
   [ Core Machine : 137.158.126.21 ]
-  CU  Process             : avg 8.94 %   peak 15.00 %
-  AMF                     : avg 0.00 %
+  CU  Process             : avg 8.85 %   peak 13.00 %
+  AMF                     : avg 0.01 %
   SMF                     : avg 0.01 %
-  UPF                     : avg 1.37 %
+  UPF                     : avg 1.39 %
+  Core NFs (all)          : avg 1.41 %   (all core network functions; CU not included)
+
+  [ Whole machines (mpstat: all cores, incl. kernel work; 100 % = whole machine) ]
+  RAN Machine CPU (all)   : 20.93 % busy = 2.51 cores   (usr 14.65 %, sys 5.77 %, soft 0.34 %)
+  Core Machine CPU (all)  : 1.51 % busy = 0.18 cores   (usr 0.60 %, sys 0.74 %, soft 0.04 %)
 
 ────────────────────────────────────────────────────────────────────────────────
  MEMORY USAGE  (pidstat RSS, during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine ]
-  DU  RSS                 : 2582992 KB
-  UE  RSS                 : 852416 KB
+  DU  RSS                 : 2582621 KB
+  UE  RSS                 : 852054 KB
 
   [ Core Machine ]
-  CU  RSS                 : 2425344 KB
-  AMF RSS                 : 36608 KB
-  SMF RSS                 : 57165 KB
-  UPF RSS                 : 33920 KB
+  CU  RSS                 : 2425472 KB
+  AMF RSS                 : 36480 KB
+  SMF RSS                 : 57212 KB
+  UPF RSS                 : 34048 KB
+  Core NFs (all) RSS      : 290791 KB   (all core network functions; CU not included)
 
 ────────────────────────────────────────────────────────────────────────────────
  POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : 137.158.126.24 ]
-  Average Power           : 38 W
-  Total Energy            : 6239 J
+  Average Power           : 37 W
+  Total Energy            : 6172 J
 
   [ Core Machine : 137.158.126.21 ]
   Average Power           : 12 W
-  Total Energy            : 2082 J
+  Total Energy            : 2073 J
 
 ────────────────────────────────────────────────────────────────────────────────
  FIXED-LOAD RESOURCES  (UDP 5 Mbit/s DL + 5 Mbit/s UL at once, 60s)
@@ -111,19 +117,20 @@
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
 
   [ RAN Machine : 137.158.126.24 ]
-  FL DU  CPU              : avg 193.35 %   peak 200.00 %
-  FL DU  RSS              : 2584696 KB
-  FL UE  CPU              : avg 95.22 %   peak 103.00 %
-  FL UE  RSS              : 852492 KB
-  FL RAN Power            : 42 W   (2548 J)
-  FL Machine CPU (all)    : 24.24 % busy = 2.91 cores   (usr 17.82 %, sys 6.11 %, soft 0.29 %)
+  FL DU  CPU              : avg 192.32 %   peak 196.00 %
+  FL DU  RSS              : 2584408 KB
+  FL UE  CPU              : avg 88.64 %   peak 93.00 %
+  FL UE  RSS              : 852304 KB
+  FL RAN Power            : 41 W   (2512 J)
+  FL Machine CPU (all)    : 23.72 % busy = 2.85 cores   (usr 17.22 %, sys 5.94 %, soft 0.40 %)
 
   [ Core Machine : 137.158.126.21 ]
-  FL CU  CPU              : avg 9.50 %   peak 11.00 %
-  FL CU  RSS              : 2425344 KB
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.02 % / 1.72 %
-  FL Core Power           : 13 W   (796 J)
-  FL Machine CPU (all)    : 1.07 % busy = 0.13 cores   (usr 0.46 %, sys 0.57 %, soft 0.04 %)
+  FL CU  CPU              : avg 9.30 %   peak 11.00 %
+  FL CU  RSS              : 2425472 KB
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.00 % / 1.42 %
+  FL Core NFs (all)       : CPU avg 1.43 %   RSS 290804 KB   (CU not included)
+  FL Core Power           : 13 W   (820 J)
+  FL Machine CPU (all)    : 1.21 % busy = 0.15 cores   (usr 0.44 %, sys 0.60 %, soft 0.03 %)
 
 ────────────────────────────────────────────────────────────────────────────────
  TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
@@ -131,13 +138,13 @@
   CPU Governor            : RAN performance, core powersave
 
   [ RAN Machine : 137.158.126.24 ]
-  Package Temperature     : avg 61.1 °C   max 70 °C
+  Package Temperature     : avg 60.7 °C   max 67 °C
   Average CPU Frequency   : 4200 MHz
   Thermal Throttle Events : 0   (0 = no slowdown from heat)
 
   [ Core Machine : 137.158.126.21 ]
-  Package Temperature     : avg 36.5 °C   max 52 °C
-  Average CPU Frequency   : 3482 MHz
+  Package Temperature     : avg 34.8 °C   max 46 °C
+  Average CPU Frequency   : 3549 MHz
   Thermal Throttle Events : 0   (0 = no slowdown from heat)
 
 ────────────────────────────────────────────────────────────────────────────────
@@ -159,6 +166,8 @@
   raw/power_ran.txt       : RAPL power log - RAN machine
   raw/power_core.txt      : RAPL power log - core machine
   raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power
+  raw/mpstat_ran.txt      : Whole-machine CPU, RAN machine (performance tests)
+  raw/mpstat_core.txt     : Whole-machine CPU, core machine (performance tests)
   raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
   raw/thermal_core.txt    : Temperature/frequency log - core machine
   ../../terminal_session.txt : Full terminal output of the whole run

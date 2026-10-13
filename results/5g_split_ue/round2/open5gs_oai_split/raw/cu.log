@@ -18,9 +18,9 @@ CMDLINE: "./nr-softmodem" "-O" "/home/bluelabuser/openairinterface5g/targets/PRO
 [0m[NGAP]   [gNB 0] check the amf registration state
 [0m[GTPU]   Configuring GTPu
 [0m[GTPU]   SA mode 
+[0m[NR_RRC] Entering main loop of NR_RRC message task
 [0m[GTPU]   Configuring GTPu address : 127.0.0.20, port : 2152
 [0m[GTPU]   Initializing UDP for local address 127.0.0.20 with port 2152
-[0m[NR_RRC] Entering main loop of NR_RRC message task
 [0m[GTPU]   Created gtpu instance id: 79
 [0m[UTIL]   threadCreate() for GTPrx_79: creating thread with affinity ffffffff, priority 50
 [0m[32m[NGAP]   Send NGSetupRequest to AMF
@@ -29,7 +29,7 @@ CMDLINE: "./nr-softmodem" "-O" "/home/bluelabuser/openairinterface5g/targets/PRO
 [0m[NR_RRC] Accepting new CU-UP ID 3584 name gNB-Eurecom-CU (assoc_id -1)
 [0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
 [0m[UTIL]   threadCreate() for TASK_CU_F1: creating thread with affinity ffffffff, priority 50
-[0m[34m[NGAP]   Served GUAMIs for AMF open5gs-amf0 (assoc_id=825):
+[0m[34m[NGAP]   Served GUAMIs for AMF open5gs-amf0 (assoc_id=1029):
 [0m[34m[NGAP]    GUAMI:
 [0m[34m[NGAP]      PLMN: MCC=001, MNC=01
 [0m[34m[NGAP]      AMF Region ID: 2
@@ -60,98 +60,98 @@ CMDLINE: "./nr-softmodem" "-O" "/home/bluelabuser/openairinterface5g/targets/PRO
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_F1_SETUP_REQUEST
-[0m[NR_RRC] Received F1 Setup Request from gNB_DU 3584 (gNB-Eurecom-DU) on assoc_id 827
+[0m[NR_RRC] Received F1 Setup Request from gNB_DU 3584 (gNB-Eurecom-DU) on assoc_id 1031
 [0m[NR_RRC] Accepting DU 3584 (gNB-Eurecom-DU) (RRC version 17.3.0)
 [0m[NR_RRC] Added cell 12345678 to DU cells array (total cells = 1)
 [0m[NR_RRC] DU 3584: Added cell 12345678
 [0m[NR_RRC] DU 3584 (gNB-Eurecom-DU): sending F1 Setup Response
-[0m[34m[F1AP]   CU Task Received F1AP_SETUP_RESP for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_SETUP_RESP for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
-[0m[34m[F1AP]   [SCTP 827] CU_handle_gNB_DU_CONFIGURATION_UPDATE
+[0m[34m[F1AP]   [SCTP 1031] CU_handle_gNB_DU_CONFIGURATION_UPDATE
 [0m[34m[F1AP]   Sending F1AP_GNB_DU_CONFIGURATION_UPDATE ITTI message 
 [0m[NR_RRC] cell PLMN 001.01 Cell ID 12345678 is in service
-[0m[34m[F1AP]   CU Task Received F1AP_GNB_DU_CONFIGURATION_UPDATE_ACKNOWLEDGE for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_GNB_DU_CONFIGURATION_UPDATE_ACKNOWLEDGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
-[0m[NR_RRC] Decoding CCCH: RNTI 703e, payload_size 6
-[0m[32m[NR_RRC] [--] (cellID 0, UE ID 1 RNTI 703e) Create UE context: CU UE ID 1 DU UE ID 28734 (rnti: 703e, random ue id 8c9670717a000000)
-[0m[NR_RRC] Adding new PCell (cell 12345678, assoc_id 827)
+[0m[NR_RRC] Decoding CCCH: RNTI 842f, payload_size 6
+[0m[32m[NR_RRC] [--] (cellID 0, UE ID 1 RNTI 842f) Create UE context: CU UE ID 1 DU UE ID 33839 (rnti: 842f, random ue id dee5e7555f000000)
+[0m[NR_RRC] Adding new PCell (cell 12345678, assoc_id 1031)
 [0m[RRC]    activate SRB 1 of UE 1
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Send RRC Setup
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Send RRC Setup
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 39 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRCSetupComplete (RRC_CONNECTED reached)
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRCSetupComplete (RRC_CONNECTED reached)
 [0m[NGAP]   Selected PLMN in the NG Initial UE Message: MCC=001 MNC=01
-[0m[NGAP]   UE 1: Selected AMF 'open5gs-amf0' (assoc_id 825) through selected PLMN MCC=001 MNC=01
-[0m[NGAP]   Create UE context (ID 1) for AMF 'open5gs-amf0' (assoc_id 825)
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Send DL Information Transfer [42 bytes]
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[NGAP]   UE 1: Selected AMF 'open5gs-amf0' (assoc_id 1029) through selected PLMN MCC=001 MNC=01
+[0m[NGAP]   Create UE context (ID 1) for AMF 'open5gs-amf0' (assoc_id 1029)
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Send DL Information Transfer [42 bytes]
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 30 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRC UL Information Transfer [24 bytes]
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Send DL Information Transfer [19 bytes]
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRC UL Information Transfer [24 bytes]
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Send DL Information Transfer [19 bytes]
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 66 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRC UL Information Transfer [60 bytes]
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRC UL Information Transfer [60 bytes]
 [0m[34m[NGAP]   NGAP_FIND_PROTOCOLIE_BY_ID ie is NULL (searching for ie: 110)
 [0m[34m[NGAP]   NGAP_FIND_PROTOCOLIE_BY_ID ie is NULL (searching for ie: 71)
 [0m[34m[NGAP]   AllowedNSSAI.list.count 1
 [0m[34m[NGAP]   NGAP_FIND_PROTOCOLIE_BY_ID ie is NULL (searching for ie: 36)
 [0m[NGAP]   Initial Context Setup UE RAN ID 1 UE AMF ID 1: 0 PDU session(s)
-[0m[32m[NR_RRC] [--] (cellID bc614e, UE ID 1 RNTI 703e) Selected security algorithms: ciphering 0, integrity 2
-[0m[NR_RRC] [UE 703e] Saved security key 95
+[0m[32m[NR_RRC] [--] (cellID bc614e, UE ID 1 RNTI 842f) Selected security algorithms: ciphering 0, integrity 2
+[0m[NR_RRC] [UE 842f] Saved security key 53
 [0m[NR_RRC] UE 1 Logical Channel DL-DCCH, Generate SecurityModeCommand (bytes 3)
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 8 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received Security Mode Complete
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received Security Mode Complete
 [0m[NR_RRC] UE 1: Logical Channel DL-DCCH, Generate NR UECapabilityEnquiry (bytes 8, xid 1)
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 20 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received UE capabilities
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received UE capabilities
 [0m[NR_RRC] Send message to ngap: NGAP_UE_CAPABILITIES_IND
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Send DL Information Transfer [55 bytes]
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
-[0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Send DL Information Transfer [55 bytes]
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[NR_RRC] Send message to sctp: NGAP_InitialContextSetupResponse
+[0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 19 (DCCH) 
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRC UL Information Transfer [13 bytes]
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 49 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRC UL Information Transfer [13 bytes]
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRC UL Information Transfer [43 bytes]
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Send DL Information Transfer [51 bytes]
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRC UL Information Transfer [43 bytes]
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Send DL Information Transfer [51 bytes]
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[NGAP]   PDUSESSIONSetup initiating message
 [0m[NR_RRC] UE 1: received PDU Session Resource Setup Request
@@ -159,30 +159,30 @@ CMDLINE: "./nr-softmodem" "-O" "/home/bluelabuser/openairinterface5g/targets/PRO
 [0m[NR_RRC] Added PDU Session 10, (total nb of sessions = 1)
 [0m[NR_RRC] UE 1: created new DRB 1 for QFI 1 (5QI 9)
 [0m[NR_RRC] UE 1: assigned DRB 1 to QFI 1 (5QI 9) in PDU session 10
-[0m[NR_RRC] PDU Session to Setup: PDU Session ID=10, incoming TEID=0x0000dff2, Addr=137.158.126.21
-[0m[32m[NR_RRC] [--] (cellID bc614e, UE ID 1 RNTI 703e) selecting CU-UP ID 3584 based on exact NSSAI match (1:0x000001)
+[0m[NR_RRC] PDU Session to Setup: PDU Session ID=10, incoming TEID=0x0000cdcf, Addr=137.158.126.21
+[0m[32m[NR_RRC] [--] (cellID bc614e, UE ID 1 RNTI 842f) selecting CU-UP ID 3584 based on exact NSSAI match (1:0x000001)
 [0m[RRC]    UE 1 associating to CU-UP assoc_id -1 out of 1 CU-UPs
 [0m[E1AP]   UE 1: set up PDU session ID 10 (1 bearers)
 [0m[GTPU]   Incoming DRB 1 / PDU Session 1 - UL TEID 65535
-[0m[GTPU]   [81] UE ID 1: Create tunnel TEID incoming 0x120cd2f1 outgoing 0xffff to remote IPv4 0.0.0.0, IPv6 ::, port 2152
+[0m[GTPU]   [81] UE ID 1: Create tunnel TEID incoming 0xc6aa7706 outgoing 0xffff to remote IPv4 0.0.0.0, IPv6 ::, port 2152
 [0m[93m[SDAP]    Could not find SDAP entity: entity list empty (ue_id=1 pdu_session_id=10)
 [0m[SDAP]   Creating SDAP entity ue_id=1 pdu_session_id=10
 [0m[SDAP]   Default DRB for the created SDAP entity: DRB 1 
 [0m[PDCP]   Added DRB 1 to UE ID 1
-[0m[GTPU]   N3 GTP-U tunnel: PDUSession=10/UL TEID=0x0000dff2
-[0m[GTPU]   [79] UE ID 1: Create tunnel TEID incoming 0x75615b49 outgoing 0xdff2 to remote IPv4 137.158.126.21, IPv6 ::, port 2152
+[0m[GTPU]   N3 GTP-U tunnel: PDUSession=10/UL TEID=0x0000cdcf
+[0m[GTPU]   [79] UE ID 1: Create tunnel TEID incoming 0x64e1bb56 outgoing 0xcdcf to remote IPv4 137.158.126.21, IPv6 ::, port 2152
 [0m[RRC]    activate SRB 2 of UE 1
 [0m[RRC]    UE 1 trigger UE context setup request with 1 DRBs
-[0m[34m[F1AP]   CU Task Received F1AP_UE_CONTEXT_SETUP_REQ for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_UE_CONTEXT_SETUP_REQ for instance 0: sending SCTP message via assoc_id 1031
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m[E1AP]   UE 1: updating PDU session ID 10 (0 setup, 1 modify bearers)
 [0m[PDCP]   DRB 1 re-established
-[0m[GTPU]   [81] UE ID 1: Update tunnel TEID incoming 0x120cd2f1 outgoing 0xa53e417f to remote IPv4 137.158.126.24, IPv6 ::, port 2152
+[0m[GTPU]   [81] UE ID 1: Update tunnel TEID incoming 0xc6aa7706 outgoing 0x5a69f45d to remote IPv4 137.158.126.24, IPv6 ::, port 2152
 [0m[NR_RRC] PDU Session New: status to ESTABLISH for PDU Session 10 
-[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 703e) Generate RRCReconfiguration (bytes 286, xid 0)
+[0m[32m[NR_RRC] [DL] (cellID bc614e, UE ID 1 RNTI 842f) Generate RRCReconfiguration (bytes 286, xid 0)
 [0m[NR_RRC] Received E1AP Bearer Context Modification Response for UE CU-CP ID 1
-[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_DL_RRC_MESSAGE for instance 0: sending SCTP message via assoc_id 1031
 [0m[RRC]    UE 1: PDU session ID 10 modified 1 bearers, setup 0 bearers
 [0m[34m[F1AP]   CU send DL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
@@ -190,11 +190,11 @@ CMDLINE: "./nr-softmodem" "-O" "/home/bluelabuser/openairinterface5g/targets/PRO
 [0m[34m[F1AP]   CU_handle_UL_RRC_MESSAGE_TRANSFER 
 [0m[34m[F1AP]   UL RRC MESSAGE for SRB 1 in DCCH 
 [0m[34m[F1AP]   [UE 1] calling pdcp_data_ind for SRB 1 with size 8 (DCCH) 
-[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 703e) Received RRCReconfigurationComplete
-[0m[NR_RRC] PDU Session Setup: ID=10, outgoing TEID=0x75615b49, Addr=127.0.0.20
+[0m[32m[NR_RRC] [UL] (cellID bc614e, UE ID 1 RNTI 842f) Received RRCReconfigurationComplete
+[0m[NR_RRC] PDU Session Setup: ID=10, outgoing TEID=0x64e1bb56, Addr=127.0.0.20
 [0m[NR_RRC] NGAP_PDUSESSION_SETUP_RESP: sending the message
-[0m[34m[NGAP]   Encoded PDU Session Transfer (10): TEID=0x75615b49, Addr=127.0.0.20
-[0m[34m[F1AP]   CU Task Received F1AP_UE_CONTEXT_MODIFICATION_REQ for instance 0: sending SCTP message via assoc_id 827
+[0m[34m[F1AP]   CU Task Received F1AP_UE_CONTEXT_MODIFICATION_REQ for instance 0: sending SCTP message via assoc_id 1031
+[0m[34m[NGAP]   Encoded PDU Session Transfer (10): TEID=0x64e1bb56, Addr=127.0.0.20
 [0m[34m[F1AP]   CU Task Received SCTP_DATA_IND for instance 0: sending SCTP message via assoc_id 0
 [0m[34m[F1AP]   Calling handler with instance 0
 [0m
