@@ -1,8 +1,8 @@
 RAPL Power Measurement - RAN Machine (137.158.126.24)
 =================================================
-Start energy (uJ) : 239482142478
-End energy   (uJ) : 242556733606
-Duration      (s) : 167
-Total energy  (J) : 3074
-Average power (W) : 18
-Timestamp         : Tue Oct  6 06:53:25 PM CAT 2026
+Start energy (uJ) : 129253610149
+End energy   (uJ) : 132134003655
+Duration      (s) : 166
+Total energy  (J) : 2880
+Average power (W) : 17
+Timestamp         : Mon Oct 12 09:43:15 PM CAT 2026

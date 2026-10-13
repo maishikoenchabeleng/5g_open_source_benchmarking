@@ -1,20 +1,32 @@
 === Tunnel Interface State ===
-Timestamp: Tue Oct  6 06:50:38 PM CAT 2026
-157: uesimtun0: <POINTOPOINT,PROMISC,NOTRAILERS,UP,LOWER_UP> mtu 1400 qdisc fq_codel state UNKNOWN group default qlen 500
+Timestamp: Mon Oct 12 09:40:27 PM CAT 2026
+187: uesimtun0: <POINTOPOINT,PROMISC,NOTRAILERS,UP,LOWER_UP> mtu 1400 qdisc fq_codel state UNKNOWN group default qlen 500
     link/none 
     inet 10.60.0.1/24 scope global uesimtun0
        valid_lft forever preferred_lft forever
-    inet6 fe80::6029:4771:358d:47ed/64 scope link stable-privacy 
+    inet6 fe80::9be4:6206:460b:754b/64 scope link stable-privacy 
        valid_lft forever preferred_lft forever
 
 Route for UE traffic: 137.158.126.21 from 10.60.0.1 dev uesimtun0 table 5000 uid 0 
 
 === Policy rules ===
 0:	from all lookup local
-32595:	from 10.60.0.1 lookup 5000
-32596:	from 10.60.0.1 lookup rt_uesimtun0
+32565:	from 10.60.0.1 lookup 5000
+32566:	from 10.60.0.1 lookup rt_uesimtun0
+32567:	from all to 10.60.0.1 lookup 9999
+32569:	from 10.45.0.2 lookup rt_uesimtun0
+32570:	from all to 10.45.0.2 lookup 9999
+32573:	from all to 10.60.0.1 lookup 9999
+32576:	from all to 10.45.0.2 lookup 9999
+32579:	from all to 10.60.0.1 lookup 9999
+32582:	from all to 10.45.0.2 lookup 9999
+32584:	from all to 10.60.0.1 lookup 9999
+32586:	from all to 10.45.0.2 lookup 9999
+32588:	from all to 10.60.0.1 lookup 9999
+32590:	from all to 10.45.0.2 lookup 9999
+32592:	from all to 10.60.0.1 lookup 9999
+32594:	from all to 10.45.0.2 lookup 9999
 32597:	from all to 10.60.0.1 lookup 9999
-32599:	from 10.45.0.2 lookup rt_uesimtun0
 32600:	from all to 10.45.0.2 lookup 9999
 32603:	from all to 10.60.0.1 lookup 9999
 32606:	from all to 10.45.0.2 lookup 9999
@@ -116,5 +128,5 @@ default via 137.158.126.1 dev eno1 proto dhcp metric 100
 192.168.70.128/26 dev oai-cn5g proto kernel scope link src 192.168.70.129 linkdown 
 
 === Bytes through uesimtun0 during tests ===
-rx (downlink): 3535993684
-tx (uplink)  : 3579989652
+rx (downlink): 3536330482
+tx (uplink)  : 3580096145
