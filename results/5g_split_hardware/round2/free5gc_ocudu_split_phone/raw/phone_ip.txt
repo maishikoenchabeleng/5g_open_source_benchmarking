@@ -1,1 +1,1 @@
-15:08:17 attached, IP 10.60.0.1 (after ~0s)
+13:44:40 attached, IP 10.60.0.1 (after ~10s)

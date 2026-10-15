@@ -1,8 +1,8 @@
-2026-10-06T13:07:52.945161 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
-2026-10-06T13:07:53.540889 [DU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
-2026-10-06T13:07:55.607552 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
-2026-10-06T13:07:55.607561 [APP     ] [E] Couldn't register stdin handler
-2026-10-06T13:07:55.643627 [GNB     ] [I] ==== DU started ===
-2026-10-06T13:08:10.658589 [CU-F1-U ] [D] Found F1-U default gateway for DRB. sst: 1, sd: 0x1, 5QI=0x9
-2026-10-06T13:11:48.688357 [GNB     ] [I] Stopping...
+2026-10-15T11:44:06.378776 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-15T11:44:06.976203 [DU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-15T11:44:09.046930 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-15T11:44:09.046937 [APP     ] [E] Couldn't register stdin handler
+2026-10-15T11:44:09.083444 [GNB     ] [I] ==== DU started ===
+2026-10-15T11:44:36.794397 [CU-F1-U ] [D] Found F1-U default gateway for DRB. sst: 1, sd: 0x1, 5QI=0x9
+2026-10-15T11:48:12.628824 [GNB     ] [I] Stopping...
 (END)
