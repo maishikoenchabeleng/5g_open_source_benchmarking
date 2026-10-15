@@ -1,75 +1,77 @@
 ================================================================================
                 5G TESTBED - REAL PHONE - ALL RUNS COMPARISON
 ================================================================================
-  Generated : 2026-10-06 16:31:49
-  Run ID    : 20261006_153852
+  Generated : 2026-10-15 12:44:57
+  Run ID    : 20261015_114921
 ================================================================================
 
 ── round1/free5gc_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 248 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 225 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 255 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 2415 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 20.797 ms
-  Jitter                  : 2.578 ms
+  RTT Average             : 21.936 ms
+  Jitter                  : 2.449 ms
   UDP Packet Loss         : 0%
-  Downlink                : 33.7 Mbps   (core -> phone)
-  Uplink                  : 7.20 Mbps   (phone -> core)
-  CQI                     : 14.59   (0-15, channel quality reported by the phone)
-  DL MCS                  : 11.52   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 7.06 %
-  UL MCS                  : 6.38
-  UL BLER                 : 5.65 %
-  UL SNR                  : 15.64 dB   (measured by the gNB)
-  DL RSRP                 : -91.70 dBm   (measured by the phone; OAI only)
+  Downlink                : 35.9 Mbps   (core -> phone)
+  Uplink                  : 8.05 Mbps   (phone -> core)
+  CQI                     : 14.87   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.96   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 6.55 %
+  UL MCS                  : 7.43
+  UL BLER                 : 5.27 %
+  UL SNR                  : 15.22 dB   (measured by the gNB)
+  DL RSRP                 : -87.91 dBm   (measured by the phone; OAI only)
   DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
   Average Power           : 19 W
-  Average Power           : 3 W
+  Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.52, DL MCS 13.43, UL MCS 8.82, UL SNR 15.68 dB, DL BLER 13.20 %, UL BLER 9.07 %
-  FL gNB CPU              : avg 69.77 %   peak 79.00 %
-  FL gNB RSS              : 671964 KB
-  FL RAN Power            : 20 W   (1272 J)
-  FL Machine CPU (all)    : 8.02 % busy = 0.96 cores   (usr 4.59 %, sys 2.31 %, soft 1.12 %)
-  FL AMF / SMF / UPF CPU  : avg 0.08 % / 0.10 % / 0.11 %
+  FL Radio (avg)          : CQI 15.00, DL MCS 13.07, UL MCS 10.41, UL SNR 15.31 dB, DL BLER 11.76 %, UL BLER 9.65 %
+  FL gNB CPU              : avg 70.26 %   peak 75.00 %
+  FL gNB RSS              : 671952 KB
+  FL RAN Power            : 20 W   (1252 J)
+  FL Machine CPU (all)    : 7.25 % busy = 0.87 cores   (usr 3.91 %, sys 2.62 %, soft 0.63 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.13 % / 0.12 %
+  FL Core NFs (all)       : CPU avg 0.33 %   RSS 296314 KB   (CU not included)
   FL Core Power           : 4 W   (255 J)
-  FL Machine CPU (all)    : 1.35 % busy = 0.16 cores   (usr 0.69 %, sys 0.54 %, soft 0.12 %)
+  FL Machine CPU (all)    : 1.46 % busy = 0.18 cores   (usr 0.65 %, sys 0.59 %, soft 0.13 %)
 
 ── round1/free5gc_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 393 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 25998 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 394 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 14896 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 25.734 ms
-  Jitter                  : 1.917 ms
+  RTT Average             : 26.417 ms
+  Jitter                  : 1.982 ms
   UDP Packet Loss         : 0%
-  Downlink                : 55.1 Mbps   (core -> phone)
-  Uplink                  : 23.3 Mbps   (phone -> core)
-  CQI                     : 14.41   (0-15, channel quality reported by the phone)
-  DL MCS                  : 22.77   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.32 %
-  UL MCS                  : 26.14
-  UL BLER                 : 3.29 %
-  UL SNR                  : 30.13 dB   (measured by the gNB)
+  Downlink                : 55.3 Mbps   (core -> phone)
+  Uplink                  : 24.2 Mbps   (phone -> core)
+  CQI                     : 15.00   (0-15, channel quality reported by the phone)
+  DL MCS                  : 25.93   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.21 %
+  UL MCS                  : 26.33
+  UL BLER                 : 0.70 %
+  UL SNR                  : 31.52 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -7.65 dB   (measured by the gNB; OCUDU only)
-  Average Power           : 27 W
+  UL RSRP                 : -9.96 dB   (measured by the gNB; OCUDU only)
+  Average Power           : 26 W
   Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.95, DL MCS 23.79, UL MCS 26.61, UL SNR 27.16 dB, DL BLER 0.90 %, UL BLER 0.98 %
-  FL gNB CPU              : avg 101.23 %   peak 107.00 %
-  FL gNB RSS              : 2746976 KB
-  FL RAN Power            : 27 W   (1652 J)
-  FL Machine CPU (all)    : 6.78 % busy = 0.81 cores   (usr 2.52 %, sys 3.85 %, soft 0.41 %)
-  FL AMF / SMF / UPF CPU  : avg 0.03 % / 0.13 % / 0.11 %
-  FL Core Power           : 4 W   (250 J)
-  FL Machine CPU (all)    : 1.25 % busy = 0.15 cores   (usr 0.66 %, sys 0.54 %, soft 0.04 %)
+  FL Radio (avg)          : CQI 15.00, DL MCS 26.79, UL MCS 26.52, UL SNR 27.84 dB, DL BLER 0.11 %, UL BLER 0.85 %
+  FL gNB CPU              : avg 101.23 %   peak 104.00 %
+  FL gNB RSS              : 2746536 KB
+  FL RAN Power            : 26 W   (1608 J)
+  FL Machine CPU (all)    : 8.26 % busy = 0.99 cores   (usr 3.59 %, sys 3.98 %, soft 0.57 %)
+  FL AMF / SMF / UPF CPU  : avg 0.05 % / 0.13 % / 0.13 %
+  FL Core NFs (all)       : CPU avg 0.41 %   RSS 298099 KB   (CU not included)
+  FL Core Power           : 4 W   (257 J)
+  FL Machine CPU (all)    : 1.31 % busy = 0.16 cores   (usr 0.64 %, sys 0.52 %, soft 0.02 %)
 
 ── round1/open5gs_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
@@ -77,327 +79,337 @@
   Registration Time       : 174 ms   (AMF: Registration Request -> Registration Complete)
   PDU Session Setup Time  : 209 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 21.796 ms
-  Jitter                  : 2.577 ms
+  RTT Average             : 21.403 ms
+  Jitter                  : 2.467 ms
   UDP Packet Loss         : 0%
-  Downlink                : 33.3 Mbps   (core -> phone)
-  Uplink                  : 7.29 Mbps   (phone -> core)
-  CQI                     : 14.57   (0-15, channel quality reported by the phone)
-  DL MCS                  : 12.89   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 7.10 %
-  UL MCS                  : 6.07
-  UL BLER                 : 5.86 %
-  UL SNR                  : 15.63 dB   (measured by the gNB)
-  DL RSRP                 : -91.45 dBm   (measured by the phone; OAI only)
-  DL SINR                 : 23.48 dB   (measured by the phone; OAI only)
+  Downlink                : 36.5 Mbps   (core -> phone)
+  Uplink                  : 7.85 Mbps   (phone -> core)
+  CQI                     : 14.98   (0-15, channel quality reported by the phone)
+  DL MCS                  : 13.07   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 6.94 %
+  UL MCS                  : 7.52
+  UL BLER                 : 6.02 %
+  UL SNR                  : 15.34 dB   (measured by the gNB)
+  DL RSRP                 : -87.55 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
-  Average Power           : 20 W
-  Average Power           : 3 W
+  Average Power           : 19 W
+  Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.00, DL MCS 19.90, UL MCS 9.62, UL SNR 15.59 dB, DL BLER 9.67 %, UL BLER 9.55 %
-  FL gNB CPU              : avg 70.74 %   peak 78.00 %
-  FL gNB RSS              : 670892 KB
-  FL RAN Power            : 21 W   (1308 J)
-  FL Machine CPU (all)    : 4.42 % busy = 0.53 cores   (usr 1.73 %, sys 2.13 %, soft 0.56 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 6.40 %
-  FL Core Power           : 4 W   (260 J)
-  FL Machine CPU (all)    : 1.32 % busy = 0.16 cores   (usr 0.69 %, sys 0.58 %, soft 0.06 %)
+  FL Radio (avg)          : CQI 14.67, DL MCS 13.08, UL MCS 8.66, UL SNR 15.34 dB, DL BLER 12.13 %, UL BLER 10.23 %
+  FL gNB CPU              : avg 70.30 %   peak 85.00 %
+  FL gNB RSS              : 670572 KB
+  FL RAN Power            : 21 W   (1260 J)
+  FL Machine CPU (all)    : 7.05 % busy = 0.85 cores   (usr 3.73 %, sys 2.52 %, soft 0.66 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.23 %
+  FL Core NFs (all)       : CPU avg 6.36 %   RSS 291268 KB   (CU not included)
+  FL Core Power           : 4 W   (269 J)
+  FL Machine CPU (all)    : 1.58 % busy = 0.19 cores   (usr 0.70 %, sys 0.75 %, soft 0.02 %)
 
 ── round1/open5gs_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
-  Registration Time       : 316 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 117 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 296 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 157 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 27.690 ms
-  Jitter                  : 2.068 ms
+  RTT Average             : 25.221 ms
+  Jitter                  : 1.792 ms
   UDP Packet Loss         : 0%
-  Downlink                : 53.5 Mbps   (core -> phone)
-  Uplink                  : 12.3 Mbps   (phone -> core)
-  CQI                     : 13.87   (0-15, channel quality reported by the phone)
-  DL MCS                  : 21.29   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.43 %
-  UL MCS                  : 25.07
-  UL BLER                 : 21.63 %
-  UL SNR                  : 29.21 dB   (measured by the gNB)
+  Downlink                : 54.2 Mbps   (core -> phone)
+  Uplink                  : 25.4 Mbps   (phone -> core)
+  CQI                     : 15.00   (0-15, channel quality reported by the phone)
+  DL MCS                  : 25.91   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.24 %
+  UL MCS                  : 26.64
+  UL BLER                 : 0.05 %
+  UL SNR                  : 31.09 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -10.83 dB   (measured by the gNB; OCUDU only)
+  UL RSRP                 : -9.70 dB   (measured by the gNB; OCUDU only)
   Average Power           : 26 W
-  Average Power           : 3 W
+  Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.11, DL MCS 21.64, UL MCS 25.95, UL SNR 26.57 dB, DL BLER 1.05 %, UL BLER 13.38 %
-  FL gNB CPU              : avg 103.26 %   peak 115.00 %
-  FL gNB RSS              : 2746936 KB
-  FL RAN Power            : 27 W   (1664 J)
-  FL Machine CPU (all)    : 10.89 % busy = 1.31 cores   (usr 5.95 %, sys 4.39 %, soft 0.54 %)
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 5.67 %
-  FL Core Power           : 4 W   (248 J)
-  FL Machine CPU (all)    : 1.22 % busy = 0.15 cores   (usr 0.60 %, sys 0.59 %, soft 0.02 %)
+  FL Radio (avg)          : CQI 15.00, DL MCS 26.62, UL MCS 27.00, UL SNR 28.38 dB, DL BLER 0.07 %, UL BLER 0.28 %
+  FL gNB CPU              : avg 103.40 %   peak 121.00 %
+  FL gNB RSS              : 2745824 KB
+  FL RAN Power            : 27 W   (1628 J)
+  FL Machine CPU (all)    : 8.47 % busy = 1.02 cores   (usr 3.87 %, sys 3.90 %, soft 0.57 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.05 % / 6.85 %
+  FL Core NFs (all)       : CPU avg 6.97 %   RSS 292352 KB   (CU not included)
+  FL Core Power           : 4 W   (259 J)
+  FL Machine CPU (all)    : 1.71 % busy = 0.21 cores   (usr 0.75 %, sys 0.75 %, soft 0.12 %)
 
 ── round2/free5gc_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 249 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 219 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 253 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 25249 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 21.229 ms
-  Jitter                  : 2.806 ms
+  RTT Average             : 20.438 ms
+  Jitter                  : 2.059 ms
   UDP Packet Loss         : 0%
-  Downlink                : 35.5 Mbps   (core -> phone)
-  Uplink                  : 7.69 Mbps   (phone -> core)
-  CQI                     : 14.53   (0-15, channel quality reported by the phone)
-  DL MCS                  : 11.20   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 7.18 %
-  UL MCS                  : 6.54
-  UL BLER                 : 6.41 %
-  UL SNR                  : 15.52 dB   (measured by the gNB)
-  DL RSRP                 : -91.61 dBm   (measured by the phone; OAI only)
-  DL SINR                 : 23.47 dB   (measured by the phone; OAI only)
+  Downlink                : 35.6 Mbps   (core -> phone)
+  Uplink                  : 7.55 Mbps   (phone -> core)
+  CQI                     : 14.49   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.05   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 5.97 %
+  UL MCS                  : 6.35
+  UL BLER                 : 6.15 %
+  UL SNR                  : 15.28 dB   (measured by the gNB)
+  DL RSRP                 : -88.08 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.42 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
   Average Power           : 19 W
-  Average Power           : 3 W
+  Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.75, DL MCS 16.98, UL MCS 10.59, UL SNR 15.30 dB, DL BLER 9.51 %, UL BLER 9.67 %
-  FL gNB CPU              : avg 71.70 %   peak 80.00 %
-  FL gNB RSS              : 672544 KB
-  FL RAN Power            : 21 W   (1295 J)
-  FL Machine CPU (all)    : 5.76 % busy = 0.69 cores   (usr 2.87 %, sys 2.36 %, soft 0.53 %)
-  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.13 % / 0.15 %
-  FL Core Power           : 4 W   (260 J)
-  FL Machine CPU (all)    : 1.22 % busy = 0.15 cores   (usr 0.60 %, sys 0.51 %, soft 0.03 %)
+  FL Radio (avg)          : CQI 15.00, DL MCS 19.33, UL MCS 10.25, UL SNR 15.37 dB, DL BLER 10.30 %, UL BLER 8.90 %
+  FL gNB CPU              : avg 71.26 %   peak 79.00 %
+  FL gNB RSS              : 672436 KB
+  FL RAN Power            : 20 W   (1268 J)
+  FL Machine CPU (all)    : 5.58 % busy = 0.67 cores   (usr 2.86 %, sys 2.07 %, soft 0.65 %)
+  FL AMF / SMF / UPF CPU  : avg 0.10 % / 0.13 % / 0.13 %
+  FL Core NFs (all)       : CPU avg 0.44 %   RSS 297913 KB   (CU not included)
+  FL Core Power           : 4 W   (248 J)
+  FL Machine CPU (all)    : 1.36 % busy = 0.16 cores   (usr 0.60 %, sys 0.56 %, soft 0.07 %)
 
 ── round2/free5gc_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 397 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 146 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 391 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 2127 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 27.221 ms
-  Jitter                  : 2.170 ms
+  RTT Average             : 26.011 ms
+  Jitter                  : 0.966 ms
   UDP Packet Loss         : 0%
-  Downlink                : 54.0 Mbps   (core -> phone)
-  Uplink                  : 24.2 Mbps   (phone -> core)
-  CQI                     : 14.44   (0-15, channel quality reported by the phone)
-  DL MCS                  : 23.11   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.33 %
-  UL MCS                  : 26.52
-  UL BLER                 : 1.18 %
-  UL SNR                  : 30.48 dB   (measured by the gNB)
+  Downlink                : 55.3 Mbps   (core -> phone)
+  Uplink                  : 24.6 Mbps   (phone -> core)
+  CQI                     : 14.99   (0-15, channel quality reported by the phone)
+  DL MCS                  : 26.00   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.30 %
+  UL MCS                  : 26.99
+  UL BLER                 : 0.36 %
+  UL SNR                  : 31.26 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -7.86 dB   (measured by the gNB; OCUDU only)
-  Average Power           : 27 W
+  UL RSRP                 : -9.95 dB   (measured by the gNB; OCUDU only)
+  Average Power           : 26 W
   Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.64, DL MCS 22.98, UL MCS 26.93, UL SNR 27.99 dB, DL BLER 0.95 %, UL BLER 0.44 %
-  FL gNB CPU              : avg 102.20 %   peak 111.00 %
-  FL gNB RSS              : 2746744 KB
-  FL RAN Power            : 27 W   (1666 J)
-  FL Machine CPU (all)    : 9.38 % busy = 1.13 cores   (usr 4.91 %, sys 3.95 %, soft 0.52 %)
-  FL AMF / SMF / UPF CPU  : avg 0.08 % / 0.15 % / 0.13 %
-  FL Core Power           : 4 W   (255 J)
-  FL Machine CPU (all)    : 1.26 % busy = 0.15 cores   (usr 0.61 %, sys 0.55 %, soft 0.00 %)
+  FL Radio (avg)          : CQI 15.00, DL MCS 26.21, UL MCS 26.46, UL SNR 27.25 dB, DL BLER 0.30 %, UL BLER 0.71 %
+  FL gNB CPU              : avg 101.46 %   peak 104.00 %
+  FL gNB RSS              : 2746568 KB
+  FL RAN Power            : 26 W   (1607 J)
+  FL Machine CPU (all)    : 6.95 % busy = 0.83 cores   (usr 2.64 %, sys 3.82 %, soft 0.38 %)
+  FL AMF / SMF / UPF CPU  : avg 0.08 % / 0.13 % / 0.13 %
+  FL Core NFs (all)       : CPU avg 0.44 %   RSS 299924 KB   (CU not included)
+  FL Core Power           : 4 W   (251 J)
+  FL Machine CPU (all)    : 1.29 % busy = 0.15 cores   (usr 0.62 %, sys 0.54 %, soft 0.03 %)
 
 ── round2/open5gs_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
-  Registration Time       : 203 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 280 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 189 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 205 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 21.038 ms
-  Jitter                  : 2.800 ms
+  RTT Average             : 20.642 ms
+  Jitter                  : 2.100 ms
   UDP Packet Loss         : 0%
-  Downlink                : 33.6 Mbps   (core -> phone)
-  Uplink                  : 7.81 Mbps   (phone -> core)
-  CQI                     : 14.76   (0-15, channel quality reported by the phone)
-  DL MCS                  : 12.73   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 7.60 %
-  UL MCS                  : 5.69
-  UL BLER                 : 5.85 %
-  UL SNR                  : 15.51 dB   (measured by the gNB)
-  DL RSRP                 : -91.28 dBm   (measured by the phone; OAI only)
+  Downlink                : 36.1 Mbps   (core -> phone)
+  Uplink                  : 7.66 Mbps   (phone -> core)
+  CQI                     : 13.88   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.39   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 5.89 %
+  UL MCS                  : 8.49
+  UL BLER                 : 5.95 %
+  UL SNR                  : 15.35 dB   (measured by the gNB)
+  DL RSRP                 : -88.00 dBm   (measured by the phone; OAI only)
   DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
   Average Power           : 19 W
-  Average Power           : 3 W
-  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
+  Average Power           : 4 W
+  FL Load Delivered       : DL 4.91 Mbps (loss 1.7 %), UL 5.00 Mbps (loss 0.0032 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 15.00, DL MCS 13.82, UL MCS 9.05, UL SNR 15.68 dB, DL BLER 13.34 %, UL BLER 9.22 %
-  FL gNB CPU              : avg 70.06 %   peak 74.00 %
-  FL gNB RSS              : 669208 KB
-  FL RAN Power            : 21 W   (1283 J)
-  FL Machine CPU (all)    : 6.63 % busy = 0.80 cores   (usr 3.62 %, sys 2.41 %, soft 0.60 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.32 %
-  FL Core Power           : 4 W   (266 J)
-  FL Machine CPU (all)    : 1.58 % busy = 0.19 cores   (usr 0.76 %, sys 0.79 %, soft 0.03 %)
+  FL Radio (avg)          : CQI 14.10, DL MCS 18.26, UL MCS 10.21, UL SNR 15.50 dB, DL BLER 11.16 %, UL BLER 9.26 %
+  FL gNB CPU              : avg 70.76 %   peak 85.00 %
+  FL gNB RSS              : 671212 KB
+  FL RAN Power            : 20 W   (1253 J)
+  FL Machine CPU (all)    : 4.56 % busy = 0.55 cores   (usr 1.70 %, sys 2.18 %, soft 0.58 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 6.12 %
+  FL Core NFs (all)       : CPU avg 6.25 %   RSS 293676 KB   (CU not included)
+  FL Core Power           : 4 W   (259 J)
+  FL Machine CPU (all)    : 1.47 % busy = 0.18 cores   (usr 0.66 %, sys 0.69 %, soft 0.05 %)
 
 ── round2/open5gs_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
   Registration Time       : 316 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 138 ms   (Registration Complete -> UE IP allocated by SMF)
+  PDU Session Setup Time  : 107 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 26.881 ms
-  Jitter                  : 2.169 ms
+  RTT Average             : 27.082 ms
+  Jitter                  : 1.537 ms
   UDP Packet Loss         : 0%
-  Downlink                : 54.2 Mbps   (core -> phone)
+  Downlink                : 54.4 Mbps   (core -> phone)
   Uplink                  : 24.3 Mbps   (phone -> core)
-  CQI                     : 14.40   (0-15, channel quality reported by the phone)
-  DL MCS                  : 22.81   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.37 %
-  UL MCS                  : 26.15
-  UL BLER                 : 0.65 %
-  UL SNR                  : 30.83 dB   (measured by the gNB)
+  CQI                     : 15.00   (0-15, channel quality reported by the phone)
+  DL MCS                  : 24.36   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.27 %
+  UL MCS                  : 25.93
+  UL BLER                 : 1.24 %
+  UL SNR                  : 31.23 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -7.96 dB   (measured by the gNB; OCUDU only)
-  Average Power           : 27 W
+  UL RSRP                 : -9.65 dB   (measured by the gNB; OCUDU only)
+  Average Power           : 26 W
   Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.46, DL MCS 23.08, UL MCS 27.00, UL SNR 28.74 dB, DL BLER 0.92 %, UL BLER 0.08 %
-  FL gNB CPU              : avg 102.17 %   peak 105.00 %
-  FL gNB RSS              : 2746680 KB
-  FL RAN Power            : 27 W   (1649 J)
-  FL Machine CPU (all)    : 6.09 % busy = 0.73 cores   (usr 2.09 %, sys 3.73 %, soft 0.27 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 5.62 %
-  FL Core Power           : 4 W   (258 J)
-  FL Machine CPU (all)    : 1.21 % busy = 0.14 cores   (usr 0.65 %, sys 0.55 %, soft 0.01 %)
+  FL Radio (avg)          : CQI 14.94, DL MCS 26.13, UL MCS 26.21, UL SNR 27.69 dB, DL BLER 0.21 %, UL BLER 4.32 %
+  FL gNB CPU              : avg 102.63 %   peak 122.00 %
+  FL gNB RSS              : 2746036 KB
+  FL RAN Power            : 26 W   (1606 J)
+  FL Machine CPU (all)    : 7.25 % busy = 0.87 cores   (usr 2.91 %, sys 3.89 %, soft 0.32 %)
+  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 6.21 %
+  FL Core NFs (all)       : CPU avg 6.33 %   RSS 291480 KB   (CU not included)
+  FL Core Power           : 4 W   (259 J)
+  FL Machine CPU (all)    : 4.32 % busy = 0.52 cores   (usr 0.82 %, sys 3.25 %, soft 0.10 %)
 
 ── round3/free5gc_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 259 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 18045 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 209 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 202 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 22.417 ms
-  Jitter                  : 2.456 ms
+  RTT Average             : 20.496 ms
+  Jitter                  : 1.980 ms
   UDP Packet Loss         : 0%
-  Downlink                : 33.5 Mbps   (core -> phone)
-  Uplink                  : 6.98 Mbps   (phone -> core)
-  CQI                     : 14.37   (0-15, channel quality reported by the phone)
-  DL MCS                  : 11.84   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 6.99 %
-  UL MCS                  : 6.01
-  UL BLER                 : 6.05 %
-  UL SNR                  : 15.40 dB   (measured by the gNB)
-  DL RSRP                 : -92.41 dBm   (measured by the phone; OAI only)
-  DL SINR                 : 23.32 dB   (measured by the phone; OAI only)
+  Downlink                : 36.0 Mbps   (core -> phone)
+  Uplink                  : 7.17 Mbps   (phone -> core)
+  CQI                     : 14.58   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.73   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 5.35 %
+  UL MCS                  : 6.27
+  UL BLER                 : 6.36 %
+  UL SNR                  : 15.45 dB   (measured by the gNB)
+  DL RSRP                 : -87.53 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
   Average Power           : 19 W
   Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 13.70, DL MCS 17.13, UL MCS 9.46, UL SNR 15.60 dB, DL BLER 10.13 %, UL BLER 9.92 %
-  FL gNB CPU              : avg 71.37 %   peak 86.00 %
-  FL gNB RSS              : 672084 KB
-  FL RAN Power            : 20 W   (1279 J)
-  FL Machine CPU (all)    : 10.31 % busy = 1.24 cores   (usr 5.96 %, sys 3.56 %, soft 0.79 %)
-  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.13 % / 0.12 %
-  FL Core Power           : 4 W   (254 J)
-  FL Machine CPU (all)    : 1.35 % busy = 0.16 cores   (usr 0.68 %, sys 0.54 %, soft 0.02 %)
+  FL Radio (avg)          : CQI 14.00, DL MCS 19.25, UL MCS 10.38, UL SNR 15.48 dB, DL BLER 9.75 %, UL BLER 9.02 %
+  FL gNB CPU              : avg 70.70 %   peak 79.00 %
+  FL gNB RSS              : 672228 KB
+  FL RAN Power            : 20 W   (1258 J)
+  FL Machine CPU (all)    : 6.47 % busy = 0.78 cores   (usr 3.36 %, sys 2.46 %, soft 0.61 %)
+  FL AMF / SMF / UPF CPU  : avg 0.07 % / 0.13 % / 0.15 %
+  FL Core NFs (all)       : CPU avg 0.46 %   RSS 298707 KB   (CU not included)
+  FL Core Power           : 4 W   (245 J)
+  FL Machine CPU (all)    : 1.29 % busy = 0.15 cores   (usr 0.60 %, sys 0.55 %, soft 0.08 %)
 
 ── round3/free5gc_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.60.0.1   (IP changes during the tests: 0)
-  Registration Time       : 392 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 2207 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 419 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 19589 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 25.835 ms
-  Jitter                  : 1.784 ms
+  RTT Average             : 25.637 ms
+  Jitter                  : 2.023 ms
   UDP Packet Loss         : 0%
-  Downlink                : 54.6 Mbps   (core -> phone)
-  Uplink                  : 23.0 Mbps   (phone -> core)
-  CQI                     : 14.13   (0-15, channel quality reported by the phone)
-  DL MCS                  : 22.38   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.43 %
-  UL MCS                  : 26.32
-  UL BLER                 : 3.19 %
-  UL SNR                  : 30.72 dB   (measured by the gNB)
+  Downlink                : 54.8 Mbps   (core -> phone)
+  Uplink                  : 20.3 Mbps   (phone -> core)
+  CQI                     : 14.99   (0-15, channel quality reported by the phone)
+  DL MCS                  : 25.61   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.14 %
+  UL MCS                  : 26.07
+  UL BLER                 : 11.63 %
+  UL SNR                  : 30.62 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -8.09 dB   (measured by the gNB; OCUDU only)
+  UL RSRP                 : -12.74 dB   (measured by the gNB; OCUDU only)
   Average Power           : 26 W
   Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.21, DL MCS 22.66, UL MCS 26.98, UL SNR 27.53 dB, DL BLER 0.93 %, UL BLER 0.20 %
-  FL gNB CPU              : avg 102.75 %   peak 116.00 %
-  FL gNB RSS              : 2747060 KB
-  FL RAN Power            : 27 W   (1666 J)
-  FL Machine CPU (all)    : 9.77 % busy = 1.17 cores   (usr 5.25 %, sys 3.73 %, soft 0.79 %)
-  FL AMF / SMF / UPF CPU  : avg 0.10 % / 0.13 % / 0.13 %
-  FL Core Power           : 4 W   (245 J)
-  FL Machine CPU (all)    : 1.23 % busy = 0.15 cores   (usr 0.60 %, sys 0.54 %, soft 0.01 %)
+  FL Radio (avg)          : CQI 15.00, DL MCS 26.74, UL MCS 26.02, UL SNR 26.99 dB, DL BLER 0.09 %, UL BLER 7.71 %
+  FL gNB CPU              : avg 101.85 %   peak 106.00 %
+  FL gNB RSS              : 2746932 KB
+  FL RAN Power            : 26 W   (1623 J)
+  FL Machine CPU (all)    : 8.59 % busy = 1.03 cores   (usr 3.85 %, sys 3.97 %, soft 0.60 %)
+  FL AMF / SMF / UPF CPU  : avg 0.08 % / 0.11 % / 0.15 %
+  FL Core NFs (all)       : CPU avg 0.44 %   RSS 299001 KB   (CU not included)
+  FL Core Power           : 4 W   (246 J)
+  FL Machine CPU (all)    : 1.24 % busy = 0.15 cores   (usr 0.57 %, sys 0.53 %, soft 0.07 %)
 
 ── round3/open5gs_oai_phone ──────────────────────────────────────────────────────
   Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
-  Registration Time       : 194 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 250 ms   (Registration Complete -> UE IP allocated by SMF)
-  Packet Loss             : 0 %
-  RTT Average             : 21.041 ms
-  Jitter                  : 2.703 ms
+  Registration Time       : 174 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 184 ms   (Registration Complete -> UE IP allocated by SMF)
+  Packet Loss             : 2 %
+  RTT Average             : 22.513 ms
+  Jitter                  : 2.249 ms
   UDP Packet Loss         : 0%
-  Downlink                : 32.1 Mbps   (core -> phone)
-  Uplink                  : 6.76 Mbps   (phone -> core)
-  CQI                     : 14.52   (0-15, channel quality reported by the phone)
-  DL MCS                  : 12.55   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 6.94 %
-  UL MCS                  : 5.44
-  UL BLER                 : 6.36 %
-  UL SNR                  : 15.52 dB   (measured by the gNB)
-  DL RSRP                 : -91.57 dBm   (measured by the phone; OAI only)
-  DL SINR                 : 23.48 dB   (measured by the phone; OAI only)
+  Downlink                : 36.2 Mbps   (core -> phone)
+  Uplink                  : 7.40 Mbps   (phone -> core)
+  CQI                     : 14.60   (0-15, channel quality reported by the phone)
+  DL MCS                  : 12.00   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 5.92 %
+  UL MCS                  : 6.99
+  UL BLER                 : 6.23 %
+  UL SNR                  : 15.59 dB   (measured by the gNB)
+  DL RSRP                 : -88.22 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
   Average Power           : 19 W
-  Average Power           : 3 W
+  Average Power           : 4 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.00, DL MCS 16.92, UL MCS 10.07, UL SNR 15.45 dB, DL BLER 8.11 %, UL BLER 8.93 %
-  FL gNB CPU              : avg 70.67 %   peak 79.00 %
-  FL gNB RSS              : 668472 KB
-  FL RAN Power            : 21 W   (1292 J)
-  FL Machine CPU (all)    : 10.07 % busy = 1.21 cores   (usr 5.69 %, sys 3.76 %, soft 0.62 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.03 %
-  FL Core Power           : 4 W   (265 J)
-  FL Machine CPU (all)    : 1.32 % busy = 0.16 cores   (usr 0.61 %, sys 0.61 %, soft 0.02 %)
+  FL Radio (avg)          : CQI 14.13, DL MCS 17.75, UL MCS 10.38, UL SNR 15.59 dB, DL BLER 10.88 %, UL BLER 9.68 %
+  FL gNB CPU              : avg 71.35 %   peak 80.00 %
+  FL gNB RSS              : 671181 KB
+  FL RAN Power            : 21 W   (1266 J)
+  FL Machine CPU (all)    : 6.90 % busy = 0.83 cores   (usr 3.61 %, sys 2.54 %, soft 0.65 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.70 %
+  FL Core NFs (all)       : CPU avg 6.80 %   RSS 292957 KB   (CU not included)
+  FL Core Power           : 4 W   (260 J)
+  FL Machine CPU (all)    : 3.71 % busy = 0.45 cores   (usr 1.64 %, sys 1.82 %, soft 0.14 %)
 
 ── round3/open5gs_ocudu_phone ──────────────────────────────────────────────────────
   Cell              : Cell pci=0, bw=20 MHz, 1T1R, dl_arfcn=640608 (n78), dl_freq=3609.12 MHz, dl_ssb_arfcn=640320, ul_freq=3609.12 MHz
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
-  Registration Time       : 317 ms   (AMF: Registration Request -> Registration Complete)
-  PDU Session Setup Time  : 117 ms   (Registration Complete -> UE IP allocated by SMF)
+  Registration Time       : 292 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 112 ms   (Registration Complete -> UE IP allocated by SMF)
   Packet Loss             : 0 %
-  RTT Average             : 27.268 ms
-  Jitter                  : 3.381 ms
+  RTT Average             : 26.442 ms
+  Jitter                  : 2.049 ms
   UDP Packet Loss         : 0%
-  Downlink                : 54.1 Mbps   (core -> phone)
-  Uplink                  : 23.8 Mbps   (phone -> core)
-  CQI                     : 14.09   (0-15, channel quality reported by the phone)
-  DL MCS                  : 21.91   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 0.34 %
-  UL MCS                  : 26.33
-  UL BLER                 : 2.00 %
-  UL SNR                  : 30.76 dB   (measured by the gNB)
+  Downlink                : 54.3 Mbps   (core -> phone)
+  Uplink                  : 20.3 Mbps   (phone -> core)
+  CQI                     : 15.00   (0-15, channel quality reported by the phone)
+  DL MCS                  : 25.11   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 0.23 %
+  UL MCS                  : 25.89
+  UL BLER                 : 11.41 %
+  UL SNR                  : 30.96 dB   (measured by the gNB)
   DL RSRP                 : N/A dBm   (measured by the phone; OAI only)
   DL SINR                 : N/A dB   (measured by the phone; OAI only)
-  UL RSRP                 : -8.48 dB   (measured by the gNB; OCUDU only)
+  UL RSRP                 : -12.33 dB   (measured by the gNB; OCUDU only)
   Average Power           : 26 W
   Average Power           : 3 W
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.15, DL MCS 22.43, UL MCS 26.98, UL SNR 28.07 dB, DL BLER 0.94 %, UL BLER 0.26 %
-  FL gNB CPU              : avg 102.31 %   peak 113.00 %
-  FL gNB RSS              : 2746548 KB
-  FL RAN Power            : 27 W   (1658 J)
-  FL Machine CPU (all)    : 7.22 % busy = 0.87 cores   (usr 3.01 %, sys 3.87 %, soft 0.35 %)
-  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 5.72 %
+  FL Radio (avg)          : CQI 15.00, DL MCS 26.38, UL MCS 26.07, UL SNR 27.38 dB, DL BLER 0.06 %, UL BLER 8.45 %
+  FL gNB CPU              : avg 104.67 %   peak 112.00 %
+  FL gNB RSS              : 2746164 KB
+  FL RAN Power            : 26 W   (1641 J)
+  FL Machine CPU (all)    : 8.76 % busy = 1.05 cores   (usr 4.31 %, sys 3.87 %, soft 0.46 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.05 % / 5.66 %
+  FL Core NFs (all)       : CPU avg 5.77 %   RSS 291638 KB   (CU not included)
   FL Core Power           : 4 W   (258 J)
-  FL Machine CPU (all)    : 1.29 % busy = 0.15 cores   (usr 0.65 %, sys 0.54 %, soft 0.01 %)
+  FL Machine CPU (all)    : 1.50 % busy = 0.18 cores   (usr 0.70 %, sys 0.65 %, soft 0.04 %)
 
