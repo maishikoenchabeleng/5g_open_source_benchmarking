@@ -1,9 +1,13 @@
-2026-10-06T13:39:24.377434 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
-2026-10-06T13:39:24.958561 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
-2026-10-06T13:39:27.119903 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
-2026-10-06T13:39:27.119912 [APP     ] [E] Couldn't register stdin handler
-2026-10-06T13:39:27.164849 [GNB     ] [I] ==== gNB started ===
-2026-10-06T13:43:16.461004 [GNB     ] [I] Stopping...
-2026-10-06T13:43:16.462176 [PHY     ] [W] [   566.8] Discarded uplink slot. Ignoring processing.
-2026-10-06T13:43:16.462177 [PHY     ] [W] [   566.8] Real-time failure in lower PHY: PUxCH request late for sector 0, slot 566.8.
+2026-10-15T09:49:52.972870 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-15T09:49:53.583337 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-15T09:50:06.889093 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-15T09:50:06.889102 [APP     ] [E] Couldn't register stdin handler
+2026-10-15T09:50:06.929769 [GNB     ] [I] ==== gNB started ===
+2026-10-15T09:50:42.025739 [RF      ] [W] Real-time failure in RF: underflow
+2026-10-15T09:50:42.028282 [RF      ] [W] Real-time failure in RF: late
+2026-10-15T09:50:42.028361 [RF      ] [W] Real-time failure in RF: late
+2026-10-15T09:50:42.028399 [RF      ] [W] Real-time failure in RF: late
+2026-10-15T09:50:42.028491 [RF      ] [W] Real-time failure in RF: late
+2026-10-15T09:50:42.028512 [RF      ] [W] Real-time failure in RF: late
+2026-10-15T09:54:00.475537 [GNB     ] [I] Stopping...
 (END)

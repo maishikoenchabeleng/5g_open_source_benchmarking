@@ -1,5 +1,5 @@
 duration_s=60
 ran_watts=21
-ran_joules=1308
+ran_joules=1260
 core_watts=4
-core_joules=260
+core_joules=269

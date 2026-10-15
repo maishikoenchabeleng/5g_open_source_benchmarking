@@ -1,7 +1,7 @@
 ================================================================================
                    5G TESTBED - REAL PHONE BENCHMARK REPORT
 ================================================================================
-  Generated  : 2026-10-06 15:48:11
+  Generated  : 2026-10-15 11:58:50
   Report for : OPEN5GS + OAI (B210)
   Round      : 1 of 3
 ================================================================================
@@ -16,10 +16,10 @@
   Core Machine IP   : 137.158.126.21
   Phone IMSI        : 001020000049862
   Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
-  Phone attached    : after ~30s (checked every 5s)
+  Phone attached    : after ~25s (checked every 5s)
   Ping Count        : 100 packets
   Iperf Duration    : 30 seconds
-  Test Timestamp    : 2026-10-06 15:48:11
+  Test Timestamp    : 2026-10-15 11:58:50
 
 ────────────────────────────────────────────────────────────────────────────────
  REGISTRATION  (from core network logs)
@@ -32,69 +32,75 @@
 ────────────────────────────────────────────────────────────────────────────────
   Packets Sent            : 100
   Packet Loss             : 0 %
-  RTT Minimum             : 16.297 ms
-  RTT Average             : 21.796 ms
-  RTT Maximum             : 34.550 ms
-  RTT Std Deviation       : 3.685 ms
+  RTT Minimum             : 11.325 ms
+  RTT Average             : 21.403 ms
+  RTT Maximum             : 35.391 ms
+  RTT Std Deviation       : 4.231 ms
 
 ────────────────────────────────────────────────────────────────────────────────
  JITTER  (UDP iperf3 2 Mbit/s, 30s, core -> phone = downlink)
 ────────────────────────────────────────────────────────────────────────────────
   UDP Throughput          : 2.00 Mbps
-  Jitter                  : 2.577 ms
+  Jitter                  : 2.467 ms
   UDP Packet Loss         : 0%
 
 ────────────────────────────────────────────────────────────────────────────────
  THROUGHPUT  (TCP iperf3, 30s, receiver side)
 ────────────────────────────────────────────────────────────────────────────────
-  Downlink                : 33.3 Mbps   (core -> phone)
-  Uplink                  : 7.29 Mbps   (phone -> core)
+  Downlink                : 36.5 Mbps   (core -> phone)
+  Uplink                  : 7.85 Mbps   (phone -> core)
 
 ────────────────────────────────────────────────────────────────────────────────
- RADIO  (averages over the test window, 150 one-second samples)
+ RADIO  (averages over the test window, 149 one-second samples)
 ────────────────────────────────────────────────────────────────────────────────
-  CQI                     : 14.57   (0-15, channel quality reported by the phone)
-  DL MCS                  : 12.89   (0-27/28, higher = faster but more fragile)
-  DL BLER                 : 7.10 %
-  UL MCS                  : 6.07
-  UL BLER                 : 5.86 %
-  UL SNR                  : 15.63 dB   (measured by the gNB)
-  DL RSRP                 : -91.45 dBm   (measured by the phone; OAI only)
-  DL SINR                 : 23.48 dB   (measured by the phone; OAI only)
+  CQI                     : 14.98   (0-15, channel quality reported by the phone)
+  DL MCS                  : 13.07   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 6.94 %
+  UL MCS                  : 7.52
+  UL BLER                 : 6.02 %
+  UL SNR                  : 15.34 dB   (measured by the gNB)
+  DL RSRP                 : -87.55 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
   UL RSRP                 : N/A dB   (measured by the gNB; OCUDU only)
 
 ────────────────────────────────────────────────────────────────────────────────
  CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : 137.158.126.24 ]
-  gNB Process             : avg 52.68 %   peak 94.00 %
+  gNB Process             : avg 54.63 %   peak 97.00 %
 
   [ Core Machine : 137.158.126.21 ]
   AMF                     : avg 0.01 %
   SMF                     : avg 0.03 %
-  UPF                     : avg 3.64 %
+  UPF                     : avg 3.82 %
+  Core NFs (all)          : avg 3.95 %   (all core network functions; CU not included)
+
+  [ Whole machines (mpstat: all cores, incl. kernel work; 100 % = whole machine) ]
+  RAN Machine CPU (all)   : 5.36 % busy = 0.64 cores   (usr 2.44 %, sys 2.25 %, soft 0.60 %)
+  Core Machine CPU (all)  : 1.83 % busy = 0.22 cores   (usr 0.80 %, sys 0.88 %, soft 0.04 %)
 
 ────────────────────────────────────────────────────────────────────────────────
  MEMORY USAGE  (pidstat RSS, during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine ]
-  gNB RSS                 : 669321 KB
+  gNB RSS                 : 669303 KB
 
   [ Core Machine ]
   AMF RSS                 : 36352 KB
-  SMF RSS                 : 57361 KB
-  UPF RSS                 : 34176 KB
+  SMF RSS                 : 56925 KB
+  UPF RSS                 : 34048 KB
+  Core NFs (all) RSS      : 291223 KB   (all core network functions; CU not included)
 
 ────────────────────────────────────────────────────────────────────────────────
  POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
 ────────────────────────────────────────────────────────────────────────────────
   [ RAN Machine : 137.158.126.24 ]
-  Average Power           : 20 W
-  Total Energy            : 3001 J
+  Average Power           : 19 W
+  Total Energy            : 2887 J
 
   [ Core Machine : 137.158.126.21 ]
-  Average Power           : 3 W
-  Total Energy            : 599 J
+  Average Power           : 4 W
+  Total Energy            : 601 J
 
 ────────────────────────────────────────────────────────────────────────────────
  FIXED-LOAD RESOURCES  (UDP 5 Mbit/s DL + 5 Mbit/s UL at once, 60s)
@@ -105,18 +111,19 @@
   not the UPF process CPU, to compare the cores. 100 % = whole machine.
   FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 5.00 Mbps (loss 0 %)
   FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
-  FL Radio (avg)          : CQI 14.00, DL MCS 19.90, UL MCS 9.62, UL SNR 15.59 dB, DL BLER 9.67 %, UL BLER 9.55 %
+  FL Radio (avg)          : CQI 14.67, DL MCS 13.08, UL MCS 8.66, UL SNR 15.34 dB, DL BLER 12.13 %, UL BLER 10.23 %
 
   [ RAN Machine : 137.158.126.24 ]
-  FL gNB CPU              : avg 70.74 %   peak 78.00 %
-  FL gNB RSS              : 670892 KB
-  FL RAN Power            : 21 W   (1308 J)
-  FL Machine CPU (all)    : 4.42 % busy = 0.53 cores   (usr 1.73 %, sys 2.13 %, soft 0.56 %)
+  FL gNB CPU              : avg 70.30 %   peak 85.00 %
+  FL gNB RSS              : 670572 KB
+  FL RAN Power            : 21 W   (1260 J)
+  FL Machine CPU (all)    : 7.05 % busy = 0.85 cores   (usr 3.73 %, sys 2.52 %, soft 0.66 %)
 
   [ Core Machine : 137.158.126.21 ]
-  FL AMF / SMF / UPF CPU  : avg 0.02 % / 0.03 % / 6.40 %
-  FL Core Power           : 4 W   (260 J)
-  FL Machine CPU (all)    : 1.32 % busy = 0.16 cores   (usr 0.69 %, sys 0.58 %, soft 0.06 %)
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.03 % / 6.23 %
+  FL Core NFs (all)       : CPU avg 6.36 %   RSS 291268 KB   (CU not included)
+  FL Core Power           : 4 W   (269 J)
+  FL Machine CPU (all)    : 1.58 % busy = 0.19 cores   (usr 0.70 %, sys 0.75 %, soft 0.02 %)
 
 ────────────────────────────────────────────────────────────────────────────────
  TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
@@ -124,13 +131,13 @@
   CPU Governor            : RAN performance, core powersave
 
   [ RAN Machine : 137.158.126.24 ]
-  Package Temperature     : avg 42.8 °C   max 53 °C
-  Average CPU Frequency   : 4043 MHz
+  Package Temperature     : avg 39.7 °C   max 52 °C
+  Average CPU Frequency   : 4012 MHz
   Thermal Throttle Events : 0   (0 = no slowdown from heat)
 
   [ Core Machine : 137.158.126.21 ]
-  Package Temperature     : avg 31.5 °C   max 45 °C
-  Average CPU Frequency   : 1484 MHz
+  Package Temperature     : avg 28.4 °C   max 44 °C
+  Average CPU Frequency   : 1414 MHz
   Thermal Throttle Events : 0   (0 = no slowdown from heat)
 
 ────────────────────────────────────────────────────────────────────────────────
@@ -154,6 +161,8 @@
   raw/power_ran.txt       : RAPL power log - RAN machine
   raw/power_core.txt      : RAPL power log - core machine
   raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power, radio
+  raw/mpstat_ran.txt      : Whole-machine CPU, RAN machine (performance tests)
+  raw/mpstat_core.txt     : Whole-machine CPU, core machine (performance tests)
   raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
   raw/thermal_core.txt    : Temperature/frequency log - core machine
   ../../terminal_session.txt : Full terminal output of the whole run
