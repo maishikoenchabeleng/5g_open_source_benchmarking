@@ -1,0 +1,178 @@
+================================================================================
+              5G TESTBED - REAL PHONE CU/DU SPLIT BENCHMARK REPORT
+================================================================================
+  Generated  : 2026-10-15 13:24:56
+  Report for : OPEN5GS + OAI CU/DU split (B210)
+  Round      : 1 of 3
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+ TEST CONFIGURATION
+────────────────────────────────────────────────────────────────────────────────
+  Core Network      : OPEN5GS
+  RAN               : OAI CU/DU split (B210)
+  CU Location       : Core machine 137.158.126.21  (nr-softmodem)
+  DU Location       : RAN machine 137.158.126.24  (nr-softmodem + B210)
+  Cell              : SSB ARFCN 640704, 51 PRB (20 MHz at 30 kHz SCS)
+  RAN Machine IP    : 137.158.126.24
+  Core Machine IP   : 137.158.126.21
+  Phone IMSI        : 001020000049862
+  Phone IP          : 10.45.0.2   (IP changes during the tests: 0)
+  Phone attached    : after ~25s (checked every 5s)
+  Ping Count        : 100 packets
+  Iperf Duration    : 30 seconds
+  Test Timestamp    : 2026-10-15 13:24:56
+
+────────────────────────────────────────────────────────────────────────────────
+ REGISTRATION  (from core network logs)
+────────────────────────────────────────────────────────────────────────────────
+  Registration Time       : 209 ms   (AMF: Registration Request -> Registration Complete)
+  PDU Session Setup Time  : 10213 ms   (Registration Complete -> UE IP allocated by SMF)
+
+────────────────────────────────────────────────────────────────────────────────
+ LATENCY  (100 ICMP packets, core machine -> phone)
+────────────────────────────────────────────────────────────────────────────────
+  Packets Sent            : 100
+  Packet Loss             : 0 %
+  RTT Minimum             : 16.147 ms
+  RTT Average             : 21.337 ms
+  RTT Maximum             : 39.467 ms
+  RTT Std Deviation       : 3.350 ms
+
+────────────────────────────────────────────────────────────────────────────────
+ JITTER  (UDP iperf3 2 Mbit/s, 30s, core -> phone = downlink)
+────────────────────────────────────────────────────────────────────────────────
+  UDP Throughput          : 2.00 Mbps
+  Jitter                  : 2.264 ms
+  UDP Packet Loss         : 0%
+
+────────────────────────────────────────────────────────────────────────────────
+ THROUGHPUT  (TCP iperf3, 30s, receiver side)
+────────────────────────────────────────────────────────────────────────────────
+  Downlink                : 37.8 Mbps   (core -> phone)
+  Uplink                  : 6.91 Mbps   (phone -> core)
+
+────────────────────────────────────────────────────────────────────────────────
+ RADIO  (averages over the test window, 145 one-second samples)
+────────────────────────────────────────────────────────────────────────────────
+  CQI                     : 14.41   (0-15, channel quality reported by the phone)
+  DL MCS                  : 10.93   (0-27/28, higher = faster but more fragile)
+  DL BLER                 : 5.57 %
+  UL MCS                  : 6.52
+  UL BLER                 : 6.13 %
+  UL SNR                  : 15.36 dB   (measured by the DU)
+  DL RSRP                 : -87.85 dBm   (measured by the phone; OAI only)
+  DL SINR                 : 23.50 dB   (measured by the phone; OAI only)
+  UL RSRP                 : N/A dB   (measured by the DU; OCUDU only)
+
+────────────────────────────────────────────────────────────────────────────────
+ CPU USAGE  (pidstat, sampled every 1s during the performance tests; 100% = one core)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  DU  Process             : avg 52.71 %   peak 97.00 %
+
+  [ Core Machine : 137.158.126.21 ]
+  CU  Process             : avg 3.73 %   peak 9.00 %
+  AMF                     : avg 0.01 %
+  SMF                     : avg 0.03 %
+  UPF                     : avg 2.00 %
+  Core NFs (all)          : avg 2.10 %   (all core network functions; CU not included)
+
+  [ Whole machines (mpstat: all cores, incl. kernel work; 100 % = whole machine) ]
+  RAN Machine CPU (all)   : 5.65 % busy = 0.68 cores   (usr 2.55 %, sys 2.39 %, soft 0.62 %)
+  Core Machine CPU (all)  : 2.16 % busy = 0.26 cores   (usr 1.02 %, sys 0.97 %, soft 0.06 %)
+
+────────────────────────────────────────────────────────────────────────────────
+ MEMORY USAGE  (pidstat RSS, during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine ]
+  DU  RSS                 : 634525 KB
+
+  [ Core Machine ]
+  CU  RSS                 : 154488 KB
+  AMF RSS                 : 36224 KB
+  SMF RSS                 : 56924 KB
+  UPF RSS                 : 34048 KB
+  Core NFs (all) RSS      : 291496 KB   (all core network functions; CU not included)
+
+────────────────────────────────────────────────────────────────────────────────
+ POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
+────────────────────────────────────────────────────────────────────────────────
+  [ RAN Machine : 137.158.126.24 ]
+  Average Power           : 19 W
+  Total Energy            : 2856 J
+
+  [ Core Machine : 137.158.126.21 ]
+  Average Power           : 6 W
+  Total Energy            : 980 J
+
+────────────────────────────────────────────────────────────────────────────────
+ FIXED-LOAD RESOURCES  (UDP 5 Mbit/s DL + 5 Mbit/s UL at once, 60s)
+────────────────────────────────────────────────────────────────────────────────
+  Same traffic for every combination: compare these values to see which
+  combination needs fewer resources for the same job.
+  Machine CPU = all cores incl. kernel work (e.g. free5gc gtp5g); use it,
+  not the UPF process CPU, to compare the cores. 100 % = whole machine.
+  FL Load Delivered       : DL 5.00 Mbps (loss 0 %), UL 4.99 Mbps (loss 0 %)
+  FL Load Check           : VALID   (VALID = both directions >= 95% of target, loss <= 5%)
+  FL Radio (avg)          : CQI 14.00, DL MCS 19.02, UL MCS 10.51, UL SNR 15.34 dB, DL BLER 11.07 %, UL BLER 8.66 %
+
+  [ RAN Machine : 137.158.126.24 ]
+  FL DU  CPU              : avg 70.39 %   peak 79.00 %
+  FL DU  RSS              : 636212 KB
+  FL RAN Power            : 20 W   (1260 J)
+  FL Machine CPU (all)    : 6.14 % busy = 0.74 cores   (usr 3.09 %, sys 2.32 %, soft 0.63 %)
+
+  [ Core Machine : 137.158.126.21 ]
+  FL CU  CPU              : avg 2.36 %   peak 5.00 %
+  FL CU  RSS              : 154488 KB
+  FL AMF / SMF / UPF CPU  : avg 0.00 % / 0.00 % / 1.56 %
+  FL Core NFs (all)       : CPU avg 1.61 %   RSS 291786 KB   (CU not included)
+  FL Core Power           : 11 W   (685 J)
+  FL Machine CPU (all)    : 1.71 % busy = 0.21 cores   (usr 0.79 %, sys 0.61 %, soft 0.18 %)
+
+────────────────────────────────────────────────────────────────────────────────
+ TEMPERATURE & CPU FREQUENCY  (sampled every 2s during tests)
+────────────────────────────────────────────────────────────────────────────────
+  CPU Governor            : RAN performance, core powersave
+
+  [ RAN Machine : 137.158.126.24 ]
+  Package Temperature     : avg 40.9 °C   max 51 °C
+  Average CPU Frequency   : 3943 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+  [ Core Machine : 137.158.126.21 ]
+  Package Temperature     : avg 31.5 °C   max 45 °C
+  Average CPU Frequency   : 2405 MHz
+  Thermal Throttle Events : 0   (0 = no slowdown from heat)
+
+────────────────────────────────────────────────────────────────────────────────
+ EVIDENCE FILES
+────────────────────────────────────────────────────────────────────────────────
+  raw/du.log              : DU terminal output (OCUDU: incl. per-second metrics table)
+  raw/du_internal.log     : OCUDU DU /tmp/du.log (warning level) - OCUDU only
+  raw/cu.log              : CU terminal output (core machine)
+  raw/cu_internal.log     : OCUDU CU /tmp/cu.log (core machine) - OCUDU only
+  raw/radio_metrics.csv   : Per-second radio metrics during the tests
+  raw/nrMAC_stats_last.log: Last OAI DU MAC stats snapshot - OAI only
+  raw/nrRRC_stats_last.log: Last OAI CU RRC stats snapshot (core machine) - OAI only
+  raw/amf.log             : Open5GS AMF/SMF/UPF journal logs (Open5GS runs)
+  raw/free5gc.log         : free5gc log (free5gc runs)
+  raw/phone_ip.txt        : Phone IP and any changes during the tests
+  raw/ping_phone.txt      : Full ping output (100 packets)
+  raw/iperf_tcp_dl.txt    : TCP downlink iperf3 full output
+  raw/iperf_tcp_ul.txt    : TCP uplink iperf3 full output
+  raw/iperf_udp.txt       : UDP jitter iperf3 full output
+  raw/FAILED.txt          : Only present if the run failed (reason)
+  raw/cpu_ran.txt         : pidstat output - RAN machine
+  raw/cpu_core.txt        : pidstat output - core machine
+  raw/power_ran.txt       : RAPL power log - RAN machine
+  raw/power_core.txt      : RAPL power log - core machine
+  raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power, radio
+  raw/mpstat_ran.txt      : Whole-machine CPU, RAN machine (performance tests)
+  raw/mpstat_core.txt     : Whole-machine CPU, core machine (performance tests)
+  raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
+  raw/thermal_core.txt    : Temperature/frequency log - core machine
+  ../../terminal_session.txt : Full terminal output of the whole run
+
+================================================================================
