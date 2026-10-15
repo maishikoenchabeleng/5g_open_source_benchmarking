@@ -498,12 +498,12 @@ collect_cpu_ram() {
 
     log "Collecting CPU/RAM on core machine..."
     ssh_core "LC_ALL=C pidstat -u -p ALL 1 ${PIDSTAT_SAMPLES} \
-        | grep --line-buffered -E ' (${cu_name}|open5gs-[a-z]+|amf|smf|upf)$'" \
+        | grep --line-buffered -E ' (${cu_name}|open5gs-[a-z]+|amf|ausf|bsf|chf|n3iwf|nef|nrf|nssf|pcf|scp|smf|tngf|udm|udr|upf)$'" \
         > "${log_dir}/cpu_core.txt" 2>&1 &
     CPU_CORE_PID=$!
 
     ssh_core "LC_ALL=C pidstat -r -p ALL 1 ${PIDSTAT_SAMPLES} \
-        | grep --line-buffered -E ' (${cu_name}|open5gs-[a-z]+|amf|smf|upf)$'" \
+        | grep --line-buffered -E ' (${cu_name}|open5gs-[a-z]+|amf|ausf|bsf|chf|n3iwf|nef|nrf|nssf|pcf|scp|smf|tngf|udm|udr|upf)$'" \
         > "${log_dir}/mem_core.txt" 2>&1 &
     MEM_CORE_PID=$!
 }
@@ -769,6 +769,50 @@ parse_mpstat() {
         }' "$file"
 }
 
+# Core network functions: Open5GS (open5gs-*d) and free5gc (amf, smf, upf,
+# nrf, ...). Used to sum the whole core's CPU/memory; the CU (split) and other
+# programs (e.g. the MongoDB database) are not included.
+CORE_NF_RE='^(open5gs-[a-z]+|amf|ausf|bsf|chf|n3iwf|nef|nrf|nssf|pcf|scp|smf|tngf|udm|udr|upf)$'
+
+# Sum over ALL core network functions per sample, then averaged over samples.
+# $2 = cpu (prints %CPU, 100% = one core) or ram (prints RSS in KB).
+parse_core_total() {
+    local file=$1
+    local kind=$2
+    if [ ! -s "$file" ]; then echo "N/A"; return; fi
+    awk -v kind="$kind" -v re="$CORE_NF_RE" '
+        $1 == "Average:" { next }
+        $NF ~ re {
+            ampm = ($2 == "AM" || $2 == "PM")
+            want = (kind == "cpu" ? 10 : 9) + ampm
+            if (NF != want) next
+            key = ampm ? $1 " " $2 : $1
+            s[key] += $(NF-2)
+        }
+        END {
+            n = 0; t = 0
+            for (k in s) { n++; t += s[k] }
+            if (!n) print "N/A"
+            else if (kind == "cpu") printf "%.2f\n", t / n
+            else printf "%.0f\n", t / n
+        }' "$file"
+}
+
+# Whole-machine CPU (mpstat) on both machines during the performance tests
+start_mpstat_both() {
+    local log_dir=$1
+    LC_ALL=C mpstat 1 900 > "${log_dir}/mpstat_ran.txt" 2>&1 &
+    MPSTAT_RAN_PID=$!
+    ssh_core "LC_ALL=C mpstat 1 900" > "${log_dir}/mpstat_core.txt" 2>&1 &
+    MPSTAT_CORE_PID=$!
+}
+
+stop_mpstat_both() {
+    kill $MPSTAT_RAN_PID 2>/dev/null
+    ssh_core "pkill -x mpstat 2>/dev/null; true"
+    wait $MPSTAT_RAN_PID $MPSTAT_CORE_PID 2>/dev/null
+}
+
 run_fixed_load_test() {
     local raw_dir=$1
     local ran=$2
@@ -878,6 +922,15 @@ generate_report() {
     local fl_smf_cpu; read fl_smf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "$(core_nf_proc $core smf)")
     local fl_upf_cpu; read fl_upf_cpu _ <<< $(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "$(core_nf_proc $core upf)")
 
+    # Whole core (all core network functions) and whole machines, performance tests
+    local core_cpu=$(parse_core_total "${raw_dir}/cpu_core.txt" cpu)
+    local core_rss=$(parse_core_total "${raw_dir}/mem_core.txt" ram)
+    local m_rb m_rcores m_rusr m_rsys m_rsoft m_cb m_ccores m_cusr m_csys m_csoft
+    read m_rb m_rcores m_rusr m_rsys m_rsoft <<< $(parse_mpstat "${raw_dir}/mpstat_ran.txt")
+    read m_cb m_ccores m_cusr m_csys m_csoft <<< $(parse_mpstat "${raw_dir}/mpstat_core.txt")
+    local fl_core_cpu=$(parse_core_total "${raw_dir}/fixed_load/cpu_core.txt" cpu)
+    local fl_core_rss=$(parse_core_total "${raw_dir}/fixed_load/mem_core.txt" ram)
+
     cat > "$report_file" << EOF
 ================================================================================
                    5G CU/DU SPLIT BENCHMARK REPORT
@@ -956,6 +1009,11 @@ generate_report() {
   AMF                     : avg ${amf_cpu} %
   SMF                     : avg ${smf_cpu} %
   UPF                     : avg ${upf_cpu} %
+  Core NFs (all)          : avg ${core_cpu} %   (all core network functions; CU not included)
+
+  [ Whole machines (mpstat: all cores, incl. kernel work; 100 % = whole machine) ]
+  RAN Machine CPU (all)   : ${m_rb} % busy = ${m_rcores} cores   (usr ${m_rusr} %, sys ${m_rsys} %, soft ${m_rsoft} %)
+  Core Machine CPU (all)  : ${m_cb} % busy = ${m_ccores} cores   (usr ${m_cusr} %, sys ${m_csys} %, soft ${m_csoft} %)
 
 ────────────────────────────────────────────────────────────────────────────────
  MEMORY USAGE  (pidstat RSS, during the performance tests)
@@ -969,6 +1027,7 @@ generate_report() {
   AMF RSS                 : $(parse_ram "${raw_dir}/mem_core.txt" "$(core_nf_proc $core amf)") KB
   SMF RSS                 : $(parse_ram "${raw_dir}/mem_core.txt" "$(core_nf_proc $core smf)") KB
   UPF RSS                 : $(parse_ram "${raw_dir}/mem_core.txt" "$(core_nf_proc $core upf)") KB
+  Core NFs (all) RSS      : ${core_rss} KB   (all core network functions; CU not included)
 
 ────────────────────────────────────────────────────────────────────────────────
  POWER CONSUMPTION  (Intel RAPL, measured during the performance tests)
@@ -1003,6 +1062,7 @@ generate_report() {
   FL CU  CPU              : avg ${fl_cu_cpu} %   peak ${fl_cu_pk} %
   FL CU  RSS              : $(parse_ram "${raw_dir}/fixed_load/mem_core.txt" "$(cu_proc $ran)") KB
   FL AMF / SMF / UPF CPU  : avg ${fl_amf_cpu} % / ${fl_smf_cpu} % / ${fl_upf_cpu} %
+  FL Core NFs (all)       : CPU avg ${fl_core_cpu} %   RSS ${fl_core_rss} KB   (CU not included)
   FL Core Power           : ${fl_cw} W   (${fl_cj} J)
   FL Machine CPU (all)    : ${fl_cb} % busy = ${fl_ccores} cores   (usr ${fl_cusr} %, sys ${fl_csys} %, soft ${fl_csoft} %)
 
@@ -1040,6 +1100,8 @@ generate_report() {
   raw/power_ran.txt       : RAPL power log - RAN machine
   raw/power_core.txt      : RAPL power log - core machine
   raw/fixed_load/         : Fixed-load test: iperf_fixed.txt, CPU/RAM, power
+  raw/mpstat_ran.txt      : Whole-machine CPU, RAN machine (performance tests)
+  raw/mpstat_core.txt     : Whole-machine CPU, core machine (performance tests)
   raw/thermal_ran.txt     : Temperature/frequency log - RAN machine
   raw/thermal_core.txt    : Temperature/frequency log - core machine
   ../../terminal_session.txt : Full terminal output of the whole run
@@ -1088,7 +1150,21 @@ append_csv() {
     fl_res="$(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(du_proc $ran)" | cut -d" " -f1),$(parse_cpu "${raw_dir}/fixed_load/cpu_ran.txt" "$(ue_proc $ran)" | cut -d" " -f1),$(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "$(cu_proc $ran)" | cut -d" " -f1),$(parse_ram "${raw_dir}/fixed_load/mem_ran.txt" "$(du_proc $ran)"),$(parse_ram "${raw_dir}/fixed_load/mem_ran.txt" "$(ue_proc $ran)"),$(parse_ram "${raw_dir}/fixed_load/mem_core.txt" "$(cu_proc $ran)"),$(parse_cpu "${raw_dir}/fixed_load/cpu_core.txt" "$(core_nf_proc $core upf)" | cut -d" " -f1),${fl_rw},${fl_rj},${fl_cw},${fl_cj},$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_ran.txt" | cut -d" " -f5),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f1),$(parse_mpstat "${raw_dir}/fixed_load/mpstat_core.txt" | cut -d" " -f5)"
     [ "$fl_valid" = "VALID" ] || fl_res=$(printf "N/A%.0s," $(seq 1 15) | sed "s/,$//")
 
-    echo "${TIMESTAMP},${core},${ran}_split,${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${du_cpu},${ue_cpu},${cu_cpu},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${ran_th},${core_th},${CURRENT_ROUND},${fl_dl},${fl_ul},${fl_dl_loss},${fl_ul_loss},${fl_valid},${fl_res}" \
+    # Whole core, RAN/CU memory and whole machines (performance tests),
+    # whole core at fixed load (N/A if the fixed load was not delivered)
+    local core_cpu=$(parse_core_total "${raw_dir}/cpu_core.txt" cpu)
+    local core_rss=$(parse_core_total "${raw_dir}/mem_core.txt" ram)
+    local ran_rss=$(parse_ram "${raw_dir}/mem_ran.txt" "$(du_proc $ran)")
+    local cu_rss=$(parse_ram "${raw_dir}/mem_core.txt" "$(cu_proc $ran)")
+    local m_ran=$(parse_mpstat "${raw_dir}/mpstat_ran.txt" | awk '{print $1","$5}')
+    local m_core=$(parse_mpstat "${raw_dir}/mpstat_core.txt" | awk '{print $1","$5}')
+    local fl_core_cpu=$(parse_core_total "${raw_dir}/fixed_load/cpu_core.txt" cpu)
+    local fl_core_rss=$(parse_core_total "${raw_dir}/fixed_load/mem_core.txt" ram)
+    if [ "$(fixed_load_check $(fixed_load_rates "${raw_dir}/fixed_load/iperf_fixed.txt"))" != "VALID" ]; then
+        fl_core_cpu="N/A"; fl_core_rss="N/A"
+    fi
+
+    echo "${TIMESTAMP},${core},${ran}_split,${status},${UE_IP:-N/A},${ping_loss},${rtt_avg},${rtt_mdev},${tcp_dl},${tcp_ul},${jitter},${udp_loss},${du_cpu},${ue_cpu},${cu_cpu},${RAN_WATTS:-N/A},${RAN_JOULES:-N/A},${CORE_WATTS:-N/A},${CORE_JOULES:-N/A},${reg_ms},${pdu_ms},${ran_th},${core_th},${CURRENT_ROUND},${fl_dl},${fl_ul},${fl_dl_loss},${fl_ul_loss},${fl_valid},${fl_res},${core_cpu},${core_rss},${ran_rss},${cu_rss},${m_ran},${m_core},${fl_core_cpu},${fl_core_rss}" \
         >> "$csv_file"
 }
 
@@ -1217,6 +1293,7 @@ run_combination() {
 
     collect_cpu_ram "$raw_dir" "$(du_proc $ran)" "$(ue_proc $ran)" "$(cu_proc $ran)"
     start_thermal_log "$raw_dir"
+    start_mpstat_both "$raw_dir"
 
     RAPL_RAN_START=$(read_rapl_ran)
     RAPL_CORE_START=$(read_rapl_core)
@@ -1249,6 +1326,7 @@ run_combination() {
 
     stop_cpu_ram
     stop_thermal_log
+    stop_mpstat_both
 
     # The RAPL counter wraps around (max_energy_range_uj); rapl_delta handles it
     local e_ran=$(rapl_delta "$RAPL_RAN_START" "$RAPL_RAN_END" "$(read_rapl_max_ran)")
@@ -1526,7 +1604,7 @@ main() {
     echo -e "${GREEN}╚══════════════════════════════════════════════════════════════╝${NC}"
     echo ""
 
-    echo "timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,du_cpu_pct,ue_cpu_pct,cu_cpu_pct,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round,fl_dl_mbps,fl_ul_mbps,fl_dl_loss_pct,fl_ul_loss_pct,fl_valid,fl_du_cpu_pct,fl_ue_cpu_pct,fl_cu_cpu_pct,fl_du_rss_kb,fl_ue_rss_kb,fl_cu_rss_kb,fl_upf_cpu_pct,fl_ran_watts,fl_ran_joules,fl_core_watts,fl_core_joules,fl_ran_machine_cpu_pct,fl_ran_softirq_pct,fl_core_machine_cpu_pct,fl_core_softirq_pct" \
+    echo "timestamp,core,ran,status,ue_ip,ping_loss_pct,rtt_avg_ms,rtt_mdev_ms,tcp_dl_mbps,tcp_ul_mbps,jitter_ms,udp_loss,du_cpu_pct,ue_cpu_pct,cu_cpu_pct,ran_watts,ran_joules,core_watts,core_joules,reg_ms,pdu_setup_ms,ran_temp_avg_c,ran_temp_max_c,ran_freq_avg_mhz,ran_throttle_events,core_temp_avg_c,core_temp_max_c,core_freq_avg_mhz,core_throttle_events,round,fl_dl_mbps,fl_ul_mbps,fl_dl_loss_pct,fl_ul_loss_pct,fl_valid,fl_du_cpu_pct,fl_ue_cpu_pct,fl_cu_cpu_pct,fl_du_rss_kb,fl_ue_rss_kb,fl_cu_rss_kb,fl_upf_cpu_pct,fl_ran_watts,fl_ran_joules,fl_core_watts,fl_core_joules,fl_ran_machine_cpu_pct,fl_ran_softirq_pct,fl_core_machine_cpu_pct,fl_core_softirq_pct,core_cpu_pct,core_rss_kb,du_rss_kb,cu_rss_kb,ran_machine_cpu_pct,ran_softirq_pct,core_machine_cpu_pct,core_softirq_pct,fl_core_cpu_pct,fl_core_rss_kb" \
         > "${BASE_DIR}/all_results.csv"
 
     log "Results will be saved to: ${BASE_DIR}"
@@ -1550,7 +1628,7 @@ main() {
     done
 
     generate_comparison
-    generate_summary "ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms du_cpu_pct ue_cpu_pct cu_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events fl_dl_mbps fl_ul_mbps fl_du_cpu_pct fl_ue_cpu_pct fl_cu_cpu_pct fl_du_rss_kb fl_ue_rss_kb fl_cu_rss_kb fl_upf_cpu_pct fl_ran_watts fl_ran_joules fl_core_watts fl_core_joules fl_ran_machine_cpu_pct fl_ran_softirq_pct fl_core_machine_cpu_pct fl_core_softirq_pct"
+    generate_summary "ping_loss_pct rtt_avg_ms rtt_mdev_ms tcp_dl_mbps tcp_ul_mbps jitter_ms du_cpu_pct ue_cpu_pct cu_cpu_pct ran_watts core_watts reg_ms pdu_setup_ms ran_temp_max_c core_temp_max_c ran_freq_avg_mhz core_freq_avg_mhz ran_throttle_events core_throttle_events fl_dl_mbps fl_ul_mbps fl_du_cpu_pct fl_ue_cpu_pct fl_cu_cpu_pct fl_du_rss_kb fl_ue_rss_kb fl_cu_rss_kb fl_upf_cpu_pct fl_ran_watts fl_ran_joules fl_core_watts fl_core_joules fl_ran_machine_cpu_pct fl_ran_softirq_pct fl_core_machine_cpu_pct fl_core_softirq_pct core_cpu_pct core_rss_kb du_rss_kb cu_rss_kb ran_machine_cpu_pct ran_softirq_pct core_machine_cpu_pct core_softirq_pct fl_core_cpu_pct fl_core_rss_kb"
 
     echo ""
     echo -e "${GREEN}╔══════════════════════════════════════════════════════════════╗${NC}"
