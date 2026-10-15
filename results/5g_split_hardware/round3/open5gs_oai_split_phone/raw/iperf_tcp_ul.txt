@@ -1,40 +1,40 @@
 Connecting to host 10.45.0.2, port 5201
 Reverse mode, remote host 10.45.0.2 is sending
-[  5] local 10.45.0.1 port 39076 connected to 10.45.0.2 port 5201
+[  5] local 10.45.0.1 port 42348 connected to 10.45.0.2 port 5201
 [ ID] Interval           Transfer     Bitrate
-[  5]   0.00-1.06   sec   640 KBytes  4.96 Mbits/sec                  
-[  5]   1.06-2.04   sec   896 KBytes  7.49 Mbits/sec                  
-[  5]   2.04-3.05   sec   768 KBytes  6.23 Mbits/sec                  
-[  5]   3.05-4.01   sec   768 KBytes  6.51 Mbits/sec                  
-[  5]   4.01-5.15   sec   896 KBytes  6.44 Mbits/sec                  
-[  5]   5.15-6.13   sec   768 KBytes  6.42 Mbits/sec                  
-[  5]   6.13-7.13   sec   896 KBytes  7.34 Mbits/sec                  
-[  5]   7.13-8.07   sec   896 KBytes  7.81 Mbits/sec                  
-[  5]   8.07-9.06   sec   896 KBytes  7.41 Mbits/sec                  
-[  5]   9.06-10.07  sec   896 KBytes  7.26 Mbits/sec                  
-[  5]  10.07-11.12  sec  1.00 MBytes  7.99 Mbits/sec                  
-[  5]  11.12-12.01  sec   640 KBytes  5.89 Mbits/sec                  
-[  5]  12.01-13.06  sec   640 KBytes  4.99 Mbits/sec                  
-[  5]  13.06-14.05  sec   896 KBytes  7.45 Mbits/sec                  
-[  5]  14.05-15.04  sec   896 KBytes  7.41 Mbits/sec                  
-[  5]  15.04-16.09  sec  1.00 MBytes  7.95 Mbits/sec                  
-[  5]  16.09-17.11  sec   896 KBytes  7.20 Mbits/sec                  
-[  5]  17.11-18.13  sec   768 KBytes  6.19 Mbits/sec                  
-[  5]  18.13-19.03  sec   768 KBytes  6.99 Mbits/sec                  
-[  5]  19.03-20.06  sec   896 KBytes  7.12 Mbits/sec                  
-[  5]  20.06-21.04  sec   896 KBytes  7.49 Mbits/sec                  
-[  5]  21.04-22.05  sec  1.00 MBytes  8.31 Mbits/sec                  
-[  5]  22.05-23.02  sec   896 KBytes  7.58 Mbits/sec                  
-[  5]  23.02-24.00  sec  1.00 MBytes  8.51 Mbits/sec                  
-[  5]  24.00-25.07  sec  1.00 MBytes  7.84 Mbits/sec                  
-[  5]  25.07-26.12  sec   896 KBytes  7.03 Mbits/sec                  
-[  5]  26.12-27.01  sec   768 KBytes  7.02 Mbits/sec                  
-[  5]  27.01-28.14  sec  1.00 MBytes  7.46 Mbits/sec                  
-[  5]  28.14-29.15  sec   640 KBytes  5.17 Mbits/sec                  
-[  5]  29.15-30.04  sec   512 KBytes  4.74 Mbits/sec                  
+[  5]   0.00-1.04   sec   640 KBytes  5.04 Mbits/sec                  
+[  5]   1.04-2.12   sec   896 KBytes  6.82 Mbits/sec                  
+[  5]   2.12-3.01   sec   768 KBytes  7.03 Mbits/sec                  
+[  5]   3.01-4.04   sec   896 KBytes  7.13 Mbits/sec                  
+[  5]   4.04-5.09   sec   896 KBytes  7.02 Mbits/sec                  
+[  5]   5.09-6.08   sec  1.00 MBytes  8.43 Mbits/sec                  
+[  5]   6.08-7.06   sec  1.12 MBytes  9.67 Mbits/sec                  
+[  5]   7.06-8.00   sec   896 KBytes  7.77 Mbits/sec                  
+[  5]   8.00-9.14   sec   768 KBytes  5.52 Mbits/sec                  
+[  5]   9.14-10.02  sec   640 KBytes  5.96 Mbits/sec                  
+[  5]  10.02-11.04  sec  1.12 MBytes  9.25 Mbits/sec                  
+[  5]  11.04-12.09  sec   768 KBytes  6.02 Mbits/sec                  
+[  5]  12.09-13.07  sec   512 KBytes  4.28 Mbits/sec                  
+[  5]  13.07-14.04  sec   768 KBytes  6.49 Mbits/sec                  
+[  5]  14.04-15.07  sec   896 KBytes  7.13 Mbits/sec                  
+[  5]  15.07-16.12  sec   896 KBytes  6.99 Mbits/sec                  
+[  5]  16.12-17.01  sec   896 KBytes  8.25 Mbits/sec                  
+[  5]  17.01-18.00  sec  1.00 MBytes  8.43 Mbits/sec                  
+[  5]  18.00-19.13  sec   896 KBytes  6.52 Mbits/sec                  
+[  5]  19.13-20.19  sec   640 KBytes  4.95 Mbits/sec                  
+[  5]  20.19-21.09  sec   768 KBytes  6.99 Mbits/sec                  
+[  5]  21.09-22.01  sec   896 KBytes  7.94 Mbits/sec                  
+[  5]  22.01-23.10  sec  1.00 MBytes  7.74 Mbits/sec                  
+[  5]  23.10-24.10  sec   896 KBytes  7.34 Mbits/sec                  
+[  5]  24.10-25.07  sec   896 KBytes  7.53 Mbits/sec                  
+[  5]  25.07-26.07  sec  1.00 MBytes  8.42 Mbits/sec                  
+[  5]  26.07-27.03  sec  1.00 MBytes  8.73 Mbits/sec                  
+[  5]  27.03-28.06  sec  1.00 MBytes  8.11 Mbits/sec                  
+[  5]  28.06-29.01  sec  1.00 MBytes  8.83 Mbits/sec                  
+[  5]  29.01-30.03  sec   896 KBytes  7.20 Mbits/sec                  
 - - - - - - - - - - - - - - - - - - - - - - - - -
 [ ID] Interval           Transfer     Bitrate         Retr
-[  5]   0.00-30.06  sec  29.9 MBytes  8.34 Mbits/sec    0             sender
-[  5]   0.00-30.04  sec  24.9 MBytes  6.95 Mbits/sec                  receiver
+[  5]   0.00-30.05  sec  30.8 MBytes  8.58 Mbits/sec    0             sender
+[  5]   0.00-30.03  sec  25.9 MBytes  7.23 Mbits/sec                  receiver
 
 iperf Done.
