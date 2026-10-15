@@ -1,9 +1,9 @@
-UE RNTI 206e CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -91 (2 meas)
-UE 206e: CQI 14, RI 1, PMI (0,0)
-UE 206e: UL-RI 1, TPMI 0
-UE 206e: dlsch_rounds 77415/8154/105/5, dlsch_errors 0, pucch0_DTX 11 (SNR 19.2-0.8 dB), BLER 0.09661 MCS (1) 23 CCE fail 5209, goodput 5.67 Mbps
-UE 206e: ulsch_rounds 51839/3683/71/38, ulsch_errors 10, ulsch_DTX 2, BLER 0.06138 MCS (1) 9 (Qm 4 deltaMCS 0 dB) NPRB 30 SNR 14.1 (-0.9) dB CCE fail 0, goodput 4.36 Mbps
-UE 206e: LCID 1: TX           1368 RX           6340 bytes
-UE 206e: LCID 2: TX              0 RX              0 bytes
-UE 206e: LCID 4: TX      172078176 RX       69461884 bytes
+UE RNTI 9269 CU-UE-ID 1 in-sync PH 58 dB PCMAX 21 dBm, average RSRP -86 (4 meas)
+UE 9269: CQI 14, RI 1, PMI (0,0)
+UE 9269: UL-RI 1, TPMI 0
+UE 9269: dlsch_rounds 75553/7552/178/5, dlsch_errors 0, pucch0_DTX 0 (SNR 20.6+0.6 dB), BLER 0.09467 MCS (1) 20 CCE fail 4984, goodput 5.23 Mbps
+UE 9269: ulsch_rounds 51743/3935/138/69, ulsch_errors 26, ulsch_DTX 0, BLER 0.11501 MCS (1) 13 (Qm 6 deltaMCS 0 dB) NPRB 19 SNR 15.9 (+0.9) dB CCE fail 0, goodput 4.05 Mbps
+UE 9269: LCID 1: TX           1331 RX           6154 bytes
+UE 9269: LCID 2: TX              0 RX              0 bytes
+UE 9269: LCID 4: TX      153694555 RX       69756095 bytes
 
