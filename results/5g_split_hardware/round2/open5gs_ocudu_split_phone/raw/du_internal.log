@@ -1,9 +1,9 @@
-2026-10-06T12:59:00.464236 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
-2026-10-06T12:59:01.052565 [DU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
-2026-10-06T12:59:03.117520 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
-2026-10-06T12:59:03.117529 [APP     ] [E] Couldn't register stdin handler
-2026-10-06T12:59:03.153796 [GNB     ] [I] ==== DU started ===
-2026-10-06T12:59:17.040873 [CU-F1-U ] [D] Found F1-U default gateway for DRB. sst: 1, sd: 0x1, 5QI=0x9
-2026-10-06T13:02:56.450526 [GNB     ] [I] Stopping...
-2026-10-06T13:02:56.451599 [PHY     ] [W] [  964.19] Real-time failure in lower PHY: PRACH request late for sector 0, slot 964.19 and start symbol 0.
+2026-10-15T11:34:51.272529 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-15T11:34:51.875125 [DU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-15T11:34:53.952944 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-15T11:34:53.952954 [APP     ] [E] Couldn't register stdin handler
+2026-10-15T11:34:54.024375 [GNB     ] [I] ==== DU started ===
+2026-10-15T11:35:09.438236 [CU-F1-U ] [D] Found F1-U default gateway for DRB. sst: 1, sd: 0x1, 5QI=0x9
+2026-10-15T11:38:47.569357 [GNB     ] [I] Stopping...
+2026-10-15T11:38:47.570535 [PHY     ] [W] [  993.19] Real-time failure in lower PHY: PRACH request late for sector 0, slot 993.19 and start symbol 0.
 (END)
