@@ -1,7 +1,8 @@
-2026-10-06T14:05:49.880393 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
-2026-10-06T14:05:50.471042 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
-2026-10-06T14:05:52.650480 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
-2026-10-06T14:05:52.650491 [APP     ] [E] Couldn't register stdin handler
-2026-10-06T14:05:52.692692 [GNB     ] [I] ==== gNB started ===
-2026-10-06T14:09:41.989032 [GNB     ] [I] Stopping...
+2026-10-15T10:16:51.065961 [GNB     ] [I] Built in Release mode using commit fb2f55999b on branch dev
+2026-10-15T10:16:51.662479 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "ocudu_performance" script
+2026-10-15T10:16:53.820844 [IO-EPOLL] [E] fd=0: Failed to register file descriptor. Cause: epoll_ctl failed with "Operation not permitted"
+2026-10-15T10:16:53.820854 [APP     ] [E] Couldn't register stdin handler
+2026-10-15T10:16:53.862003 [GNB     ] [I] ==== gNB started ===
+2026-10-15T10:20:43.154857 [GNB     ] [I] Stopping...
+2026-10-15T10:20:43.156050 [PHY     ] [W] [  565.19] Real-time failure in lower PHY: PRACH request late for sector 0, slot 565.19 and start symbol 0.
 (END)
