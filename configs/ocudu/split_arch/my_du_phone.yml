@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: Copyright (C) 2021-2026 Software Radio Systems Limited
+# SPDX-License-Identifier: BSD-3-Clause-Open-MPI
+
+
+# This example configuration outlines how to configure the OCUDU gNB to create a single TDD cell
+# transmitting in band 78, with 20 MHz bandwidth and 30 kHz sub-carrier-spacing. A USRP B200 is configured
+# as the RF frontend using split 8. Note in this example an external clock source is not used, so the sync
+# is not defined and the default is used.
+
+f1ap:
+  addrs: 137.158.126.21                # Address of the CU-CP's F1AP endpoint
+  bind_addrs: 137.158.126.24           # Local address the DU binds to for the F1AP connection
+
+f1u:
+  peer_port: 2153
+  socket:
+    - bind_addr: 137.158.126.24        # Local address the DU binds to for the F1-U connection
+
+
+ru_sdr:
+  device_driver: uhd
+  device_args: type=b200,num_recv_frames=64,num_send_frames=64
+  srate: 23.04
+  otw_format: sc12
+  tx_gain: 75
+  rx_gain: 40
+
+
+cell_cfg:
+  slicing:
+    - sst: 1
+      sd: 1
+  dl_arfcn: 640608
+  band: 78
+  channel_bandwidth_MHz: 20
+  common_scs: 30
+  plmn: "00102"
+  tac: 1
+  pci: 0
+
+expert_phy:
+  pusch_channel_estimator_td_strategy: average
+  pusch_channel_estimator_cfo_compensation: true
+
+metrics:
+  autostart_stdout_metrics: true
+
+# The USRP clock may introduce some CFO: configure the channel estimator to compensate for it.
+# With good clocks (e.g., external ones), the default setup may provide better performance.
+log:
+  filename: /tmp/du.log
+  all_level: warning
+
+pcap:
+  mac_enable: false
+  mac_filename: /tmp/du_mac.pcap
+  f1ap_enable: false
+  f1ap_filename: /tmp/du_f1ap.pcap
+  f1u_enable: false
+  f1u_filename: /tmp/du_f1u.pcap
