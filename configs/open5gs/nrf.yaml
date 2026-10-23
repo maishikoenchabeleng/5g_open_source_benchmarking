@@ -13,6 +13,9 @@ nrf:
     - plmn_id:
         mcc: 001
         mnc: 01
+    - plmn_id:
+        mcc: 001
+        mnc: 02
   sbi:
     server:
       - address: 127.0.0.10

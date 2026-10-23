@@ -32,15 +32,31 @@ amf:
       amf_id:
         region: 2
         set: 1
+    - plmn_id:
+        mcc: 001
+        mnc: 02
+      amf_id:
+        region: 2
+        set: 1
   tai:
     - plmn_id:
         mcc: 001
         mnc: 01
       tac: 1
+    - plmn_id:
+        mcc: 001
+        mnc: 02
+      tac: 1
   plmn_support:
     - plmn_id:
         mcc: 001
         mnc: 01
+      s_nssai:
+        - sst: 1
+          sd: 0x000001
+    - plmn_id:
+        mcc: 001
+        mnc: 02
       s_nssai:
         - sst: 1
           sd: 0x000001
