@@ -36,7 +36,7 @@ cell_cfg:
   slicing:
     - sst: 1
       sd: 1
-  dl_arfcn: 630000
+  dl_arfcn: 640608
   band: 78
   channel_bandwidth_MHz: 20
   common_scs: 30
