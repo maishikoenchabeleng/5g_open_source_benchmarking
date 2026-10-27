@@ -5,8 +5,8 @@
 # Tests the 4 CU/DU split combinations on two separate machines:
 #   CU (+ core network) on the core machine, DU + UE on the RAN machine.
 #
-# RAN Machine  : administrator@137.158.xxx.xx   (DU + UE)
-# Core Machine : bluelabuser@137.158.xxx.xx     (CU + core)
+# RAN Machine  : administrator@xxx.xxx.xxx.xx   (DU + UE)
+# Core Machine : bluelabuser@xxx.xxx.xxx.xx     (CU + core)
 #
 # Combinations:
 #   1. OCUDU split (ocu/odu + srsUE, ZMQ)          + Open5GS
@@ -35,9 +35,9 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.xxx.xx"
+RAN_IP="xxx.xxx.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.xxx.xx"
+CORE_IP="xxx.xxx.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
