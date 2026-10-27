@@ -5,8 +5,8 @@
 # Tests the 4 CU/DU split combinations on two separate machines:
 #   CU (+ core network) on the core machine, DU + UE on the RAN machine.
 #
-# RAN Machine  : administrator@137.158.126.24   (DU + UE)
-# Core Machine : bluelabuser@137.158.126.21     (CU + core)
+# RAN Machine  : administrator@137.158.xxx.xx   (DU + UE)
+# Core Machine : bluelabuser@137.158.xxx.xx     (CU + core)
 #
 # Combinations:
 #   1. OCUDU split (ocu/odu + srsUE, ZMQ)          + Open5GS
@@ -26,8 +26,8 @@
 # A B C D, ...), so slow drifts affect all combinations equally. Set ROUNDS
 # below. summary.txt / summary.csv give mean, std, min, max, 95% CI.
 #
-# Port layout on the core machine (the UPF owns 137.158.126.21:2152):
-#   CU N3   -> 127.0.0.20:2152      CU F1-U -> 137.158.126.21:2153
+# Port layout on the core machine (the UPF owns 137.158.xxx.xx:2152):
+#   CU N3   -> 127.0.0.20:2152      CU F1-U -> 137.158.xxx.xx:2153
 #   DU F1-U -> sends to CU on 2153  F1-C    -> SCTP 38472
 # =============================================================================
 
@@ -35,9 +35,9 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.126.24"
+RAN_IP="137.158.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.126.21"
+CORE_IP="137.158.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
