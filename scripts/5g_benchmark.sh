@@ -29,9 +29,9 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.126.24"
+RAN_IP="137.158.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.126.21"
+CORE_IP="137.158.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
