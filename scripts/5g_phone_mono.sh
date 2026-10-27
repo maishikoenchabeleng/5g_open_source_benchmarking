@@ -5,8 +5,8 @@
 # Benchmarks a real COTS phone (OnePlus, SIM IMSI 0010200000xxxxx, PLMN 001/02)
 # through a monolithic gNB on the B210, with Open5GS or free5gc as the core.
 #
-# RAN Machine  : administrator@137.158.xxx.xx   (gNB + B210)
-# Core Machine : bluelabuser@137.158.xxx.xx
+# RAN Machine  : administrator@xxx.xxx.xxx.xx   (gNB + B210)
+# Core Machine : bluelabuser@xxx.xxx.xxx.xx
 #   open5gs : amf.yaml with 001/01 + 001/02
 #   free5gc : AMF_CFG=amfcfg_phone.yaml ./run.sh (001/02 listed first - free5gc
 #             uses its first PLMN for auth, SM data and SM policy)
@@ -39,9 +39,9 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.xxx.xx"
+RAN_IP="xxx.xxx.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.xxx.xx"
+CORE_IP="xxx.xxx.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
