@@ -2,12 +2,12 @@
 # =============================================================================
 # 5G TESTBED - REAL PHONE BENCHMARK (CU/DU split, DU on the USRP B210)
 # =============================================================================
-# Benchmarks a real COTS phone (OnePlus, SIM IMSI 001020000049862, PLMN 001/02)
+# Benchmarks a real COTS phone (OnePlus, SIM IMSI 0010200000xxxxx, PLMN 001/02)
 # through a CU/DU split: the CU runs on the core machine, the DU drives the
 # B210 on the RAN machine. Open5GS or free5gc as the core.
 #
-# RAN Machine  : administrator@137.158.126.24   (DU + B210)
-# Core Machine : bluelabuser@137.158.126.21     (CU + core)
+# RAN Machine  : administrator@137.158.xxx.xx   (DU + B210)
+# Core Machine : bluelabuser@137.158.xxx.xx     (CU + core)
 #   open5gs : amf.yaml with 001/01 + 001/02
 #   free5gc : AMF_CFG=amfcfg_phone.yaml ./run.sh (001/02 listed first - free5gc
 #             uses its first PLMN for auth, SM data and SM policy)
@@ -17,8 +17,8 @@
 #           DU odu -c ~/ocudu/configs/my_du_phone.yml          (20 MHz, 3450 MHz)
 #   oai   : CU nr-softmodem -O .../CONF/my_cu_phone.conf       (core machine)
 #           DU nr-softmodem -O .../CONF/my_du_phone.conf -E    (40 MHz, SSB 3619.2 MHz)
-# Ports on the core machine (the UPF owns 137.158.126.21:2152):
-#   CU N3 -> 127.0.0.20:2152, CU F1-U -> 137.158.126.21:2153, F1-C -> SCTP 38472
+# Ports on the core machine (the UPF owns 137.158.xxx.xx:2152):
+#   CU N3 -> 127.0.0.20:2152, CU F1-U -> 137.158.xxx.xx:2153, F1-C -> SCTP 38472
 #
 # Run with sudo:
 #   sudo ./5g_split_hardware.sh                 # all 4 combinations, ROUNDS times (round-robin)
@@ -43,15 +43,15 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.126.24"
+RAN_IP="137.158.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.126.21"
+CORE_IP="137.158.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
 
 # The phone's SIM
-PHONE_IMSI="001020000049862"
+PHONE_IMSI="0010200000xxxxx"
 
 # OCUDU split
 OCUDU_DU_CONF="${HOME_DIR}/ocudu/configs/my_du_phone.yml"
