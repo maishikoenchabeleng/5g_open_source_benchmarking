@@ -102,8 +102,3 @@ Components built from source are given with the commit that was built, as these 
 - The `iperf3` server ran on the phone in the **Termux** app, with a wake lock enabled so that the phone did not sleep during the tests.
 - The phone was kept in the same fixed position relative to the USRP antennas for all Phase 2 tests.
 
-## Installation Issues and Fixes
-
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| srsUE crashed when connecting to the gNB | The sample rate (`base_srate`/`srate`) of the gNB and srsUE did not match, and the gNB used settings srsUE does not support | Configure the gNB's band, subcarrier spacing, bandwidth and sample rate to match srsUE, and use the same `base_srate` on both sides of the ZMQ link |
