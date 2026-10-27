@@ -12,4 +12,7 @@ This folder contains the scripts that were used for running and testing the 5G t
 | `5g_mono_hardware` | Runs the monolithic networks with **real USRP hardware + real UE** | 
 | `5g_split_hardware` |Runs the split 2 (CU/DU) architecture network with **real USRP hardware + real UE** | 
 
+## Before running the scripts
+
+Set the IP addresses and usernames at the top of each script to match your own setup:
 
