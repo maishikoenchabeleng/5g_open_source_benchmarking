@@ -2,12 +2,12 @@
 # =============================================================================
 # 5G TESTBED - REAL PHONE BENCHMARK (CU/DU split, DU on the USRP B210)
 # =============================================================================
-# Benchmarks a real COTS phone (OnePlus, SIM IMSI 0010200000xxxxx, PLMN 001/02)
+# Benchmarks a real COTS phone (OnePlus, SIM IMSI 001020000xxxxxxx, PLMN 001/02)
 # through a CU/DU split: the CU runs on the core machine, the DU drives the
 # B210 on the RAN machine. Open5GS or free5gc as the core.
 #
-# RAN Machine  : administrator@137.158.xxx.xx   (DU + B210)
-# Core Machine : bluelabuser@137.158.xxx.xx     (CU + core)
+# RAN Machine  : administrator@xxx.xxx.xxx.xx   (DU + B210)
+# Core Machine : bluelabuser@xxx.xxx.xxx.xx     (CU + core)
 #   open5gs : amf.yaml with 001/01 + 001/02
 #   free5gc : AMF_CFG=amfcfg_phone.yaml ./run.sh (001/02 listed first - free5gc
 #             uses its first PLMN for auth, SM data and SM policy)
@@ -43,15 +43,15 @@
 # CONFIGURATION
 # =============================================================================
 RAN_USER="administrator"
-RAN_IP="137.158.xxx.xx"
+RAN_IP="xxx.xxx.xxx.xx"
 CORE_USER="bluelabuser"
-CORE_IP="137.158.xxx.xx"
+CORE_IP="xxx.xxx.xxx.xx"
 
 HOME_DIR="/home/administrator"
 CORE_HOME="/home/bluelabuser"
 
 # The phone's SIM
-PHONE_IMSI="0010200000xxxxx"
+PHONE_IMSI="00102000xxxxxxx"
 
 # OCUDU split
 OCUDU_DU_CONF="${HOME_DIR}/ocudu/configs/my_du_phone.yml"
